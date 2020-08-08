@@ -208,7 +208,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Roadmap
 
-# ![Diagram](Resources/Roadmap.png)
+![Diagram](Resources/Roadmap.png)
 
 
 
