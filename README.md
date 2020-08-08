@@ -200,21 +200,21 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## <span id="Appendix">Appendix<span>
 
-### **User Story Map**
+### User Story Map
 
-![Diagram](Resources/User Story Map.png)
+![Diagram](Resources/User_Story_Map.png)
 
 
 
-### Road Map
+### Roadmap
+
 # ![Diagram](Resources/Roadmap.png)
+
 
 
 ### Milestones
 
 ![Diagram](Resources/Milestone.png)
-
-## 
 
 
 
