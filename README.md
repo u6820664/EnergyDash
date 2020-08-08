@@ -1,13 +1,13 @@
 Table of Contents
 =================
 - [Background](#Background)
-- [Tools and Skills related](#Tools_and_Skills_related)
+- [Tools and Skills Related](#Tools_and_Skills_Related)
 - [Requirement](#Requirement)
 - [Identification of Resources, Risks, Potential Costs](#Identification_of_Resources_Risks_Potential_Costs)
 
 - [Role and Responsibility](#Role_and_Responsibility)
 
-- [Schedule and Due date](#Schedule_and_Due_date)
+- [Schedule and Due Date](#Schedule_and_Due_Date)
 
 - [Appendix](#Appendix)
 
@@ -25,7 +25,7 @@ First, we will check the things that we need to do. Second, after communicating 
 
 
 
-## <span id="Tools_and_Skills_related">2 Tools and Skills related<span>
+## <span id="Tools_and_Skills_Related">2 Tools and Skills Related<span>
 
 ### 2.1 Project Management Tools
 
@@ -169,7 +169,7 @@ User surveys play an important role in both front-end and back-end development a
 
  
 
-## <span id="Schedule_and_Due_date">6 Schedule and Due date<span>
+## <span id="Schedule_and_Due_Date">6 Schedule and Due Date<span>
 
 ### 6.1 Schedule
 
