@@ -190,7 +190,7 @@ User surveys play an important role in both front-end and back-end development a
 
 **Gantt Chart**
 
-# ![Diagram](Resources/Gantt chart.png)
+# ![Diagram](Resources/Gantt_chart.png)
 
 ### 6.2 Due Date
 
