@@ -1,25 +1,19 @@
 Table of Contents
 =================
-- [1 Background](#1 Background)
-- [2 Tools and Skills related](#2 Tools and Skills related)
-- [3 Requirement](#3 Requirement)
-- [4 Identification of Resources, Risks, Potential Costs](#4 Identification of Resources, Risks, Potential Costs)
+- [Background](#Background)
+- [Tools and Skills related](#Tools_and_Skills_related)
+- [Requirement](#Requirement)
+- [Identification of Resources, Risks, Potential Costs](#Identification_of_Resources_Risks_Potential_Costs)
 
-- [5 Role and Responsibility](#5 Role and Responsibility)
+- [Role and Responsibility](#Role_and_Responsibility)
 
-- [6 Schedule and Due date](#6 Schedule and Due date)
+- [Schedule and Due date](#Schedule_and_Due_date)
 
 - [Appendix](#Appendix)
 
 
 
-
-
-
-
-
-
-## <span id="1 Background">1 Background<span>
+## <span id="Background">1 Background<span>
 
 ### 1.1 Problem
 
@@ -31,7 +25,7 @@ First, we will check the things that we need to do. Second, after communicating 
 
 
 
-## <span id="2 Tools and Skills related">2 Tools and Skills related<span>
+## <span id="Tools_and_Skills_related">2 Tools and Skills related<span>
 
 ### 2.1 Project Management Tools
 
@@ -59,7 +53,7 @@ Java and most likely a combination of Python and JavaScript.
 
 
 
-## <span id="3 Requirement">3 Requirement<span>
+## <span id="Requirement">3 Requirement<span>
 
 ### 3.1 Product Functions
 
@@ -123,7 +117,7 @@ User surveys play an important role in both front-end and back-end development a
 
 
 
-## <span id="4 Identification of resources, risks, potential costs">4 Identification of Resources, Risks, Potential Costs<span>
+## <span id="Identification_of_Resources_Risks_Potential_Costs">4 Identification of Resources, Risks, Potential Costs<span>
 
 ### 4.1 Resources
 
@@ -161,7 +155,7 @@ User surveys play an important role in both front-end and back-end development a
 
 
 
-## <span id="5 Role and Responsibility">5 Role and Responsibility<span>
+## <span id="Role_and_Responsibility">5 Role and Responsibility<span>
 
 | Name           | Uni ID   | Role                                   |
 | -------------- | -------- | -------------------------------------- |
@@ -175,7 +169,7 @@ User surveys play an important role in both front-end and back-end development a
 
  
 
-## <span id="6 Schedule and Due date">6 Schedule and Due date<span>
+## <span id="Schedule_and_Due_date">6 Schedule and Due date<span>
 
 ### 6.1 Schedule
 
