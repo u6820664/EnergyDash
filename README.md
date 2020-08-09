@@ -100,7 +100,7 @@ The primary goal of this project is to create a real-time web-based data dashboa
 #### 3.4.1 An Operational Website
 
 - The program should at least implement.
-- The requirement in 3.3.2 System Output to Calculate and display energy usage tips for input energy data in a simpler and clearer way, and list them at the front-end.
+- The requirement in 3.3.2 System Output to calculate and display energy usage tips for input energy data in a simpler and clearer way, and list them at the front-end.
 - The requirements in 3.3.3 System Input, be able to receive the latest energy data.
 
 
@@ -218,9 +218,16 @@ The client does not propose any due day so we will follow the due day of this co
 
 
 
-### Decision Making
+### Reasoning
 
 [Decision Making Log](https://drive.google.com/drive/u/0/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV)
+[Risk Assessment](https://drive.google.com/drive/u/0/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_)
+
+
+
+### Feedback
+
+[Feedback Log](https://drive.google.com/drive/u/0/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV)
 
 
 
