@@ -220,7 +220,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Decision Making
 
-[Decision Making Log](https://drive.google.com/open?id=19k1Fsmo4KuVd94mFDShupvla8UwJ114F)
+[Decision Making Log](https://drive.google.com/drive/u/0/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV)
 
 
 
