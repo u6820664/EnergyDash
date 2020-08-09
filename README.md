@@ -29,9 +29,9 @@ First, we will check the things that we need to do. Second, after communicating 
 
 ### 2.1 Project Management Tools
 
-- Slack, WeChat (General Q&A)
-- Monday (Task management)
-- Github (Code branch)
+- [Slack](https://app.slack.com/client/T018HVDJHGR/D017QJTF4A3) (General Q&A)
+- [Monday](https://rexergy-company.monday.com/boards/681706745) (Task management)
+- [Github](https://github.com/u6820664/EnergyDash) (Code branch)
 - Google Drive (Document)
 - Zoom (Meeting)
 
@@ -220,8 +220,8 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Reasoning
 
-[Decision Making Log](https://drive.google.com/drive/u/0/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV)
-[Risk Assessment](https://drive.google.com/drive/u/0/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_)
+#### [Decision Making Log](https://drive.google.com/drive/u/0/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV)
+#### [Risk Assessment](https://drive.google.com/drive/u/0/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_)
 
 
 
