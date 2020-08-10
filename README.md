@@ -126,23 +126,15 @@ The client's vision is to inspire people to respond to climate change, by choosi
 
 ### 4.2 Key Stakeholders
 
-Ben Wilkinson: Rexergy’s CEO.
-
-
-Consumers: including households and factories.
-
-
-Electricity companies: including energy generators, whole sellers, and retailers.
+- Ben Wilkinson: Rexergy’s CEO.
+- Consumers: including households and factories.
+- Electricity companies: including energy generators, whole sellers, and retailers.
 
 ### 4.3 Stakeholders' Expectation
 
-Ben Wilkinson: makes an app to help realize the vision.
-
-
-Consumers: be able to protect the environment by making an impact themselves.
-
-
-Electricity companies: more reasonable configuration of different forms of power generation methods, and selection of energy plans that are more acceptable to the public.
+- Ben Wilkinson: makes an app to help realize the vision.
+- Consumers: be able to protect the environment by making an impact themselves.
+- Electricity companies: more reasonable configuration of different forms of power generation methods, and selection of energy plans that are more acceptable to the public.
 
 ### 4.4 How Will This Project Make Things Better?
 
