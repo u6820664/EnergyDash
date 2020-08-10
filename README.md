@@ -116,7 +116,8 @@ Our team is committed to applying and improving some of the current open source 
 User surveys play an important role in both front-end and back-end development and how algorithms work. For this project, our goal was to get feedback on different types of households, understanding the level of energy consumption in each household and the proportion of energy bills in each household, which would help us design the project and improve the user experience on the site.
 
 
-## <span id="Stakeholder Analysis">4 Stakeholder Analysis<span>
+
+## <span id="Stakeholder_Analysis">4 Stakeholder Analysis<span>
 
 ### 4.1 Client’s Vision and Objectives 
 
