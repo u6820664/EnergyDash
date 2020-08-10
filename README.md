@@ -12,6 +12,7 @@ Table of Contents
 
 - [Appendix](#Appendix)
 
+- [Documentation](#Documentation)
 
 ## <span id="Background">1 Background<span>
 
@@ -244,7 +245,15 @@ The client does not propose any due day so we will follow the due day of this co
 
 ![Diagram](Resources/Milestone.png)
 
-### [Project Agreement](https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
+
+## <span id="Documentation">Documentation<span>
+ 
+
+### Project Agreement
+
+#### [Statement of Work](https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
+#### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
+
 
 
 ### Reasoning
