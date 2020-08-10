@@ -3,6 +3,7 @@ Table of Contents
 - [Background](#Background)
 - [Tools and Skills Related](#Tools_and_Skills_Related)
 - [Requirement](#Requirement)
+- [Stakeholder Analysis](#Stakeholder Analysis)
 - [Identification of Resources, Risks, Potential Costs](#Identification_of_Resources_Risks_Potential_Costs)
 
 - [Role and Responsibility](#Role_and_Responsibility)
@@ -10,7 +11,6 @@ Table of Contents
 - [Schedule and Due Date](#Schedule_and_Due_Date)
 
 - [Appendix](#Appendix)
-
 
 
 ## <span id="Background">1 Background<span>
@@ -114,6 +114,34 @@ Our team is committed to applying and improving some of the current open source 
 #### 3.4.3 User Survey Report
 
 User surveys play an important role in both front-end and back-end development and how algorithms work. For this project, our goal was to get feedback on different types of households, understanding the level of energy consumption in each household and the proportion of energy bills in each household, which would help us design the project and improve the user experience on the site.
+
+
+
+## <span id="Stakeholder Analysis">4 Stakeholder Analysis<span>
+
+### 4.1 Client’s Vision and Objectives 
+
+The client's vision is to inspire people to respond to climate change, by choosing more environmentally friendly energy, while helping people save more money that should have gone into the pockets of coal plants.
+
+### 4.2 Key Stakeholders
+
+Ben Wilkinson: Rexergy’s CEO.
+Consumers: including households and factories.
+Electricity companies: including energy generators, whole sellers, and retailers.
+
+### 4.3 Stakeholders' Expectation
+
+Ben Wilkinson: makes an app to help realize the vision.
+Consumers: be able to protect the environment by making an impact themselves.
+Electricity companies: more reasonable configuration of different forms of power generation methods, and selection of energy plans that are more acceptable to the public.
+
+### 4.4 How Will This Project Make Things Better?
+
+- Create an application that enables people to have a better impact on protecting the environment
+- Let people know if it is a good time to use more, or less power
+- Power of collective action can focus impacts and create faster change
+- Give them feedback on their actions, impacts
+- A simple application that can provide services to every member of the family, including children and the elderly
 
 
 
