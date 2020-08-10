@@ -244,6 +244,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ![Diagram](Resources/Milestone.png)
 
+### Project Agreement(https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
 
 
 ### Reasoning
@@ -255,7 +256,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Feedback
 
-[Feedback Log](https://drive.google.com/drive/u/0/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV)
+#### [Feedback Log](https://drive.google.com/drive/u/0/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV)
 
 
 
