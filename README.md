@@ -116,7 +116,6 @@ Our team is committed to applying and improving some of the current open source 
 User surveys play an important role in both front-end and back-end development and how algorithms work. For this project, our goal was to get feedback on different types of households, understanding the level of energy consumption in each household and the proportion of energy bills in each household, which would help us design the project and improve the user experience on the site.
 
 
-
 ## <span id="Stakeholder Analysis">4 Stakeholder Analysis<span>
 
 ### 4.1 Client’s Vision and Objectives 
@@ -145,9 +144,9 @@ Electricity companies: more reasonable configuration of different forms of power
 
 
 
-## <span id="Identification_of_Resources_Risks_Potential_Costs">4 Identification of Resources, Risks, Potential Costs<span>
+## <span id="Identification_of_Resources_Risks_Potential_Costs">5 Identification of Resources, Risks, Potential Costs<span>
 
-### 4.1 Resources
+### 5.1 Resources
 
 - Team members’ laptops used for data processing
 - Team members’ laptops used for software developing
@@ -156,7 +155,7 @@ Electricity companies: more reasonable configuration of different forms of power
 
 
 
-### 4.2 Risks
+### 5.2 Risks
 
 - The risk of failing to achieve the expected accuracy and efficiency
 - The risk of failure to final integrate due to the disunity of work division
@@ -165,7 +164,7 @@ Electricity companies: more reasonable configuration of different forms of power
 
 
 
-### 4.3 Risks Management
+### 5.3 Risks Management
 
 - Review work every 2 weeks. If any process is falling behind, try switch methods/ add additional workload/ adjust team structure
 
@@ -174,7 +173,7 @@ Electricity companies: more reasonable configuration of different forms of power
 
 
 
-### 4.4 Potential Costs
+### 5.4 Potential Costs
 
 - Budget for entity legal documentation and licenses. The client will bear it.
 - Budget for purchasing web development frames. The client will bear it.
@@ -183,7 +182,7 @@ Electricity companies: more reasonable configuration of different forms of power
 
 
 
-## <span id="Role_and_Responsibility">5 Role and Responsibility<span>
+## <span id="Role_and_Responsibility">6 Role and Responsibility<span>
 
 | Name           | Uni ID   | Role                                   |
 | -------------- | -------- | -------------------------------------- |
@@ -197,9 +196,9 @@ Electricity companies: more reasonable configuration of different forms of power
 
  
 
-## <span id="Schedule_and_Due_Date">6 Schedule and Due Date<span>
+## <span id="Schedule_and_Due_Date">7 Schedule and Due Date<span>
 
-### 6.1 Schedule
+### 7.1 Schedule
 
 | Time              | Plan                                                         |
 | ----------------- | ------------------------------------------------------------ |
@@ -220,7 +219,7 @@ Electricity companies: more reasonable configuration of different forms of power
 
 # ![Diagram](Resources/Gantt_chart.png)
 
-### 6.2 Due Date
+### 7.2 Due Date
 
 The client does not propose any due day so we will follow the due day of this course to arrange our project (https://cs.anu.edu.au/TechLauncher/dates/)
 
