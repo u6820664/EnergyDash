@@ -278,5 +278,5 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Other Resources
 
-#### [Google Drive](https://drive.google.com/drive/u/0/folders/1y3KpK8C18bNmg2Vh6dXU8p4_0ZtfzpBJ)
+#### [Google Drive](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing)
 
