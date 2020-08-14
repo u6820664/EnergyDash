@@ -33,7 +33,7 @@ First, we will check the things that we need to do. Second, after communicating 
 - [Slack](https://app.slack.com/client/T018HVDJHGR/D017QJTF4A3) (General Q&A)
 - [Monday](https://rexergy-company.monday.com/boards/681706745) (Task management)
 - [Github](https://github.com/u6820664/EnergyDash) (Code branch)
-- Google Drive (Document)
+- [Google Drive](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing) (Document)
 - Zoom (Meeting)
 
 
@@ -58,7 +58,27 @@ Java and most likely a combination of Python and JavaScript.
 
 ### 3.1 Product Functions
 
-The primary goal of this project is to create a real-time web-based data dashboard, for time strapped energy users. Forecasting of when is the best time for consumers to use energy. Displaying the most important and actionable metrics will allow consumers to discover strategies to reduce their bills. In addition, it will be possible to switch between different metrics to find the most appropriate energy usage for consumers in the future.
+This project creates a real-time data dashboard for energy users, predicts and reminds consumers of the best time to use energy through the analysis of consumers' energy solutions and locations. The main purpose is to develop a more rational energy use strategy for consumers, while indirectly reducing the burning of coal and other fossil fuels.
+The project will be implemented on multiple platforms, including Web App, Mobile(Android) and Chrome Extension.
+
+
+- Basic functions
+  - Implement sign up/in via email and password
+  - Implement display single number metric in real-time
+  - Implement swap between the main metrics
+
+
+- Main functions
+  - Implement input user Information (Energy Bill Prices and Times, Postcode)
+  - Implement edit user Information in Settings
+  - Implement display history of metrics in line graph (day, week, months, years)
+  - Implement display cumulative metrics
+  - Implement create energy report
+  - Compare performance against expected, or average user
+  - Display savings in the metrics
+  - Implement create plan for user Data Security and Storage for back- end
+  - Implement turn metrics into a colour, and incorporate into background
+  - Implement convert main metric into an icon with a colour and/or number and/or symbol than changes with the metric (Chrome extension)
 
 
 
@@ -251,28 +271,28 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### Project Agreement
 
-#### [Statement of Work](https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
-#### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/u/0/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e)
+#### [Statement of Work](https://drive.google.com/drive/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e?usp=sharing)
+#### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e?usp=sharing)
 
 
 
 ### Reasoning
 
-#### [Decision Making Log](https://drive.google.com/drive/u/0/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV)
-#### [Risk Assessment](https://drive.google.com/drive/u/0/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_)
+#### [Decision Making Log](https://drive.google.com/drive/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV?usp=sharing)
+#### [Risk Assessment](https://drive.google.com/drive/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_?usp=sharing)
 
 
 
 ### Feedback
 
-#### [Feedback Log](https://drive.google.com/drive/u/0/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV)
+#### [Feedback Log](https://drive.google.com/drive/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV?usp=sharing)
 
 
 
 ### Meeting Agenda
 
-#### [Client Meeting](https://drive.google.com/drive/u/0/folders/1JDLw-aj0xIpS0n6nQhEs_xYXsJeqq_1z)
-#### [Group Meeting](https://drive.google.com/drive/u/0/folders/1BSpx8gMwuLM7Ho7e31pjJPzcxYUEbgdz)
+#### [Client Meeting](https://drive.google.com/drive/folders/1JDLw-aj0xIpS0n6nQhEs_xYXsJeqq_1z?usp=sharing)
+#### [Group Meeting](https://drive.google.com/drive/folders/1BSpx8gMwuLM7Ho7e31pjJPzcxYUEbgdz?usp=sharing)
 
 
 
