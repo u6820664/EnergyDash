@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    background-image: url(../images/bg_img.jpeg);
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 悬停变红色、加下划线 */
+a:hover {
+    color: #F00;
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+}
+
+.logo {
+    width: 260px;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+
+.slogan {
+    position: absolute;
+    width: 600px;
+    top: 28%;
+    left: 14%;
+}
+
+.slogan h1 {
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    line-height: 10px;
+    text-align: right;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.right {
+    float: right;
+    position: absolute;
+    right: 6%;
+    top: 15%;
+    height: 532px;
+    width: 380px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 50px;
+}
+
+table, tr, td {
+    width: 100%;
+}
+
+table {
+    table-layout: fixed;
+}
+
+tr {
+    height: 65px;
+}
+
+.box {
+    width: 100%;
+}
+
+.box input {
+    width: 100%;
+    height: 40px;
+    color: #0f0f0f;
+}
+
+/* visibility icons */
+.box img {
+    position: absolute;
+    top: 226px;
+    right: 65px;
+    width: 24px;
+}
+
+/* key icon  */
+#key {
+    position: absolute;
+    top: 224px;
+    left: 22px;
+    width: 24px;
+    opacity: 0.3;
+}
+
+/* email icon  */
+#email {
+    position: absolute;
+    top: 154px;
+    left: 22px;
+    width: 24px;
+    opacity: 0.3;
+}
+
+
+/* facebook icon  */
+#facebook {
+    position: absolute;
+    bottom: 110px;
+    left: 75px;
+    width: 38px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+/* google icon  */
+#google {
+    position: absolute;
+    bottom: 58px;
+    left: 75px;
+    width: 38px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.small_tr {
+    height: 10px;
+}
+
+h6 {
+    color: #C65EDB;
+}
+
+
+#loginBut {
+    position: absolute;
+    top: 270px;
+    right: 53px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.extLink_button {
+    width: 230px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+label {
+    color: #333;
+    text-align: right;
+    margin-right: 20px;
+    width: 20%;
+}
+
+input {
+    color: #ccc;
+    height: 40px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.check {
+    line-height: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+
+

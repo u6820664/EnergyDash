@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Rexergy</title>
+    <link rel="stylesheet" href="css/signUpStyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    -->
+</head>
+
+
+<body>
+
+<!-- Logo、标语部分 -->
+<div class="left">
+    <div class="logo">
+        <img src="images/logo.svg" alt="">
+    </div>
+    <div class="slogan">
+        <h1>Your Personal Energy Advocate.</h1>
+    </div>
+    <div class="footer">
+        <a href="https://www.google.com">Help</a> ｜ <a href="https://www.google.com">xxxx©rexergy.com</a>
+    </div>
+</div>
+
+<!-- 登录表格的主体部分 -->
+<div class="right">
+    <form action="" onsubmit="return loginBtn_click();">
+        <table>
+            <tr class="small_tr">
+                <td>
+                    <h6 class="small">START&nbsp;YOUR&nbsp;PERSONAL&nbsp;ENERGY&nbsp;JOURNEY</h6>
+                </td>
+            </tr>
+
+            <tr class="small_tr">
+                <td>
+                    <h3>Login&nbsp;your&nbsp;account</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="box">
+                        <label>Email&nbsp;Address</label>
+                        <input id="Ead" type="text"
+                               placeholder="  Your Email address">
+                    </div>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <div class="box">
+                        <label>Password
+                            <img src="images/visibility.png" id="eye">
+                            <img src="images/email.png" id="email">
+                            <img src="images/key.png" id="key">
+
+                        </label>
+                        <input id="pwd" type="password"
+                               placeholder="  Your password">
+                    </div>
+                </td>
+            </tr>
+
+
+            <!-- 切换密码是否可见 -->
+            <script>
+                // Get elements
+                var eye = document.getElementById('eye');
+                var pwd = document.getElementById('pwd');
+
+                // Bind events
+                var flag = 0;
+                eye.onclick = function () {
+
+
+                    if (flag === 0) {
+                        pwd.type = 'text';
+                        eye.src = "images/visibility_off.png";
+                        flag = 1;
+                    } else {
+                        pwd.type = 'password';
+                        eye.src = "images/visibility.png";
+                        flag = 0;
+                    }
+                }
+
+            </script>
+
+
+            <tr>
+                <td style="text-align:left">
+                    <div class="button_box">
+                        <input type="checkbox" id="remember" name="" checked class="check">&nbsp;&nbsp;&nbsp;Remember&nbsp;me
+                        <button id="loginBut" type="submit" class="btn btn-outline-primary">Login</button>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr class="small_tr">
+                <td style="text-align:right">
+                    <a href="https://rexergy.com.au/">Forget&nbsp;password?</a>
+                </td>
+            </tr>
+
+
+            <tr class="small_tr">
+                <td style="text-align:right">Don't have an account？
+
+                    <a id="link" href="javascript:;">
+                        Sign up
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <div>
+                        <img src="images/facebook.png" id="facebook">
+                        <button type="button" class="btn btn-primary extLink_button">Facebook</button>
+                    </div>
+
+
+                </td>
+            </tr>
+
+            <tr class="small_tr">
+                <td style="text-align:center">
+
+                    <div>
+                        <img src="images/google.png" id="google">
+                        <button type="button" class="btn btn-danger extLink_button">Google</button>
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+</div>
+
+<!-- 注册表格主体部分 -->
+<div id="sign" class="sign">
+    <div id="title" class="sign-title">Sign Up for An Account
+    </div>
+
+    <button id="closeBtn" href="javascript:void(0);" type="button" class="close" aria-label="Close">
+        <span class="close_span" aria-hidden="true">&times;</span>
+    </button>
+
+
+    <div class="sign-input-content">
+        <div class="sign-input">
+            <label>Email </label>
+            <input type="text" placeholder="Your Email Address" name="info[username]" id="username" class="list-input">
+        </div>
+        <div class="sign-input">
+            <label>Password </label>
+            <input type="password" placeholder="Your password" name="info[password]" id="password" class="list-input">
+        </div>
+        <div class="sign-input">
+            <label>Confirm </label>
+            <input type="password" placeholder="Confirm your password" name="info[password]" id="passwordDC"
+                   class="list-input">
+        </div>
+
+    </div>
+    <div id="signBtn">
+
+        <button id="signUpBut" type="button" class="btn btn-primary  sign-button" onclick="fun();">Sign Up</button>
+        <!-- <button type="button" class="btn btn-outline-primary login_button">Sign up</button>-->
+    </div>
+
+
+</div>
+
+<!-- 遮盖层 -->
+<div id="bg" class="sign-bg"></div>
+
+<!-- 实现弹框注册 -->
+<script>
+    // 获取元素
+    var sign = document.querySelector('.sign');
+    var mask = document.querySelector('.sign-bg');
+    var link = document.querySelector('#link');
+    var closeBtn = document.querySelector('#closeBtn');
+
+    // 点击后显示
+    link.addEventListener('click', function () {
+        mask.style.display = 'block';
+        sign.style.display = 'block';
+    })
+
+    // 点击后隐藏
+    closeBtn.addEventListener('click', function () {
+
+
+            mask.style.display = 'none';
+            sign.style.display = 'none';
+        }
+    )
+</script>
+
+<!--实现记住密码-->
+<script>
+    $(document).ready(function () {
+        var strName = localStorage.getItem('keyName');
+        var strPass = localStorage.getItem('keyPass');
+        if (strName) {
+            $('#Ead').val(strName);
+        }
+        if (strPass) {
+            $('#pwd').val(strPass);
+        }
+
+    });
+
+    function loginBtn_click() {
+        var strName = $('#Ead').val();
+        var strPass = $('#pass').val();
+        localStorage.setItem('keyName', strName);
+        if ($('#remember').is(':checked')) {
+            localStorage.setItem('keyPass', strPass);
+        } else {
+            localStorage.removeItem('keyPass');
+        }
+    }
+</script>
+
+<!-- 点击登录或注册 -->
+<script>
+    var signUpBut = document.querySelector('#signUpBut');
+    signUpBut.addEventListener('click', function () {
+
+        $.ajax({
+            url: "https://www.baidu.com/",
+            type: "post",
+            data: {"email": "rex@outlook.com", "password": "12345"},
+            success: function () {
+                alert("成功啦！")
+            },
+            error: function () {
+                alert("出错啦！")
+            }
+
+
+        });
+
+    });
+
+    var loginBut = document.querySelector('#loginBut');
+    loginBut.addEventListener('click', function () {
+        $.ajax({
+            url: "https://www.baidu.com/",
+            type: "post",
+            data: {"email": "rex@outlook.com", "password": "12345"},
+            success: function () {
+                alert("成功啦！")
+            },
+            error: function () {
+                alert("出错啦！")
+            }
+        });
+
+    });
+
+</script>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+ -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
