@@ -185,7 +185,7 @@
     </div>
     <div id="signBtn">
 
-        <button id="signUpBut" type="button" class="btn btn-primary  sign-button" onclick="fun();">Sign Up</button>
+        <button id="signUpBut" type="submit" class="btn btn-primary  sign-button" onclick="fun();">Sign Up</button>
         <!-- <button type="button" class="btn btn-outline-primary login_button">Sign up</button>-->
     </div>
 
@@ -235,7 +235,7 @@
 
     function loginBtn_click() {
         var strName = $('#Ead').val();
-        var strPass = $('#pass').val();
+        var strPass = $('#pwd').val();
         localStorage.setItem('keyName', strName);
         if ($('#remember').is(':checked')) {
             localStorage.setItem('keyPass', strPass);
