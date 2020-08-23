@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="Init FrontEnd Code">
-      <change beforePath="$PROJECT_DIR$/FrontEnd/login.html" beforeDir="false" />
+    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="Init Front-End Framework">
+      <change afterPath="$PROJECT_DIR$/Resources/Architecture_diagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,11 @@
       <workItem from="1597373937862" duration="1200000" />
       <workItem from="1597451328715" duration="5000" />
       <workItem from="1597555401596" duration="106000" />
+      <workItem from="1597555512362" duration="949000" />
+      <workItem from="1597703422616" duration="9000" />
+      <workItem from="1597806934547" duration="1543000" />
+      <workItem from="1597925153682" duration="214000" />
+      <workItem from="1598166952483" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="Init FrontEnd Code">
       <created>1597374091133</created>
@@ -77,7 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597374091133</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init Front-End Framework">
+      <created>1597555558425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597555558425</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init Front-End Framework">
+      <created>1597555835475</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597555835475</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,12 +118,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init FrontEnd Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init FrontEnd Code" />
+    <MESSAGE value="Init Front-End Framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init Front-End Framework" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597374137257">
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1597555865458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597374137257" />
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597555865458" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597555867177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597555867177" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598167042579">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598167042579" />
   </component>
 </project>

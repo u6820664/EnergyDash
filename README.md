@@ -266,6 +266,12 @@ The client does not propose any due day so we will follow the due day of this co
 ![Diagram](Resources/Milestone.png)
 
 
+
+### Architecture Diagram
+
+![Diagram](Resources/Architecture_diagram.png)
+
+
 ## <span id="Documentation">Documentation<span>
  
 
