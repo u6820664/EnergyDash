@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="Init Front-End Framework">
-      <change afterPath="$PROJECT_DIR$/Resources/Architecture_diagram.png" afterDir="false" />
+    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Zixin &lt;u6605822@anu.edu.au&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1g4Vd4OcaIeSINvus3Z6obThiZt" />
@@ -59,11 +62,29 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FrontEnd/Zixin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="" />
@@ -79,6 +100,7 @@
       <workItem from="1597806934547" duration="1543000" />
       <workItem from="1597925153682" duration="214000" />
       <workItem from="1598166952483" duration="177000" />
+      <workItem from="1598180023575" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="Init FrontEnd Code">
       <created>1597374091133</created>
@@ -101,38 +123,62 @@
       <option name="project" value="LOCAL" />
       <updated>1597555835475</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add the sign up/in page">
+      <created>1598180307301</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598180307301</updated>
+    </task>
+    <task id="LOCAL-00005" summary="debug">
+      <created>1598180888175</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598180888175</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init FrontEnd Code" />
     <MESSAGE value="Init Front-End Framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Front-End Framework" />
+    <MESSAGE value="Add the sign up/in page" />
+    <MESSAGE value="debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="86" key="DiffContextDialog" timestamp="1597555865458">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1598180888044">
+      <screen x="0" y="23" width="1440" height="790" />
+    </state>
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.786@0.23.1440.786" timestamp="1598180306948" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.790@0.23.1440.790" timestamp="1598180888044" />
+    <state x="138" y="88" key="DiffContextDialog" timestamp="1598180361367">
+      <screen x="0" y="23" width="1440" height="790" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597555865458" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597555867177">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="138" y="88" key="DiffContextDialog/0.23.1440.790@0.23.1440.790" timestamp="1598180361367" />
+    <state x="215" y="32" key="Vcs.Push.Dialog.v2" timestamp="1598180928306">
+      <screen x="0" y="23" width="1440" height="790" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597555867177" />
+    <state x="215" y="32" key="Vcs.Push.Dialog.v2/0.23.1440.790@0.23.1440.790" timestamp="1598180928306" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598167042579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
