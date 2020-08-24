@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- 网站信息 不会展示给浏览人员 -->
+    <meta charset="UTF-8" >
+
+    <title>Welcome</title> <!-- 网站标题 -->
+    <link rel ="stylesheet" href="login.css" type = text/css>
+</head>
+<style>
+</style>
+
+
+
+<body>
+<div style = "width:100%;overflow:hidden">
+    <div style="width:50%;float:left;text-align:center" id = "LHS" >
+        <div id = login style="padding-top:40%;padding-bottom:60% ">
+            <form name="login1">
+                <p style="color: purple;font-size: 15px;">START YOUR PERSONAL ENERGY JOURNEY</p>
+                <h1> <!-- 一级二级标题 用数字表示字体大小-->
+                    Login your account
+                </h1>
+                <div style="text-align: left;padding-left: 33.3%;padding-right: 66.6%">
+                    <p> <!-- 段落 -->
+                        Email:<br>
+                        <input class = enter type="text" placeholder="Your email address"/>
+                    </p>
+                    <p>
+                        Password:<br>
+                        <input class = enter type="password" placeholder="Please enter your password"/>
+                    </p>
+                </div>
+                <div>
+
+
+                    <input class = l style="position:absolute;top:650px;left:550px" type="submit" value="Login" />
+                </div>
+                <div>
+                    <p style="color:#2742b7;position:absolute;top:700px;left:600px">
+                        Forget password?
+                    </p>
+                </div>
+                <div class ="imgbtn" style="position: absolute; top:775px;left:400px">
+                    <img src="picture/facebook.png" style="width: 260px">
+                </div>
+                <div style="position: absolute; top:850px;left:400px">
+                    <img src="picture/google.png" style="width: 260px">
+                </div>
+
+
+            </form>
+            <button class = r  style="position:absolute;top:650px;left:320px" onclick = "re()">Register</button>
+            <script>
+                function re(){
+                    window.location.href='https://www.baidu.com/'
+                }
+            </script>
+        </div>
+    </div>
+
+    <div style ="width:50%;float:left;" id = "RHS">
+        <div style ="position: relative;">
+            <img style ="position: absolute" z-index=-1 id="right" width="100%" height = auto src= "picture/login1.jpg" />
+            <img style ="position: absolute; top:1050px; left:670px;" height="120px" width="auto"  src="picture/logo.svg">
+            <div style="position: absolute;z-index:2; top:100px;left:250px;text-align: center" >
+                <h1 style = "text-align: center;color: white">
+                    Your Personal Energy Advocate.
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
