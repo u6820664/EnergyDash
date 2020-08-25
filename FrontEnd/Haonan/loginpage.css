@@ -1,0 +1,68 @@
+h3 {
+    padding: 30px;
+    color: plum;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: blue;
+
+    text-decoration: none;
+}
+
+form {
+    text-align: center;
+    height: 100px;
+
+}
+
+#clear {
+    clear: left;
+}
+
+input[type="submit"] {
+    background: lightgreen;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 8%;
+    height: 2em;
+    font-size: 15px;
+}
+
+input[type="reset"] {
+    background: lightpink;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 8%;
+    height: 2em;
+    font-size: 15px;
+}
+
+#background img {
+    float: right;
+    border-radius: 10px;
+    border: 3px solid lightyellow;
+}
+
+#clear {
+    clear: right;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.clear {
+    clear: left;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    margin-left: 1%;
+}
+
