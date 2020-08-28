@@ -146,15 +146,21 @@ The client's vision is to inspire people to respond to climate change, by choosi
 
 ### 4.2 Key Stakeholders
 
-- Ben Wilkinson: Rexergy’s CEO.
-- Consumers: including households and factories.
-- Electricity companies: including energy generators, whole sellers, and retailers.
+- Client: Ben Wilkinson, Rexergy’s CEO.
+- Development Group Members: A group who is responsible for planning and executing the project.
+- Shadow Team: Our peers, who will assess and provide feedback for our deliverables.
+- Tutors: They are professionals who help our group to understand the aim of the project, assist and  guide students in the learning process.
+- Other Examiners: People who assess our deliverables of each stage.
+- Energy Consumers: One of the main users of our website, who wants to enjoy their services on our    website.Including households and factories.
 
 ### 4.3 Stakeholders' Expectation
 
-- Ben Wilkinson: makes an app to help realize the vision.
-- Consumers: be able to protect the environment by making an impact themselves.
-- Electricity companies: more reasonable configuration of different forms of power generation methods, and selection of energy plans that are more acceptable to the public.
+- Client: Clients expect the project outcome to fulfill users’ needs, be fully functional and be user friendly.
+- Development Group Members: Group Members expects the project to be managed under professional manner and provide outstanding outcome through the project.
+- Shadow Team: Shadow Team expects to see an on-track and well-management project from all the resources provided by our team.
+- Tutors: Tutors expect to see weekly progress from our team and professionalism from all the members in our team.
+- Other Examiners: Other Examiners expect to see a project outstanding from our team according to the marking criteria.
+- Energy Consumers: Energy Consumers expect to obtain useful insights from the project outcome.
 
 ### 4.4 How Will This Project Make Things Better?
 
