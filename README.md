@@ -155,20 +155,20 @@ The client's vision is to inspire people to respond to climate change, by choosi
 
 ### 4.3 Stakeholders' Expectation
 
-- Client: Clients expect the project outcome to fulfill users’ needs, be fully functional and be user friendly.
-- Development Group Members: Group Members expects the project to be managed under professional manner and provide outstanding outcome through the project.
-- Shadow Team: Shadow Team expects to see an on-track and well-management project from all the resources provided by our team.
-- Tutors: Tutors expect to see weekly progress from our team and professionalism from all the members in our team.
-- Other Examiners: Other Examiners expect to see a project outstanding from our team according to the marking criteria.
-- Energy Consumers: Energy Consumers expect to obtain useful insights from the project outcome.
+- Client: expects the project outcome to fulfill users’ needs, be fully functional and be user friendly.
+- Development Group Members: expect the project to be managed under professional manner and provide outstanding outcome through the project.
+- Shadow Team: expects to see an on-track and well-management project from all the resources provided by our team.
+- Tutors: expect to see weekly progress from our team and professionalism from all the members in our team.
+- Other Examiners: expect to see a project outstanding from our team according to the marking criteria.
+- Energy Consumers: expect to obtain useful insights from the project outcome.
 
 ### 4.4 How Will This Project Make Things Better?
 
-- Create an application that enables people to have a better impact on protecting the environment
-- Let people know if it is a good time to use more, or less power
-- Power of collective action can focus impacts and create faster change
-- Give them feedback on their actions, impacts
-- A simple application that can provide services to every member of the family, including children and the elderly
+- Create an application that enables people to have a better impact on protecting the environment.
+- Let people know if it is a good time to use more, or less power.
+- Power of collective action can focus impacts and create faster change.
+- Give them feedback on their actions, impacts.
+- A simple application that can provide services to every member of the family, including children and the elderly.
 
 
 
