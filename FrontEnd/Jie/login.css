@@ -1,47 +1,59 @@
-input.enter {
-    height:25px;
-    width: 400px;
+.wrapper {
+    display: grid;
+    grid-template-columns: 15% 20% 15% 16.66% 16.66% 16.66%;
+    grid-template-rows: 15% 20% 15% 16.66% 16.66% 16.66%;
+}
+.p1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+
+
+
+}
+
+
+.login{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start:3;
+    grid-row-end:5;
+}
+.enter{
+    height: 30px;
+    width: 100%;
     border: 1px solid #ccc;
 
     border-radius: 15px;
-    padding-left:5px;
-    padding-top:5px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
-
+    margin-top:8px;
 }
-input.focus {
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-
-}
-input.l {
-    height:40px;
-    width: 190px;
-    border-radius: 25px;
-    background-color:#2742b7 ;
-    color:white;
-    border:0px;
-}
-
-button.r{
-    height:40px;
-    width: 190px;
-    border-radius: 25px;
-    background-color:white;
-    border-color: #47cd87;
-    color:#47cd87;
-    border:2px solid;
-
-}
-
-
 input::-webkit-input-placeholder {
     color: darkgray;
+}
+.button{
+    height:40px;
+    width: 48%;
+    border-radius: 25px;
+    border:0px;
+    margin-top:10px;
+    text-align: center;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0.5; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
 
+.Flex-fadeIn {
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 1s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数 infinite 为无限 否则就是具体次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
 }

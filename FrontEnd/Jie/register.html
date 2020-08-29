@@ -2,50 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome to Rexergy</title>
     <link rel ="stylesheet" href="login.css" type = text/css>
 </head>
 <body>
-<div style = "width:100%;overflow:hidden">
-<div style="width:50%;float:left;text-align:center" id = "LHS" >
-    <div id = login style="padding-top:40%;padding-bottom:60% ">
-        <form name="login1">
-            <p style="color: purple;font-size: 15px;">START YOUR PERSONAL ENERGY JOURNEY</p>
+<div class="wrapper">
+    <div class = p1 >
+        <img style ="width: 100%;z-index: -1;" src="picture/login1.jpg">
+        <h1 class="Flex-fadeIn" style = "text-align: center;color: white;position: absolute;top:20%;left:62.5%">
+            Your Personal Energy Advocate.
+        </h1>
+        <img class="Flex-fadeIn" src="picture/logo.svg" style="position:absolute;top:112%;left:80%;width: 20%">
+
+    </div>
+    <div class="login Flex-fadeIn">
+        <form >
+
             <h1> <!-- 一级二级标题 用数字表示字体大小-->
-                Login your account
+                Create your account
             </h1>
-            <div style="text-align: left;padding-left: 33.3%;padding-right: 66.6%">
+            <div style="text-align: left">
                 <p> <!-- 段落 -->
                     Email:<br>
-                    <input class = enter type="text" placeholder="Your email address"/>
+                    <input class = enter type="text" placeholder="Your email address" />
                 </p>
                 <p>
                     Password:<br>
                     <input class = enter type="password" placeholder="Please enter your password"/>
                 </p>
+                <p>
+                    Phone&nbspnumber:<br>
+                    <input class = enter type="text" placeholder="Please enter your phone number"/>
+                </p>
             </div>
             <div>
-                <button class = r style="position:absolute;top:650px;left:320px">Register</button>
-                <input class = l style="position:absolute;top:650px;left:550px" type="submit" value="Login" />
+                <input class = button  type="submit" value="Sign up" style="background-color:#2742b7;color:white; float:right"/>
+                <input class = button  value="Back" style=" background-color:white; border-color: #47cd87; color:#47cd87; border:2px solid; float:left" onclick="location.href='login.html'">
             </div>
-
 
 
         </form>
-    </div>
-</div>
-
-<div style ="width:50%;float:left;" id = "RHS">
-    <div style ="position: relative;">
-        <img style ="position: absolute" z-index=-1 id="right" width="100%" height = auto src= "picture/login1.jpg" />
-        <img style ="position: absolute; top:1050px; left:670px;" height="120px" width="auto"  src="picture/logo.svg">
-        <div style="position: absolute;z-index:2; top:100px;left:250px;text-align: center" >
-            <h1 style = "text-align: center;color: white">
-                Your Personal Energy Advocate.
-            </h1>
+        <div align ="center" style="margin-top: 40%">
+            <button class =button  style="background-color: #3b5998;color: white;width: 60%" onclick="location.href='http://www.facebook.com'">
+                Facebook
+            </button>
+            <br>
+            <button class =button  style="background-color: #f44336;color: white;width: 60%" onclick="location.href='http://www.Google.com'">
+                Google
+            </button>
         </div>
     </div>
-</div>
+
+
 </div>
 </body>
 </html>
