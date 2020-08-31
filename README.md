@@ -310,7 +310,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.7 Other Resources
 
-### [Research of React Native](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
+### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
 
 ### [API Documentation](https://docs.google.com/spreadsheets/d/1gNr3FPh65QFX51Mry32Wkf38K353WTDAz6e2r6DYauw/edit?usp=sharing)
 
