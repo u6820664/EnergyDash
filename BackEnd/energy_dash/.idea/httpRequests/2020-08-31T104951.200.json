@@ -1,0 +1,37 @@
+{
+  "code": 200,
+  "data": {
+    "endRow": 1,
+    "firstPage": 1,
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "lastPage": 1,
+    "list": [
+      {
+        "energyPlan": "no plan",
+        "password": "123",
+        "planId": "12345",
+        "userId": "1",
+        "userName": "John"
+      }
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ],
+    "nextPage": 0,
+    "orderBy": null,
+    "pageNum": 1,
+    "pageSize": 20,
+    "pages": 1,
+    "prePage": 0,
+    "size": 1,
+    "startRow": 1,
+    "total": 1
+  },
+  "message": "SUCCESS"
+}

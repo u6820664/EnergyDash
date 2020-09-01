@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.UserDao">
+
+  <resultMap id="UserResultMap" type="team.ienergy.energydash.beans.User">
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <id column="user_name" jdbcType="VARCHAR" property="userName" />
+    <id column="password" jdbcType="VARCHAR" property="password" />
+    <id column="plan_id" jdbcType="VARCHAR" property="planId" />
+    <id column="energy_plan" jdbcType="VARCHAR" property="energyPlan" />
+  </resultMap>
+
+
+  <select id="findAll" resultMap="UserResultMap"  >
+        SELECT * FROM user
+  </select>
+
+
+</mapper>
