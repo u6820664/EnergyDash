@@ -3,16 +3,31 @@
 <mapper namespace="team.ienergy.energydash.dao.UserDao">
 
   <resultMap id="UserResultMap" type="team.ienergy.energydash.beans.User">
-    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
     <id column="user_name" jdbcType="VARCHAR" property="userName" />
     <id column="password" jdbcType="VARCHAR" property="password" />
     <id column="plan_id" jdbcType="VARCHAR" property="planId" />
     <id column="energy_plan" jdbcType="VARCHAR" property="energyPlan" />
   </resultMap>
 
-
   <select id="findAll" resultMap="UserResultMap"  >
         SELECT * FROM user
+  </select>
+
+
+  <select id="signIn" resultMap="UserResultMap">
+    select * from user
+    where 1=1
+    <if test="userName != null and userName !=''">
+      <![CDATA[
+             and user_name = #{userName,jdbcType = VARCHAR}
+            ]]>
+    </if>
+    <if test="password != null and password !=''">
+      <![CDATA[
+             and password = #{password,jdbcType = VARCHAR}
+            ]]>
+    </if>
   </select>
 
 

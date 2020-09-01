@@ -14,5 +14,10 @@ import java.util.List;
 
 public interface UserService {
     List<User> findAll();
+
+    User signUp(String userName, String password);
+
+    User signIn(String userName, String password);
+
 }
 

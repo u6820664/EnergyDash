@@ -27,4 +27,15 @@ public class UserServiceImpl implements UserService{
         List<User> users  = userDao.findAll();
         return users;
     }
+
+    @Override
+    public User signUp(String userName, String password) {
+        return null;
+    }
+
+    @Override
+    public User signIn(String userName, String password) {
+        User user = userDao.signIn(userName,password);
+        return user;
+    }
 }

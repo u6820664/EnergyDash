@@ -20,15 +20,15 @@ public interface UserDao {
     List<User> findAll();
 
     //sign up
-    void signUp(@Param("userName") String userName, @Param("password") String password);
+    void signUp(User user);
 
     //sign in
-    void signIn(@Param("userName") String userName, @Param("password") String password);
+    User signIn(@Param(value = "userName")String userName, @Param(value = "password")String password);
 
+    //get specific user
+    User getUser(String userName);
 
     //User getUser(@Param("userName") String userName, @Param("password") String password);
-
-
 
 }
 
