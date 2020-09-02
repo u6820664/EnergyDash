@@ -32,18 +32,17 @@ public class UserController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public Object listAll() {
         List<User> userList = userService.findAll();
-        JSONObject data = new JSONObject();
-        data.put("rows", userList);
-        data.put("total", userList.size());
+
+        //data.put(userList);
         ResultBean resultBean = new ResultBean();
-        resultBean.setData(data);
+        resultBean.setData(userList);
         return JSON.toJSON(resultBean);
     }
 
     /**
      * @param
      * @return java.lang.Object
-     * @desc interface 1002：search for user information
+     * @desc interface 1002：sign up
      * @author Hao Cao
      * @date 1 September 2020
      * @func_name signUp
