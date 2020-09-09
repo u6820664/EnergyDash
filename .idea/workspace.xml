@@ -20,10 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="Init Front-End Framework">
-      <change afterPath="$PROJECT_DIR$/Resources/Architecture_diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-08-31T104951.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T043919.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T044131.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T044336.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T044340.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T044621.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T045948.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T050034.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T050427.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/2020-09-01T051740.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/beans/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/java/team/ienergy/energydash/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/beans/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/beans/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/energy_dash/target/classes/team/ienergy/energydash/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +67,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="450" />
+    <option name="y" value="135" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
   <component name="ProjectId" id="1g4Vd4OcaIeSINvus3Z6obThiZt" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EnergyDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EnergyDash" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +102,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BackEnd/energy_dash" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,7 +116,22 @@
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="" />
@@ -76,6 +147,7 @@
       <workItem from="1597806934547" duration="1543000" />
       <workItem from="1597925153682" duration="214000" />
       <workItem from="1598166952483" duration="177000" />
+      <workItem from="1599634840657" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Init FrontEnd Code">
       <created>1597374091133</created>
@@ -101,20 +173,76 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init FrontEnd Code" />

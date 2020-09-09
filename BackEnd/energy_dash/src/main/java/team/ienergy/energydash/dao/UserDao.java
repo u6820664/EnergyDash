@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import team.ienergy.energydash.beans.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @desc: A DAO for user information handling
@@ -23,10 +24,10 @@ public interface UserDao {
     void signUp(User user);
 
     //sign in
-    User signIn(@Param(value = "userName")String userName, @Param(value = "password")String password);
+    User signIn(@Param(value = "email")String email, @Param(value = "password")String password);
 
-    //get specific user
-    User getUser(String userName);
+    //get specific user according to unique email
+    User getUser(@Param(value = "email")String email);
 
     //User getUser(@Param("userName") String userName, @Param("password") String password);
 
