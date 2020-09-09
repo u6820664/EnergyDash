@@ -3,6 +3,7 @@ import org.springframework.stereotype.Service;
 import team.ienergy.energydash.beans.User;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -15,9 +16,11 @@ import java.util.List;
 public interface UserService {
     List<User> findAll();
 
-    User signUp(String userName, String password);
+    void signUp(User user);
 
-    User signIn(String userName, String password);
+    User signIn(String email, String password);
+
+    User getUser(String email);
 
 }
 

@@ -7,6 +7,7 @@ import team.ienergy.energydash.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -29,13 +30,19 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User signUp(String userName, String password) {
-        return null;
+    public void signUp(User user) {
+        userDao.signUp(user);
     }
 
     @Override
-    public User signIn(String userName, String password) {
-        User user = userDao.signIn(userName,password);
+    public User signIn(String email, String password) {
+        User user = userDao.signIn(email, password);
+        return user;
+    }
+
+    @Override
+    public User getUser(String email) {
+        User user = userDao.getUser(email);
         return user;
     }
 }
