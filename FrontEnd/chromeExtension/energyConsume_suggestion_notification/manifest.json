@@ -1,0 +1,21 @@
+{
+  "name": "Energy Consume Notify Event Popup",
+  "description": "Demonstrates usage and features of the event page by reminding user to consume energy",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Energy Consume Notify Event",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "energy_notify16.png",
+    "32": "energy_notify32.png",
+    "48": "energy_notify48.png",
+    "128": "energy_notify128.png"
+  }
+}

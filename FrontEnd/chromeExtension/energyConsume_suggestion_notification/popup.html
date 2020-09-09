@@ -1,0 +1,101 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+<head>
+    <title>Energy Consume Notify Event Popup</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1rem;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: initial;
+            line-height: normal;
+        }
+
+        .brand_logo {
+            line-height: normal;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: none;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        button {
+            margin: 0;
+            overflow: visible;
+            text-transform: none;
+            outline: 0;
+            outline-offset: 0;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            color: #fff;
+            background-color: #2742b7;
+            border-color: #2742b7;
+            padding: 1rem 3rem;
+            border-radius: 0.1875rem;
+            display: block;
+            width: 100%;
+            font-weight: 400;
+            box-shadow: 0 2px 2px 0 rgba(102, 64, 178, 0.14), 0 3px 1px -2px rgba(102, 64, 178, 0.2), 0 1px 5px 0 rgba(102, 64, 178, 0.12);
+            cursor: pointer;
+            font-size: 0.875rem;
+            height: 50px;
+            line-height: 1.5;
+        }
+
+        button:hover {
+            color: #fff;
+            background-color: #563696;
+            border-color: #51338c;
+            text-decoration: none;
+        }
+
+        .tips {
+            color: #001737;
+            font-size: 1rem;
+            line-height: normal;
+            box-sizing: border-box;
+            text-shadow: none;
+            box-shadow: none;
+            margin-top: 1.5rem !important;
+            text-align: center !important;
+            font-weight: 300 !important;
+        }
+
+
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+</head>
+<body>
+<div class="brand_logo">
+    <img src='./logo.png' class="logo">
+</div>
+<!-- An Alarm delay of less than the minimum 1 minute will fire
+in approximately 1 minute incriments if released -->
+<div>
+    <button>LOGIN</button>
+</div>
+
+<div class="tips">
+    Don't have an account? <a href="#">Create</a>
+</div>
+      <button id='sampleSecond' value='0.1'>Sample Second</button>
+      <button id='15min' value='15'>15 Minutes</button>
+      <button id='30min' value='30'>30 Minutes</button>
+      <button id='cancelAlarm'>Cancel Alarm</button>
+<!-- link to non-persistent background script -->
+<script src="popup.js"></script>
+</body>
+</html>
