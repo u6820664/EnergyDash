@@ -1,318 +1,400 @@
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalaa@sina.com&originalEmail=lalaa@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T113259.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalaa@sina.com&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033517.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalala@sina.com&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033509.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=ddd@anu.edu.au&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033428.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033346.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033240.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033114.200.json
+
+###
+
+GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-10T033004.200.json
+
+###
+
+POST http://localhost:8080/user/sign_up?email=xxx@anu.edu.au&password=999&userName=dads&postcode=adasd
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T031722.200.json
+
+###
+
+POST http://localhost:8080/user/sign_up?email=asdad&password=999&userName=&postcode=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T031505.200.json
+
+###
+
+POST http://localhost:8080/user/sign_up?email=asdad&password=999&useName=&postcode=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T031408.400.json
+
+###
+
+POST http://localhost:8080/user/sign_up?email=asdad&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T031335.400.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=asdad&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T031006.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T030940.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=dad@google.com&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-09T030842.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=dad@google.com&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T083714.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=Bro&password=999
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T083655.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bro&password=999&email=Bro@google.com&postcode=2603&planId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T083111.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Mom&password=999&email=mom@google.com&postcode=2603&planId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T083010.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Dad&password=999&email=dad@google.com&postcode=2603&planId=88888888
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082802.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Baby&password=999&email=fff@google.com&postcode=2603&planId=88888888
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082751.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Baby&password=999&email=fff@google.com&postcode=2603
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082723.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=tim&password=789&email=sss@qq.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082524.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=tim&password=789&email=sss@qq.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082329.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T082028.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T081941.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T081535.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T081200.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T081043.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T081022.400.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T071015.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=Bob&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T070930.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=Bob&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T063525.200.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=Bob&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061900.500.json
+
+###
+
+POST http://localhost:8080/user/sign_in?email=&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061808.500.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061742.400.json
+
+###
+
+PUT http://localhost:8080/user/sign_in?userName=&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061738.405.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?email=xx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061542.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?email=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061534.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?email=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T061256.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?email=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T060302.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?email=xxx@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T060042.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T054729.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T054215.500.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T053504.200.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T053435.400.json
+
+###
+
+PUT http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T053415.400.json
+
+###
+
+POST http://localhost:8080/user/sign_up?userName=Alex
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-06T053411.405.json
+
+###
+
+POST http://localhost:8080/user/sign_in?userName=Alex&password=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-05T072114.500.json
+
+###
+
 POST http://localhost:8080/user/sign_in?userName=Alex&password=321
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-09-01T105857.200.json
-
-###
-
-GET http://localhost:8080/user/list?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T104809.200.json
-
-###
-
-GET http://localhost:8080/user/list?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T104458-1.200.json
-
-###
-
-GET http://localhost:8080/user/list?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T104458.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T094055.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=333
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T094009.500.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=333
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093945.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=333
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093849.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=333
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093846.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093825.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093647.404.json
-
-###
-
-GET http://localhost:8080/user/list?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093602.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093546.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093432.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093308.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T093225.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=123
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T092954.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=John&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T092946.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T092925.500.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T092916.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T091241.500.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T091035.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?userName=Alex&password=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T090156.404.json
-
-###
-
-POST http://localhost:8080/user/sign_in?Alex=321
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T090110.400.json
-
-###
-
-GET http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T074733.200.json
-
-###
-
-GET http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T074301.405.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T073831.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T062455.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T055358.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T051740.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T050427.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T050034.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T045948.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T044621.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T044340.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T044336.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T044131.200.json
-
-###
-
-POST http://localhost:8080/user/list
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-01T043919.200.json
-
-###
-
-POST http://localhost:8080/user/list?page=1&size=20
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-08-31T104951.200.json
+<> 2020-09-02T112001.200.json
 
 ###
 

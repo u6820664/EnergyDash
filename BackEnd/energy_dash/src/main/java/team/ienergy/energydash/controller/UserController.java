@@ -136,4 +136,42 @@ public class UserController {
         return JSON.toJSON(resultBean);
     }
 
+
+    /**
+     * @param verifiedEmail,originalEmail
+     * @return java.lang.Object
+     * @desc interface 1004: Verify email address existence
+     * @author Hao Cao
+     * @date 9 September 2020
+     * @func_name verifyEmailAddress
+     */
+    @ResponseBody
+    @RequestMapping(value = "/verify_email_address", method = RequestMethod.GET)
+    public Object verifyEmailAddress(@RequestParam(value = "verifiedEmail", required = true) String verifiedEmail,
+                                     @RequestParam(value = "originalEmail", required = true) String originalEmail) {
+
+        if (verifiedEmail == null || verifiedEmail.length() == 0 || originalEmail == null || originalEmail.length() == 0){
+            throw new NormalException("1003"+NormalException.ERROR_CODE_NO_PARA, "Email cannot be empty");
+        }
+        ResultBean resultBean = new ResultBean();
+        Map params = new HashMap();
+        params.put("message", null);
+
+        //check existence of the user according to the email address
+        if (!verifiedEmail.equals(originalEmail)){
+            User testUser = userService.getUser(verifiedEmail);
+
+            if (testUser != null){
+                params.put("message", "The email address has been registered, please change to another one.");
+            }
+            else{
+                params.put("message", "Congratulations, the email address is available");
+            }
+        }
+        resultBean.setData(params);
+        return JSON.toJSON(resultBean);
+    }
+
+
+
 }
