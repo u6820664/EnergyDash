@@ -19,326 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="Fix popup Page">
+    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="add content in profile page">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/web/js/jquery-3.3.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Haonan/findpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Haonan/findpassword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Haonan/loginpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Haonan/loginpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Haonan/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Haonan/loginpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Haonan/picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Haonan/picture.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/picture/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/picture/facebook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/picture/google.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/picture/google.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/picture/login1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/picture/login1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/picture/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/picture/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Jie/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Jie/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/Sign_in_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/Sign_in_up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/bootstrap/js/npm.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/bootstrap/js/npm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/css/signUpStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/css/signUpStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/bg_img.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/bg_img.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/email.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/email.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/facebook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/google.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/google.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/key.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/key.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/visibility.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/visibility.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/images/visibility_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/images/visibility_off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Zixin/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/wiki/Zixin/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_demo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_demo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_layouts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_layouts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_misc.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_preview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_preview.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/_vertical-wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/_vertical-wrapper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_badges.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_badges.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_cards.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_checkbox-radio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_checkbox-radio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_lists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_tables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/_tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/plugin-overrides/_progressbar-js.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/plugin-overrides/_progressbar-js.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/components/plugin-overrides/_pws-tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/components/plugin-overrides/_pws-tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/landing-screens/_auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/landing-screens/_auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/mixins/_animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/mixins/_animation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/mixins/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/mixins/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/mixins/_cards.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/mixins/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/mixins/_misc.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/maps/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/maps/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_alert.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_badge.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_button-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_button-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_close.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_close.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_code.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_code.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_custom-forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_custom-forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_images.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_input-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_input-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_jumbotron.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_jumbotron.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_list-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_media.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_pagination.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_popover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_popover.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_print.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_progress.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_reboot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_root.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_spinners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_spinners.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_tables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_toasts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_toasts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_tooltip.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_transitions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_transitions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_type.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/bootstrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_background-variant.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_badge.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_caret.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_deprecate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_float.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_float.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_grid-framework.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_hover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_hover.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_image.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_nav-divider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_resize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_screen-reader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_size.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_table-row.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_text-emphasis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_text-hide.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/mixins/_visibility.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_align.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_align.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_borders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_borders.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_clearfix.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_display.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_embed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_embed.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_flex.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_flex.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_float.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_float.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_overflow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_overflow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_position.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_position.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_screenreaders.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_shadows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_shadows.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_sizing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_spacing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_stretched-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_stretched-link.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/utilities/_visibility.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/bootstrap/scss/vendor/_rfs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/_animate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/_animate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/_compass.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/_compass.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/_lemonade.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/_lemonade.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/_animate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/_animate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/_core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/_shared.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/_shared.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_attention-seekers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_attention-seekers.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_bouncing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_bouncing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_classes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_classes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_fading.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_fading.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_flippers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_flippers.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_lightspeed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_lightspeed.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_rotating.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_rotating.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/_specials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/_specials.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/bouncing/_bouncing-entrances.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/bouncing/_bouncing-entrances.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/bouncing/_bouncing-exits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/bouncing/_bouncing-exits.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/fading/_fading-entrances.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/fading/_fading-entrances.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/fading/_fading-exits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/fading/_fading-exits.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/rotating/_rotating-entrances.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/rotating/_rotating-entrances.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/animation/animate/rotating/_rotating-exits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/animation/animate/rotating/_rotating-exits.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_css3.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_css3.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_reset-legacy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_reset-legacy.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_support.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_support.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_animation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_appearance.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_appearance.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_background-clip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_background-clip.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_background-origin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_background-origin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_background-size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_background-size.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_border-radius.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_box-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_box-shadow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_box-sizing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_box-sizing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_box.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_box.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_columns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_columns.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_flexbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_flexbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_font-face.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_font-face.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_hyphenation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_hyphenation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_images.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_inline-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_inline-block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_opacity.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_opacity.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_pie.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_pie.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_regions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_regions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_shared.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_shared.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_text-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_text-shadow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_transform-legacy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_transform-legacy.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_transform.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_transform.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_transition.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/css3/_user-interface.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/css3/_user-interface.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_constants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_constants.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_cross_browser_support.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_cross_browser_support.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_display.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_gradient_support.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_gradient_support.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/functions/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/functions/_lists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/layout/_grid-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/layout/_grid-background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/layout/_sticky-footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/layout/_sticky-footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/layout/_stretching.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/layout/_stretching.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/reset/_utilities-legacy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/reset/_utilities-legacy.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/reset/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/reset/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/_links.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/_links.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/_lists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/_text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/_vertical_rhythm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/_vertical_rhythm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/links/_hover-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/links/_hover-link.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/links/_link-colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/links/_link-colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/links/_unstyled-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/links/_unstyled-link.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/lists/_bullets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/lists/_bullets.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/lists/_horizontal-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/lists/_horizontal-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/lists/_inline-block-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/lists/_inline-block-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/lists/_inline-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/lists/_inline-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/text/_ellipsis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/text/_ellipsis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/text/_force-wrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/text/_force-wrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/text/_nowrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/text/_nowrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/typography/text/_replacement.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/typography/text/_replacement.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_color.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_general.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_links.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_links.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_lists.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_print.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_sprites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_sprites.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_tables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/_text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/color/_contrast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/color/_contrast.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_clearfix.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_float.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_float.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_hacks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_hacks.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_min.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_min.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/general/_tag-cloud.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/general/_tag-cloud.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/links/_hover-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/links/_hover-link.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/links/_link-colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/links/_link-colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/links/_unstyled-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/links/_unstyled-link.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/lists/_bullets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/lists/_bullets.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/lists/_horizontal-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/lists/_horizontal-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/lists/_inline-block-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/lists/_inline-block-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/lists/_inline-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/lists/_inline-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/sprites/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/sprites/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/sprites/_sprite-img.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/sprites/_sprite-img.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/tables/_alternating-rows-and-columns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/tables/_alternating-rows-and-columns.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/tables/_borders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/tables/_borders.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/tables/_scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/tables/_scaffolding.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/text/_ellipsis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/text/_ellipsis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/text/_nowrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/text/_nowrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/node_modules/compass-mixins/lib/compass/utilities/text/_replacement.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/node_modules/compass-mixins/lib/compass/utilities/text/_replacement.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/charts/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/forms/basic_elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/forms/basic_elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/icons/mdi.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/icons/mdi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/samples/lock-screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/samples/lock-screen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/samples/login-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/samples/login-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/samples/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/samples/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/samples/register-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/samples/register-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/samples/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/samples/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/tables/basic-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/tables/basic-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/ui-features/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/ui-features/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examples/ui-features/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/examples/ui-features/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/auth/lockscreen-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/auth/lockscreen-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/auth/login-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/auth/login-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/auth/register-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/auth/register-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/faces/face7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/faces/face7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/logo-mini.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/logo-mini.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/images/other/navbar-cover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/images/other/navbar-cover.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/js/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/js/chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/js/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/js/hoverable-collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/js/hoverable-collapse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/js/off-canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/js/off-canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/js/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/js/template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pages/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/pages/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pages/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/pages/auth/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/pages/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/pages/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/chart.js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/chart.js/Chart.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/css/vendor.bundle.base.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/css/vendor.bundle.base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/js/vendor.bundle.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/js/vendor.bundle.base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/css/materialdesignicons.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/css/materialdesignicons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/css/materialdesignicons.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/css/materialdesignicons.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/css/materialdesignicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/css/materialdesignicons.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/css/materialdesignicons.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/css/materialdesignicons.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/fonts/materialdesignicons-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/fonts/materialdesignicons-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/fonts/materialdesignicons-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/vendors/mdi/fonts/materialdesignicons-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/vendors/mdi/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/web/pages/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/pages/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,6 +37,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Zixin &lt;u6605822@anu.edu.au&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1g4Vd4OcaIeSINvus3Z6obThiZt" />
@@ -364,7 +53,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/FrontEnd/chromeExtension/energyConsume_suggestion_notification" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FrontEnd/web/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -373,10 +63,6 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification" />
-      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\web" />
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\wiki" />
@@ -384,8 +70,28 @@
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\img" />
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FrontEnd/web/js" />
+      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification" />
+      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\css" />
+    </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="" />
@@ -402,6 +108,7 @@
       <workItem from="1597925153682" duration="214000" />
       <workItem from="1598166952483" duration="177000" />
       <workItem from="1599686109643" duration="6223000" />
+      <workItem from="1599750879366" duration="846000" />
     </task>
     <task id="LOCAL-00001" summary="Init FrontEnd Code">
       <created>1597374091133</created>
@@ -435,27 +142,33 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init FrontEnd Code" />
     <MESSAGE value="Init Front-End Framework" />
     <MESSAGE value="Fix popup Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix popup Page" />
+    <MESSAGE value="add content in profile page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add content in profile page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="242" y="23" key="CommitChangelistDialog2" timestamp="1599751738727">
+      <screen x="0" y="23" width="1440" height="773" />
+    </state>
+    <state x="242" y="23" key="CommitChangelistDialog2/0.23.1440.773@0.23.1440.773" timestamp="1599751738727" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1597555865458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
