@@ -1,0 +1,72 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+<head>
+    <title>Energy Consume Notify Event Popup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+</head>
+<body>
+<div class="container-scroller d-flex">
+    <div class="container-fluid page-body-wrapper full-page-wrapper d-flex">
+        <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+            <div class="row flex-grow">
+                <div class="col-lg-12 d-flex align-items-center justify-content-center">
+                    <div class="auth-form-transparent text-left p-3">
+                        <div class="brand-logo">
+                            <img src="img/logo.svg" alt="logo">
+                        </div>
+                        <h4>Welcome back!</h4>
+                        <h6 class="font-weight-medium" style="color:#C65EDB">START YOUR PERSONAL ENERGY JOURNEY</h6>
+                        <form class="pt-3" id="loginForm">
+                            <div class="my-3">
+                                <button type="submit" id="loginBtn"
+                                        class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">LOGIN
+                                </button>
+                            </div>
+                            <div class="mb-2 d-flex">
+                                <button id='goodToUse' value='0.1' type="button"
+                                        class="btn btn-success auth-form-btn flex-grow mr-1">
+                                    Good
+                                </button>
+
+                                <button id='badToUse' type="button"
+                                        class="btn btn-danger auth-form-btn flex-grow ml-1">
+                                    Bad
+                                </button>
+
+                            </div>
+                            <div class="mb-2 d-flex">
+                                <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
+                                    Facebook
+                                </button>
+                                <button type="button" class="btn btn-google auth-form-btn flex-grow ml-1">
+                                    Google
+                                </button>
+                            </div>
+
+                            <div class="text-center mt-4 font-weight-light">
+                                Don't have an account? <a href="#" class="text-primary">Create</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- link to non-persistent background script -->
+<script src="js/popup.js"></script>
+</body>
+</html>
