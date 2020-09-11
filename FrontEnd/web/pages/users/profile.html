@@ -17,6 +17,9 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
+    <!--jquery-->
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+
     <style>
         .user_bg {
             background-color: #01baef;
@@ -144,33 +147,115 @@
                                     <div class="card-body">
                                         <h4 class="card-title">User Info</h4>
                                         <form class="forms-sample">
+
+
+                                            <script>
+                                                $.ajax({
+                                                    type: "get",
+                                                    url: 'information',
+                                                    contentType: 'application/json',
+                                                    success: function (response) {
+                                                        document.getElementById('username').setAttribute('value', response.data.userName);
+                                                        document.getElementById('password').setAttribute('value', response.data.password);
+                                                        document.getElementById('postcode').setAttribute('value', response.data.postcode);
+                                                        document.getElementById('planID').setAttribute('value', response.data.planId);
+                                                        document.getElementById('email').setAttribute('value', response.data.email);
+                                                    }
+                                                });
+                                            </script>
+
+                                            <!-- Name -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2"
                                                        class="col-sm-3 col-form-label">Name</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="exampleInputUsername2"
+                                                    <input type="text" class="form-control" id="username"
                                                            placeholder="Nick Name">
                                                 </div>
                                             </div>
+
+
+                                            <!-- Email -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2"
                                                        class="col-sm-3 col-form-label">Email</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="exampleInputUsername2"
+                                                    <input type="text" class="form-control" id="email"
                                                            placeholder="abc@xyz.com">
                                                 </div>
+                                                <!-- 错误 bg-danger 正确 bg-success -->
+                                                <p id="info"></p>
                                             </div>
+
+                                            <!--检测邮箱是否可用-->
+                                            <script>
+                                                // 获取页面中的元素
+                                                var emailInp = document.getElementById("email");
+                                                var info = document.getElementById('info');
+                                                var originalEmail = document.getElementById('email').value;
+
+
+                                                // 当焦点离开文本框以后
+                                                emailInp.onblur = function () {
+                                                    // 获取用户输入的邮箱地址
+                                                    var verifiedEmail = this.value;
+
+                                                    // 验证邮箱地址的正则表达式
+                                                    var reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                                                    // 如果用户输入的邮箱地址不符合规则
+                                                    if (!reg.test(verifiedEmail)) {
+                                                        // 给出用户提示
+                                                        info.innerHTML = 'Please enter an email address that conforms to the rules';
+                                                        // 让提示信息显示为错误提示信息的样式
+                                                        info.className = 'bg-danger';
+                                                        // 阻止程序向下执行
+                                                        return;
+                                                    }
+
+
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: "verify_email_address",
+
+                                                        data: {
+                                                            verifiedEmail: verifiedEmail,
+                                                            originalEmail: originalEmail
+                                                        },
+                                                        success: function (result) {//参数result是服务器响应结果的值
+                                                            //console.log(result);
+                                                            info.innerHTML = result.message;
+                                                            if (result.message == 'Congratulations, the email address is available.') {
+                                                                info.className = 'bg-success';
+                                                            } else {
+                                                                info.className = 'bg-danger';
+                                                            }
+                                                        },
+                                                        error: function (xhr) {
+                                                            //console.log(xhr);
+                                                            info.innerHTML = xhr.message;
+                                                            info.className = 'bg-danger';
+                                                        }
+
+                                                    });
+                                                }
+                                            </script>
+
+
+                                            <!-- Password -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Password</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="exampleInputUsername2"
+                                                    <input type="text" class="form-control" name="password"
+                                                           id="password"
                                                            placeholder="Password">
                                                 </div>
                                             </div>
+
+                                            <!-- Postcode -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Postcode</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="exampleInputUsername2"
+                                                    <input type="text" class="form-control" id="postcode"
                                                            placeholder="2600">
                                                 </div>
                                             </div>
@@ -198,6 +283,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Plan ID -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Plan
                                                     ID </label>
@@ -209,6 +295,40 @@
 
                                             <button type="submit" class="btn btn-primary mr-2">Edit</button>
                                             <button class="btn btn-light">Cancel</button>
+
+
+                                            <!--修改信息-->
+                                            <script>
+                                                $('#btn').on('click', function () {
+
+                                                    var username = document.getElementById('username').value;
+                                                    var password = document.getElementById('password').value;
+                                                    var postcode = document.getElementById('postcode').value;
+                                                    var planID = document.getElementById('planID').value;
+                                                    var email = document.getElementById('email').value;
+
+                                                    $.ajax({
+                                                        type: "post",
+                                                        url: 'information',
+                                                        contentType: 'application/json',
+                                                        data: {
+                                                            password: password,
+                                                            postcode: postcode,
+                                                            planId: planID,
+                                                            userName: username,
+                                                            email: email,
+
+                                                        }
+
+
+                                                    });
+
+                                                });
+
+
+                                            </script>
+
+
                                         </form>
                                     </div>
                                 </div>

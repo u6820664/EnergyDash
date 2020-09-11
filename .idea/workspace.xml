@@ -82,6 +82,10 @@
       <change afterPath="$PROJECT_DIR$/FrontEnd/Android/gradlew" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FrontEnd/Android/gradlew.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FrontEnd/Android/settings.gradle" afterDir="false" />
+    <list default="true" id="d7978256-c8ed-4529-94d8-c4392839c6d5" name="Default Changelist" comment="add content in profile page">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/web/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/web/pages/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/web/pages/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +103,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Zixin &lt;u6605822@anu.edu.au&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -140,7 +149,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/FrontEnd/chromeExtension/energyConsume_suggestion_notification" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FrontEnd/web/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -149,10 +159,6 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification" />
-      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\web" />
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\wiki" />
@@ -160,6 +166,27 @@
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\img" />
       <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FrontEnd/web/js" />
+      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification" />
+      <recent name="C:\Users\Administrator\WebstormProjects\EnergyDash\FrontEnd\chromeExtension\energyConsume_suggestion_notification\css" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,6 +220,7 @@
       <workItem from="1597925153682" duration="214000" />
       <workItem from="1598166952483" duration="177000" />
       <workItem from="1599686109643" duration="6223000" />
+      <workItem from="1599750879366" duration="846000" />
     </task>
     <task id="LOCAL-00001" summary="Init FrontEnd Code">
       <created>1597374091133</created>
@@ -232,13 +260,16 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
             <State>
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
@@ -270,9 +301,14 @@
     <MESSAGE value="Init FrontEnd Code" />
     <MESSAGE value="Init Front-End Framework" />
     <MESSAGE value="Fix popup Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix popup Page" />
+    <MESSAGE value="add content in profile page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add content in profile page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="242" y="23" key="CommitChangelistDialog2" timestamp="1599751738727">
+      <screen x="0" y="23" width="1440" height="773" />
+    </state>
+    <state x="242" y="23" key="CommitChangelistDialog2/0.23.1440.773@0.23.1440.773" timestamp="1599751738727" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1597555865458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
