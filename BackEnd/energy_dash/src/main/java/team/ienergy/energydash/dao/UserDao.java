@@ -29,7 +29,10 @@ public interface UserDao {
     //get specific user according to unique email
     User getUser(@Param(value = "email")String email);
 
+
+    void updateUserProfile(Map paramMap);
     //User getUser(@Param("userName") String userName, @Param("password") String password);
+
 
 }
 

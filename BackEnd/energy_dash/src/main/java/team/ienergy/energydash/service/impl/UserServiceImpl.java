@@ -45,4 +45,9 @@ public class UserServiceImpl implements UserService{
         User user = userDao.getUser(email);
         return user;
     }
+
+    @Override
+    public void updateUserProfile(Map paramMap) {
+        userDao.updateUserProfile(paramMap);
+    }
 }

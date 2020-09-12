@@ -172,6 +172,78 @@ public class UserController {
         return JSON.toJSON(resultBean);
     }
 
+    /**
+     * @param email,userName,password
+     * @return java.lang.Object
+     * @desc interface 1005: load user profile
+     * @author Hao Cao
+     * @date 12 September 2020
+     * @func_name loadUserProfile
+     */
+    @ResponseBody
+    @RequestMapping(value = "/load_user_profile", method = RequestMethod.GET)
+    public Object loadUserProfile(@RequestParam(value = "email", required = true) String email,
+                                  @RequestParam(value = "userName", required = false) String userName,
+                                  @RequestParam(value = "password", required = true) String password) {
+
+        ResultBean resultBean = new ResultBean();
+        User user = userService.signIn(email, password);
+        resultBean.setData(user);
+        return JSON.toJSON(resultBean);
+
+    }
+
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc interface 1006: update user profile
+     * @author Hao Cao
+     * @date 13 September 2020
+     * @func_name updateUserProfile
+     * @Requirement:
+     * 1. Have already check the existence of the updated email address.
+     * 2. All the values need to be received.
+     */
+    @ResponseBody
+    @RequestMapping(value = "/update_user_profile", method = RequestMethod.POST)
+    public Object updateUserProfile(@RequestParam(value = "userName", required = true) String userName,
+                                    @RequestParam(value = "email", required = true) String email,
+                                    @RequestParam(value = "password", required = true) String password,
+                                    @RequestParam(value = "postcode", required = true) String postcode,
+                                    @RequestParam(value = "planId", required = false) String planId,
+                                    @RequestParam(value = "image", required = false) MultipartFile file,
+                                    @RequestParam(value = "originalEmail", required = true) String originalEmail) {
+
+
+        //check existence of the user's originalEmail
+        User testUser = userService.getUser(originalEmail);
+        if (testUser == null){
+            throw new NormalException("1006"+NormalException.ERROR_CODE_NO_RESULT, "Cannot find the user!");
+        }
+
+        User updatedUser = new User();
+        Map paramMap=new HashMap();
+        paramMap.put("userName", userName);
+        paramMap.put("email", email);
+        paramMap.put("password", password);
+        paramMap.put("postcode", postcode);
+        paramMap.put("originalEmail", originalEmail);
+
+        updatedUser.setUserName(userName);
+        updatedUser.setEmail(email);
+        updatedUser.setPassword(password);
+        updatedUser.setPostcode(postcode);
+        if (planId != null && planId.length() != 0){
+            updatedUser.setPlanId(planId);
+            paramMap.put("planId", planId);
+        }
+
+        ResultBean resultBean = new ResultBean();
+        userService.updateUserProfile(paramMap);
+        resultBean.setData(updatedUser);
+        return JSON.toJSON(resultBean);
+    }
+
 
 
 }

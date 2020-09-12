@@ -22,5 +22,7 @@ public interface UserService {
 
     User getUser(String email);
 
+    void updateUserProfile(Map paramMap);
+
 }
 

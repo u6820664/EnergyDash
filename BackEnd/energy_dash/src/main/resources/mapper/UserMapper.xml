@@ -29,7 +29,6 @@
 
   </insert>
 
-
   <select id="signIn" resultMap="UserResultMap">
     select * from user
     where 1=1
@@ -45,8 +44,26 @@
     </if>
   </select>
 
+  <update id="updateUserProfile">
+        UPDATE user
+      <if test="userName != null and userName != ''">
+        set user_name = #{userName,jdbcType = VARCHAR}
+      </if>
+      <if test="email != null and email !=''">
+          ,email = #{email,jdbcType = VARCHAR}
+      </if>
+      <if test="password != null and password !=''">
+          ,password = #{password,jdbcType = VARCHAR}
+      </if>
+      <if test="postcode != null and postcode !=''">
+          ,postcode = #{postcode,jdbcType = VARCHAR}
+      </if>
+      <if test="planId != null and planId !=''">
+          ,plan_id = #{planId,jdbcType = VARCHAR}
+      </if>
+      where email = #{originalEmail,jdbcType = VARCHAR}
 
-
+  </update>
 
 
 </mapper>

@@ -4,23 +4,37 @@
 
   <resultMap id="UserResultMap" type="team.ienergy.energydash.beans.User">
     <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <id column="email" jdbcType="VARCHAR" property="email" />
     <id column="user_name" jdbcType="VARCHAR" property="userName" />
     <id column="password" jdbcType="VARCHAR" property="password" />
+    <id column="postcode" jdbcType="VARCHAR" property="postcode" />
     <id column="plan_id" jdbcType="VARCHAR" property="planId" />
-    <id column="energy_plan" jdbcType="VARCHAR" property="energyPlan" />
+    <id column="image" jdbcType="BLOB" property="image" />
   </resultMap>
 
   <select id="findAll" resultMap="UserResultMap"  >
         SELECT * FROM user
   </select>
 
+  <select id="getUser" resultMap="UserResultMap"  >
+        SELECT * FROM user
+        where 1=1 and email = #{email,jdbcType = VARCHAR}
+  </select>
+
+  <insert id="signUp" parameterType="team.ienergy.energydash.beans.User">
+        INSERT INTO user
+        (user_name, email, password, postcode, plan_id, image)
+        VALUE
+        (#{userName},#{email},#{password},#{postcode},#{planId},#{image})
+
+  </insert>
 
   <select id="signIn" resultMap="UserResultMap">
     select * from user
     where 1=1
-    <if test="userName != null and userName !=''">
+    <if test="email != null and email !=''">
       <![CDATA[
-             and user_name = #{userName,jdbcType = VARCHAR}
+             and email = #{email,jdbcType = VARCHAR}
             ]]>
     </if>
     <if test="password != null and password !=''">
@@ -29,6 +43,27 @@
             ]]>
     </if>
   </select>
+
+  <update id="updateUserProfile">
+        UPDATE user
+      <if test="userName != null and userName != ''">
+        set user_name = #{userName,jdbcType = VARCHAR}
+      </if>
+      <if test="email != null and email !=''">
+          ,email = #{email,jdbcType = VARCHAR}
+      </if>
+      <if test="password != null and password !=''">
+          ,password = #{password,jdbcType = VARCHAR}
+      </if>
+      <if test="postcode != null and postcode !=''">
+          ,postcode = #{postcode,jdbcType = VARCHAR}
+      </if>
+      <if test="planId != null and planId !=''">
+          ,plan_id = #{planId,jdbcType = VARCHAR}
+      </if>
+      where email = #{originalEmail,jdbcType = VARCHAR}
+
+  </update>
 
 
 </mapper>
