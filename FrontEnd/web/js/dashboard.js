@@ -254,6 +254,79 @@
       });
     }
 
+    if ($("#task-chart2").length) {
+      var taskChartCanvas = $("#task-chart2").get(0).getContext("2d");
+      var taskChart = new Chart(taskChartCanvas, {
+        type: 'bar',
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
+          datasets: [{
+            label: 'Profit',
+            data: [-3, -5, -5, 3, 4, -5, -1, 9],
+            backgroundColor: '#f83e37'
+          }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0
+            }
+          },
+          scales: {
+            yAxes: [{
+              display: true,
+              gridLines: {
+                drawBorder: false,
+                color: '#f1f3f9',
+                zeroLineColor: '#f1f3f9'
+              },
+              ticks: {
+                display: true,
+                fontColor: "#9fa0a2",
+                fontSize: 10,
+                padding: 0,
+                stepSize: 10,
+                min: -10,
+                max: 10
+              }
+            }],
+            xAxes: [{
+              display: false,
+              stacked: false,
+              categoryPercentage: 1,
+              ticks: {
+                display: false,
+                beginAtZero: false,
+                display: true,
+                padding: 10,
+                fontSize: 11
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+                display: false
+              },
+              position: 'bottom',
+              barPercentage: 0.7
+            }]
+          },
+          legend: {
+            display: false
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        }
+      });
+    }
+
     if ($("#regional-chart").length) {
       var regionalChartCanvas = $("#regional-chart").get(0).getContext("2d");
       var regionalChart = new Chart(regionalChartCanvas, {

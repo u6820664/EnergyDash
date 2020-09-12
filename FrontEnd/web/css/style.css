@@ -1,3 +1,6 @@
+
+.show{ display: block !important;}
+
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
@@ -18740,6 +18743,12 @@ code {
 .stretch-card > .card {
   width: 100%;
   min-width: 100%;
+  position: relative;
+}
+.dropdown{
+	position: absolute;
+	right: 0px;
+	top: 40px;
 }
 
 @media (min-width: 576px) {
