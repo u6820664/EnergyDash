@@ -161,6 +161,7 @@
                                                         document.getElementById('planID').setAttribute('value', response.data.planId);
                                                         document.getElementById('email').setAttribute('value', response.data.email);
                                                     }
+
                                                 });
                                             </script>
 
@@ -192,10 +193,9 @@
                                                 // 获取页面中的元素
                                                 var emailInp = document.getElementById("email");
                                                 var info = document.getElementById('info');
-                                                var originalEmail = document.getElementById('email').value;
 
 
-                                                // 当焦点离开文本框以后
+                                                // 当文本框离开焦点以后
                                                 emailInp.onblur = function () {
                                                     // 获取用户输入的邮箱地址
                                                     var verifiedEmail = this.value;
@@ -213,18 +213,42 @@
                                                     }
 
 
+                                                    // var originalEmail = document.getElementById('email').value;
+
+                                                    //请求information页面前定义的变量
+                                                    var originalEmail = "";
+
+                                                    //请求information页面，获取原始email的值
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: 'information',
+                                                        contentType: 'application/json',
+                                                        async: false, // 要求同步
+                                                        success: function (response) {
+                                                            //希望用从information页面请求来的值更新
+                                                            originalEmail = response.data.email;
+                                                            // console.log("information传来的，originalEmail:" + originalEmail);
+                                                        }
+
+                                                    });
+
+
+                                                    // console.log("请求后，originalEmail:" + originalEmail);
+
                                                     $.ajax({
                                                         type: "get",
                                                         url: "verify_email_address",
-
                                                         data: {
                                                             verifiedEmail: verifiedEmail,
                                                             originalEmail: originalEmail
                                                         },
                                                         success: function (result) {//参数result是服务器响应结果的值
                                                             //console.log(result);
+                                                            //console.log("传输后，originalEmail:" + originalEmail);
+                                                            //console.log("verifiedEmail:" + verifiedEmail);
+
                                                             info.innerHTML = result.message;
-                                                            if (result.message == 'Congratulations, the email address is available.') {
+                                                            if (result.message === 'Congratulations, the email address is available.') {
                                                                 info.className = 'bg-success';
                                                             } else {
                                                                 info.className = 'bg-danger';
@@ -237,7 +261,9 @@
                                                         }
 
                                                     });
+
                                                 }
+
                                             </script>
 
 
@@ -293,36 +319,80 @@
                                                 </div>
                                             </div>
 
-                                            <button type="submit" class="btn btn-primary mr-2">Edit</button>
+                                            <button id="btn" type="button" class="btn btn-primary mr-2">Edit</button>
                                             <button class="btn btn-light">Cancel</button>
-
 
                                             <!--修改信息-->
                                             <script>
-                                                $('#btn').on('click', function () {
+                                                //比较文本框里的数据和源数据，看传递哪一个
+                                                function contrastContent(inp, ori) {
+                                                    var otp = ori;
 
-                                                    var username = document.getElementById('username').value;
-                                                    var password = document.getElementById('password').value;
-                                                    var postcode = document.getElementById('postcode').value;
-                                                    var planID = document.getElementById('planID').value;
-                                                    var email = document.getElementById('email').value;
+                                                    //说明用户确实修改过文本框里的数据
+                                                    if (inp !== "") {
+                                                        //并且两次数据不一样
+                                                        if (inp !== ori) {
+                                                            //用文本框里的
+                                                            otp = inp;
+                                                        }
+                                                    }
+
+                                                    return otp;
+                                                }
+
+                                                $("#btn").on('click', function () {
+
+                                                    // 先尝试获取文本框中的内容。如果不为空说明用户修改过了。
+                                                    var usernameINP = document.getElementById('username').value;
+                                                    var passwordINP = document.getElementById('password').value;
+                                                    var postcodeINP = document.getElementById('postcode').value;
+                                                    var planIDINP = document.getElementById('planID').value;
+                                                    var emailINP = document.getElementById('email').value;
+
+
+                                                    var usernameORI = "";
+                                                    var passwordORI = "";
+                                                    var postcodeORI = "";
+                                                    var planIDORI = "";
+                                                    var emailORI = "";
+
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: 'information',
+                                                        async: false, // 要求同步
+                                                        success: function (response) {
+                                                            // 这部分是从数据库获取的原始数据
+                                                            usernameORI = response.data.userName;
+                                                            passwordORI = response.data.password;
+                                                            postcodeORI = response.data.postcode;
+                                                            planIDORI = response.data.planId;
+                                                            emailORI = response.data.email;
+                                                        }
+                                                    });
+
+
+                                                    var usernameOtp = contrastContent(usernameINP, usernameORI);
+                                                    var passwordOtp = contrastContent(passwordINP, passwordORI);
+                                                    var postcodeOtp = contrastContent(postcodeINP, postcodeORI);
+                                                    var planIDOtp = contrastContent(planIDINP, planIDORI);
+                                                    var emailOtp = contrastContent(emailINP, emailORI);
+
 
                                                     $.ajax({
                                                         type: "post",
-                                                        url: 'information',
-                                                        contentType: 'application/json',
+                                                        url: 'editServlet',
                                                         data: {
-                                                            password: password,
-                                                            postcode: postcode,
-                                                            planId: planID,
-                                                            userName: username,
-                                                            email: email,
-
+                                                            password: passwordOtp,
+                                                            postcode: postcodeOtp,
+                                                            planId: planIDOtp,
+                                                            userName: usernameOtp,
+                                                            email: emailOtp,
                                                         }
-
 
                                                     });
 
+
+                                                    alert("Modified successfully.")
                                                 });
 
 
