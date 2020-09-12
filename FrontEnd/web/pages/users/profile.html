@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rexergy | User Profile</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png"/>
+
+    <!--jquery-->
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+
+    <style>
+        .user_bg {
+            background-color: #01baef;
+            background-image: linear-gradient(360deg, #01baef 0%, #20bf55 80%);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="adcenter"></div>
+<div class="container-scroller d-flex">
+    <!-- partial:./partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <li class="nav-item sidebar-category">
+                <p>Navigation</p>
+                <span></span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../dashboard.html">
+                    <i class="mdi mdi-view-quilt menu-icon"></i>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="mdi mdi-account menu-icon"></i>
+                    <span class="menu-title">User Profile</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:./partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row">
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+                <div class="navbar-brand-wrapper">
+                    <a class="navbar-brand brand-logo" href="index.html"><img src="../../images/logo.svg"
+                                                                              alt="logo"/></a>
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../images/logo-mini.svg"
+                                                                                   alt="logo"/></a>
+                </div>
+                <ul class="navbar-nav navbar-nav-right">
+
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                        data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+            <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1 text-black">Welcome back, Alex Xiu</h4>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <i class="mdi mdi-flash text-success"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <i class="mdi mdi-flash-alert text-danger"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <i class="mdi mdi-cog text-primary"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <i class="mdi mdi-logout text-primary"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 grid-margin stretch-card">
+                        <div class="row w-100 flex-grow">
+                            <div class="col-md-4 grid-margin stretch-card">
+                                <div class="card text-white">
+                                    <div class="card-body user_bg">
+                                        <div class="col-md-12" align="center">
+                                            <img src="../../images/faces/face1.jpg" alt="image"/>
+                                            <p class="display-4">Alex</p>
+                                            <p>Platinum member</p>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <blockquote class="blockquote">
+                                                <address>
+                                                    <p class="font-weight-bold">ANU</p>
+                                                    <p>
+                                                        University Ave,
+                                                    </p>
+                                                    <p>
+                                                        Unit 15
+                                                    </p>
+                                                    <p>
+                                                        Canberra, ACT 2600
+                                                    </p>
+                                                </address>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">User Info</h4>
+                                        <form class="forms-sample">
+
+
+                                            <script>
+                                                $.ajax({
+                                                    type: "get",
+                                                    url: 'information',
+                                                    contentType: 'application/json',
+                                                    success: function (response) {
+                                                        document.getElementById('username').setAttribute('value', response.data.userName);
+                                                        document.getElementById('password').setAttribute('value', response.data.password);
+                                                        document.getElementById('postcode').setAttribute('value', response.data.postcode);
+                                                        document.getElementById('planID').setAttribute('value', response.data.planId);
+                                                        document.getElementById('email').setAttribute('value', response.data.email);
+                                                    }
+                                                });
+                                            </script>
+
+                                            <!-- Name -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2"
+                                                       class="col-sm-3 col-form-label">Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="username"
+                                                           placeholder="Nick Name">
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Email -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2"
+                                                       class="col-sm-3 col-form-label">Email</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="email"
+                                                           placeholder="abc@xyz.com">
+                                                </div>
+                                                <!-- 错误 bg-danger 正确 bg-success -->
+                                                <p id="info"></p>
+                                            </div>
+
+                                            <!--检测邮箱是否可用-->
+                                            <script>
+                                                // 获取页面中的元素
+                                                var emailInp = document.getElementById("email");
+                                                var info = document.getElementById('info');
+                                                var originalEmail = document.getElementById('email').value;
+
+
+                                                // 当焦点离开文本框以后
+                                                emailInp.onblur = function () {
+                                                    // 获取用户输入的邮箱地址
+                                                    var verifiedEmail = this.value;
+
+                                                    // 验证邮箱地址的正则表达式
+                                                    var reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                                                    // 如果用户输入的邮箱地址不符合规则
+                                                    if (!reg.test(verifiedEmail)) {
+                                                        // 给出用户提示
+                                                        info.innerHTML = 'Please enter an email address that conforms to the rules';
+                                                        // 让提示信息显示为错误提示信息的样式
+                                                        info.className = 'bg-danger';
+                                                        // 阻止程序向下执行
+                                                        return;
+                                                    }
+
+
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: "verify_email_address",
+
+                                                        data: {
+                                                            verifiedEmail: verifiedEmail,
+                                                            originalEmail: originalEmail
+                                                        },
+                                                        success: function (result) {//参数result是服务器响应结果的值
+                                                            //console.log(result);
+                                                            info.innerHTML = result.message;
+                                                            if (result.message == 'Congratulations, the email address is available.') {
+                                                                info.className = 'bg-success';
+                                                            } else {
+                                                                info.className = 'bg-danger';
+                                                            }
+                                                        },
+                                                        error: function (xhr) {
+                                                            //console.log(xhr);
+                                                            info.innerHTML = xhr.message;
+                                                            info.className = 'bg-danger';
+                                                        }
+
+                                                    });
+                                                }
+                                            </script>
+
+
+                                            <!-- Password -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Password</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" name="password"
+                                                           id="password"
+                                                           placeholder="Password">
+                                                </div>
+                                            </div>
+
+                                            <!-- Postcode -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Postcode</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="postcode"
+                                                           placeholder="2600">
+                                                </div>
+                                            </div>
+
+                                            <!--                                            <div class="form-group row">-->
+                                            <!--                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Address</label>-->
+                                            <!--                                                <div class="col-sm-9">-->
+                                            <!--                                                    <input type="text" class="form-control" id="exampleInputUsername2"-->
+                                            <!--                                                           placeholder="81 Woolley St, Dickson ACT 2602">-->
+                                            <!--                                                </div>-->
+                                            <!--                                            </div>-->
+
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Profile
+                                                    photo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="file" name="img[]" class="file-upload-default">
+                                                    <div class="input-group col-xs-12">
+                                                        <input type="text" class="form-control file-upload-info"
+                                                               disabled placeholder="Upload Image">
+                                                        <span class="input-group-append"> <button
+                                                                class="file-upload-browse btn btn-primary"
+                                                                type="button">Upload</button> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Plan ID -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Plan
+                                                    ID </label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="exampleInputUsername2"
+                                                           placeholder="7500128">
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary mr-2">Edit</button>
+                                            <button class="btn btn-light">Cancel</button>
+
+
+                                            <!--修改信息-->
+                                            <script>
+                                                $('#btn').on('click', function () {
+
+                                                    var username = document.getElementById('username').value;
+                                                    var password = document.getElementById('password').value;
+                                                    var postcode = document.getElementById('postcode').value;
+                                                    var planID = document.getElementById('planID').value;
+                                                    var email = document.getElementById('email').value;
+
+                                                    $.ajax({
+                                                        type: "post",
+                                                        url: 'information',
+                                                        contentType: 'application/json',
+                                                        data: {
+                                                            password: password,
+                                                            postcode: postcode,
+                                                            planId: planID,
+                                                            userName: username,
+                                                            email: email,
+
+                                                        }
+
+
+                                                    });
+
+                                                });
+
+
+                                            </script>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:./partials/_footer.html -->
+            <footer class="footer">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+                            <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright © 2020 Energy
+                                Dash Team. All
+                                rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- base:js -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<!-- endinject -->
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- 网站信息 不会展示给浏览人员 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome to Rexergy</title> <!-- 网站标题 -->
+    <link rel="stylesheet" href="login.css" type=text/css>
+</head>
+<style>
+    .bigImg {
+        position: relative;
+    }
+
+    .smallImg {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+
+    .slogan {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        text-align: center;
+        color: white;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <!--    <div class = p1 >-->
+
+    <!--        <img style ="width: 100%;z-index: -1;" src="picture/login1.jpg">-->
+    <!--        <h1 class="Flex-fadeIn" style = "text-align: center;color: white;position: absolute;top:20%;left:62.5%">-->
+    <!--            Your Personal Energy Advocate.-->
+    <!--        </h1>-->
+    <!--        <img class="Flex-fadeIn" src="picture/logo.svg" style="position:absolute;top:112%;left:80%;width: 20%">-->
+
+    <!--    </div>-->
+
+    //绝对位置的相对位置，只能通过DIV中实现，不能再IMG里面去写
+    <div class="p1 Flex-fadeIn">
+        <div class="bigImg">
+            <img style="width: -webkit-fill-available;" src="picture/login1.jpg">
+            <div class="slogan"><h1>Your Personal Energy Advocate.</h1></div>
+            <div class="smallImg"><img style="width: 200px;" src="picture/logo.svg"/></div>
+        </div>
+    </div>
+
+
+    <div class="login Flex-fadeIn">
+        <form>
+            <p style="color: purple;font-size: 15px;">START YOUR PERSONAL ENERGY JOURNEY</p>
+            <h1> <!-- 一级二级标题 用数字表示字体大小-->
+                Login your account
+            </h1>
+            <div style="text-align: left">
+                <p> <!-- 段落 -->
+                    Email:<br>
+                    <input class=enter type="text" placeholder="Your email address"/>
+                </p>
+                <p>
+                    Password:<br>
+                    <input class=enter type="password" placeholder="Please enter your password"/>
+                </p>
+            </div>
+            <div>
+                <input class=button type="submit" value="Login"
+                       style="background-color:#2742b7;color:white; float:right"/>
+                <input class=button value="Sign up"
+                       style=" background-color:white; border-color: #47cd87; color:#47cd87; border:2px solid; float:left"
+                       onclick="location.href='register.html'">
+            </div>
+            <div>
+                <p style="color:#2742b7;margin-top:3%;float:right">
+                    Forget password?
+                </p>
+            </div>
+
+        </form>
+        <div align="center" style="margin-top: 40%">
+            <button class=button style="background-color: #3b5998;color: white;width: 60%"
+                    onclick="location.href='http://www.facebook.com'">
+                Facebook
+            </button>
+            <br>
+            <button class=button style="background-color: #f44336;color: white;width: 60%"
+                    onclick="location.href='http://www.Google.com'">
+                Google
+            </button>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

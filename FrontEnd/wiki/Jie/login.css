@@ -1,0 +1,59 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 15% 20% 15% 16.66% 16.66% 16.66%;
+    grid-template-rows: 15% 20% 15% 16.66% 16.66% 16.66%;
+}
+.p1 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+
+
+
+}
+
+
+.login{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start:3;
+    grid-row-end:5;
+}
+.enter{
+    height: 30px;
+    width: 100%;
+    border: 1px solid #ccc;
+
+    border-radius: 15px;
+    margin-top:8px;
+}
+input::-webkit-input-placeholder {
+    color: darkgray;
+}
+.button{
+    height:40px;
+    width: 48%;
+    border-radius: 25px;
+    border:0px;
+    margin-top:10px;
+    text-align: center;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0.5; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+
+.Flex-fadeIn {
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 1s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数 infinite 为无限 否则就是具体次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
