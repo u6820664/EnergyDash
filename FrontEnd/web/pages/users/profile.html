@@ -255,6 +255,9 @@
                                                 var info = document.getElementById('info');
                                                 var flag = false;
 
+                                                if (emailInp.value === "") {
+                                                    flag = true;
+                                                }
 
                                                 // 当文本框离开焦点以后
                                                 emailInp.onblur = function () {
@@ -403,13 +406,13 @@
                                                             }
 
                                                         });
-                                                        alert("Edited successfully.");
+                                                        alert("Edit successfully.");
                                                         flag = false;
                                                     }
 
                                                 });
                                             </script>
-
+                                            
                                         </form>
                                     </div>
                                 </div>
