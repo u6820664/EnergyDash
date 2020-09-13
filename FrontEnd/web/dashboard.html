@@ -140,6 +140,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link icon-link">
+                            <i class="mdi mdi-flash-alert text-warning"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
                             <i class="mdi mdi-flash-alert text-danger"></i>
                         </a>
                     </li>
@@ -210,7 +215,20 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <canvas id="audience-chart"></canvas>
+                                    </div>
+                                    <div class="card-body">
+                                        <!--1-->
+                                        <div class="month_canvas show" style="display: none;">
+                                            <canvas id="audience-chart" height="130"></canvas>
+                                        </div>
+                                        <!--2-->
+                                        <div class="week-tab_canvas" style="display: none;">
+                                            <canvas id="audience-chart-week" height="130"></canvas>
+                                        </div>
+                                        <!--3-->
+                                        <div class="day-tab_canvas" style="display: none;">
+                                            <canvas id="audience-chart-day" height="130"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
