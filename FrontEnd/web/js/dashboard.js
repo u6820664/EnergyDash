@@ -2,8 +2,8 @@
   'use strict';
   $(function() {
 
-    if ($("#audience-chart").length) {
-      var AudienceChartCanvas = $("#audience-chart").get(0).getContext("2d");
+    if ($("#audience-chart-month").length) {
+      var AudienceChartCanvas = $("#audience-chart-month").get(0).getContext("2d");
       var AudienceChart = new Chart(AudienceChartCanvas, {
         type: 'bar',
         data: {
@@ -86,7 +86,7 @@
     }
 
     if ($("#audience-chart-week").length) {
-      var AudienceChartCanvas = $("#audience-chart").get(0).getContext("2d");
+      var AudienceChartCanvas = $("#audience-chart-week").get(0).getContext("2d");
       var AudienceChart = new Chart(AudienceChartCanvas, {
         type: 'bar',
         data: {
@@ -169,7 +169,7 @@
     }
 
     if ($("#audience-chart-day").length) {
-      var AudienceChartCanvas = $("#audience-chart").get(0).getContext("2d");
+      var AudienceChartCanvas = $("#audience-chart-day").get(0).getContext("2d");
       var AudienceChart = new Chart(AudienceChartCanvas, {
         type: 'bar',
         data: {
