@@ -71,20 +71,23 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item">
+                    <li class="nav-item radin1 radpub">
                         <a href="#" class="nav-link icon-link">
                             <i class="mdi mdi-flash text-success"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item radin2 radpub">
                         <a href="#" class="nav-link icon-link">
                             <i class="mdi mdi-flash-alert text-warning"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item radin3 radpub">
                         <a href="#" class="nav-link icon-link">
                             <i class="mdi mdi-flash-alert text-danger"></i>
                         </a>
+                    </li>
+                    <li class="nav-item radpubH">
+                        &nbsp;
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link icon-link">
@@ -97,6 +100,30 @@
                         </a>
                     </li>
                 </ul>
+                <script src="js/jquery-3.3.1.min.js"></script>
+
+                <script>
+
+                    $(function(){
+                        function sj() {
+                            var rand = Math.random() * 3;
+
+                            if(0 < rand && rand < 1){
+                                $(".radin1").find('i').show();
+                                $(".radin1").siblings('.radpub').find('i').hide();
+                            }
+                            if(1 < rand && rand < 2){
+                                $(".radin2").find('i').show();
+                                $(".radin2").siblings('.radpub').find('i').hide();
+                            }
+                            if(2 < rand && rand < 3){
+                                $(".radin3").find('i').show();
+                                $(".radin3").siblings('.radpub').find('i').hide();
+                            }
+                        }
+                        setInterval(sj, 1000)
+                    })
+                </script>
             </div>
         </nav>
 
