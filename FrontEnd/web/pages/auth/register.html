@@ -35,6 +35,44 @@
             line-height: 10px;
             text-align: right;
         }
+
+        .drag {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #e8e8e8;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .bg {
+            width: 40px;
+            height: 100%;
+            position: absolute;
+            background-color: #75CDF9;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            user-select: none;
+        }
+
+        .btnX {
+            width: 40px;
+            height: 38px;
+            position: absolute;
+            border: 1px solid #ccc;
+            cursor: move;
+            font-family: Sans-serif, serif;
+            text-align: center;
+            background-color: #fff;
+            user-select: none;
+            color: #666;
+        }
+
     </style>
 </head>
 
@@ -50,19 +88,28 @@
                         </div>
                         <h4>New here?</h4>
                         <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
+
+
+                        <!--Username-->
                         <form class="pt-3" id="registerForm">
+
+
+                            <!--Username-->
                             <div class="form-group">
                                 <label>Username</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend bg-transparent">
-                      <span class="input-group-text bg-transparent border-right-0">
-                        <i class="mdi mdi-account-outline text-primary"></i>
-                      </span>
+                                      <span class="input-group-text bg-transparent border-right-0">
+                                        <i class="mdi mdi-account-outline text-primary"></i>
+                                      </span>
                                     </div>
                                     <input type="text" class="form-control form-control-lg border-left-0" id="username"
                                            placeholder="Username">
                                 </div>
                             </div>
+
+
+                            <!--Email-->
                             <div class="form-group">
                                 <label>Email</label>
                                 <div class="input-group">
@@ -80,6 +127,7 @@
                             </div>
 
 
+                            <!--Password-->
                             <div class="form-group">
                                 <label>Password</label>
                                 <div class="input-group">
@@ -94,33 +142,126 @@
                                 </div>
                             </div>
 
+
+                            <!--Postcode-->
                             <div class="form-group">
                                 <label>Postcode</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
-                                            <i class="mdi mdi-lock-outline text-primary"></i>
+                                                <!--<i class="mdi mdi-lock-outline text-primary"></i>-->
                                           </span>
                                     </div>
 
-                                    <input type="password" class="form-control form-control-lg border-left-0"
-                                           id="password" placeholder="Postcode">
+                                    <input type="text" class="form-control form-control-lg border-left-0"
+                                           id="postcode" placeholder="Postcode">
                                 </div>
                             </div>
 
+                            <!--Verification Bar-->
                             <div class="form-group">
-                                <label>Verification code</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
-                                          <span class="input-group-text bg-transparent border-right-0">
-                                            <i class="mdi mdi-lock-outline text-primary"></i>
-                                          </span>
+                                <label>Verification Bar</label>
+                                <div class="drag">
+                                    <div class="bg"></div>
+                                    <div class="text" onselectstart="return false;">Please drag the slider to unlock
                                     </div>
-
-                                    <input type="password" class="form-control form-control-lg border-left-0"
-                                           id="password" placeholder="Verification code">
+                                    <div class="btnX">&gt;&gt;</div>
                                 </div>
                             </div>
+
+                            <script>
+                                /*
+                                  滑动验证
+                                */
+                                var slideFlag = false;
+
+                                //一、定义一个获取DOM元素的方法
+                                var $ = function (selector) {
+                                        return document.querySelector(selector);
+                                    },
+                                    box = $(".drag"),//容器
+                                    bg = $(".bg"),//背景
+                                    text = $(".text"),//文字
+                                    btnX = $(".btnX"),//滑块
+                                    success = false,//是否通过验证的标志
+                                    distance = box.offsetWidth - btnX.offsetWidth;//滑动成功的宽度（距离）
+
+                                //二、给滑块注册鼠标按下事件
+                                btnX.onmousedown = function (e) {
+
+                                    //1.鼠标按下之前必须清除掉后面设置的过渡属性
+                                    btnX.style.transition = "";
+                                    bg.style.transition = "";
+
+                                    //说明：clientX 事件属性会返回当事件被触发时，鼠标指针向对于浏览器页面(或客户区)的水平坐标。
+
+                                    //2.当滑块位于初始位置时，得到鼠标按下时的水平位置
+                                    var e = e || window.event;
+                                    var downX = e.clientX;
+
+                                    //三、给文档注册鼠标移动事件
+                                    document.onmousemove = function (e) {
+                                        var e = e || window.event;
+                                        //1.获取鼠标移动后的水平位置
+                                        var moveX = e.clientX;
+
+                                        //2.得到鼠标水平位置的偏移量（鼠标移动时的位置 - 鼠标按下时的位置）
+                                        var offsetX = moveX - downX;
+
+                                        //3.在这里判断一下：鼠标水平移动的距离 与 滑动成功的距离 之间的关系
+                                        if (offsetX > distance) {
+                                            offsetX = distance;//如果滑过了终点，就将它停留在终点位置
+                                        } else if (offsetX < 0) {
+                                            offsetX = 0;//如果滑到了起点的左侧，就将它重置为起点位置
+                                        }
+
+                                        //4.根据鼠标移动的距离来动态设置滑块的偏移量和背景颜色的宽度
+                                        btnX.style.left = offsetX + "px";
+                                        bg.style.width = offsetX + "px";
+
+                                        //如果鼠标的水平移动距离 = 滑动成功的宽度
+                                        if (offsetX === distance) {
+                                            //1.设置滑动成功后的样式
+                                            text.innerHTML = "Verified successfully.";
+                                            text.style.color = "#fff";
+                                            //btnX.innerHTML = "&radic;";
+                                            btnX.innerHTML = "✓";
+                                            btnX.style.color = "green";
+                                            bg.style.backgroundColor = "lightgreen";
+
+                                            //2.设置滑动成功后的状态
+                                            success = true;
+                                            //成功后，清除掉鼠标按下事件和移动事件（因为移动时并不会涉及到鼠标松开事件）
+                                            btnX.onmousedown = null;
+                                            document.onmousemove = null;
+
+                                            //3.成功解锁后的回调函数
+                                            setTimeout(function () {
+                                                //alert('Verified successfully');
+                                                slideFlag = true;
+                                            }, 100);
+                                        }
+                                    };
+
+                                    //四、给文档注册鼠标松开事件
+                                    document.onmouseup = function (e) {
+
+                                        //如果鼠标松开时，滑到了终点，则验证通过
+                                        if (success) {
+                                            return;
+                                        } else {
+                                            //反之，则将滑块复位（设置了1s的属性过渡效果）
+                                            btnX.style.left = 0;
+                                            bg.style.width = 0;
+                                            btnX.style.transition = "left 1s ease";
+                                            bg.style.transition = "width 1s ease";
+                                        }
+                                        //只要鼠标松开了，说明此时不需要拖动滑块了，那么就清除鼠标移动和松开事件。
+                                        document.onmousemove = null;
+                                        document.onmouseup = null;
+                                    }
+                                };
+                            </script>
 
                             <div class="mb-4">
                                 <div class="form-check">
@@ -259,48 +400,61 @@
             emailFlag = false;
             return;
         } else {
-            //"unchecked"
-            if (!document.getElementById('chb').checked) {
-                alert("Sorry, you must agree to the privacy policy to register.");
+            // 用户名为空
+            if (document.getElementById("username").value === "") {
+                alert("Sorry, the username cannot be empty.");
                 return;
             } else {
-                // 密码栏为空
-                if (document.getElementById("password").value === "") {
-                    alert("Sorry, the password cannot be empty.");
+                // 密码长度不对，必须是8-16位
+                if (document.getElementById("password").value.length < 8 || document.getElementById("password").value.length > 16) {
+                    alert("Sorry, the password should be 8-16 in length.");
                     return;
                 } else {
-                    // 用户名为空
-                    if (document.getElementById("username").value === "") {
-                        alert("Sorry, the username cannot be empty.");
+                    // 邮编为空
+                    if (document.getElementById("postcode").value === "") {
+                        alert("Sorry, the postcode cannot be empty.");
                         return;
-
                     } else {
-                        // 先尝试获取文本框中的内容。如果不为空说明用户修改过了。
-                        var usernameINP = document.getElementById('username').value;
-                        var passwordINP = document.getElementById('password').value;
-                        //var planIDINP = document.getElementById('planID').value;
-                        var emailINP = document.getElementById('email').value;
+                        // 未同意隐私条款
+                        if (!document.getElementById('chb').checked) {
+                            alert("Sorry, you must agree to the privacy policy to register.");
+                            return;
+                        } else {
+                            //未通过滑动验证
+                            if (!slideFlag) {
+                                alert("Sorry, please prove that you are not a robot by sliding the verification bar.");
+                                return;
+                            } else {
+                                // 先尝试获取文本框中的内容。如果不为空说明用户修改过了。
+                                var usernameINP = document.getElementById('username').value;
+                                var passwordINP = document.getElementById('password').value;
+                                var postcodeINP = document.getElementById('postcode').value;
+                                var emailINP = document.getElementById('email').value;
 
+                                $.ajax({
+                                    type: "post",
+                                    url: 'editServlet',
+                                    data: {
+                                        password: passwordINP,
+                                        postcode: postcodeINP,
+                                        userName: usernameINP,
+                                        email: emailINP,
+                                    }
 
-                        $.ajax({
-                            type: "post",
-                            url: 'editServlet',
-                            data: {
-                                password: passwordINP,
-                                //planId: planIDOtp,
-                                userName: usernameINP,
-                                email: emailINP,
+                                });
+                                alert("Submit successfully.");
+                                flag = false;
                             }
+                        }
 
-                        });
-                        alert("Submit successfully.");
-                        flag = false;
                     }
 
                 }
-            }
 
+            }
         }
+
+
     });
 
 </script>
