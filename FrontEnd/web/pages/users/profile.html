@@ -298,7 +298,6 @@
 
 
                                                     // console.log("请求后，originalEmail:" + originalEmail);
-
                                                     $.ajax({
                                                         type: "get",
                                                         url: "verify_email_address",
@@ -307,19 +306,13 @@
                                                             originalEmail: originalEmail
                                                         },
                                                         success: function (result) {//参数result是服务器响应结果的值
-                                                            //console.log(result);
-                                                            //console.log("传输后，originalEmail:" + originalEmail);
-                                                            //console.log("verifiedEmail:" + verifiedEmail);
-
-                                                            info.innerHTML = result.message;
-                                                            if (result.message === 'Congratulations, the email address is available.') {
+                                                            info.innerHTML = result.data.message;
+                                                            if (result.data.message === 'Congratulations, the email address is available.') {
                                                                 info.className = 'bg-success';
-                                                                flag = true;
-                                                            } else if (result.message === "") {
-                                                                flag = true;
+                                                                emailFlag = true;
                                                             } else {
                                                                 info.className = 'bg-danger';
-                                                                flag = false;
+                                                                emailFlag = false;
                                                             }
                                                         },
                                                         error: function (xhr) {

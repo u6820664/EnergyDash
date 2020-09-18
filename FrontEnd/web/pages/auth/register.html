@@ -364,15 +364,17 @@
         }
 
 
+        var originalEmail = "";
         $.ajax({
             type: "get",
-            url: "register_email_address",
+            url: "verify_email_address",
             data: {
-                verifiedEmail: verifiedEmail
+                verifiedEmail: verifiedEmail,
+                originalEmail: originalEmail
             },
             success: function (result) {//参数result是服务器响应结果的值
-                info.innerHTML = result.message;
-                if (result.message === 'Congratulations, the email address is available.') {
+                info.innerHTML = result.data.message;
+                if (result.data.message === 'Congratulations, the email address is available.') {
                     info.className = 'bg-success';
                     emailFlag = true;
                 } else {
