@@ -1,6 +1,9 @@
 
 .show{ display: block !important;}
-
+.navbar-nav-right{ min-width: 200px;  position: relative;}
+.radpub{ position: absolute; left: 0; top: 0;}
+.radpubH{ width: 30px;}
+.radpub a i{ display: none;}
 /*------------------------------------------------------------------
  [Master Stylesheet]
 

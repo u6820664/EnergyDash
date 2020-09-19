@@ -17,6 +17,10 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
+    <!--jquery-->
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+
+
     <style>
         .slogan {
             position: absolute;
@@ -47,7 +51,7 @@
                         </div>
                         <h4>Welcome back!</h4>
                         <h6 class="font-weight-medium" style="color:#C65EDB">START YOUR PERSONAL ENERGY JOURNEY</h6>
-                        <form class="pt-3" id="loginForm">
+                        <form class="pt-3" id="loginForm" onsubmit="return loginBtn_click();">
                             <div class="form-group">
                                 <label for="username">Username/ Email</label>
                                 <div class="input-group">
@@ -75,12 +79,42 @@
                             <div class="my-2 d-flex justify-content-between align-items-center">
                                 <div class="form-check">
                                     <label class="form-check-label text-muted">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" id="remember" checked
+                                               class="check">
                                         Remember me
                                     </label>
                                 </div>
                                 <a href="#" class="auth-link text-black">Forgot password?</a>
                             </div>
+
+
+                            <!--实现记住密码-->
+                            <script>
+                                $(document).ready(function () {
+                                    var strName = localStorage.getItem('keyName');
+                                    var strPass = localStorage.getItem('keyPass');
+                                    if (strName) {
+                                        $('#username').val(strName);
+                                    }
+                                    if (strPass) {
+                                        $('#password').val(strPass);
+                                    }
+
+                                });
+
+                                function loginBtn_click() {
+                                    var strName = $('#username').val();
+                                    var strPass = $('#password').val();
+                                    localStorage.setItem('keyName', strName);
+                                    if ($('#remember').is(':checked')) {
+                                        localStorage.setItem('keyPass', strPass);
+                                    } else {
+                                        localStorage.removeItem('keyPass');
+                                    }
+                                }
+                            </script>
+
+
                             <div class="my-3">
                                 <!--                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" id="login">LOGIN</a>-->
                                 <button type="submit" id="loginBtn"
