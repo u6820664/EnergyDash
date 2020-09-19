@@ -309,10 +309,10 @@
                                                             info.innerHTML = result.data.message;
                                                             if (result.data.message === 'Congratulations, the email address is available.') {
                                                                 info.className = 'bg-success';
-                                                                emailFlag = true;
+                                                                flag = true;
                                                             } else {
                                                                 info.className = 'bg-danger';
-                                                                emailFlag = false;
+                                                                flag  = false;
                                                             }
                                                         },
                                                         error: function (xhr) {
