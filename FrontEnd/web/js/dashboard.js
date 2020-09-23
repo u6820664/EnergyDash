@@ -354,7 +354,7 @@
     if ($("#task-chart1").length) {
       var taskChartCanvas = $("#task-chart1").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -427,7 +427,7 @@
     if ($("#task-chart2").length) {
       var taskChartCanvas = $("#task-chart2").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -500,7 +500,7 @@
     if ($("#task-chart3").length) {
       var taskChartCanvas = $("#task-chart3").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -573,7 +573,7 @@
     if ($("#task-chart4").length) {
       var taskChartCanvas = $("#task-chart4").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -646,7 +646,7 @@
     if ($("#task-chart5").length) {
       var taskChartCanvas = $("#task-chart5").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -719,7 +719,7 @@
     if ($("#task-chart6").length) {
       var taskChartCanvas = $("#task-chart6").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -792,7 +792,7 @@
     if ($("#task-chart7").length) {
       var taskChartCanvas = $("#task-chart7").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
@@ -865,7 +865,7 @@
     if ($("#task-chart8").length) {
       var taskChartCanvas = $("#task-chart8").get(0).getContext("2d");
       var taskChart = new Chart(taskChartCanvas, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May","Jun", "Jul", "Aug"],
           datasets: [{
