@@ -280,9 +280,9 @@ The client does not propose any due day so we will follow the due day of this co
 
 
 
-## 8.3 Feedback
+## 8.3 Feedback&Reflection
 
-### [Feedback Log](https://drive.google.com/drive/folders/1g5JtXnbIugeodYEOE5Wgl1ZTaeQXk9AV?usp=sharing)
+### [Feedback&Reflection](https://drive.google.com/drive/folders/1n0NYaQ-e55wxX2nLy5vnbD-2AfZ8hhBr?usp=sharing)
 
 
 
@@ -312,9 +312,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
 
-### [API Documentation](https://docs.google.com/spreadsheets/d/1gNr3FPh65QFX51Mry32Wkf38K353WTDAz6e2r6DYauw/edit?usp=sharing)
-
-### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
+### [API Documentation](https://drive.google.com/file/d/141Oy0ExoBpVFzNzM1b19DDe8s6MZ1rjd/view?usp=sharing)
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
 
