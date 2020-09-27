@@ -165,7 +165,7 @@ public class UserController {
                 params.put("message", "The email address has been registered, please change to another one.");
             }
             else{
-                params.put("message", "Congratulations, the email address is available");
+                params.put("message", "Congratulations, the email address is available.");
             }
         }
         resultBean.setData(params);
@@ -229,6 +229,7 @@ public class UserController {
         paramMap.put("postcode", postcode);
         paramMap.put("originalEmail", originalEmail);
 
+        updatedUser.setUserId(testUser.getUserId());
         updatedUser.setUserName(userName);
         updatedUser.setEmail(email);
         updatedUser.setPassword(password);
