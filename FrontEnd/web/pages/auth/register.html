@@ -363,8 +363,7 @@
             return;
         }
 
-
-        var originalEmail = "";
+        var originalEmail = "1";
         $.ajax({
             type: "get",
             url: "http://54.79.60.225:8080/user/verify_email_address",
@@ -435,7 +434,7 @@
 
                                 $.ajax({
                                     type: "post",
-                                    url: 'editServlet',
+                                    url: 'http://localhost:8080/user/sign_up',
                                     data: {
                                         password: passwordINP,
                                         postcode: postcodeINP,
