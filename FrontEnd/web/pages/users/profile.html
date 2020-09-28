@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
     <!--jquery-->
-    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 
     <style>
         .user_bg {
@@ -149,23 +149,6 @@
                                         <form class="forms-sample">
 
 
-                                            <script>
-                                                // 从服务器获取用户资料
-                                                $.ajax({
-                                                    type: "get",
-                                                    url: 'information',
-                                                    contentType: 'application/json',
-                                                    success: function (response) {
-                                                        document.getElementById('username').setAttribute('value', response.data.userName);
-                                                        document.getElementById('password').setAttribute('value', response.data.password);
-                                                        document.getElementById('postcode').setAttribute('value', response.data.postcode);
-                                                        document.getElementById('planID').setAttribute('value', response.data.planId);
-                                                        document.getElementById('email').setAttribute('value', response.data.email);
-                                                    }
-
-                                                });
-                                            </script>
-
                                             <!-- Name -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2"
@@ -245,6 +228,65 @@
                                             <button id="btn" type="button" class="btn btn-primary mr-2">Edit</button>
                                             <button class="btn btn-light">Cancel</button>
 
+
+                                            <script>
+                                                // // 从服务器获取用户资料
+                                                // $.ajax({
+                                                //     type: "get",
+                                                //     url: 'information',
+                                                //     contentType: 'application/json',
+                                                //     success: function (response) {
+                                                //         document.getElementById('username').setAttribute('value', response.data.userName);
+                                                //         document.getElementById('password').setAttribute('value', response.data.password);
+                                                //         document.getElementById('postcode').setAttribute('value', response.data.postcode);
+                                                //         document.getElementById('planID').setAttribute('value', response.data.planId);
+                                                //         document.getElementById('email').setAttribute('value', response.data.email);
+                                                //     }
+                                                //
+                                                // });
+
+                                                function GetRequest() {
+                                                    var url = decodeURI(location.search); //获取url中"?"符后的字串
+                                                    var theRequest = new Object();
+                                                    if (url.indexOf("?") != -1) {
+                                                        var str = url.substr(1);
+                                                        strs = str.split("&");
+                                                        for (var i = 0; i < strs.length; i++) {
+                                                            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                                                        }
+                                                    }
+                                                    return theRequest;
+                                                }
+
+                                                var dataJson = GetRequest();
+                                                console.log(dataJson.userName);
+
+
+                                                document.getElementById('username').setAttribute('value', dataJson.userName);
+                                                document.getElementById('password').setAttribute('value', dataJson.password);
+                                                document.getElementById('postcode').setAttribute('value', dataJson.postcode);
+                                                document.getElementById('planID').setAttribute('value', dataJson.planId);
+                                                document.getElementById('email').setAttribute('value', dataJson.email);
+
+                                                // $(function () {
+                                                //     var str = window.location.search;  //获取链接中传递的参数
+                                                //     orderData = str.substring(str.indexOf("=") + 1);//?orderData={"roomNum":"210","orderDay":"TODAY","orderTime":["10301100","11001140"]}
+                                                //     var reg = new RegExp("%22", "g");
+                                                //     var dataJson = $.parseJSON(orderData.replace(reg, "\""));
+                                                //
+                                                //     document.getElementById('username').setAttribute('value', dataJson.userName);
+                                                //     document.getElementById('password').setAttribute('value', dataJson.password);
+                                                //     document.getElementById('postcode').setAttribute('value', dataJson.postcode);
+                                                //     document.getElementById('planID').setAttribute('value', dataJson.planId);
+                                                //     document.getElementById('email').setAttribute('value', dataJson.email);
+                                                //
+                                                // });
+
+
+                                                // 获取从login传来的数据
+                                            </script>
+
+
                                             <script>
                                                 /*
                                                 检测邮箱是否可
@@ -253,7 +295,7 @@
                                                 // 获取页面中的元素
                                                 var emailInp = document.getElementById("email");
                                                 var info = document.getElementById('info');
-                                                var flag = false;
+                                                var emailFlag = false;
 
                                                 if (emailInp.value === "") {
                                                     flag = true;
@@ -277,27 +319,26 @@
                                                     }
 
 
-                                                    // var originalEmail = document.getElementById('email').value;
+                                                    var originalEmail = dataJson.email;
 
-                                                    //请求information页面前定义的变量
-                                                    var originalEmail = "";
+                                                    // //请求information页面前定义的变量
+                                                    // var originalEmail = "1";
+                                                    //
+                                                    // //请求information页面，获取原始email的值
+                                                    // $.ajax({
+                                                    //     type: "get",
+                                                    //     url: 'information',
+                                                    //     contentType: 'application/json',
+                                                    //     async: false, // 要求同步
+                                                    //     success: function (response) {
+                                                    //         //希望用从information页面请求来的值更新
+                                                    //         originalEmail = response.data.email;
+                                                    //         // console.log("information传来的，originalEmail:" + originalEmail);
+                                                    //     }
+                                                    //
+                                                    // });
 
-                                                    //请求information页面，获取原始email的值
-                                                    $.ajax({
-                                                        type: "get",
-                                                        url: 'information',
-                                                        contentType: 'application/json',
-                                                        async: false, // 要求同步
-                                                        success: function (response) {
-                                                            //希望用从information页面请求来的值更新
-                                                            originalEmail = response.data.email;
-                                                            // console.log("information传来的，originalEmail:" + originalEmail);
-                                                        }
-
-                                                    });
-
-
-                                                    // console.log("请求后，originalEmail:" + originalEmail);
+                                                    var originalEmail = "1";
                                                     $.ajax({
                                                         type: "get",
                                                         url: "http://54.79.60.225:8080/user/verify_email_address",
@@ -309,10 +350,10 @@
                                                             info.innerHTML = result.data.message;
                                                             if (result.data.message === 'Congratulations, the email address is available.') {
                                                                 info.className = 'bg-success';
-                                                                flag = true;
+                                                                emailFlag = true;
                                                             } else {
                                                                 info.className = 'bg-danger';
-                                                                flag  = false;
+                                                                emailFlag = false;
                                                             }
                                                         },
                                                         error: function (xhr) {
@@ -364,11 +405,11 @@
                                                         var passwordORI = "";
                                                         var postcodeORI = "";
                                                         var planIDORI = "";
-                                                        var emailORI = "";
+                                                        var emailORI = "0";
 
                                                         $.ajax({
                                                             type: "get",
-                                                            url: 'information',
+                                                            url: "http://54.79.60.225:8080/user/load_user_profile",
                                                             async: false, // 要求同步
                                                             success: function (response) {
                                                                 // 这部分是从数据库获取的原始数据

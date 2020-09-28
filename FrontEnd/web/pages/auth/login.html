@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
     <!--jquery-->
-    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 
     <style>
         .slogan {
@@ -282,8 +282,18 @@
                                         var password = document.getElementById('password').value;
 
                                         /*
-                                        提交用户名和密码
+                                        提交用户名和密码，准备获取值
                                         */
+
+                                        //容器
+                                        var userIdGot;
+                                        var userNameGot;
+                                        var emailGot;
+                                        var passwordGot;
+                                        var planIdGot;
+                                        var postcodeGot;
+
+
                                         $.ajax({
                                             type: "post",
                                             url: "http://54.79.60.225:8080/user/sign_in",
@@ -291,16 +301,51 @@
                                                 email: email,
                                                 password: password
                                             },
+                                            async: false, // 要求同步
                                             success: function (response) {
                                                 // 这部分是从数据库获取的原始数据
-                                                alert(response);
+                                                //alert(response.data.userName);
+
+                                                //把获取来的值赋值给先前的容器备传
+                                                userIdGot = response.data.userId;
+                                                userNameGot = response.data.userName;
+                                                emailGot = response.data.email;
+                                                passwordGot = response.data.password;
+                                                planIdGot = response.data.planId;
+                                                postcodeGot = response.data.postcode;
+
+                                                var orderData = {
+                                                    password: passwordGot,
+                                                    postcode: postcodeGot,
+                                                    planId: planIdGot,
+                                                    userName: userNameGot,
+                                                    userId: userIdGot,
+                                                    email: emailGot
+                                                };
+
+
+                                                //先获取本页面的url
+                                                //截取前一部分;
+
+                                                var integrityurl = window.location.href;
+                                                console.log(integrityurl);
+
+                                                var jsonStr = JSON.stringify(orderData);
+                                                window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
+
+                                                //http://54.79.60.225/pages/auth/login.html?
+
+                                                alert("Welcome!");
+                                                //alert(window.location.href);
                                             },
                                             error: function (response) {
                                                 alert("error");
                                             }
                                         });
 
+
                                     }
+
                                 });
                             </script>
 
