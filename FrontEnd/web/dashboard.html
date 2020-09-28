@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="images/favicon.png"/>
 </head>
 <body>
-<meta http-equiv="refresh" content="5">
+<!--<meta http-equiv="refresh" content="5">-->
 <div class="adcenter"></div>
 <div class="container-scroller d-flex">
     <!-- partial:./partials/_sidebar.html -->
@@ -105,23 +105,24 @@
 
                 <script>
 
-                    $(function(){
+                    $(function () {
                         function sj() {
                             var rand = Math.random() * 3;
 
-                            if(0 < rand && rand < 1){
+                            if (0 < rand && rand < 1) {
                                 $(".radin1").find('i').show();
                                 $(".radin1").siblings('.radpub').find('i').hide();
                             }
-                            if(1 < rand && rand < 2){
+                            if (1 < rand && rand < 2) {
                                 $(".radin2").find('i').show();
                                 $(".radin2").siblings('.radpub').find('i').hide();
                             }
-                            if(2 < rand && rand < 3){
+                            if (2 < rand && rand < 3) {
                                 $(".radin3").find('i').show();
                                 $(".radin3").siblings('.radpub').find('i').hide();
                             }
                         }
+
                         setInterval(sj, 1000)
                     })
                 </script>
@@ -136,7 +137,7 @@
 
                 <div class="row">
 
-
+                    <!-- Real-time Data -->
                     <!-- Swap Metrics -->
                     <div class="col-12 col-xl-6 grid-margin stretch-card">
                         <div class="row w-100 flex-grow">
@@ -157,70 +158,70 @@
                                                  aria-labelledby="notificationDropdown">
                                                 <p class="mb-0 font-weight-normal float-left dropdown-header">
                                                     Metrics</p>
-                                                <a class="dropdown-item preview-item">
+                                                <a class="dropdown-item preview-item" id="tab_Metrics_1">
                                                     <div class="preview-thumbnail">
                                                         <div class="preview-icon bg-success">
                                                             <i class="mdi mdi mdi-currency-usd mx-0"></i>
                                                         </div>
                                                     </div>
                                                     <div class="preview-item-content">
-                                                        <h6 class="preview-subject font-weight-normal" type="button">
+                                                        <h6 class="preview-subject font-weight-normal">
                                                             Energy Price</h6>
                                                         <p class="font-weight-light small-text mb-0 text-muted">
                                                             real-time
                                                         </p>
                                                     </div>
                                                 </a>
-                                                <a class="dropdown-item preview-item">
+                                                <a class="dropdown-item preview-item" id="tab_Metrics_2">
                                                     <div class="preview-thumbnail">
                                                         <div class="preview-icon bg-warning">
                                                             <i class="mdi mdi mdi-currency-usd mx-0"></i>
                                                         </div>
                                                     </div>
                                                     <div class="preview-item-content">
-                                                        <h6 class="preview-subject font-weight-normal" type="button">
+                                                        <h6 class="preview-subject font-weight-normal">
                                                             Carbon intensity</h6>
                                                         <p class="font-weight-light small-text mb-0 text-muted">
                                                             real-time
                                                         </p>
                                                     </div>
                                                 </a>
-                                                <a class="dropdown-item preview-item">
+                                                <a class="dropdown-item preview-item" id="tab_Metrics_3">
                                                     <div class="preview-thumbnail">
                                                         <div class="preview-icon bg-info">
                                                             <i class="mdi mdi-currency-usd mx-0"></i>
                                                         </div>
                                                     </div>
                                                     <div class="preview-item-content">
-                                                        <h6 class="preview-subject font-weight-normal" type="button">
+                                                        <h6 class="preview-subject font-weight-normal">
                                                             Coal generator profits</h6>
                                                         <p class="font-weight-light small-text mb-0 text-muted">
                                                             real-time
                                                         </p>
                                                     </div>
                                                 </a>
-                                                <a class="dropdown-item preview-item">
+                                                <a class="dropdown-item preview-item" id="tab_Metrics_4">
                                                     <div class="preview-thumbnail">
                                                         <div class="preview-icon bg-danger">
                                                             <i class="mdi mdi-currency-usd mx-0"></i>
                                                         </div>
                                                     </div>
                                                     <div class="preview-item-content">
-                                                        <h6 class="preview-subject font-weight-normal" type="button">
+                                                        <h6 class="preview-subject font-weight-normal">
                                                             Renewable energy profits</h6>
                                                         <p class="font-weight-light small-text mb-0 text-muted">
                                                             real-time
                                                         </p>
                                                     </div>
                                                 </a>
-                                                <a class="dropdown-item preview-item">
+                                                <a class="dropdown-item preview-item" id="tab_Metrics_5">
                                                     <div class="preview-thumbnail">
                                                         <div class="preview-icon bg-primary">
                                                             <i class="mdi mdi-currency-usd mx-0"></i>
                                                         </div>
                                                     </div>
                                                     <div class="preview-item-content">
-                                                        <h6 class="preview-subject font-weight-normal" type="button">
+                                                        <h6 class="preview-subject font-weight-normal">
                                                             Energy consumption</h6>
                                                         <p class="font-weight-light small-text mb-0 text-muted">
                                                             real-time
@@ -231,10 +232,8 @@
                                         </div>
                                     </div>
 
-
                                     <div class="card-body">
-                                        <!--1-->
-                                        <div class="tab_canvas show" style="display: none;">
+                                        <div style="display: block;" id="card_Metrics_1">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy Price</p>
                                                 <p class="text-success font-weight-medium">cents / MWH</p>
@@ -245,8 +244,8 @@
                                             </div>
                                             <canvas id="balance-chart" height="130"></canvas>
                                         </div>
-                                        <!--2-->
-                                        <div class="tab_canvas " style="display: none;">
+
+                                        <div style="display: none;" id="card_Metrics_2">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Carbon intensity</p>
                                                 <p class="text-success font-weight-medium">kg / MWH</p>
@@ -257,11 +256,11 @@
                                             </div>
                                             <canvas id="task-chart1" height="130"></canvas>
                                         </div>
-                                        <!--3-->
-                                        <div class="tab_canvas " style="display: none;">
+
+                                        <div style="display: none;" id="card_Metrics_3">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Coal generator profits</p>
-                                                <p class="text-success font-weight-medium">cents / MWH</p>
+                                                <p class="text-success font-weight-medium">kg / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
@@ -269,8 +268,8 @@
                                             </div>
                                             <canvas id="task-chart2" height="130"></canvas>
                                         </div>
-                                        <!--4-->
-                                        <div class="tab_canvas " style="display: none;">
+
+                                        <div style="display: none;" id="card_Metrics_4">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Renewable energy profits</p>
                                                 <p class="text-success font-weight-medium">cents / MWH</p>
@@ -281,8 +280,8 @@
                                             </div>
                                             <canvas id="task-chart3" height="130"></canvas>
                                         </div>
-                                        <!--5-->
-                                        <div class="tab_canvas " style="display: none;">
+
+                                        <div style="display: none;" id="card_Metrics_5">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy consumption</p>
                                                 <p class="text-success font-weight-medium">kWh</p>
@@ -510,24 +509,91 @@
 <!-- End custom js for this page-->
 <!--<script src="js/positionMove.js"></script>-->
 </body>
+<!--Canvas_swap Metrics 1-5 -->
+<!--<script>-->
+<!--    (function () {-->
+<!--        function tabs(handles, cons) {-->
+<!--            $(handles).each(function (num) {-->
+<!--                $(this).click(function () {-->
+<!--                    $(handles).removeClass("hover");-->
+<!--                    $(this).addClass("hover");-->
+<!--                    $(cons).removeClass("show");-->
+<!--                    $($(cons)[num]).addClass("show");-->
+<!--                });-->
+<!--            });-->
+<!--        }-->
+
+<!--        window.tabs = tabs;-->
+<!--        tabs(".preview-item", ".tab_canvas ");-->
+<!--    })();-->
+<!--</script>-->
+
+
+<!--Canvas_swap Metrics 1-5  -->
 <script>
-    (function () {
-        function tabs(handles, cons) {
-            $(handles).each(function (num) {
-                $(this).click(function () {
-                    $(handles).removeClass("hover");
-                    $(this).addClass("hover");
-                    $(cons).removeClass("show");
-                    $($(cons)[num]).addClass("show");
-                });
-            });
-        }
+    document.getElementById("tab_Metrics_1").onclick = function () {
+        changeToMetrics_1()
+    };
 
-        window.tabs = tabs;
+    function changeToMetrics_1() {
+        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_2").style.display = 'none';
+        document.getElementById("card_Metrics_3").style.display = 'none';
+        document.getElementById("card_Metrics_4").style.display = 'none';
+        document.getElementById("card_Metrics_5").style.display = 'none';
+    }
 
-        tabs(".preview-item", ".tab_canvas ");
+    document.getElementById("tab_Metrics_2").onclick = function () {
+        changeToMetrics_2()
+    };
 
-    })();
+    function changeToMetrics_2() {
+        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_2").style.display = 'block';
+        document.getElementById("card_Metrics_3").style.display = 'none';
+        document.getElementById("card_Metrics_4").style.display = 'none';
+        document.getElementById("card_Metrics_5").style.display = 'none';
+    }
+
+    document.getElementById("tab_Metrics_3").onclick = function () {
+        changeToMetrics_3()
+    };
+
+    function changeToMetrics_3() {
+        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_2").style.display = 'none';
+        document.getElementById("card_Metrics_3").style.display = 'block';
+        document.getElementById("card_Metrics_4").style.display = 'none';
+        document.getElementById("card_Metrics_5").style.display = 'none';
+    }
+
+    document.getElementById("tab_Metrics_4").onclick = function () {
+        changeToMetrics_4()
+    };
+
+    function changeToMetrics_4() {
+        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_2").style.display = 'none';
+        document.getElementById("card_Metrics_3").style.display = 'none';
+        document.getElementById("card_Metrics_4").style.display = 'block';
+        document.getElementById("card_Metrics_5").style.display = 'none';
+    }
+
+    document.getElementById("tab_Metrics_5").onclick = function () {
+        changeToMetrics_5()
+    };
+
+    function changeToMetrics_5() {
+        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_2").style.display = 'none';
+        document.getElementById("card_Metrics_3").style.display = 'none';
+        document.getElementById("card_Metrics_4").style.display = 'none';
+        document.getElementById("card_Metrics_5").style.display = 'block';
+    }
+
+
+
+
 
 </script>
 
@@ -563,6 +629,5 @@
         document.getElementById("card_month").style.display = 'block';
     }
 </script>
-
 
 </html>
