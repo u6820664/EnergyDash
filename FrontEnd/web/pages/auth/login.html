@@ -322,21 +322,11 @@
                                                     userId: userIdGot,
                                                     email: emailGot
                                                 };
-
-
-                                                //先获取本页面的url
-                                                //截取前一部分;
-
-                                                var integrityurl = window.location.href;
-                                                console.log(integrityurl);
-
+                                                
+                                                alert("Welcome!");
                                                 var jsonStr = JSON.stringify(orderData);
                                                 window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
-
-                                                //http://54.79.60.225/pages/auth/login.html?
-
                                                 alert("Welcome!");
-                                                //alert(window.location.href);
                                             },
                                             error: function (response) {
                                                 alert("error");
