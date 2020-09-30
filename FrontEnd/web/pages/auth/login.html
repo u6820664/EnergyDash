@@ -322,17 +322,21 @@
                                                     userId: userIdGot,
                                                     email: emailGot
                                                 };
-                                                
-                                                alert("Welcome!");
+
+                                                if (password !== passwordGot || email !== emailGot) {
+                                                    alert("Wrong email or password!");
+                                                    return;
+                                                }
+
                                                 var jsonStr = JSON.stringify(orderData);
                                                 window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
+                                                //window.location.href = "../users/profile.html?orderData=" + jsonStr;
                                                 alert("Welcome!");
                                             },
                                             error: function (response) {
-                                                alert("error");
+                                                alert("Wrong email or password!");
                                             }
                                         });
-
 
                                     }
 
