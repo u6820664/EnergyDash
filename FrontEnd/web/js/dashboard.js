@@ -511,6 +511,396 @@
             });
         }
 
+        if ($("#balance-chart").length) {
+            var areaData = {
+                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"],
+                datasets: [
+                    {
+                        data: [Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30],
+                        borderColor: [
+                            '#1faf47'
+                        ],
+                        borderWidth: 3,
+                        fill: false,
+                        label: "services"
+                    },
+                ]
+            };
+            var areaOptions = {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            display: false,
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: 'transparent',
+                            zeroLineColor: '#eeeeee'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            display: true,
+                            autoSkip: false,
+                            maxRotation: 0,
+                            stepSize: 100,
+                            fontColor: "#000",
+                            fontSize: 14,
+                            padding: 18,
+                            stepSize: 1000,
+                            max: 30,
+                            fontSize: 10,
+                            fontColor: "#b1b0b0",
+                            callback: function (value) {
+                                var ranges = [
+                                    {divider: 1e6, suffix: 'M'},
+                                    {divider: 1e3, suffix: 'k'}
+                                ];
+
+                                function formatNumber(n) {
+                                    for (var i = 0; i < ranges.length; i++) {
+                                        if (n >= ranges[i].divider) {
+                                            return (n / ranges[i].divider).toString() + ranges[i].suffix;
+                                        }
+                                    }
+                                    return n;
+                                }
+
+                                return formatNumber(value);
+                            }
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            color: "#f8f8f8",
+                            zeroLineColor: "#f8f8f8"
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    enabled: true
+                },
+                elements: {
+                    line: {
+                        tension: 0
+                    },
+                    point: {
+                        radius: 0
+                    }
+                }
+            }
+            var balanceChartCanvas = $("#balance-chart").get(0).getContext("2d");
+            var balanceChart = new Chart(balanceChartCanvas, {
+                type: 'line',
+                data: areaData,
+                options: areaOptions
+            });
+        }
+
+        if ($("#task-chart1").length) {
+            var taskChartCanvas = $("#task-chart1").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                    datasets: [{
+                        label: 'Profit',
+                        data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
+                        backgroundColor: 'orange'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10,
+                                min: -10,
+                                max: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#task-chart2").length) {
+            var taskChartCanvas = $("#task-chart2").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                    datasets: [{
+                        label: 'Profit',
+                        data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
+                        backgroundColor: 'lightblue'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10,
+                                min: -10,
+                                max: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#task-chart3").length) {
+            var taskChartCanvas = $("#task-chart3").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                    datasets: [{
+                        label: 'Profit',
+                        data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
+                        backgroundColor: 'red'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10,
+                                min: -10,
+                                max: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#task-chart4").length) {
+            var taskChartCanvas = $("#task-chart4").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                    datasets: [{
+                        label: 'Profit',
+                        data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
+                        backgroundColor: 'blue'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10,
+                                min: -10,
+                                max: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
 
     });
 
@@ -518,395 +908,7 @@
 
 
 function PerRefresh() {
-    if ($("#balance-chart").length) {
-        var areaData = {
-            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"],
-            datasets: [
-                {
-                    data: [Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30, Math.random() * 30],
-                    borderColor: [
-                        '#1faf47'
-                    ],
-                    borderWidth: 3,
-                    fill: false,
-                    label: "services"
-                },
-            ]
-        };
-        var areaOptions = {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                filler: {
-                    propagate: false
-                }
-            },
-            scales: {
-                xAxes: [{
-                    display: true,
-                    ticks: {
-                        display: false,
-                    },
-                    gridLines: {
-                        display: false,
-                        drawBorder: false,
-                        color: 'transparent',
-                        zeroLineColor: '#eeeeee'
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    ticks: {
-                        display: true,
-                        autoSkip: false,
-                        maxRotation: 0,
-                        stepSize: 100,
-                        fontColor: "#000",
-                        fontSize: 14,
-                        padding: 18,
-                        stepSize: 1000,
-                        max: 30,
-                        fontSize: 10,
-                        fontColor: "#b1b0b0",
-                        callback: function (value) {
-                            var ranges = [
-                                {divider: 1e6, suffix: 'M'},
-                                {divider: 1e3, suffix: 'k'}
-                            ];
 
-                            function formatNumber(n) {
-                                for (var i = 0; i < ranges.length; i++) {
-                                    if (n >= ranges[i].divider) {
-                                        return (n / ranges[i].divider).toString() + ranges[i].suffix;
-                                    }
-                                }
-                                return n;
-                            }
-
-                            return formatNumber(value);
-                        }
-                    },
-                    gridLines: {
-                        drawBorder: false,
-                        color: "#f8f8f8",
-                        zeroLineColor: "#f8f8f8"
-                    }
-                }]
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: true
-            },
-            elements: {
-                line: {
-                    tension: 0
-                },
-                point: {
-                    radius: 0
-                }
-            }
-        }
-        var balanceChartCanvas = $("#balance-chart").get(0).getContext("2d");
-        var balanceChart = new Chart(balanceChartCanvas, {
-            type: 'line',
-            data: areaData,
-            options: areaOptions
-        });
-    }
-
-    if ($("#task-chart1").length) {
-        var taskChartCanvas = $("#task-chart1").get(0).getContext("2d");
-        var taskChart = new Chart(taskChartCanvas, {
-            type: 'line',
-            data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                datasets: [{
-                    label: 'Profit',
-                    data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
-                    backgroundColor: 'orange'
-                }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
-                },
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        gridLines: {
-                            drawBorder: false,
-                            color: '#f1f3f9',
-                            zeroLineColor: '#f1f3f9'
-                        },
-                        ticks: {
-                            display: true,
-                            fontColor: "#9fa0a2",
-                            fontSize: 10,
-                            padding: 0,
-                            stepSize: 10,
-                            min: -10,
-                            max: 10
-                        }
-                    }],
-                    xAxes: [{
-                        display: false,
-                        stacked: false,
-                        categoryPercentage: 1,
-                        ticks: {
-                            display: false,
-                            beginAtZero: false,
-                            display: true,
-                            padding: 10,
-                            fontSize: 11
-                        },
-                        gridLines: {
-                            color: "rgba(0, 0, 0, 0)",
-                            display: false
-                        },
-                        position: 'bottom',
-                        barPercentage: 0.7
-                    }]
-                },
-                legend: {
-                    display: false
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    }
-                }
-            }
-        });
-    }
-
-    if ($("#task-chart2").length) {
-        var taskChartCanvas = $("#task-chart2").get(0).getContext("2d");
-        var taskChart = new Chart(taskChartCanvas, {
-            type: 'line',
-            data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                datasets: [{
-                    label: 'Profit',
-                    data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
-                    backgroundColor: 'lightblue'
-                }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
-                },
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        gridLines: {
-                            drawBorder: false,
-                            color: '#f1f3f9',
-                            zeroLineColor: '#f1f3f9'
-                        },
-                        ticks: {
-                            display: true,
-                            fontColor: "#9fa0a2",
-                            fontSize: 10,
-                            padding: 0,
-                            stepSize: 10,
-                            min: -10,
-                            max: 10
-                        }
-                    }],
-                    xAxes: [{
-                        display: false,
-                        stacked: false,
-                        categoryPercentage: 1,
-                        ticks: {
-                            display: false,
-                            beginAtZero: false,
-                            display: true,
-                            padding: 10,
-                            fontSize: 11
-                        },
-                        gridLines: {
-                            color: "rgba(0, 0, 0, 0)",
-                            display: false
-                        },
-                        position: 'bottom',
-                        barPercentage: 0.7
-                    }]
-                },
-                legend: {
-                    display: false
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    }
-                }
-            }
-        });
-    }
-
-    if ($("#task-chart3").length) {
-        var taskChartCanvas = $("#task-chart3").get(0).getContext("2d");
-        var taskChart = new Chart(taskChartCanvas, {
-            type: 'line',
-            data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                datasets: [{
-                    label: 'Profit',
-                    data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
-                    backgroundColor: 'red'
-                }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
-                },
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        gridLines: {
-                            drawBorder: false,
-                            color: '#f1f3f9',
-                            zeroLineColor: '#f1f3f9'
-                        },
-                        ticks: {
-                            display: true,
-                            fontColor: "#9fa0a2",
-                            fontSize: 10,
-                            padding: 0,
-                            stepSize: 10,
-                            min: -10,
-                            max: 10
-                        }
-                    }],
-                    xAxes: [{
-                        display: false,
-                        stacked: false,
-                        categoryPercentage: 1,
-                        ticks: {
-                            display: false,
-                            beginAtZero: false,
-                            display: true,
-                            padding: 10,
-                            fontSize: 11
-                        },
-                        gridLines: {
-                            color: "rgba(0, 0, 0, 0)",
-                            display: false
-                        },
-                        position: 'bottom',
-                        barPercentage: 0.7
-                    }]
-                },
-                legend: {
-                    display: false
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    }
-                }
-            }
-        });
-    }
-
-    if ($("#task-chart4").length) {
-        var taskChartCanvas = $("#task-chart4").get(0).getContext("2d");
-        var taskChart = new Chart(taskChartCanvas, {
-            type: 'line',
-            data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                datasets: [{
-                    label: 'Profit',
-                    data: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
-                    backgroundColor: 'blue'
-                }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
-                },
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        gridLines: {
-                            drawBorder: false,
-                            color: '#f1f3f9',
-                            zeroLineColor: '#f1f3f9'
-                        },
-                        ticks: {
-                            display: true,
-                            fontColor: "#9fa0a2",
-                            fontSize: 10,
-                            padding: 0,
-                            stepSize: 10,
-                            min: -10,
-                            max: 10
-                        }
-                    }],
-                    xAxes: [{
-                        display: false,
-                        stacked: false,
-                        categoryPercentage: 1,
-                        ticks: {
-                            display: false,
-                            beginAtZero: false,
-                            display: true,
-                            padding: 10,
-                            fontSize: 11
-                        },
-                        gridLines: {
-                            color: "rgba(0, 0, 0, 0)",
-                            display: false
-                        },
-                        position: 'bottom',
-                        barPercentage: 0.7
-                    }]
-                },
-                legend: {
-                    display: false
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    }
-                }
-            }
-        });
-    }
 
     if ($("#task-chart5").length) {
         var taskChartCanvas = $("#task-chart5").get(0).getContext("2d");
