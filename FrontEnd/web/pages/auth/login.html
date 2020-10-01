@@ -18,8 +18,7 @@
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
     <!--jquery-->
-    <script src="../../js/jquery-3.3.1.min.js"></script>
-
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 
     <style>
         .slogan {
@@ -36,6 +35,44 @@
             line-height: 10px;
             text-align: right;
         }
+
+        .drag {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #e8e8e8;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .bg {
+            width: 40px;
+            height: 100%;
+            position: absolute;
+            background-color: #75CDF9;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            user-select: none;
+        }
+
+        .btnX {
+            width: 40px;
+            height: 38px;
+            position: absolute;
+            border: 1px solid #ccc;
+            cursor: move;
+            font-family: Sans-serif, serif;
+            text-align: center;
+            background-color: #fff;
+            user-select: none;
+            color: #666;
+        }
+
     </style>
 </head>
 
@@ -86,54 +123,227 @@
                                 </div>
 
 
-                                <!--实现记住密码-->
-                                <script>
-                                    $(document).ready(function () {
-                                        var strEmail = localStorage.getItem('keyEmail');
-                                        var strPass = localStorage.getItem('keyPass');
-                                        if (strEmail) {
-                                            $('#email').val(strEmail);
-                                        }
-                                        if (strPass) {
-                                            $('#password').val(strPass);
-                                        }
-
-                                    });
-
-                                    function loginBtn_click() {
-                                        var strEmail = $('#email').val();
-                                        var strPass = $('#password').val();
-                                        localStorage.setItem('keyEmail', strEmail);
-                                        if ($('#remember').is(':checked')) {
-                                            localStorage.setItem('keyPass', strPass);
-                                        } else {
-                                            localStorage.removeItem('keyPass');
-                                        }
-
-
-                                        /*
-                                        提交用户名和密码
-                                        */
-                                        $.ajax({
-                                            type: "post",
-                                            url: "sign_in",
-                                            data: {
-                                                email: strEmail,
-                                                password: strPass
-                                            }
-                                        });
-                                    }
-                                </script>
-
-
                                 <a href="#" class="auth-link text-black">Forgot password?</a>
                             </div>
+
+                            <!--实现记住密码-->
+                            <script>
+                                $(document).ready(function () {
+                                    var strEmail = localStorage.getItem('keyEmail');
+                                    var strPass = localStorage.getItem('keyPass');
+                                    if (strEmail) {
+                                        $('#email').val(strEmail);
+                                    }
+                                    if (strPass) {
+                                        $('#password').val(strPass);
+                                    }
+
+                                });
+
+                                function loginBtn_click() {
+                                    var strEmail = $('#email').val();
+                                    var strPass = $('#password').val();
+                                    localStorage.setItem('keyEmail', strEmail);
+                                    if ($('#remember').is(':checked')) {
+                                        localStorage.setItem('keyPass', strPass);
+                                    } else {
+                                        localStorage.removeItem('keyPass');
+                                    }
+
+                                }
+                            </script>
+
+
+                            <!--Verification Bar-->
+                            <div class="form-group">
+                                <label>Verification Bar</label>
+                                <div class="drag">
+                                    <div class="bg"></div>
+                                    <div class="text" onselectstart="return false;">Drag the slider to unlock.
+                                    </div>
+                                    <div class="btnX">&gt;&gt;</div>
+                                </div>
+                            </div>
+
+                            <script>
+                                /*
+                                  滑动验证
+                                */
+                                var slideFlag = false;
+
+                                //一、定义一个获取DOM元素的方法
+                                var $ = function (selector) {
+                                        return document.querySelector(selector);
+                                    },
+                                    box = $(".drag"),//容器
+                                    bg = $(".bg"),//背景
+                                    text = $(".text"),//文字
+                                    btnX = $(".btnX"),//滑块
+                                    success = false,//是否通过验证的标志
+                                    distance = box.offsetWidth - btnX.offsetWidth;//滑动成功的宽度（距离）
+
+                                //二、给滑块注册鼠标按下事件
+                                btnX.onmousedown = function (e) {
+
+                                    //1.鼠标按下之前必须清除掉后面设置的过渡属性
+                                    btnX.style.transition = "";
+                                    bg.style.transition = "";
+
+                                    //说明：clientX 事件属性会返回当事件被触发时，鼠标指针向对于浏览器页面(或客户区)的水平坐标。
+
+                                    //2.当滑块位于初始位置时，得到鼠标按下时的水平位置
+                                    var e = e || window.event;
+                                    var downX = e.clientX;
+
+                                    //三、给文档注册鼠标移动事件
+                                    document.onmousemove = function (e) {
+                                        var e = e || window.event;
+                                        //1.获取鼠标移动后的水平位置
+                                        var moveX = e.clientX;
+
+                                        //2.得到鼠标水平位置的偏移量（鼠标移动时的位置 - 鼠标按下时的位置）
+                                        var offsetX = moveX - downX;
+
+                                        //3.在这里判断一下：鼠标水平移动的距离 与 滑动成功的距离 之间的关系
+                                        if (offsetX > distance) {
+                                            offsetX = distance;//如果滑过了终点，就将它停留在终点位置
+                                        } else if (offsetX < 0) {
+                                            offsetX = 0;//如果滑到了起点的左侧，就将它重置为起点位置
+                                        }
+
+                                        //4.根据鼠标移动的距离来动态设置滑块的偏移量和背景颜色的宽度
+                                        btnX.style.left = offsetX + "px";
+                                        bg.style.width = offsetX + "px";
+
+                                        //如果鼠标的水平移动距离 = 滑动成功的宽度
+                                        if (offsetX === distance) {
+                                            //1.设置滑动成功后的样式
+                                            text.innerHTML = "Verified successfully.";
+                                            text.style.color = "#fff";
+                                            //btnX.innerHTML = "&radic;";
+                                            btnX.innerHTML = "✓";
+                                            btnX.style.color = "green";
+                                            bg.style.backgroundColor = "lightgreen";
+
+                                            //2.设置滑动成功后的状态
+                                            success = true;
+                                            //成功后，清除掉鼠标按下事件和移动事件（因为移动时并不会涉及到鼠标松开事件）
+                                            btnX.onmousedown = null;
+                                            document.onmousemove = null;
+
+                                            //3.成功解锁后的回调函数
+                                            setTimeout(function () {
+                                                //alert('Verified successfully');
+                                                slideFlag = true;
+                                            }, 100);
+                                        }
+                                    };
+
+                                    //四、给文档注册鼠标松开事件
+                                    document.onmouseup = function (e) {
+
+                                        //如果鼠标松开时，滑到了终点，则验证通过
+                                        if (success) {
+                                            return;
+                                        } else {
+                                            //反之，则将滑块复位（设置了1s的属性过渡效果）
+                                            btnX.style.left = 0;
+                                            bg.style.width = 0;
+                                            btnX.style.transition = "left 1s ease";
+                                            bg.style.transition = "width 1s ease";
+                                        }
+                                        //只要鼠标松开了，说明此时不需要拖动滑块了，那么就清除鼠标移动和松开事件。
+                                        document.onmousemove = null;
+                                        document.onmouseup = null;
+                                    }
+                                };
+                            </script>
+
+
                             <div class="my-3">
                                 <!--                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" id="login">LOGIN</a>-->
                                 <button type="submit" id="loginBtn"
                                         class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">LOGIN
                                 </button>
                             </div>
+
+                            <script>
+                                // 点击提交按钮后
+
+                                // 必须滑动验证栏
+                                $("#loginBtn").addEventListener('click', function () {
+
+                                    if (!slideFlag) {
+                                        alert("Sorry, please prove that you are not a robot by sliding the verification bar.");
+                                        return;
+                                    } else {
+                                        // 先尝试获取文本框中的内容。如果不为空说明用户修改过了。
+                                        var email = document.getElementById('email').value;
+                                        var password = document.getElementById('password').value;
+
+                                        /*
+                                        提交用户名和密码，准备获取值
+                                        */
+
+                                        //容器
+                                        var userIdGot;
+                                        var userNameGot;
+                                        var emailGot;
+                                        var passwordGot;
+                                        var planIdGot;
+                                        var postcodeGot;
+
+
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://54.79.60.225:8080/user/sign_in",
+                                            data: {
+                                                email: email,
+                                                password: password
+                                            },
+                                            async: false, // 要求同步
+                                            success: function (response) {
+                                                // 这部分是从数据库获取的原始数据
+                                                //alert(response.data.userName);
+
+                                                //把获取来的值赋值给先前的容器备传
+                                                userIdGot = response.data.userId;
+                                                userNameGot = response.data.userName;
+                                                emailGot = response.data.email;
+                                                passwordGot = response.data.password;
+                                                planIdGot = response.data.planId;
+                                                postcodeGot = response.data.postcode;
+
+                                                var orderData = {
+                                                    password: passwordGot,
+                                                    postcode: postcodeGot,
+                                                    planId: planIdGot,
+                                                    userName: userNameGot,
+                                                    userId: userIdGot,
+                                                    email: emailGot
+                                                };
+
+                                                if (password !== passwordGot || email !== emailGot) {
+                                                    alert("Wrong email or password!");
+                                                    return;
+                                                }
+
+                                                var jsonStr = JSON.stringify(orderData);
+                                                window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
+                                                //window.location.href = "../users/profile.html?orderData=" + jsonStr;
+                                                alert("Welcome!");
+                                            },
+                                            error: function (response) {
+                                                alert("Wrong email or password!");
+                                            }
+                                        });
+
+                                    }
+
+                                });
+                            </script>
+
+
                             <div class="mb-2 d-flex">
                                 <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
                                     <i class="mdi mdi-facebook mr-2"></i>Facebook

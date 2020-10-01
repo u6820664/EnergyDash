@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
     <!-- 外部js -->
-    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 
     <style>
         .slogan {
@@ -363,11 +363,10 @@
             return;
         }
 
-
-        var originalEmail = "";
+        var originalEmail = "1";
         $.ajax({
             type: "get",
-            url: "verify_email_address",
+            url: "http://54.79.60.225:8080/user/verify_email_address",
             data: {
                 verifiedEmail: verifiedEmail,
                 originalEmail: originalEmail
@@ -435,7 +434,7 @@
 
                                 $.ajax({
                                     type: "post",
-                                    url: 'editServlet',
+                                    url: 'http://localhost:8080/user/sign_up',
                                     data: {
                                         password: passwordINP,
                                         postcode: postcodeINP,
@@ -446,6 +445,7 @@
                                 });
                                 alert("Submit successfully.");
                                 flag = false;
+                                window.location.href = "http://54.79.60.225/pages/auth/login.html?";
                             }
                         }
 
