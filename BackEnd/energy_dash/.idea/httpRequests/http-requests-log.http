@@ -1,3 +1,363 @@
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T094052.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=single
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T094041.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=single
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093935.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093926.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093914.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=single
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093902.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=demand
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093849.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=sssss
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093839.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=sssss
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093652.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Ori&customerType=Residential&postcode=2601&tariffType=sssss
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093646.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=sssss
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093638.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=demand
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093628.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=demand
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093627.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093614.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-01T093524.400.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T041033.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T040818.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T040813.200.json
+
+###
+
+GET http://localhost:8080/user/find_energy_plan?companyName=Origin&customerType=Residential&postcode=26000
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T040804.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=26000
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T040759.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=26000
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T035311.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T034008.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T033657.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T032519.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T032020.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031917.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031814.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031723.500.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031554.500.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031552.500.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031542.500.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031150.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031128.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031127.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T031050.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030712.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030711.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=usage
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030710.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2601&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030626.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030618.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030422.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602&tariffType=timeofuse
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030419.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030205.200.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T030038.500.json
+
+###
+
+GET http://localhost:8080/plan/find_energy_plan?companyName=Origin&customerType=Residential&postcode=2602
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-09-27T025914.500.json
+
+###
+
 GET http://localhost:8080/user/verify_email_address?originalEmail=yyy@anu.edu.au&verifiedEmail=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
@@ -35,366 +395,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2020-09-17T070035.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Belx&email=yyy@anu.edu.au&password=abd&originalEmail=yyy@anu.edu.au&postcode=2756
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T065858.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Belx&email=yyy@anu.edu.au&password=abd&originalEmail=yyy@anu.edu.au&postcode=2756
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T063423.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Belx&email=yyy@anu.edu.au&password=abc&originalEmail=yyy@anu.edu.au&postcode=2756
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T063334.200.json
-
-###
-
-GET http://localhost:8080/user/load_user_profile?userName=Belx&email=yyy@anu.edu.au&password=abc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062624.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?userName=Belx&email=yyy@anu.edu.au&password=abc
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062615.400.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?originalEmail=lalala@anu.edu.au&verifiedEmail=alalal@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062259.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?originalEmail=lalala@anu.edu.au&verifiedEmail=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062122.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?originalEmail=yyy@anu.edu.au&verifiedEmail=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062051.200.json
-
-###
-
-POST http://localhost:8080/user/verify_email_address?originalEmail=yyy@anu.edu.au&verifiedEmail=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T062048.405.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=yyy@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=2756&planId=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-17T061453.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=yyy@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=2756&planId=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T085642.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=xxx@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=2756&planId=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T085554.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=xxx@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=310000&planId=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T085517.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=xxx@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=310000&planId=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T085510.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=xxx@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=310000&planid=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T085057.200.json
-
-###
-
-POST http://localhost:8080/user/update_user_profile?userName=Blex&originalEmail=xxx@anu.edu.au&password=abc&email=yyy@anu.edu.au&postcode=310000&planid=lalalala
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-12T084422.500.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalaa@sina.com&originalEmail=lalaa@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T113259.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalaa@sina.com&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033517.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=lalala@sina.com&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033509.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=ddd@anu.edu.au&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033428.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033346.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033240.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033114.200.json
-
-###
-
-GET http://localhost:8080/user/verify_email_address?verifiedEmail=xxx@anu.edu.au&originalEmail=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-10T033004.200.json
-
-###
-
-POST http://localhost:8080/user/sign_up?email=xxx@anu.edu.au&password=999&userName=dads&postcode=adasd
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T031722.200.json
-
-###
-
-POST http://localhost:8080/user/sign_up?email=asdad&password=999&userName=&postcode=
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T031505.200.json
-
-###
-
-POST http://localhost:8080/user/sign_up?email=asdad&password=999&useName=&postcode=
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T031408.400.json
-
-###
-
-POST http://localhost:8080/user/sign_up?email=asdad&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T031335.400.json
-
-###
-
-POST http://localhost:8080/user/sign_in?email=asdad&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T031006.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?email=&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T030940.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?email=dad@google.com&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-09T030842.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?email=dad@google.com&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T083714.200.json
-
-###
-
-POST http://localhost:8080/user/sign_in?email=Bro&password=999
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T083655.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bro&password=999&email=Bro@google.com&postcode=2603&planId=
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T083111.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Mom&password=999&email=mom@google.com&postcode=2603&planId=
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T083010.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Dad&password=999&email=dad@google.com&postcode=2603&planId=88888888
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082802.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Baby&password=999&email=fff@google.com&postcode=2603&planId=88888888
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082751.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Baby&password=999&email=fff@google.com&postcode=2603
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082723.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=tim&password=789&email=sss@qq.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082524.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=tim&password=789&email=sss@qq.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082329.500.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T082028.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T081941.200.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T081535.500.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T081200.500.json
-
-###
-
-PUT http://localhost:8080/user/sign_up?userName=Bob&password=321&email=lalala@sina.com&postcode=2602
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-09-06T081043.500.json
 
 ###
 

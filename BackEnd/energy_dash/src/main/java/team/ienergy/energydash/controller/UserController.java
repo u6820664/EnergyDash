@@ -4,9 +4,11 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import team.ienergy.energydash.beans.Plan;
 import team.ienergy.energydash.beans.ResultBean;
 import team.ienergy.energydash.beans.User;
 import team.ienergy.energydash.exception.NormalException;
+import team.ienergy.energydash.service.PlanService;
 import team.ienergy.energydash.service.UserService;
 
 import javax.annotation.Resource;
@@ -16,14 +18,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
-* Created by CodeGenerator on 2020/08/31.
-*/
 @Controller
 @RequestMapping("/user")
 public class UserController {
     @Resource
     private UserService userService;
+
+    @Resource
+    private PlanService planService;
 
     /**
      * @param
@@ -214,7 +216,6 @@ public class UserController {
                                     @RequestParam(value = "image", required = false) MultipartFile file,
                                     @RequestParam(value = "originalEmail", required = true) String originalEmail) {
 
-
         //check existence of the user's originalEmail
         User testUser = userService.getUser(originalEmail);
         if (testUser == null){
@@ -245,6 +246,38 @@ public class UserController {
         return JSON.toJSON(resultBean);
     }
 
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc Interface 1007：list all the planId and plan name to meet the users'condition
+     * @author Hao Cao
+     * @date 27 September 2020
+     * @func_name findEnergyPlan
+     */
+    @ResponseBody
+    @RequestMapping(value = "/find_energy_plan", method = RequestMethod.GET)
+    public Object findEnergyPlan(@RequestParam(value = "companyName", required = true) String companyName,
+                                 @RequestParam(value = "customerType", required = true) String customerType,
+                                 @RequestParam(value = "postcode", required = true) String postcode,
+                                 @RequestParam(value = "tariffType", required = true) String tariffType)  {
+
+        Map paramMap=new HashMap();
+        paramMap.put("companyName", companyName);
+        paramMap.put("customerType", customerType);
+        paramMap.put("postcode", postcode);
+        paramMap.put("tariffType", tariffType);
+
+        List<Plan> planList = planService.findPlanId(paramMap);
+
+
+        if (planList.isEmpty()){
+            throw new NormalException("1007"+NormalException.ERROR_CODE_NO_RESULT, "No corresponding energy plan");
+        }
+
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(planList);
+        return JSON.toJSON(resultBean);
+    }
 
 
 }

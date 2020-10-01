@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.PlanDao">
+
+  <resultMap id="PlanResultMap" type="team.ienergy.energydash.beans.Plan">
+    <id column="pid" jdbcType="VARCHAR" property="pid" />
+    <id column="plan_name" jdbcType="VARCHAR" property="planName" />
+    <id column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <id column="customer_type" jdbcType="VARCHAR" property="customerType" />
+    <id column="postcode" jdbcType="VARCHAR" property="postcode" />
+    <id column="tariff_type" jdbcType="VARCHAR" property="tariffType" />
+  </resultMap>
+
+  <select id="findPlanId" resultMap="PlanResultMap"  >
+        SELECT * FROM energy_plan
+        where 1=1
+      <if test="companyName != null and companyName !=''">
+          <![CDATA[
+             and company_name = #{companyName,jdbcType = VARCHAR}
+            ]]>
+      </if>
+      <if test="customerType != null and customerType !=''">
+          <![CDATA[
+             and customer_type = #{customerType,jdbcType = VARCHAR}
+            ]]>
+      </if>
+      <if test="postcode != null and postcode !=''">
+          <![CDATA[
+             and postcode = #{postcode,jdbcType = VARCHAR}
+            ]]>
+      </if>
+      <if test="tariffType != null and tariffType !=''">
+          <![CDATA[
+             and tariff_type = #{tariffType,jdbcType = VARCHAR}
+            ]]>
+      </if>
+  </select>
+
+</mapper>

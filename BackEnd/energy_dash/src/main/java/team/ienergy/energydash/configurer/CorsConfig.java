@@ -4,6 +4,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+/**
+ * This configuration is used for handle issues in cross-domain request
+ */
 @Configuration
 public class CorsConfig extends WebMvcConfigurerAdapter {
     @Override
