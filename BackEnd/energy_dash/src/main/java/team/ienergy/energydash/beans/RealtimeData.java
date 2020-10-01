@@ -18,7 +18,9 @@ public class RealtimeData {
 
     private Date datetime;
 
-    private String wholesaleSale;
+    private String datetimeStr;
+
+    private String wholesalePrice;
 
     private String carbonIntensity;
 
@@ -29,13 +31,13 @@ public class RealtimeData {
     private String userConsumption;
 
 
-//    public void setDatetime(Date datetime) {
-//
-//        this.datetime = datetime;
-//        if (datetime != null) {
-//            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-//            this.datetime = sdf.format(datetime);
-//        }
-//    }
+    public void setDatetime(Date datetime) {
+
+        this.datetime = datetime;
+        if (datetime != null) {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            this.datetimeStr = sdf.format(datetime);
+        }
+    }
 
 }

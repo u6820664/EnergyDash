@@ -1,6 +1,7 @@
 package team.ienergy.energydash.service;
 
 import team.ienergy.energydash.beans.Plan;
+import team.ienergy.energydash.beans.RealtimeData;
 
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,6 @@ import java.util.Map;
 
 public interface RealtimeService {
 
-
+    RealtimeData getRealtimeData(int userId);
 }
 

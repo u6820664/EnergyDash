@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.RealtimeDao">
+
+  <resultMap id="RealtimeResultMap" type="team.ienergy.energydash.beans.RealtimeData">
+      <id column="user_id" jdbcType="INTEGER" property="userId" />
+      <id column="datetime" jdbcType="TIMESTAMP" property="datetime" />
+      <id column="wholesale_price" jdbcType="VARCHAR" property="wholesalePrice" />
+      <id column="carbon_intensity" jdbcType="VARCHAR" property="carbonIntensity" />
+      <id column="coal_profits" jdbcType="VARCHAR" property="coalProfits" />
+      <id column="renewable_profits" jdbcType="VARCHAR" property="renewableProfits" />
+      <id column="user_consumption" jdbcType="VARCHAR" property="userConsumption" />
+  </resultMap>
+
+  <select id="getRealtimeData" resultMap="RealtimeResultMap"  >
+      SELECT * FROM real_time_data
+      WHERE datetime = (
+      SELECT max(datetime)
+      FROM real_time_data
+      WHERE user_id = #{userId,jdbcType = INTEGER}
+      ) and user_id = #{userId,jdbcType = INTEGER}
+  </select>
+
+</mapper>

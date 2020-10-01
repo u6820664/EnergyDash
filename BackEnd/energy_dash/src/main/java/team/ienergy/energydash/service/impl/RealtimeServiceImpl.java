@@ -2,6 +2,7 @@ package team.ienergy.energydash.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import team.ienergy.energydash.beans.RealtimeData;
 import team.ienergy.energydash.dao.PlanDao;
 import team.ienergy.energydash.dao.RealtimeDao;
 import team.ienergy.energydash.service.RealtimeService;
@@ -21,4 +22,8 @@ public class RealtimeServiceImpl implements RealtimeService {
     private RealtimeDao realtimeDao;
 
 
+    @Override
+    public RealtimeData getRealtimeData(int userId) {
+        return realtimeDao.getRealtimeData(userId);
+    }
 }
