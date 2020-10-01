@@ -307,20 +307,20 @@
                                                 //alert(response.data.userName);
 
                                                 //把获取来的值赋值给先前的容器备传
-                                                userIdGot = response.data.userId;
-                                                userNameGot = response.data.userName;
                                                 emailGot = response.data.email;
                                                 passwordGot = response.data.password;
-                                                planIdGot = response.data.planId;
-                                                postcodeGot = response.data.postcode;
+                                                // userIdGot = response.data.userId;
+                                                // userNameGot = response.data.userName;
+                                                // postcodeGot = response.data.postcode;
+                                                // planIdGot = response.data.planId;
 
                                                 var orderData = {
                                                     password: passwordGot,
-                                                    postcode: postcodeGot,
-                                                    planId: planIdGot,
-                                                    userName: userNameGot,
-                                                    userId: userIdGot,
                                                     email: emailGot
+                                                    // userId: userIdGot,
+                                                    // userName: userNameGot,
+                                                    // postcode: postcodeGot,
+                                                    // planId: planIdGot
                                                 };
 
                                                 if (password !== passwordGot || email !== emailGot) {
@@ -328,9 +328,13 @@
                                                     return;
                                                 }
 
+                                                // alert("Welcome!");
                                                 var jsonStr = JSON.stringify(orderData);
                                                 window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
-                                                //window.location.href = "../users/profile.html?orderData=" + jsonStr;
+                                                // window.location.href = "../users/profile.html?orderData=" + jsonStr;
+                                                // window.location.replace("http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr);
+                                                // window.location.replace("../users/profile.html?orderData=" + jsonStr);
+
                                                 alert("Welcome!");
                                             },
                                             error: function (response) {

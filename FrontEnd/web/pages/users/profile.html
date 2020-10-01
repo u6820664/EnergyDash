@@ -237,31 +237,37 @@
                                                     var dataJson = $.parseJSON(orderData.replace(reg, "\""));
 
 
-                                                    // var email = dataJson.email;
-                                                    // var password = dataJson.password;
-                                                    // $.ajax({
-                                                    //     type: "get",
-                                                    //     url: "http://54.79.60.225:8080/user/load_user_profile",
-                                                    //     data: {
-                                                    //         email: email,
-                                                    //         password: password
-                                                    //     },
-                                                    //     async: false, // 要求同步
-                                                    //     success: function (response) {
-                                                    //         document.getElementById('email').setAttribute('value', response.data.email);
-                                                    //         document.getElementById('planID').setAttribute('value', response.data.planId);
-                                                    //         document.getElementById('username').setAttribute('value', response.data.userName);
-                                                    //         document.getElementById('password').setAttribute('value', response.data.password);
-                                                    //         document.getElementById('postcode').setAttribute('value', response.data.postcode);
-                                                    //     }
-                                                    // });
+                                                    var email = dataJson.email;
+                                                    var password = dataJson.password;
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: "http://54.79.60.225:8080/user/load_user_profile",
+                                                        data: {
+                                                            email: email,
+                                                            password: password
+                                                        },
+                                                        async: false, // 要求同步
+                                                        success: function (response) {
+                                                            document.getElementById('email').setAttribute('value', response.data.email);
+                                                            document.getElementById('username').setAttribute('value', response.data.userName);
+                                                            document.getElementById('password').setAttribute('value', response.data.password);
+                                                            document.getElementById('postcode').setAttribute('value', response.data.postcode);
+                                                            if (response.data.planId !== null) {
+                                                                document.getElementById('planID').setAttribute('value', response.data.planId);
+                                                            }
+                                                        }
+                                                    });
 
 
-                                                    document.getElementById('email').setAttribute('value', dataJson.email);
-                                                    document.getElementById('planID').setAttribute('value', dataJson.planId);
-                                                    document.getElementById('username').setAttribute('value', dataJson.userName);
-                                                    document.getElementById('password').setAttribute('value', dataJson.password);
-                                                    document.getElementById('postcode').setAttribute('value', dataJson.postcode);
+                                                    // document.getElementById('email').setAttribute('value', dataJson.email);
+                                                    // document.getElementById('username').setAttribute('value', dataJson.userName);
+                                                    // document.getElementById('password').setAttribute('value', dataJson.password);
+                                                    // document.getElementById('postcode').setAttribute('value', dataJson.postcode);
+                                                    // if (dataJson.planId !== null) {
+                                                    //     document.getElementById('planID').setAttribute('value', dataJson.planId);
+                                                    // }
+
+
                                                 });
 
 
