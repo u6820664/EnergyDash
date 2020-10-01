@@ -89,125 +89,157 @@
                         <h4>New here?</h4>
                         <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
 
-
-                        <!--Username-->
                         <form class="pt-3" id="registerForm">
-
-
                             <!--Username-->
-                            <div class="form-group">
-                                <label>Username</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Username</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                       <span class="input-group-text bg-transparent border-right-0">
                                         <i class="mdi mdi-account-outline text-primary"></i>
                                       </span>
+                                        </div>
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="username" placeholder="Username">
                                     </div>
-                                    <input type="text" class="form-control form-control-lg border-left-0" id="username"
-                                           placeholder="Username">
+
                                 </div>
                             </div>
 
 
                             <!--Email-->
-                            <div class="form-group">
-                                <label>Email</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Email</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                             <i class="mdi mdi-email-outline text-primary"></i>
                                           </span>
+                                        </div>
+                                        <input type="email" class="form-control form-control-lg border-left-0"
+                                               id="email" placeholder="Email">
+
                                     </div>
-                                    <input type="email" class="form-control form-control-lg border-left-0" id="email"
-                                           placeholder="Email">
+                                    <p id="info"></p>
 
                                 </div>
-                                <p id="info"></p>
-
                             </div>
 
-
                             <!--Password-->
-                            <div class="form-group">
-                                <label>Password</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Password</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                             <i class="mdi mdi-lock-outline text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="password" class="form-control form-control-lg border-left-0"
+                                               id="password" placeholder="Password">
                                     </div>
 
-                                    <input type="password" class="form-control form-control-lg border-left-0"
-                                           id="password" placeholder="Password">
                                 </div>
                             </div>
 
 
                             <!--Postcode-->
-                            <div class="form-group">
-                                <label>Postcode</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Postcode</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                                 <i class="mdi mdi-map-marker-radius text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="postcode" placeholder="Postcode">
                                     </div>
 
-                                    <input type="text" class="form-control form-control-lg border-left-0"
-                                           id="postcode" placeholder="Postcode">
                                 </div>
                             </div>
 
                             <!--Plan ID-->
-                            <div class="form-group">
-                                <label>Plan ID</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Plan ID</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                                 <i class="mdi mdi-numeric text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="planid" placeholder="Plan ID">
                                     </div>
 
-                                    <input type="text" class="form-control form-control-lg border-left-0"
-                                           id="postcode" placeholder="Plan ID">
                                 </div>
                             </div>
 
-                            <p align="center">or</p>
+                            <div class="text-center font-weight-light" style="margin-bottom:24px;">
+                                or
+                            </div>
 
                             <!--Provider Name-->
-                            <div class="form-group">
-                                <label>Provider Name</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Provider Name</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                                 <i class="mdi mdi-city text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="" placeholder="Provider Name">
                                     </div>
 
-                                    <input type="text" class="form-control form-control-lg border-left-0"
-                                           id="postcode" placeholder="Provider Name">
                                 </div>
                             </div>
 
                             <!--Customer Type-->
-                            <div class="form-group">
-                                <label>Customer Type</label>
-                                <select class="form-control" id="">
-                                    <option>Residential</option>
-                                    <option>Business</option>
-                                </select>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Customer Type</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <select class="form-control" id="">
+                                            <option>Residential</option>
+                                            <option>Business</option>
+                                        </select>
+                                    </div>
+
+                                </div>
                             </div>
 
                             <!--Tariff Type-->
-                            <div class="form-group">
-                                <label>Tariff Type</label>
-                                <select class="form-control" id="">
-                                    <option>single</option>
-                                    <option>timeofuse</option>
-                                    <option>usage</option>
-                                    <option>demand</option>
-                                </select>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Tariff Type</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <select class="form-control" id="">
+                                            <option>single</option>
+                                            <option>timeofuse</option>
+                                            <option>usage</option>
+                                            <option>demand</option>
+                                        </select>
+                                    </div>
+
+                                </div>
                             </div>
 
 
