@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<script lang="en">
 
-<head>
+    <
+    head >
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rexergy | Dashboard</title>
-    <!-- base:css -->
-    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    < meta
+    charset = "utf-8" >
+        < meta
+    name = "viewport"
+    content = "width=device-width, initial-scale=1, shrink-to-fit=no" >
+        < title > Rexergy | Dashboard < /title>
+        <!-- base:css -->
+        < link
+    rel = "stylesheet"
+    href = "vendors/mdi/css/materialdesignicons.min.css" >
+        < link
+    rel = "stylesheet"
+    href = "vendors/css/vendor.bundle.base.css" >
+        <!-- endinject -->
+        <!-- plugin css for this page -->
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        < link
+    rel = "stylesheet"
+    href = "css/style.css" >
+        <!-- endinject -->
+        < link
+    rel = "shortcut icon"
+    href = "images/favicon.png" / >
 
-    <!--jquery-->
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <!--jquery-->
+        < script
+    src = "js/jquery-3.3.1.min.js"
+    type = "text/javascript"
+    charset = "utf-8" ></script>
 
 </head>
 <body>
@@ -630,5 +645,32 @@
         document.getElementById("card_month").style.display = 'block';
     }
 </script>
+
+<script>
+    var email;
+
+    $.ajax({
+        type: "get",
+        url: "http://54.79.60.225:8080/realtime/get_realtime_data",
+        data: {
+            email: email,
+        },
+        async: false, // 要求同步
+
+        //success函数表示交互成功后的操作
+        success: function (response) {//response代表后台传过来的数据
+
+
+
+
+        }
+
+
+
+    });
+
+
+</script>
+
 
 </html>
