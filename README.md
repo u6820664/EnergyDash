@@ -298,8 +298,6 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Database Design](https://drive.google.com/drive/folders/1tkQT_4t1h0Qyp2xlwNVflvykOAMFCKoT?usp=sharing)
 
-### [UML Design](https://drive.google.com/drive/folders/1gHlsiQGvDD9kEi1nTf7ktrDfzTBj0Vrx?usp=sharing)
-
 
 
 ## 8.6 Front-End
