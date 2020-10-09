@@ -379,27 +379,10 @@
                             <div class="col-md-12 order-0 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-title">History Metrics</p>
-                                        <p class="text-muted">25% more traffic than previous week</p>
+                                        <p class="card-title">Historical consumption</p>
                                         <div class="row mb-3">
                                             <div class="col-md-7">
-                                                <div class="d-flex justify-content-between traffic-status">
-                                                    <div class="item">
-                                                        <p class="mb-">Users</p>
-                                                        <h5 class="font-weight-bold mb-0">93,956</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <p class="mb-">Bounce Rate</p>
-                                                        <h5 class="font-weight-bold mb-0">58,605</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <p class="mb-">Views</p>
-                                                        <h5 class="font-weight-bold mb-0">78,254</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                </div>
+                                                <p class="text-muted">Historical energy consumption data of users</p>
                                             </div>
                                             <div class="col-md-5">
                                                 <ul class="nav nav-pills nav-pills-custom justify-content-md-end"
@@ -412,17 +395,17 @@
                                                         </a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" id="tab_week"
-                                                           data-toggle="pill" href="#pills-career" role="tab"
-                                                           aria-controls="pills-profile" aria-selected="false">
-                                                            Week
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
                                                         <a class="nav-link" id="tab_month"
                                                            data-toggle="pill" href="#pills-music" role="tab"
                                                            aria-controls="pills-contact" aria-selected="false">
                                                             Month
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="tab_week"
+                                                           data-toggle="pill" href="#pills-career" role="tab"
+                                                           aria-controls="pills-profile" aria-selected="false">
+                                                            Year
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -633,26 +616,122 @@
 
 
 <script>
+    $(function () {
+        var email;
 
-    var email;
+        var carbonData = "";
+        var timeData = "";
 
-    $.ajax({
-        type: "get",
-        url: "http://54.79.60.225:8080/realtime/get_realtime_data",
-        data: {
-            email: email,
-        },
-        async: false, // 要求同步
+        $.ajax({
+            type: "get",
+            url: "http://54.79.60.225:8080/data/get_realtime_data",
+            data: {
+                email: "xxx@anu.edu.au",
+            },
+            async: false, // 要求同步
 
-        //success函数表示交互成功后的操作
-        success: function (response) {//response代表后台传过来的数据
+            //success函数表示交互成功后的操作
+            success: function (response) {//response代表后台传过来的数据
+                // alert(response.data[0].renewableProfits);
+                for (var i = 0; i < response.data.length; i++) {
+                    if (i == 0) {
+                        carbonData += response.data[i].carbonIntensity + ", ";
+                        timeData += response.data[i].datetime + ", ";
+                    } else if (i == response.data.length - 1) {
+                        carbonData += response.data[i].carbonIntensity;
+                        timeData += response.data[i].datetime;
+                    } else {
+                        carbonData += response.data[i].carbonIntensity + ", ";
+                        timeData += response.data[i].datetime + ", ";
+                    }
+                }
+
+            }
+
+        });
 
 
+        if ($("#task-chart5").length) {
+            var taskChartCanvas = $("#task-chart5").get(0).getContext("2d");
+            // alert(carbonData);
+            // alert(timeData);
+            console.log(timeData);
+            console.log(carbonData);
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    // labels: [timeData],
+                    labels: [1393833600000, 1393763400000, 1393761600000, 1393759800000, 1393758000000, 1393756200000, 1393754400000, 1393752600000, 1393750800000, 1393749000000, 1393747200000, 1393745400000, 1393743600000, 1393741800000, 1393740000000, 1393738200000, 1393736400000, 1393734600000, 1393732800000, 1393731000000, 1393729200000, 1393727400000, 1393725600000, 1393723800000, 1393722000000, 1393720200000, 1393718400000, 1393716600000, 1393714800000, 1393713000000, 1393711200000, 1393709400000, 1393707600000, 1393705800000, 1393704000000, 1393702200000, 1393700400000, 1393698600000, 1393696800000, 1393695000000, 1393693200000, 1393691400000, 1393689600000, 1393687800000, 1393686000000, 1393684200000, 1393682400000, 1393680600000, 1393678800000, 1393677000000],
+                    datasets: [{
+                        label: 'Carbon Intensity',
+                        // data:[],
+                        // data: [carbonData],
+                        data: [881.22, 859.33, 901.73, 908.73, 874.10, 841.54, 785.10, 680.28, 600.21, 538.92, 468.53, 415.93, 486.74, 585.62, 674.14, 775.34, 839.32, 921.04, 965.24, 947.41, 896.66, 830.22, 722.02, 624.51, 529.75, 471.12, 442.46, 526.57, 609.76, 698.42, 775.98, 891.05, 978.51, 962.36, 896.13, 766.87, 647.79, 548.85, 502.75, 470.53, 477.18, 521.31, 567.17, 640.90, 746.01, 854.50, 955.42, 965.37, 920.21, 837.16],
+                        backgroundColor: 'orange'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 200,
+                                min: 400,
+                                max: 1000
+                            }
+                        }],
+                        xAxes: [{
+                            display: true,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
         }
-
-
     });
-
 
 </script>
 
