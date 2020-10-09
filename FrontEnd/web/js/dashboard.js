@@ -84,12 +84,12 @@
             });
         }
 
-        if ($("#audience-chart-week").length) {
-            var AudienceChartCanvas = $("#audience-chart-week").get(0).getContext("2d");
+        if ($("#audience-chart-year").length) {
+            var AudienceChartCanvas = $("#audience-chart-year").get(0).getContext("2d");
             var AudienceChart = new Chart(AudienceChartCanvas, {
                 type: 'bar',
                 data: {
-                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"],
                     datasets: [
                         {
                             type: 'line',

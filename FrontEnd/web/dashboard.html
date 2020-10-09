@@ -138,13 +138,41 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
-
                 <div class="row">
 
                     <!-- Real-time Data -->
                     <!-- Swap Metrics -->
                     <div class="col-12 col-xl-6 grid-margin stretch-card">
                         <div class="row w-100 flex-grow">
+                            <!-- Recommendation Status -->
+                            <div class="col-md-12 grid-margin" align="center">
+
+                                <button class="recommend_yes btn btn-success btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 95%</big>
+                                    <h1>Recommend</h1>
+                                    </span>
+                                </button>
+
+                                <button class="recommend_med btn btn-warning btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 55%</big>
+                                    <h1>Warning</h1>
+                                    </span>
+                                </button>
+
+                                <button class="recommend_not btn btn-danger btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 35%</big>
+                                    <h1>Not Recommend</h1>
+                                    </span>
+                                </button>
+
+                            </div>
+
                             <!-- Energy Price -->
                             <div class="col-md-12  grid-margin stretch-card">
                                 <div class="card">
@@ -240,11 +268,10 @@
                                         <div style="display: block;" id="card_Metrics_1">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy Price</p>
-                                                <p class="text-success font-weight-medium">cents / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">24.88</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">cents / MWH</p>
                                             </div>
                                             <canvas id="balance-chart" height="130"></canvas>
                                         </div>
@@ -256,7 +283,7 @@
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kg / MWH</p>
                                             </div>
                                             <canvas id="task-chart1" height="130"></canvas>
                                         </div>
@@ -307,11 +334,31 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Carbon intensity</p>
-                                            <p class="text-success font-weight-medium">kg / MWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">kg / MWH</p>
                                         </div>
                                         <canvas id="task-chart5" height="130"></canvas>
                                     </div>
@@ -324,11 +371,31 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Coal generator profits</p>
-                                            <p class="text-success font-weight-medium">cents / MWH</p>
+
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="task-chart6" height="130"></canvas>
                                     </div>
@@ -341,11 +408,30 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Renewable energy profits</p>
-                                            <p class="text-success font-weight-medium">cents / MWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="task-chart7" height="130"></canvas>
                                     </div>
@@ -358,11 +444,30 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Energy consumption</p>
-                                            <p class="text-success font-weight-medium">kWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">kWH</p>
                                         </div>
                                         <canvas id="task-chart8" height="130"></canvas>
                                     </div>
@@ -402,7 +507,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" id="tab_week"
+                                                        <a class="nav-link" id="tab_year"
                                                            data-toggle="pill" href="#pills-career" role="tab"
                                                            aria-controls="pills-profile" aria-selected="false">
                                                             Year
@@ -417,11 +522,11 @@
                                         <div style="display: block;" id="card_day">
                                             <canvas id="audience-chart-day" height="130"></canvas>
                                         </div>
-                                        <div style="display: none;" id="card_week">
-                                            <canvas id="audience-chart-week" height="130"></canvas>
-                                        </div>
                                         <div style="display: none;" id="card_month">
                                             <canvas id="audience-chart-month" height="130"></canvas>
+                                        </div>
+                                        <div style="display: none;" id="card_year">
+                                            <canvas id="audience-chart-year" height="130"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -496,25 +601,6 @@
 <!-- End custom js for this page-->
 <!--<script src="js/positionMove.js"></script>-->
 </body>
-<!--Canvas_swap Metrics 1-5 -->
-<!--<script>-->
-<!--    (function () {-->
-<!--        function tabs(handles, cons) {-->
-<!--            $(handles).each(function (num) {-->
-<!--                $(this).click(function () {-->
-<!--                    $(handles).removeClass("hover");-->
-<!--                    $(this).addClass("hover");-->
-<!--                    $(cons).removeClass("show");-->
-<!--                    $($(cons)[num]).addClass("show");-->
-<!--                });-->
-<!--            });-->
-<!--        }-->
-
-<!--        window.tabs = tabs;-->
-<!--        tabs(".preview-item", ".tab_canvas ");-->
-<!--    })();-->
-<!--</script>-->
-
 
 <!--Canvas_swap Metrics 1-5  -->
 <script>
@@ -523,7 +609,7 @@
     };
 
     function changeToMetrics_1() {
-        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_1").style.display = 'block';
         document.getElementById("card_Metrics_2").style.display = 'none';
         document.getElementById("card_Metrics_3").style.display = 'none';
         document.getElementById("card_Metrics_4").style.display = 'none';
@@ -589,18 +675,8 @@
 
     function changeToDay() {
         document.getElementById("card_day").style.display = 'block';
-        document.getElementById("card_week").style.display = 'none';
         document.getElementById("card_month").style.display = 'none';
-    }
-
-    document.getElementById("tab_week").onclick = function () {
-        changeToWeek()
-    };
-
-    function changeToWeek() {
-        document.getElementById("card_day").style.display = 'none';
-        document.getElementById("card_week").style.display = 'block';
-        document.getElementById("card_month").style.display = 'none';
+        document.getElementById("card_year").style.display = 'none';
     }
 
     document.getElementById("tab_month").onclick = function () {
@@ -609,9 +685,47 @@
 
     function changeToMonth() {
         document.getElementById("card_day").style.display = 'none';
-        document.getElementById("card_week").style.display = 'none';
         document.getElementById("card_month").style.display = 'block';
+        document.getElementById("card_year").style.display = 'none';
     }
+
+    document.getElementById("tab_year").onclick = function () {
+        changeToYear()
+    };
+
+    function changeToYear() {
+        document.getElementById("card_day").style.display = 'none';
+        document.getElementById("card_month").style.display = 'none';
+        document.getElementById("card_year").style.display = 'block';
+    }
+</script>
+
+//Small chart Notify
+<script>
+    $(function () {
+        function notify() {
+            for (var i = 0; i < document.getElementsByClassName("recommend_yes").length; i++) {
+                var randv = Math.random() * 3;
+                if (0 < randv && randv < 1) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'inline';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
+                }
+                if (1 < randv && randv < 2) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'inline';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
+                }
+                if (2 < randv && randv < 3) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'inline';
+                }
+            }
+        }
+
+        setInterval(notify, 1000)
+    })
 </script>
 
 
