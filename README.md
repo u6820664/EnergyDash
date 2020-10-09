@@ -48,7 +48,7 @@ First, we will check the things that we need to do. Second, after communicating 
 
 ### 2.2.1 Programming Language
 
-Java and most likely a combination of Python and JavaScript.
+Java and most likely a combination of JavaScript.
 
 
 
@@ -227,8 +227,8 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | Hao  Cao       | u6807681 | Back-End Developer,  Database designer |
 | Haonan  Liu    | u6762898 | Front-End Developer                    |
 | Zixin  Ye      | u6605822 | Front-End Developer,  Documentation    |
-| Mingchao  Sima | u6502811 | Developer                              |
-| Jie  Zou       | u6849083 | Developer                              |
+| Mingchao  Sima | u6502811 | Back-End Developer,  Algorithm designer|
+| Jie  Zou       | u6849083 | Front-End Developer                    |
 
  
 
@@ -310,7 +310,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
 
-### [API Documentation](https://drive.google.com/file/d/141Oy0ExoBpVFzNzM1b19DDe8s6MZ1rjd/view?usp=sharing)
+### [API Documentation](https://drive.google.com/file/d/1VVuxdkl0Njew2vSo3jlrnaDxZ2pFuSy5/view?usp=sharing)
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
 
@@ -346,3 +346,6 @@ The client does not propose any due day so we will follow the due day of this co
 
 
 
+## Project Video
+
+### [Project Video](https://youtu.be/te2DoCKfq8g)
