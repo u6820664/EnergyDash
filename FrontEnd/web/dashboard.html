@@ -700,7 +700,7 @@
     }
 </script>
 
-//Small chart Notify
+<!--Small chart Notify-->
 <script>
     $(function () {
         function notify() {
@@ -749,39 +749,36 @@
                 // alert(response.data[0].renewableProfits);
                 for (var i = 0; i < response.data.length; i++) {
                     if (i == 0) {
-                        carbonData += response.data[i].carbonIntensity + ", ";
-                        timeData += response.data[i].datetime + ", ";
+                        carbonData += response.data[i].carbonIntensity + ",";
+                        timeData += response.data[i].datetime + ",";
                     } else if (i == response.data.length - 1) {
                         carbonData += response.data[i].carbonIntensity;
                         timeData += response.data[i].datetime;
                     } else {
-                        carbonData += response.data[i].carbonIntensity + ", ";
-                        timeData += response.data[i].datetime + ", ";
+                        carbonData += response.data[i].carbonIntensity + ",";
+                        timeData += response.data[i].datetime + ",";
                     }
                 }
 
             }
-
         });
 
+        var timeDataArr = timeData.split(',');
+        var carbonDataArr = carbonData.split(',');
 
         if ($("#task-chart5").length) {
             var taskChartCanvas = $("#task-chart5").get(0).getContext("2d");
-            // alert(carbonData);
-            // alert(timeData);
-            console.log(timeData);
-            console.log(carbonData);
+            console.log(timeDataArr);
+            console.log(carbonDataArr);
             var taskChart = new Chart(taskChartCanvas, {
                 type: 'line',
                 data: {
                     // labels: [],
-                    // labels: [timeData],
-                    labels: [1393833600000, 1393763400000, 1393761600000, 1393759800000, 1393758000000, 1393756200000, 1393754400000, 1393752600000, 1393750800000, 1393749000000, 1393747200000, 1393745400000, 1393743600000, 1393741800000, 1393740000000, 1393738200000, 1393736400000, 1393734600000, 1393732800000, 1393731000000, 1393729200000, 1393727400000, 1393725600000, 1393723800000, 1393722000000, 1393720200000, 1393718400000, 1393716600000, 1393714800000, 1393713000000, 1393711200000, 1393709400000, 1393707600000, 1393705800000, 1393704000000, 1393702200000, 1393700400000, 1393698600000, 1393696800000, 1393695000000, 1393693200000, 1393691400000, 1393689600000, 1393687800000, 1393686000000, 1393684200000, 1393682400000, 1393680600000, 1393678800000, 1393677000000],
+                    labels: timeDataArr,
                     datasets: [{
                         label: 'Carbon Intensity',
                         // data:[],
-                        // data: [carbonData],
-                        data: [881.22, 859.33, 901.73, 908.73, 874.10, 841.54, 785.10, 680.28, 600.21, 538.92, 468.53, 415.93, 486.74, 585.62, 674.14, 775.34, 839.32, 921.04, 965.24, 947.41, 896.66, 830.22, 722.02, 624.51, 529.75, 471.12, 442.46, 526.57, 609.76, 698.42, 775.98, 891.05, 978.51, 962.36, 896.13, 766.87, 647.79, 548.85, 502.75, 470.53, 477.18, 521.31, 567.17, 640.90, 746.01, 854.50, 955.42, 965.37, 920.21, 837.16],
+                        data: carbonDataArr,
                         backgroundColor: 'orange'
                     }
                     ]
@@ -816,7 +813,7 @@
                             }
                         }],
                         xAxes: [{
-                            display: true,
+                            display: false,
                             stacked: false,
                             categoryPercentage: 1,
                             ticks: {
