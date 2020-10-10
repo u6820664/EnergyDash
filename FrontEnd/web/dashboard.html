@@ -273,13 +273,12 @@
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">24.88</h5>
                                                 <p class="text-success mb-0">cents / MWH</p>
                                             </div>
-                                            <canvas id="balance-chart" height="130"></canvas>
+                                            <canvas id="energy-price-chart" height="130"></canvas>
                                         </div>
 
                                         <div style="display: none;" id="card_Metrics_2">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Carbon intensity</p>
-                                                <p class="text-success font-weight-medium">kg / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
@@ -291,11 +290,10 @@
                                         <div style="display: none;" id="card_Metrics_3">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Coal generator profits</p>
-                                                <p class="text-success font-weight-medium">kg / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kg / MWH</p>
                                             </div>
                                             <canvas id="task-chart2" height="130"></canvas>
                                         </div>
@@ -303,11 +301,10 @@
                                         <div style="display: none;" id="card_Metrics_4">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Renewable energy profits</p>
-                                                <p class="text-success font-weight-medium">cents / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">cents / MWH</p>
                                             </div>
                                             <canvas id="task-chart3" height="130"></canvas>
                                         </div>
@@ -315,11 +312,10 @@
                                         <div style="display: none;" id="card_Metrics_5">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy consumption</p>
-                                                <p class="text-success font-weight-medium">kWh</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kWh</p>
                                             </div>
                                             <canvas id="task-chart4" height="130"></canvas>
                                         </div>
@@ -360,7 +356,7 @@
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
                                             <p class="text-success mb-0">kg / MWH</p>
                                         </div>
-                                        <canvas id="task-chart5" height="130"></canvas>
+                                        <canvas id="carbon-intensity" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +393,7 @@
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
-                                        <canvas id="task-chart6" height="130"></canvas>
+                                        <canvas id="coal-profits" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +429,7 @@
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
-                                        <canvas id="task-chart7" height="130"></canvas>
+                                        <canvas id="renewable-profits" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -469,7 +465,7 @@
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
                                             <p class="text-success mb-0">kWH</p>
                                         </div>
-                                        <canvas id="task-chart8" height="130"></canvas>
+                                        <canvas id="energy-consumption" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -484,10 +480,11 @@
                             <div class="col-md-12 order-0 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-title">Historical consumption</p>
+                                        <p class="card-title">Historical Metrics</p>
                                         <div class="row mb-3">
                                             <div class="col-md-7">
-                                                <p class="text-muted">Historical energy consumption data of users</p>
+                                                <p class="text-muted">Historical energy consumption and price data of
+                                                    users</p>
                                             </div>
                                             <div class="col-md-5">
                                                 <ul class="nav nav-pills nav-pills-custom justify-content-md-end"
@@ -520,13 +517,13 @@
 
                                     <div class="card-body">
                                         <div style="display: block;" id="card_day">
-                                            <canvas id="audience-chart-day" height="130"></canvas>
+                                            <canvas id="historical-chart-day" height="130"></canvas>
                                         </div>
                                         <div style="display: none;" id="card_month">
-                                            <canvas id="audience-chart-month" height="130"></canvas>
+                                            <canvas id="historical-chart-month" height="130"></canvas>
                                         </div>
                                         <div style="display: none;" id="card_year">
-                                            <canvas id="audience-chart-year" height="130"></canvas>
+                                            <canvas id="historical-chart-year" height="130"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -537,21 +534,22 @@
                                 <div class="card">
                                     <div class="card-body pb-0">
                                         <div class="d-flex align-items-center mb-4">
-                                            <p class="card-title mb-0 mr-1">Cumulative Metrics</p>
-                                            <!-- <div class="badge badge-info badge-pill">2</div> -->
+                                            <p class="card-title mb-0 mr-1">Cumulative values</p>
                                         </div>
                                         <div class="d-flex flex-wrap pt-2">
                                             <div class="mr-4 mb-lg-2 mb-xl-0">
-                                                <p>Last Month</p>
-                                                <h4 class="font-weight-bold mb-0">77.15 %</h4>
+                                                <p>Energy consuption</p>
+                                                <h4 class="font-weight-bold mb-0">77.15 <span
+                                                        class="text-success">kWH</span></h4>
                                             </div>
                                             <div>
-                                                <p>This Month</p>
-                                                <h4 class="font-weight-bold mb-0">14.15 %</h4>
+                                                <p>Energy Price</p>
+                                                <h4 class="font-weight-bold mb-0">14.15 <span class="text-success">cents / MWH</span>
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas height="150" id="activity-chart"></canvas>
+                                    <canvas height="20" id="activity-chart"></canvas>
                                 </div>
                             </div>
 
@@ -667,7 +665,7 @@
 
 </script>
 
-<!--Tab_swap Day/ Week /Month -->
+<!--Tab_swap Day/ Month /Year -->
 <script>
     document.getElementById("tab_day").onclick = function () {
         changeToDay()
@@ -728,12 +726,16 @@
     })
 </script>
 
-
 <script>
     $(function () {
         var email;
 
         var carbonData = "";
+        var renewableData = "";
+        var consumptionData = "";
+        var coalData = "";
+        var priceData = "";
+
         var timeData = "";
 
         $.ajax({
@@ -748,14 +750,21 @@
             success: function (response) {//response代表后台传过来的数据
                 // alert(response.data[0].renewableProfits);
                 for (var i = 0; i < response.data.length; i++) {
-                    if (i == 0) {
-                        carbonData += response.data[i].carbonIntensity + ",";
-                        timeData += response.data[i].datetime + ",";
-                    } else if (i == response.data.length - 1) {
+                    if (i == response.data.length - 1) {
                         carbonData += response.data[i].carbonIntensity;
+                        renewableData += response.data[i].renewableProfits;
+                        consumptionData += response.data[i].userConsumption;
+                        coalData += response.data[i].coalProfits;
+                        priceData += response.data[i].wholesalePrice;
+
                         timeData += response.data[i].datetime;
                     } else {
                         carbonData += response.data[i].carbonIntensity + ",";
+                        renewableData += response.data[i].renewableProfits + ",";
+                        consumptionData += response.data[i].userConsumption + ",";
+                        coalData += response.data[i].coalProfits + ",";
+                        priceData += response.data[i].wholesalePrice + ",";
+
                         timeData += response.data[i].datetime + ",";
                     }
                 }
@@ -763,13 +772,114 @@
             }
         });
 
-        var timeDataArr = timeData.split(',');
         var carbonDataArr = carbonData.split(',');
+        var renewableDataArr = renewableData.split(',');
+        var consumptionDataArr = consumptionData.split(',');
+        var coalDataArr = coalData.split(',');
+        var priceDataArr = priceData.split(',');
 
-        if ($("#task-chart5").length) {
-            var taskChartCanvas = $("#task-chart5").get(0).getContext("2d");
-            console.log(timeDataArr);
-            console.log(carbonDataArr);
+        var timeDataArr = timeData.split(',');
+
+        if ($("#energy-price-chart").length) {
+            var areaData = {
+                labels: timeDataArr,
+                datasets: [
+                    {
+                        data: priceDataArr,
+                        borderColor: [
+                            '#1faf47'
+                        ],
+                        borderWidth: 3,
+                        fill: false,
+                        label: "services"
+                    },
+                ]
+            };
+            var areaOptions = {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            display: false,
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: 'transparent',
+                            zeroLineColor: '#eeeeee'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            display: true,
+                            autoSkip: false,
+                            maxRotation: 0,
+                            stepSize: 100,
+                            fontColor: "#000",
+                            fontSize: 14,
+                            padding: 18,
+                            stepSize: 50,
+                            fontSize: 10,
+                            fontColor: "#b1b0b0",
+                            callback: function (value) {
+                                var ranges = [
+                                    {divider: 1e6, suffix: 'M'},
+                                    {divider: 1e3, suffix: 'k'}
+                                ];
+
+                                function formatNumber(n) {
+                                    for (var i = 0; i < ranges.length; i++) {
+                                        if (n >= ranges[i].divider) {
+                                            return (n / ranges[i].divider).toString() + ranges[i].suffix;
+                                        }
+                                    }
+                                    return n;
+                                }
+
+                                return formatNumber(value);
+                            }
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            color: "#f8f8f8",
+                            zeroLineColor: "#f8f8f8"
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    enabled: true
+                },
+                elements: {
+                    line: {
+                        tension: 0
+                    },
+                    point: {
+                        radius: 0
+                    }
+                }
+            }
+            var balanceChartCanvas = $("#energy-price-chart").get(0).getContext("2d");
+            var balanceChart = new Chart(balanceChartCanvas, {
+                type: 'line',
+                data: areaData,
+                options: areaOptions
+            });
+        }
+
+
+        if ($("#carbon-intensity").length) {
+            var taskChartCanvas = $("#carbon-intensity").get(0).getContext("2d");
             var taskChart = new Chart(taskChartCanvas, {
                 type: 'line',
                 data: {
@@ -807,9 +917,7 @@
                                 fontColor: "#9fa0a2",
                                 fontSize: 10,
                                 padding: 0,
-                                stepSize: 200,
-                                min: 400,
-                                max: 1000
+                                stepSize: 200
                             }
                         }],
                         xAxes: [{
@@ -842,8 +950,227 @@
                 }
             });
         }
-    });
 
+        if ($("#coal-profits").length) {
+            var taskChartCanvas = $("#coal-profits").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Coal Generator Profits',
+                        // data:[],
+                        data: coalDataArr,
+                        backgroundColor: 'brown'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 20
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#renewable-profits").length) {
+            var taskChartCanvas = $("#renewable-profits").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Renewable Energy Profits',
+                        // data:[],
+                        data: renewableDataArr,
+                        backgroundColor: 'lightgreen'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#energy-consumption").length) {
+            var taskChartCanvas = $("#energy-consumption").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Energy Consumption',
+                        // data:[],
+                        data: consumptionDataArr,
+                        backgroundColor: 'pink'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 0.2
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+    });
 </script>
 
 </html>
