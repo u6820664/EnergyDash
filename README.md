@@ -305,8 +305,14 @@ The client does not propose any due day so we will follow the due day of this co
 ### [UI Design](https://drive.google.com/drive/folders/1utlLs2qP6LNefEX7tVfz68_A9mFICBP8?usp=sharing)
 
 
+## 8.6 Testing
 
-## 8.7 Other Resources
+### [User Tesing](https://drive.google.com/drive/folders/1Qvcm0PWao91BEMG7EOlW5k8crBUSCec9?usp=sharing)
+
+### [API Tesing](https://docs.google.com/document/d/1s8LyBLpKRte5gukueUs6tT1X-DtfO-ICFRQUfXLjnAw/edit?usp=sharing)
+
+
+## 8.8 Other Resources
 
 ### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
 
@@ -315,8 +321,6 @@ The client does not propose any due day so we will follow the due day of this co
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
 
 ### [Sprint Retrospective](https://drive.google.com/drive/folders/1aGodGwa0H8544wW6PvFrpb00gdzQgKYL?usp=sharing)
-
-### [User Testing](https://drive.google.com/drive/folders/1Aic0XbYCSahP-Im_ugEhPrFkg7e1UFnh?usp=sharing)
 
 ### [Google Drive](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing)
 
