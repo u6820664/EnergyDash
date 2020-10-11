@@ -248,7 +248,7 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | Teaching  Break-2 | ●      Coding                                                |
 | Week  07          | ●      Compared among different data analysis algorithm<br/>●      Test & Debug<br/>●      Adjusting UI and functions according to reflection<br/>●      Conduct the first user feedback |
 | Week  08          | ●      Conduct the second user survey<br/>●      Analyse and reflect to survey report<br/>●      Keep improving UI interface according to reflection<br/>●      Keep improving the data analysis algorithms according to reflection |
-| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Design poster<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
+| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Design Project Video<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
 | Week  11-12       | ●      Finish handover documents<br/>●      Report to the client |
 
 **Gantt Chart**
