@@ -18,6 +18,6 @@ import java.util.Map;
 @Repository
 public interface RealtimeDao {
 
-    RealtimeData getRealtimeData(@Param(value = "userId")Integer userId);
+    List<RealtimeData> getRealtimeData(@Param(value = "userId")Integer userId);
 }
 

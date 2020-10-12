@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.HistoricalDao">
+
+  <resultMap id="HistoricalResultMap" type="team.ienergy.energydash.beans.HistoricalData">
+      <id column="user_id" jdbcType="INTEGER" property="userId" />
+      <id column="datetime" jdbcType="TIMESTAMP" property="datetime" />
+      <id column="user_consumption" jdbcType="VARCHAR" property="userConsumption" />
+  </resultMap>
+
+    <select id="getHistoricalYearlyData" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(user_consumption) user_consumption
+        FROM real_time_data
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y' ) desc
+        limit 50
+    </select>
+
+    <select id="getHistoricalMonthlyData" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(user_consumption) user_consumption
+        FROM real_time_data
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m' ) desc
+        limit 12
+    </select>
+
+    <select id="getHistoricalDailyData" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(user_consumption) user_consumption
+        FROM real_time_data
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' ) desc
+        limit 30
+    </select>
+
+    <select id="getCumulativeData" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(user_consumption) user_consumption
+        FROM real_time_data
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+    </select>
+
+
+</mapper>
