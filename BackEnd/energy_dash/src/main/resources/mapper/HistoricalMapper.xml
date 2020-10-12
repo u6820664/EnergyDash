@@ -6,7 +6,9 @@
       <id column="user_id" jdbcType="INTEGER" property="userId" />
       <id column="datetime" jdbcType="TIMESTAMP" property="datetime" />
       <id column="user_consumption" jdbcType="VARCHAR" property="userConsumption" />
+      <id column="price" jdbcType="VARCHAR" property="price" />
   </resultMap>
+
 
     <select id="getHistoricalYearlyData" resultMap="HistoricalResultMap"  >
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
@@ -16,6 +18,15 @@
         limit 50
     </select>
 
+    <select id="getHistoricalYearlyPrice" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y' ) desc
+        limit 50
+    </select>
+
+
     <select id="getHistoricalMonthlyData" resultMap="HistoricalResultMap"  >
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
         FROM real_time_data
@@ -23,6 +34,15 @@
         GROUP BY DATE_FORMAT( datetime, '%Y-%m' ) desc
         limit 12
     </select>
+
+    <select id="getHistoricalMonthlyPrice" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m' ) desc
+        limit 12
+    </select>
+
 
     <select id="getHistoricalDailyData" resultMap="HistoricalResultMap"  >
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
@@ -32,9 +52,25 @@
         limit 30
     </select>
 
+    <select id="getHistoricalDailyPrice" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' ) desc
+        limit 30
+    </select>
+
+
+
     <select id="getCumulativeData" resultMap="HistoricalResultMap"  >
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
         FROM real_time_data
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+    </select>
+
+    <select id="getCumulativePrice" resultMap="HistoricalResultMap"  >
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
         WHERE user_id = #{userId,jdbcType = INTEGER}
     </select>
 

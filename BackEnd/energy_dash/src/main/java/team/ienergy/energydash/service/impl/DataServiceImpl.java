@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import team.ienergy.energydash.beans.HistoricalData;
 import team.ienergy.energydash.dao.HistoricalDao;
 import team.ienergy.energydash.dao.RealtimeDao;
+import team.ienergy.energydash.exception.NormalException;
 import team.ienergy.energydash.service.DataService;
 
 import java.util.List;
@@ -35,23 +36,106 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public List<HistoricalData> getHistoricalYearlyData(int userId) {
-        return historicalDao.getHistoricalYearlyData(userId);
+        List<HistoricalData> data1 = historicalDao.getHistoricalYearlyData(userId);
+        List<HistoricalData> data2 = historicalDao.getHistoricalYearlyPrice(userId);
+        if (data1.size()!= 0) {
+            for (HistoricalData data : data1) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(6, 11));
+            }
+        }
+        if (data2.size()!=0) {
+            for (HistoricalData data : data2) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(6, 11));
+            }
+        }
+
+        if (data1.size()!= 0 && data2.size()!=0){
+            for (int i = 0; i < data1.size(); i++) {
+                for (int j = 0; j < data2.size(); j++) {
+                    if (data1.get(i).getDatetimeStr().equals(data2.get(j).getDatetimeStr())) {
+                        data1.get(i).setPrice(data2.get(j).getPrice());
+                    }
+                }
+            }
+        }
+        return data1;
     }
 
     @Override
     public List<HistoricalData> getHistoricalMonthlyData(int userId) {
-        return historicalDao.getHistoricalMonthlyData(userId);
+        List<HistoricalData> data1 = historicalDao.getHistoricalMonthlyData(userId);
+        List<HistoricalData> data2 = historicalDao.getHistoricalMonthlyPrice(userId);
+        if (data1.size()!= 0) {
+            for (HistoricalData data : data1) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(3, 11));
+            }
+        }
+        if (data2.size()!=0) {
+            for (HistoricalData data : data2) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(3, 11));
+            }
+        }
+
+        if (data1.size()!= 0 && data2.size()!=0){
+            for (int i = 0; i < data1.size(); i++) {
+                for (int j = 0; j < data2.size(); j++) {
+                    if (data1.get(i).getDatetimeStr().equals(data2.get(j).getDatetimeStr())) {
+                        data1.get(i).setPrice(data2.get(j).getPrice());
+                    }
+                }
+            }
+        }
+        return data1;
     }
 
     @Override
     public List<HistoricalData> getHistoricalDailyData(int userId) {
-        return historicalDao.getHistoricalDailyData(userId);
+        List<HistoricalData> data1 = historicalDao.getHistoricalDailyData(userId);
+        List<HistoricalData> data2 = historicalDao.getHistoricalDailyPrice(userId);
+        if (data1.size()!= 0) {
+            for (HistoricalData data : data1) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(0, 11));
+            }
+        }
+        if (data2.size()!=0) {
+            for (HistoricalData data : data2) {
+                data.setDatetime(data.getDatetime());
+                data.setDatetimeStr(data.getDatetimeStr().substring(0, 11));
+            }
+        }
+
+        if (data1.size()!= 0 && data2.size()!=0){
+            for (int i = 0; i < data1.size(); i++) {
+                for (int j = 0; j < data2.size(); j++) {
+                    if (data1.get(i).getDatetimeStr().equals(data2.get(j).getDatetimeStr())) {
+                        data1.get(i).setPrice(data2.get(j).getPrice());
+                    }
+                }
+            }
+        }
+        return data1;
     }
+
 
     @Override
     public HistoricalData getCumulativeData(int userId) {
-        return historicalDao.getCumulativeData(userId);
-    }
+        HistoricalData data1 = historicalDao.getCumulativeData(userId);
+        HistoricalData data2 = historicalDao.getCumulativePrice(userId);
 
+        try {
+            data1.setDatetime(data1.getDatetime());
+            data1.setPrice(data2.getPrice());
+        }
+        catch (NullPointerException e){
+            throw new NormalException("2004"+NormalException.ERROR_CODE_NO_RESULT, "No cumulative data for now");
+        }
+
+        return data1;
+    }
 
 }

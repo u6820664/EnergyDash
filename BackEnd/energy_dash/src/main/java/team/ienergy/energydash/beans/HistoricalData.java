@@ -22,6 +22,8 @@ public class HistoricalData {
 
     private String userConsumption;
 
+    private String price;
+
 
     public void setDatetime(Date datetime) {
 

@@ -20,10 +20,18 @@ public interface HistoricalDao {
 
     List<HistoricalData> getHistoricalYearlyData(@Param(value = "userId") Integer userId);
 
+    List<HistoricalData> getHistoricalYearlyPrice(@Param(value = "userId") Integer userId);
+
     List<HistoricalData> getHistoricalMonthlyData(@Param(value = "userId") Integer userId);
+
+    List<HistoricalData> getHistoricalMonthlyPrice(@Param(value = "userId") Integer userId);
 
     List<HistoricalData> getHistoricalDailyData(@Param(value = "userId") Integer userId);
 
+    List<HistoricalData> getHistoricalDailyPrice(@Param(value = "userId") Integer userId);
+
     HistoricalData getCumulativeData(@Param(value = "userId") Integer userId);
+
+    HistoricalData getCumulativePrice(@Param(value = "userId") Integer userId);
 }
 

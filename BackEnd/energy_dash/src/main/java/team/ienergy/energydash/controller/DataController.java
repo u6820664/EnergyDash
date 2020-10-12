@@ -100,43 +100,22 @@ public class DataController {
         Map resultMap = new HashMap();
 
         //yearly
-        List<HistoricalData> yearlyData = new ArrayList<>();
-        try {
-            yearlyData = dataService.getHistoricalYearlyData(userId);
-            for (HistoricalData data:yearlyData) {
-                data.setDatetime(data.getDatetime());
-                data.setDatetimeStr(data.getDatetimeStr().substring(6,11));
-            }
-        }
-        catch (NullPointerException e){
+        List<HistoricalData> yearlyData = dataService.getHistoricalYearlyData(userId);
+        if (yearlyData.size() == 0){
             throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "No historical data for now");
         }
         resultMap.put("yearly", yearlyData);
 
         //monthly
-        List<HistoricalData> monthlyData = new ArrayList<>();
-        try {
-            monthlyData = dataService.getHistoricalMonthlyData(userId);
-            for (HistoricalData data:monthlyData) {
-                data.setDatetime(data.getDatetime());
-                data.setDatetimeStr(data.getDatetimeStr().substring(3,11));
-            }
-        }
-        catch (NullPointerException e){
+        List<HistoricalData> monthlyData = dataService.getHistoricalMonthlyData(userId);
+       if (monthlyData.size() == 0){
             throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "No historical data for now");
         }
         resultMap.put("monthly", monthlyData);
 
         //daily
-        List<HistoricalData> dailyData = new ArrayList<>();
-        try {
-            dailyData = dataService.getHistoricalDailyData(userId);
-            for (HistoricalData data:dailyData) {
-                data.setDatetime(data.getDatetime());
-                data.setDatetimeStr(data.getDatetimeStr().substring(0,11));
-            }
-        }
-        catch (NullPointerException e){
+        List<HistoricalData> dailyData = dataService.getHistoricalDailyData(userId);
+        if (dailyData.size()==0){
             throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "No historical data for now");
         }
         resultMap.put("daily", dailyData);
@@ -163,20 +142,11 @@ public class DataController {
         User user = userService.getUser(email);
         int userId = user.getUserId();
 
-        HistoricalData cummulativeData = new HistoricalData();
-
-        try {
-            cummulativeData = dataService.getCumulativeData(userId);
-            cummulativeData.setDatetime(cummulativeData.getDatetime());
-        }
-        catch (NullPointerException e){
-            throw new NormalException("2004"+NormalException.ERROR_CODE_NO_RESULT, "No cumulative data for now");
-        }
+        HistoricalData cummulativeData = dataService.getCumulativeData(userId);
 
         ResultBean resultBean = new ResultBean();
         resultBean.setData(cummulativeData);
         return JSON.toJSON(resultBean);
     }
-
 
 }
