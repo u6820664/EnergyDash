@@ -48,7 +48,7 @@ First, we will check the things that we need to do. Second, after communicating 
 
 ### 2.2.1 Programming Language
 
-Java and most likely a combination of Python and JavaScript.
+Java and most likely a combination of JavaScript.
 
 
 
@@ -227,8 +227,8 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | Hao  Cao       | u6807681 | Back-End Developer,  Database designer |
 | Haonan  Liu    | u6762898 | Front-End Developer                    |
 | Zixin  Ye      | u6605822 | Front-End Developer,  Documentation    |
-| Mingchao  Sima | u6502811 | Developer                              |
-| Jie  Zou       | u6849083 | Developer                              |
+| Mingchao  Sima | u6502811 | Back-End Developer,  Algorithm designer|
+| Jie  Zou       | u6849083 | Front-End Developer                    |
 
  
 
@@ -248,7 +248,7 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | Teaching  Break-2 | ●      Coding                                                |
 | Week  07          | ●      Compared among different data analysis algorithm<br/>●      Test & Debug<br/>●      Adjusting UI and functions according to reflection<br/>●      Conduct the first user feedback |
 | Week  08          | ●      Conduct the second user survey<br/>●      Analyse and reflect to survey report<br/>●      Keep improving UI interface according to reflection<br/>●      Keep improving the data analysis algorithms according to reflection |
-| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Design poster<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
+| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Design Project Video<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
 | Week  11-12       | ●      Finish handover documents<br/>●      Report to the client |
 
 **Gantt Chart**
@@ -298,7 +298,9 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Database Design](https://drive.google.com/drive/folders/1tkQT_4t1h0Qyp2xlwNVflvykOAMFCKoT?usp=sharing)
 
-### [UML Design](https://drive.google.com/drive/folders/1gHlsiQGvDD9kEi1nTf7ktrDfzTBj0Vrx?usp=sharing)
+### [UML](https://drive.google.com/drive/folders/1VvfnzY-Egh6AkJ76DHdV00hi9aOu6bkM?usp=sharing)
+
+### [Algorithm Design](https://drive.google.com/drive/folders/1IdvaRxg19wjUpIyF0sUtcp0OVh1V7P0P?usp=sharing)
 
 
 
@@ -307,19 +309,24 @@ The client does not propose any due day so we will follow the due day of this co
 ### [UI Design](https://drive.google.com/drive/folders/1utlLs2qP6LNefEX7tVfz68_A9mFICBP8?usp=sharing)
 
 
+## 8.6 Testing
 
-## 8.7 Other Resources
+### [User Tesing](https://drive.google.com/drive/folders/1Qvcm0PWao91BEMG7EOlW5k8crBUSCec9?usp=sharing)
+
+### [API Tesing](https://docs.google.com/document/d/1s8LyBLpKRte5gukueUs6tT1X-DtfO-ICFRQUfXLjnAw/edit?usp=sharing)
+
+
+## 8.8 Other Resources
 
 ### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
 
-### [API Documentation](https://drive.google.com/file/d/141Oy0ExoBpVFzNzM1b19DDe8s6MZ1rjd/view?usp=sharing)
+### [API Documentation](https://drive.google.com/file/d/1VVuxdkl0Njew2vSo3jlrnaDxZ2pFuSy5/view?usp=sharing)
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
 
 ### [Sprint Retrospective](https://drive.google.com/drive/folders/1aGodGwa0H8544wW6PvFrpb00gdzQgKYL?usp=sharing)
 
-### [Google Drive](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing)
-
+### [All Documentation](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing)
 
 
 # <span id="Appendix">Appendix<span>
@@ -348,3 +355,6 @@ The client does not propose any due day so we will follow the due day of this co
 
 
 
+## Project Video
+
+### [Project Video](https://youtu.be/te2DoCKfq8g)

@@ -267,7 +267,7 @@
                                 </button>
                             </div>
 
-                            <script>
+                            <script type="text/javascript">
                                 // 点击提交按钮后
 
                                 // 必须滑动验证栏
@@ -307,20 +307,20 @@
                                                 //alert(response.data.userName);
 
                                                 //把获取来的值赋值给先前的容器备传
-                                                userIdGot = response.data.userId;
-                                                userNameGot = response.data.userName;
                                                 emailGot = response.data.email;
                                                 passwordGot = response.data.password;
-                                                planIdGot = response.data.planId;
-                                                postcodeGot = response.data.postcode;
+                                                userNameGot = response.data.userName;
+                                                // userIdGot = response.data.userId;
+                                                // postcodeGot = response.data.postcode;
+                                                // planIdGot = response.data.planId;
 
                                                 var orderData = {
                                                     password: passwordGot,
-                                                    postcode: postcodeGot,
-                                                    planId: planIdGot,
-                                                    userName: userNameGot,
-                                                    userId: userIdGot,
                                                     email: emailGot
+                                                    //userName: userNameGot
+                                                    // userId: userIdGot,
+                                                    // postcode: postcodeGot,
+                                                    // planId: planIdGot
                                                 };
 
                                                 if (password !== passwordGot || email !== emailGot) {
@@ -328,10 +328,13 @@
                                                     return;
                                                 }
 
+                                                console.log(emailGot);
                                                 var jsonStr = JSON.stringify(orderData);
                                                 window.location.href = "http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr;
-                                                //window.location.href = "../users/profile.html?orderData=" + jsonStr;
-                                                alert("Welcome!");
+                                                // window.location.href = "../users/profile.html?orderData=" + jsonStr;
+                                                // window.location.replace("http://54.79.60.225/pages/users/profile.html?orderData=" + jsonStr);
+                                                // window.location.replace("../users/profile.html?orderData=" + jsonStr);
+                                                alert("Welcome, " + userNameGot + " !");
                                             },
                                             error: function (response) {
                                                 alert("Wrong email or password!");

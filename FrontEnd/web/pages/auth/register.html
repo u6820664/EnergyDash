@@ -89,74 +89,161 @@
                         <h4>New here?</h4>
                         <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
 
-
-                        <!--Username-->
                         <form class="pt-3" id="registerForm">
-
-
                             <!--Username-->
-                            <div class="form-group">
-                                <label>Username</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Username</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                       <span class="input-group-text bg-transparent border-right-0">
                                         <i class="mdi mdi-account-outline text-primary"></i>
                                       </span>
+                                        </div>
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="username" placeholder="Username">
                                     </div>
-                                    <input type="text" class="form-control form-control-lg border-left-0" id="username"
-                                           placeholder="Username">
+
                                 </div>
                             </div>
 
 
                             <!--Email-->
-                            <div class="form-group">
-                                <label>Email</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Email</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                             <i class="mdi mdi-email-outline text-primary"></i>
                                           </span>
+                                        </div>
+                                        <input type="email" class="form-control form-control-lg border-left-0"
+                                               id="email" placeholder="Email">
+
                                     </div>
-                                    <input type="email" class="form-control form-control-lg border-left-0" id="email"
-                                           placeholder="Email">
+                                    <p id="info"></p>
 
                                 </div>
-                                <p id="info"></p>
-
                             </div>
 
-
                             <!--Password-->
-                            <div class="form-group">
-                                <label>Password</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Password</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
                                             <i class="mdi mdi-lock-outline text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="password" class="form-control form-control-lg border-left-0"
+                                               id="password" placeholder="Password">
                                     </div>
 
-                                    <input type="password" class="form-control form-control-lg border-left-0"
-                                           id="password" placeholder="Password">
                                 </div>
                             </div>
 
 
                             <!--Postcode-->
-                            <div class="form-group">
-                                <label>Postcode</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend bg-transparent">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Postcode</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
                                           <span class="input-group-text bg-transparent border-right-0">
-                                                <!--<i class="mdi mdi-lock-outline text-primary"></i>-->
+                                                <i class="mdi mdi-map-marker-radius text-primary"></i>
                                           </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="postcode" placeholder="Postcode">
                                     </div>
 
-                                    <input type="text" class="form-control form-control-lg border-left-0"
-                                           id="postcode" placeholder="Postcode">
                                 </div>
                             </div>
+
+                            <!--Plan ID-->
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Plan ID</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                          <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-numeric text-primary"></i>
+                                          </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="planID" placeholder="Plan ID">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="text-center font-weight-light" style="margin-bottom:24px;">
+                                or
+                            </div>
+
+                            <!--Company Name-->
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Provider Name</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                          <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-city text-primary"></i>
+                                          </span>
+                                        </div>
+
+                                        <input type="text" class="form-control form-control-lg border-left-0"
+                                               id="companyName" placeholder="Provider Name">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--Customer Type-->
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Customer Type</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <select class="form-control" id="customerType">
+                                            <option>--Please Select--</option>
+                                            <option>Residential</option>
+                                            <option>Business</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--Tariff Type-->
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Tariff Type</label>
+                                <div class="col-sm-9">
+
+                                    <div class="input-group">
+                                        <select class="form-control" id="tariffType">
+                                            <option>--Please Select--</option>
+                                            <option>single</option>
+                                            <option>timeofuse</option>
+                                            <option>usage</option>
+                                            <option>demand</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
 
                             <!--Verification Bar-->
                             <div class="form-group">
@@ -168,6 +255,73 @@
                                     <div class="btnX">&gt;&gt;</div>
                                 </div>
                             </div>
+
+
+                            <!--反向查询PlanID-->
+                            <script>
+                                // 先尝试获取用户填写的内容
+                                var postcodeFrame = document.getElementById('postcode');
+                                var companyNameFrame = document.getElementById('companyName');
+                                var tariffTypeFrame = document.getElementById('tariffType');
+                                var customerTypeFrame = document.getElementById('customerType');
+
+
+                                //离焦事件
+                                postcodeFrame.onblur = function () {
+                                    detect();
+                                };
+
+                                companyNameFrame.onblur = function () {
+                                    detect();
+                                };
+
+
+                                tariffTypeFrame.onblur = function () {
+                                    detect();
+                                };
+
+                                customerTypeFrame.onblur = function () {
+                                    detect();
+                                };
+
+                                //与服务器联系
+                                function detect() {
+                                    var postcodeINP = postcodeFrame.value;
+                                    var companyNameINP = companyNameFrame.value;
+                                    var tariffTypeINP = tariffTypeFrame.value;
+                                    var customerTypeINP = customerTypeFrame.value;
+
+                                    $.ajax({
+                                        type: "get",
+                                        url: "http://54.79.60.225:8080/user/find_energy_plan",
+                                        data: {
+                                            companyName: companyNameINP,
+                                            customerType: customerTypeINP,
+                                            postcode: postcodeINP,
+                                            tariffType: tariffTypeINP
+                                        },
+                                        async: false,
+                                        success: function (result) {//参数result是服务器响应结果的值
+                                            console.log(typeof result.data);
+                                            if (typeof result.data !== "undefined") {
+                                                var pid = result.data[0].pid;
+                                                if (pid != null) {
+                                                    document.getElementById('planID').setAttribute('value', pid);
+                                                } else {
+                                                    document.getElementById('planID').setAttribute('value', '');
+                                                }
+
+                                            }
+                                        },
+                                        error: function (xhr) {
+                                            alert("Wrong");
+                                        }
+                                    });
+                                }
+
+
+                            </script>
+
 
                             <script>
                                 /*
@@ -310,30 +464,6 @@
 <script src="../../js/template.js"></script>
 <!-- endinject -->
 
-<!--To be fix with Real API-->
-<!--<script>-->
-<!--    $(document).ready(function () {-->
-<!--        $('#registerForm').click(function (e) {-->
-<!--            e.preventDefault();-->
-<!--            $.ajax({-->
-<!--                type: 'POST',-->
-<!--                url: 'https://reqres.in/api/register',-->
-<!--                data: {-->
-<!--                    username: $('#username').val(),-->
-<!--                    email: $('#email').val(),-->
-<!--                    password: $('#password').val()-->
-<!--                },-->
-<!--                success: function (response) {-->
-<!--                    alert("success");-->
-<!--                },-->
-<!--                error: function (result) {-->
-<!--                    alert('error');-->
-<!--                }-->
-<!--            });-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
-
 
 <script>
     /*
@@ -344,7 +474,6 @@
     var emailInp = document.getElementById("email");
     var info = document.getElementById('info');
     var emailFlag = false;
-
 
     // 当文本框离开焦点以后
     emailInp.onblur = function () {
@@ -431,19 +560,21 @@
                                 var passwordINP = document.getElementById('password').value;
                                 var postcodeINP = document.getElementById('postcode').value;
                                 var emailINP = document.getElementById('email').value;
+                                var planIDINP = document.getElementById('planID').value;
 
                                 $.ajax({
                                     type: "post",
-                                    url: 'http://localhost:8080/user/sign_up',
+                                    url: 'http://54.79.60.225:8080/user/sign_up',
                                     data: {
+                                        email: emailINP,
                                         password: passwordINP,
                                         postcode: postcodeINP,
                                         userName: usernameINP,
-                                        email: emailINP,
+                                        planId: planIDINP
                                     }
 
                                 });
-                                alert("Submit successfully.");
+                                alert("Register successfully.");
                                 flag = false;
                                 window.location.href = "http://54.79.60.225/pages/auth/login.html?";
                             }

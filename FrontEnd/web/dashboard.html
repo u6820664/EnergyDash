@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!--jquery-->
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 <body>
 <!--<meta http-equiv="refresh" content="5">-->
@@ -134,13 +138,41 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
-
                 <div class="row">
 
                     <!-- Real-time Data -->
                     <!-- Swap Metrics -->
                     <div class="col-12 col-xl-6 grid-margin stretch-card">
                         <div class="row w-100 flex-grow">
+                            <!-- Recommendation Status -->
+                            <div class="col-md-12 grid-margin" align="center">
+
+                                <button class="recommend_yes btn btn-success btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 95%</big>
+                                    <h1>Recommend</h1>
+                                    </span>
+                                </button>
+
+                                <button class="recommend_med btn btn-warning btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 55%</big>
+                                    <h1>Warning</h1>
+                                    </span>
+                                </button>
+
+                                <button class="recommend_not btn btn-danger btn-icon-text btn-lg">
+                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
+                                    <span class="d-inline-block text-left">
+                                    <big class="font-weight-light d-block">Recommendation rate 35%</big>
+                                    <h1>Not Recommend</h1>
+                                    </span>
+                                </button>
+
+                            </div>
+
                             <!-- Energy Price -->
                             <div class="col-md-12  grid-margin stretch-card">
                                 <div class="card">
@@ -236,23 +268,21 @@
                                         <div style="display: block;" id="card_Metrics_1">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy Price</p>
-                                                <p class="text-success font-weight-medium">cents / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">24.88</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">cents / MWH</p>
                                             </div>
-                                            <canvas id="balance-chart" height="130"></canvas>
+                                            <canvas id="energy-price-chart" height="130"></canvas>
                                         </div>
 
                                         <div style="display: none;" id="card_Metrics_2">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Carbon intensity</p>
-                                                <p class="text-success font-weight-medium">kg / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kg / MWH</p>
                                             </div>
                                             <canvas id="task-chart1" height="130"></canvas>
                                         </div>
@@ -260,11 +290,10 @@
                                         <div style="display: none;" id="card_Metrics_3">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Coal generator profits</p>
-                                                <p class="text-success font-weight-medium">kg / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kg / MWH</p>
                                             </div>
                                             <canvas id="task-chart2" height="130"></canvas>
                                         </div>
@@ -272,11 +301,10 @@
                                         <div style="display: none;" id="card_Metrics_4">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Renewable energy profits</p>
-                                                <p class="text-success font-weight-medium">cents / MWH</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">cents / MWH</p>
                                             </div>
                                             <canvas id="task-chart3" height="130"></canvas>
                                         </div>
@@ -284,11 +312,10 @@
                                         <div style="display: none;" id="card_Metrics_5">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy consumption</p>
-                                                <p class="text-success font-weight-medium">kWh</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
                                                 <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-muted mb-0">Avg Cost</p>
+                                                <p class="text-success mb-0">kWh</p>
                                             </div>
                                             <canvas id="task-chart4" height="130"></canvas>
                                         </div>
@@ -303,13 +330,33 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Carbon intensity</p>
-                                            <p class="text-success font-weight-medium">kg / MWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">kg / MWH</p>
                                         </div>
-                                        <canvas id="task-chart5" height="130"></canvas>
+                                        <canvas id="carbon-intensity" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -320,13 +367,33 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Coal generator profits</p>
-                                            <p class="text-success font-weight-medium">cents / MWH</p>
+
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">cents / MWH</p>
                                         </div>
-                                        <canvas id="task-chart6" height="130"></canvas>
+                                        <canvas id="coal-profits" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -337,13 +404,32 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Renewable energy profits</p>
-                                            <p class="text-success font-weight-medium">cents / MWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">cents / MWH</p>
                                         </div>
-                                        <canvas id="task-chart7" height="130"></canvas>
+                                        <canvas id="renewable-profits" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -354,13 +440,32 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Energy consumption</p>
-                                            <p class="text-success font-weight-medium">kWH</p>
+                                            <div>
+                                                <button type="button"
+                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_yes">
+                                                    <i class="mdi mdi-flash text-success"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_med">
+                                                    <i class="mdi mdi-flash-alert text-warning"></i>
+                                                </button>
+
+                                                <button type="button"
+                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
+                                                        id="recommend_not">
+                                                    <i class="mdi mdi-flash-alert text-danger"></i>
+                                                </button>
+                                            </div>
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                            <p class="text-muted mb-0">Avg Cost</p>
+                                            <p class="text-success mb-0">kWH</p>
                                         </div>
-                                        <canvas id="task-chart8" height="130"></canvas>
+                                        <canvas id="energy-consumption" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -375,27 +480,11 @@
                             <div class="col-md-12 order-0 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-title">History Metrics</p>
-                                        <p class="text-muted">25% more traffic than previous week</p>
+                                        <p class="card-title">Historical Metrics</p>
                                         <div class="row mb-3">
                                             <div class="col-md-7">
-                                                <div class="d-flex justify-content-between traffic-status">
-                                                    <div class="item">
-                                                        <p class="mb-">Users</p>
-                                                        <h5 class="font-weight-bold mb-0">93,956</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <p class="mb-">Bounce Rate</p>
-                                                        <h5 class="font-weight-bold mb-0">58,605</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <p class="mb-">Views</p>
-                                                        <h5 class="font-weight-bold mb-0">78,254</h5>
-                                                        <div class="color-border"></div>
-                                                    </div>
-                                                </div>
+                                                <p class="text-muted">Historical energy consumption and price data of
+                                                    users</p>
                                             </div>
                                             <div class="col-md-5">
                                                 <ul class="nav nav-pills nav-pills-custom justify-content-md-end"
@@ -408,17 +497,17 @@
                                                         </a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" id="tab_week"
-                                                           data-toggle="pill" href="#pills-career" role="tab"
-                                                           aria-controls="pills-profile" aria-selected="false">
-                                                            Week
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
                                                         <a class="nav-link" id="tab_month"
                                                            data-toggle="pill" href="#pills-music" role="tab"
                                                            aria-controls="pills-contact" aria-selected="false">
                                                             Month
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="tab_year"
+                                                           data-toggle="pill" href="#pills-career" role="tab"
+                                                           aria-controls="pills-profile" aria-selected="false">
+                                                            Year
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -428,13 +517,13 @@
 
                                     <div class="card-body">
                                         <div style="display: block;" id="card_day">
-                                            <canvas id="audience-chart-day" height="130"></canvas>
-                                        </div>
-                                        <div style="display: none;" id="card_week">
-                                            <canvas id="audience-chart-week" height="130"></canvas>
+                                            <canvas id="historical-chart-day" height="130"></canvas>
                                         </div>
                                         <div style="display: none;" id="card_month">
-                                            <canvas id="audience-chart-month" height="130"></canvas>
+                                            <canvas id="historical-chart-month" height="130"></canvas>
+                                        </div>
+                                        <div style="display: none;" id="card_year">
+                                            <canvas id="historical-chart-year" height="130"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -445,21 +534,22 @@
                                 <div class="card">
                                     <div class="card-body pb-0">
                                         <div class="d-flex align-items-center mb-4">
-                                            <p class="card-title mb-0 mr-1">Cumulative Metrics</p>
-                                            <!-- <div class="badge badge-info badge-pill">2</div> -->
+                                            <p class="card-title mb-0 mr-1">Cumulative values</p>
                                         </div>
                                         <div class="d-flex flex-wrap pt-2">
                                             <div class="mr-4 mb-lg-2 mb-xl-0">
-                                                <p>Last Month</p>
-                                                <h4 class="font-weight-bold mb-0">77.15 %</h4>
+                                                <p>Energy consuption</p>
+                                                <h4 class="font-weight-bold mb-0">77.15 <span
+                                                        class="text-success">kWH</span></h4>
                                             </div>
                                             <div>
-                                                <p>This Month</p>
-                                                <h4 class="font-weight-bold mb-0">14.15 %</h4>
+                                                <p>Energy Price</p>
+                                                <h4 class="font-weight-bold mb-0">14.15 <span class="text-success">cents / MWH</span>
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
-                                    <canvas height="150" id="activity-chart"></canvas>
+                                    <canvas height="20" id="activity-chart"></canvas>
                                 </div>
                             </div>
 
@@ -509,25 +599,6 @@
 <!-- End custom js for this page-->
 <!--<script src="js/positionMove.js"></script>-->
 </body>
-<!--Canvas_swap Metrics 1-5 -->
-<!--<script>-->
-<!--    (function () {-->
-<!--        function tabs(handles, cons) {-->
-<!--            $(handles).each(function (num) {-->
-<!--                $(this).click(function () {-->
-<!--                    $(handles).removeClass("hover");-->
-<!--                    $(this).addClass("hover");-->
-<!--                    $(cons).removeClass("show");-->
-<!--                    $($(cons)[num]).addClass("show");-->
-<!--                });-->
-<!--            });-->
-<!--        }-->
-
-<!--        window.tabs = tabs;-->
-<!--        tabs(".preview-item", ".tab_canvas ");-->
-<!--    })();-->
-<!--</script>-->
-
 
 <!--Canvas_swap Metrics 1-5  -->
 <script>
@@ -536,7 +607,7 @@
     };
 
     function changeToMetrics_1() {
-        document.getElementById("card_Metrics_1").style.display = 'none';
+        document.getElementById("card_Metrics_1").style.display = 'block';
         document.getElementById("card_Metrics_2").style.display = 'none';
         document.getElementById("card_Metrics_3").style.display = 'none';
         document.getElementById("card_Metrics_4").style.display = 'none';
@@ -592,12 +663,9 @@
     }
 
 
-
-
-
 </script>
 
-<!--Tab_swap Day/ Week /Month -->
+<!--Tab_swap Day/ Month /Year -->
 <script>
     document.getElementById("tab_day").onclick = function () {
         changeToDay()
@@ -605,18 +673,8 @@
 
     function changeToDay() {
         document.getElementById("card_day").style.display = 'block';
-        document.getElementById("card_week").style.display = 'none';
         document.getElementById("card_month").style.display = 'none';
-    }
-
-    document.getElementById("tab_week").onclick = function () {
-        changeToWeek()
-    };
-
-    function changeToWeek() {
-        document.getElementById("card_day").style.display = 'none';
-        document.getElementById("card_week").style.display = 'block';
-        document.getElementById("card_month").style.display = 'none';
+        document.getElementById("card_year").style.display = 'none';
     }
 
     document.getElementById("tab_month").onclick = function () {
@@ -625,9 +683,494 @@
 
     function changeToMonth() {
         document.getElementById("card_day").style.display = 'none';
-        document.getElementById("card_week").style.display = 'none';
         document.getElementById("card_month").style.display = 'block';
+        document.getElementById("card_year").style.display = 'none';
     }
+
+    document.getElementById("tab_year").onclick = function () {
+        changeToYear()
+    };
+
+    function changeToYear() {
+        document.getElementById("card_day").style.display = 'none';
+        document.getElementById("card_month").style.display = 'none';
+        document.getElementById("card_year").style.display = 'block';
+    }
+</script>
+
+<!--Small chart Notify-->
+<script>
+    $(function () {
+        function notify() {
+            for (var i = 0; i < document.getElementsByClassName("recommend_yes").length; i++) {
+                var randv = Math.random() * 3;
+                if (0 < randv && randv < 1) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'inline';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
+                }
+                if (1 < randv && randv < 2) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'inline';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
+                }
+                if (2 < randv && randv < 3) {
+                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
+                    document.getElementsByClassName("recommend_not")[i].style.display = 'inline';
+                }
+            }
+        }
+
+        setInterval(notify, 1000)
+    })
+</script>
+
+<script>
+    $(function () {
+        var email;
+
+        var carbonData = "";
+        var renewableData = "";
+        var consumptionData = "";
+        var coalData = "";
+        var priceData = "";
+
+        var timeData = "";
+
+        $.ajax({
+            type: "get",
+            url: "http://54.79.60.225:8080/data/get_realtime_data",
+            data: {
+                email: "xxx@anu.edu.au",
+            },
+            async: false, // 要求同步
+
+            //success函数表示交互成功后的操作
+            success: function (response) {//response代表后台传过来的数据
+                // alert(response.data[0].renewableProfits);
+                for (var i = 0; i < response.data.length; i++) {
+                    if (i == response.data.length - 1) {
+                        carbonData += response.data[i].carbonIntensity;
+                        renewableData += response.data[i].renewableProfits;
+                        consumptionData += response.data[i].userConsumption;
+                        coalData += response.data[i].coalProfits;
+                        priceData += response.data[i].wholesalePrice;
+
+                        timeData += response.data[i].datetime;
+                    } else {
+                        carbonData += response.data[i].carbonIntensity + ",";
+                        renewableData += response.data[i].renewableProfits + ",";
+                        consumptionData += response.data[i].userConsumption + ",";
+                        coalData += response.data[i].coalProfits + ",";
+                        priceData += response.data[i].wholesalePrice + ",";
+
+                        timeData += response.data[i].datetime + ",";
+                    }
+                }
+
+            }
+        });
+
+        var carbonDataArr = carbonData.split(',');
+        var renewableDataArr = renewableData.split(',');
+        var consumptionDataArr = consumptionData.split(',');
+        var coalDataArr = coalData.split(',');
+        var priceDataArr = priceData.split(',');
+
+        var timeDataArr = timeData.split(',');
+
+        if ($("#energy-price-chart").length) {
+            var areaData = {
+                labels: timeDataArr,
+                datasets: [
+                    {
+                        data: priceDataArr,
+                        borderColor: [
+                            '#1faf47'
+                        ],
+                        borderWidth: 3,
+                        fill: false,
+                        label: "services"
+                    },
+                ]
+            };
+            var areaOptions = {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            display: false,
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: 'transparent',
+                            zeroLineColor: '#eeeeee'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            display: true,
+                            autoSkip: false,
+                            maxRotation: 0,
+                            stepSize: 100,
+                            fontColor: "#000",
+                            fontSize: 14,
+                            padding: 18,
+                            stepSize: 50,
+                            fontSize: 10,
+                            fontColor: "#b1b0b0",
+                            callback: function (value) {
+                                var ranges = [
+                                    {divider: 1e6, suffix: 'M'},
+                                    {divider: 1e3, suffix: 'k'}
+                                ];
+
+                                function formatNumber(n) {
+                                    for (var i = 0; i < ranges.length; i++) {
+                                        if (n >= ranges[i].divider) {
+                                            return (n / ranges[i].divider).toString() + ranges[i].suffix;
+                                        }
+                                    }
+                                    return n;
+                                }
+
+                                return formatNumber(value);
+                            }
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            color: "#f8f8f8",
+                            zeroLineColor: "#f8f8f8"
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    enabled: true
+                },
+                elements: {
+                    line: {
+                        tension: 0
+                    },
+                    point: {
+                        radius: 0
+                    }
+                }
+            }
+            var balanceChartCanvas = $("#energy-price-chart").get(0).getContext("2d");
+            var balanceChart = new Chart(balanceChartCanvas, {
+                type: 'line',
+                data: areaData,
+                options: areaOptions
+            });
+        }
+
+
+        if ($("#carbon-intensity").length) {
+            var taskChartCanvas = $("#carbon-intensity").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Carbon Intensity',
+                        // data:[],
+                        data: carbonDataArr,
+                        backgroundColor: 'orange'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 200
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#coal-profits").length) {
+            var taskChartCanvas = $("#coal-profits").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Coal Generator Profits',
+                        // data:[],
+                        data: coalDataArr,
+                        backgroundColor: 'brown'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 20
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#renewable-profits").length) {
+            var taskChartCanvas = $("#renewable-profits").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Renewable Energy Profits',
+                        // data:[],
+                        data: renewableDataArr,
+                        backgroundColor: 'lightgreen'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 10
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+        if ($("#energy-consumption").length) {
+            var taskChartCanvas = $("#energy-consumption").get(0).getContext("2d");
+            var taskChart = new Chart(taskChartCanvas, {
+                type: 'line',
+                data: {
+                    // labels: [],
+                    labels: timeDataArr,
+                    datasets: [{
+                        label: 'Energy Consumption',
+                        // data:[],
+                        data: consumptionDataArr,
+                        backgroundColor: 'pink'
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                drawBorder: false,
+                                color: '#f1f3f9',
+                                zeroLineColor: '#f1f3f9'
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#9fa0a2",
+                                fontSize: 10,
+                                padding: 0,
+                                stepSize: 0.2
+                            }
+                        }],
+                        xAxes: [{
+                            display: false,
+                            stacked: false,
+                            categoryPercentage: 1,
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                                display: true,
+                                padding: 10,
+                                fontSize: 11
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            position: 'bottom',
+                            barPercentage: 0.7
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+            });
+        }
+
+    });
 </script>
 
 </html>
