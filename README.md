@@ -326,7 +326,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Sprint Retrospective](https://drive.google.com/drive/folders/1aGodGwa0H8544wW6PvFrpb00gdzQgKYL?usp=sharing)
 
-### [All Documentation](https://drive.google.com/drive/folders/1yHlllCOVcatyZDafEz8_H2ztdPSKO_-4?usp=sharing)
+### [All Documentation](https://drive.google.com/file/d/1XEcROfJQPSBGS7BiwUgDYhjM4dE8qYsK/view?usp=sharing)
 
 
 # <span id="Appendix">Appendix<span>
