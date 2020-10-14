@@ -330,26 +330,6 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Carbon intensity</p>
-                                            <div>
-                                                <button type="button"
-                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="">
-                                                    <i class="mdi mdi-flash text-success"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="">
-                                                    <i class="mdi mdi-flash-alert text-warning"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="">
-                                                    <i class="mdi mdi-flash-alert text-danger"></i>
-                                                </button>
-                                            </div>
-
 
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -368,26 +348,6 @@
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Coal generator profits</p>
 
-                                            <div>
-                                                <button type="button"
-                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_yes">
-                                                    <i class="mdi mdi-flash text-success"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_med">
-                                                    <i class="mdi mdi-flash-alert text-warning"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_not">
-                                                    <i class="mdi mdi-flash-alert text-danger"></i>
-                                                </button>
-                                            </div>
-
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
@@ -404,25 +364,6 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Renewable energy profits</p>
-                                            <div>
-                                                <button type="button"
-                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_yes">
-                                                    <i class="mdi mdi-flash text-success"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_med">
-                                                    <i class="mdi mdi-flash-alert text-warning"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_not">
-                                                    <i class="mdi mdi-flash-alert text-danger"></i>
-                                                </button>
-                                            </div>
 
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -440,25 +381,6 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Energy consumption</p>
-                                            <div>
-                                                <button type="button"
-                                                        class="recommend_yes btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_yes">
-                                                    <i class="mdi mdi-flash text-success"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_med btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_med">
-                                                    <i class="mdi mdi-flash-alert text-warning"></i>
-                                                </button>
-
-                                                <button type="button"
-                                                        class="recommend_not btn btn-outline-secondary btn-rounded btn-icon"
-                                                        id="recommend_not">
-                                                    <i class="mdi mdi-flash-alert text-danger"></i>
-                                                </button>
-                                            </div>
 
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -538,13 +460,13 @@
                                         </div>
                                         <div class="d-flex flex-wrap pt-2">
                                             <div class="mr-4 mb-lg-2 mb-xl-0">
-                                                <p>Energy consuption</p>
-                                                <h4 class="font-weight-bold mb-0">77.15 <span
+                                                <p>User consumption</p>
+                                                <h4 class="font-weight-bold mb-0">2871.10 <span
                                                         class="text-success">kWH</span></h4>
                                             </div>
                                             <div>
                                                 <p>Energy Price</p>
-                                                <h4 class="font-weight-bold mb-0">14.15 <span class="text-success">cents / MWH</span>
+                                                <h4 class="font-weight-bold mb-0">160694.80 <span class="text-success">cents / MWH</span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -728,7 +650,6 @@
 
 <script>
     $(function () {
-        var email;
 
         var carbonData = "";
         var renewableData = "";
@@ -1169,6 +1090,346 @@
                 }
             });
         }
+
+        // historical
+        var yearlyUserConsumptionData = "";
+        var yearlyPriceData = "";
+        var yearlyDatatimeStr = "";
+        var monthlyUserConsumptionData = "";
+        var monthlyPriceData = "";
+        var monthlyDatatimeStr = "";
+        var dailyUserConsumptionData = "";
+        var dailyPriceData = "";
+        var dailyDatatimeStr = "";
+
+
+        $.ajax({
+            type: "get",
+            url: "http://54.79.60.225:8080/data/get_historical_data",
+            data: {
+                email: "xxx@anu.edu.au",
+            },
+            async: false, // 要求同步
+
+            //success函数表示交互成功后的操作
+            success: function (response) {//response代表后台传过来的数据
+                for (var i = 0; i < response.data.monthly.length; i++) {
+                    if (i == response.data.length) {
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption*50;
+                        yearlyPriceData += response.data.yearly[i].price;
+                        yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
+                    } else {
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption*50 + ",";
+                        yearlyPriceData += response.data.yearly[i].price + ",";
+                        yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
+                    }
+                }
+
+            }
+
+        });
+
+        $.ajax({
+            type: "get",
+            url: "http://54.79.60.225:8080/data/get_historical_data",
+            data: {
+                email: "xxx@anu.edu.au",
+            },
+            async: false, // 要求同步
+
+            //success函数表示交互成功后的操作
+            success: function (response) {//response代表后台传过来的数据
+                for (var i = 0; i < response.data.monthly.length; i++) {
+                    if (i == response.data.length - 1) {
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption*50;
+                        monthlyPriceData += response.data.monthly[i].price;
+                        monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
+                    } else {
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption*50 + ",";
+                        monthlyPriceData += response.data.monthly[i].price + ",";
+                        monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
+                    }
+                }
+
+            }
+
+        });
+
+        $.ajax({
+            type: "get",
+            url: "http://54.79.60.225:8080/data/get_historical_data",
+            data: {
+                email: "xxx@anu.edu.au",
+            },
+            async: false, // 要求同步
+
+            //success函数表示交互成功后的操作
+            success: function (response) {//response代表后台传过来的数据
+                for (var i = 0; i < response.data.monthly.length; i++) {
+                    if (i == response.data.length - 1) {
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption*50;
+                        dailyPriceData += response.data.daily[i].price;
+                        dailyDatatimeStr += response.data.daily[i].datetimeStr;
+                    } else {
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption*50 +",";
+                        dailyPriceData += response.data.daily[i].price + ",";
+                        dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
+                    }
+                }
+
+            }
+
+        });
+
+        var yearlyUserConsumptionDataArr = yearlyUserConsumptionData.split(',');
+        var yearlyPriceDataArr = yearlyPriceData.split(',');
+        var yearlyDatatimeStrArr = yearlyDatatimeStr.split(',');
+
+        var monthlyUserConsumptionDataArr = monthlyUserConsumptionData.split(',');
+        var monthlyPriceDataArr = monthlyPriceData.split(',');
+        var monthlyDatatimeStrArr = monthlyDatatimeStr.split(',');
+
+        var dailyUserConsumptionDataArr = dailyUserConsumptionData.split(',');
+        var dailyPriceDataArr = dailyPriceData.split(',');
+        var dailyDatatimeStrArr = dailyDatatimeStr.split(',');
+
+        if ($("#historical-chart-year").length) {
+            var AudienceChartCanvas = $("#historical-chart-year").get(0).getContext("2d");
+            var AudienceChart = new Chart(AudienceChartCanvas, {
+                type: 'bar',
+                data: {
+                    labels: yearlyDatatimeStrArr,
+                    datasets: [
+                        {
+                            type: 'line',
+                            fill: false,
+                            label: 'User Consumption',
+                            data: yearlyUserConsumptionDataArr,
+                            borderColor: '#ff4c5b'
+                        },
+                        {
+                            label: 'Price',
+                            data: yearlyPriceDataArr,
+                            backgroundColor: '#1cbccd'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 20,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                display: true,
+                                drawBorder: false,
+                                color: "#f8f8f8",
+                                zeroLineColor: "#f8f8f8"
+                            },
+                            ticks: {
+                                display: true,
+                                min: 0,
+                                max: 120000,
+                                stepSize: 10000,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10,
+                                padding: 10
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            barPercentage: .9,
+                            categoryPercentage: .7,
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 3,
+                            backgroundColor: '#ff4c5b'
+                        }
+                    }
+                },
+            });
+        }
+
+        if ($("#historical-chart-month").length) {
+            var AudienceChartCanvas = $("#historical-chart-month").get(0).getContext("2d");
+            var AudienceChart = new Chart(AudienceChartCanvas, {
+                type: 'bar',
+                data: {
+                    labels: monthlyDatatimeStrArr,
+                    datasets: [
+                        {
+                            type: 'line',
+                            fill: false,
+                            label: 'User Consumption',
+                            data: monthlyUserConsumptionDataArr,
+                            borderColor: '#ff4c5b'
+                        },
+                        {
+                            label: 'Price',
+                            data: monthlyPriceDataArr,
+                            backgroundColor: '#1cbccd'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 20,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                display: true,
+                                drawBorder: false,
+                                color: "#f8f8f8",
+                                zeroLineColor: "#f8f8f8"
+                            },
+                            ticks: {
+                                display: true,
+                                min: 0,
+                                max: 15000,
+                                stepSize: 1000,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10,
+                                padding: 10
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            barPercentage: .9,
+                            categoryPercentage: .7,
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 3,
+                            backgroundColor: '#ff4c5b'
+                        }
+                    }
+                },
+            });
+        }
+
+        if ($("#historical-chart-day").length) {
+            var AudienceChartCanvas = $("#historical-chart-day").get(0).getContext("2d");
+            var AudienceChart = new Chart(AudienceChartCanvas, {
+                type: 'bar',
+                data: {
+                    labels: dailyDatatimeStrArr,
+                    datasets: [
+                        {
+                            type: 'line',
+                            fill: false,
+                            label: 'User Consumption',
+                            data: dailyUserConsumptionDataArr,
+                            borderColor: '#ff4c5b'
+                        },
+                        {
+                            label: 'Price',
+                            data: dailyPriceDataArr,
+                            backgroundColor: '#1cbccd'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 20,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                display: true,
+                                drawBorder: false,
+                                color: "#f8f8f8",
+                                zeroLineColor: "#f8f8f8"
+                            },
+                            ticks: {
+                                display: true,
+                                min: 0,
+                                max: 500,
+                                stepSize: 100,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10,
+                                padding: 10
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            barPercentage: .9,
+                            categoryPercentage: .7,
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 3,
+                            backgroundColor: '#ff4c5b'
+                        }
+                    }
+                },
+            });
+        }
+
 
     });
 </script>
