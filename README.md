@@ -354,7 +354,21 @@ The client does not propose any due day so we will follow the due day of this co
 ![Diagram](Resources/Architecture_diagram.png)
 
 
-
 ## Project Video
 
 ### [Project Video](https://youtu.be/te2DoCKfq8g)
+
+
+## Dev Environment (for Test only)
+
+Please open these page via Firefox browser.
+
+
+### [Sign in Page](http://54.79.60.225/pages/auth/login.html)
+
+### [Sign up Page](http://54.79.60.225/pages/auth/register.html)
+
+### [User Profile Page](http://54.79.60.225/pages/users/profile.html)
+
+### [Dashboard Page](http://54.79.60.225/dashboard.html)
+
