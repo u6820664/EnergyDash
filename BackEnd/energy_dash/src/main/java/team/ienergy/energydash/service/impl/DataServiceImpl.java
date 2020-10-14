@@ -138,4 +138,20 @@ public class DataServiceImpl implements DataService {
         return data1;
     }
 
+    @Override
+    public String getAverageDailyCost(int userId) {
+        return historicalDao.getAverageDailyCost(userId);
+    }
+
+    @Override
+    public HistoricalData getTodayDailyCost(int userId) {
+        return historicalDao.getTodayDailyCost(userId);
+    }
+
+    @Override
+    public HistoricalData getCurrentMonthCost(int userId) {
+        return historicalDao.getCurrentMonthCost(userId);
+    }
+
+
 }

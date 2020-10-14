@@ -2,8 +2,10 @@ package team.ienergy.energydash.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import team.ienergy.energydash.beans.EnergyPlan;
 import team.ienergy.energydash.beans.Plan;
 import team.ienergy.energydash.beans.User;
+import team.ienergy.energydash.dao.EnergyPlanDao;
 import team.ienergy.energydash.dao.PlanDao;
 import team.ienergy.energydash.dao.UserDao;
 import team.ienergy.energydash.service.PlanService;
@@ -26,8 +28,16 @@ public class PlanServiceImpl implements PlanService {
     @Autowired
     private PlanDao planDao;
 
+    @Autowired
+    private EnergyPlanDao energyPlanDao;
+
     @Override
     public List<Plan> findPlanId(Map paramMap) {
         return planDao.findPlanId(paramMap);
+    }
+
+    @Override
+    public EnergyPlan getEnergyPlan(String pid) {
+        return energyPlanDao.getEnergyPlan(pid);
     }
 }

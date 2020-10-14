@@ -14,7 +14,8 @@
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
         FROM real_time_data
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y' )
+        ORDER BY datetime desc
         limit 50
     </select>
 
@@ -22,7 +23,8 @@
         SELECT user_id, datetime, SUM(price) price
         FROM price
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y' )
+        ORDER BY datetime desc
         limit 50
     </select>
 
@@ -31,7 +33,8 @@
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
         FROM real_time_data
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y-%m' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m' )
+        ORDER BY datetime desc
         limit 12
     </select>
 
@@ -39,7 +42,8 @@
         SELECT user_id, datetime, SUM(price) price
         FROM price
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y-%m' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m' )
+        ORDER BY datetime desc
         limit 12
     </select>
 
@@ -48,7 +52,8 @@
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
         FROM real_time_data
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' )
+        ORDER BY datetime desc
         limit 30
     </select>
 
@@ -56,11 +61,10 @@
         SELECT user_id, datetime, SUM(price) price
         FROM price
         WHERE user_id = #{userId,jdbcType = INTEGER}
-        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' ) desc
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' )
+        ORDER BY datetime desc
         limit 30
     </select>
-
-
 
     <select id="getCumulativeData" resultMap="HistoricalResultMap"  >
         SELECT user_id, datetime, SUM(user_consumption) user_consumption
@@ -72,6 +76,36 @@
         SELECT user_id, datetime, SUM(price) price
         FROM price
         WHERE user_id = #{userId,jdbcType = INTEGER}
+    </select>
+
+    <select id="getAverageDailyCost" resultType="String">
+        select AVG(a.price) price
+        from(
+        SELECT SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' )
+        ORDER BY datetime desc
+        limit 30
+		)as a
+    </select>
+
+    <select id="getTodayDailyCost" resultMap="HistoricalResultMap">
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m-%d' )
+        ORDER BY datetime desc
+        limit 1
+    </select>
+
+    <select id="getCurrentMonthCost" resultMap="HistoricalResultMap">
+        SELECT user_id, datetime, SUM(price) price
+        FROM price
+        WHERE user_id = #{userId,jdbcType = INTEGER}
+        GROUP BY DATE_FORMAT( datetime, '%Y-%m' )
+        ORDER BY datetime desc
+        limit 1
     </select>
 
 

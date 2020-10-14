@@ -27,5 +27,10 @@ public interface DataService {
 
     HistoricalData getCumulativeData(int userId);
 
+    String getAverageDailyCost(int userId);
+
+    HistoricalData getTodayDailyCost(int userId);
+
+    HistoricalData getCurrentMonthCost(int userId);
 }
 

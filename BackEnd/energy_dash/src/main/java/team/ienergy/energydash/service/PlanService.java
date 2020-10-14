@@ -1,5 +1,6 @@
 package team.ienergy.energydash.service;
 
+import team.ienergy.energydash.beans.EnergyPlan;
 import team.ienergy.energydash.beans.Plan;
 
 import java.util.List;
@@ -17,5 +18,6 @@ public interface PlanService {
 
     List<Plan> findPlanId(Map paramMap);
 
+    EnergyPlan getEnergyPlan(String pid);
 }
 

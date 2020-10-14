@@ -33,5 +33,11 @@ public interface HistoricalDao {
     HistoricalData getCumulativeData(@Param(value = "userId") Integer userId);
 
     HistoricalData getCumulativePrice(@Param(value = "userId") Integer userId);
+
+    String getAverageDailyCost(@Param(value = "userId") Integer userId);
+
+    HistoricalData getTodayDailyCost(@Param(value = "userId") Integer userId);
+
+    HistoricalData getCurrentMonthCost(@Param(value = "userId") Integer userId);
 }
 

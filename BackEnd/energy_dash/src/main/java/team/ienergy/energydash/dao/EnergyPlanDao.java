@@ -11,14 +11,14 @@ import java.util.Map;
 /**
  * @desc: A DAO for energy plan handling
  * @author: Hao Cao
- * @date: 27 September 2020
+ * @date: 12 October 2020
  * @throws
  */
 
 @Repository
-public interface PlanDao {
+public interface EnergyPlanDao {
 
-    List<Plan> findPlanId(Map paramMap);
+    EnergyPlan getEnergyPlan(@Param(value = "pid") String pid);
 
 }
 

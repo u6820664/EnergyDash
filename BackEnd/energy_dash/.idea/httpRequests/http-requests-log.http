@@ -1,8 +1,360 @@
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045609.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045554.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045540.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045527.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045335.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045217.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T045134.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T044938.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T044934.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T044925.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T044919.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T044853.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T043433.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T043006.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T042713.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T040527.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T021003.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T021002-1.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T021002.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020943.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020926.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020841.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020336.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020225.200.json
+
+###
+
+ http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T020205.405.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T115742.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T112029.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-14T111752.500.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T033622.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T033420.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T030732.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T030711.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T114218.500.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T113916.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T113829.500.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T112823.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T112812.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T112743.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T112619.500.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-13T112504.500.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=lalala@sina.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T083324.200.json
+
+###
+
+GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T083043.200.json
+
+###
+
+GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T083031.200.json
+
+###
+
+GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T041015.200.json
+
+###
+
 GET http://localhost:8080/data/get_cumulative_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T104957.200.json
+<> 2020-10-12T040753.200.json
 
 ###
 
@@ -10,71 +362,7 @@ GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T104648.200.json
-
-###
-
-GET http://localhost:8080/data/get_cumulative_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T103536.200.json
-
-###
-
-GET http://localhost:8080/data/get_cumulative_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T103426.200.json
-
-###
-
-GET http://localhost:8080/data/get_cumulative_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T103357.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T101735.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T101548.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T101235.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T101053.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T100322.200.json
+<> 2020-10-12T035708.200.json
 
 ###
 
@@ -82,7 +370,7 @@ GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T100316.200.json
+<> 2020-10-12T035618.200.json
 
 ###
 
@@ -90,7 +378,7 @@ GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T100205.200.json
+<> 2020-10-12T035349.200.json
 
 ###
 
@@ -98,7 +386,7 @@ GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T100137.200.json
+<> 2020-10-12T034747.200.json
 
 ###
 
@@ -106,283 +394,7 @@ GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-10-12T100022.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T095850.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T095828.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T095728.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T095528.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T094152.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T094058.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T093848.200.json
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T093812.200.json
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/user/list?email=xxx@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-05T031315.200.json
-
-###
-
-GET http://localhost:8080/data/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-05T031156.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-05T031150.404.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-05T030501.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=xxx@google.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-05T030429.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=Bro@google.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T024531.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=Bro@google.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T024311.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=Bro@google.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T024102.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=Bro@google.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T023851.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=lalla@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T023818.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T023808.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=lalala@sina.com
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T022529.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T022457.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021920.200.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021728.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021637.500.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021551.500.json
-
-###
-
-GET http://localhost:8080/user/load_user_profile?email=yyy@anu.edu.au&password=abd
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021524.200.json
-
-###
-
-GET http://localhost:8080/user/load_user_profile?email=yyy@anu.edu.au&password=abd
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/user/load_user_profile?email=yyy@anu.edu.au&password=abd
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T021207.404.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T020914.404.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T020817.404.json
-
-###
-
-GET http://localhost:8080/realtime/get_realtime_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-01T020744.404.json
+<> 2020-10-12T034700.200.json
 
 ###
 
