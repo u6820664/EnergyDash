@@ -147,29 +147,103 @@
                             <!-- Recommendation Status -->
                             <div class="col-md-12 grid-margin" align="center">
 
-                                <button class="recommend_yes btn btn-success btn-icon-text btn-lg">
+                                <style>
+                                    #btn-notify {
+                                        color: #fff;
+                                        background-color: #00d082;
+                                        border-color: #00d082;
+                                    }
+                                </style>
+
+
+                                <button id="btn-notify" class="btn btn-icon-text btn-lg">
                                     <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
                                     <span class="d-inline-block text-left">
-                                    <big class="font-weight-light d-block">Recommendation rate 95%</big>
-                                    <h1>Recommend</h1>
+                                        <h4>Rate <span id="recommnd-value"></span></h4>
+                                        <h1 id="recommnd-level"></h1>
                                     </span>
                                 </button>
 
-                                <button class="recommend_med btn btn-warning btn-icon-text btn-lg">
-                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
-                                    <span class="d-inline-block text-left">
-                                    <big class="font-weight-light d-block">Recommendation rate 55%</big>
-                                    <h1>Warning</h1>
-                                    </span>
-                                </button>
+                                <script>
+                                    $(function () {
 
-                                <button class="recommend_not btn btn-danger btn-icon-text btn-lg">
-                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>
-                                    <span class="d-inline-block text-left">
-                                    <big class="font-weight-light d-block">Recommendation rate 35%</big>
-                                    <h1>Not Recommend</h1>
-                                    </span>
-                                </button>
+                                        $.ajax({
+                                            type: "get",
+                                            url: "http://54.79.60.225:8080/data/get_notification",
+                                            data: {
+                                                email: "xxx@anu.edu.au",
+                                            },
+                                            async: false, // 要求同步
+
+                                            //success函数表示交互成功后的操作
+                                            success: function (response) {//response代表后台传过来的数据
+                                                // alert(response.data.value);
+                                                document.getElementById('recommnd-value').innerHTML = response.data.value;
+                                                var recommendVal = document.getElementById('recommnd-value').innerHTML;
+                                                recommendVal = recommendVal.substr(0, recommendVal.length - 1);
+                                                // alert(recommendVal);
+
+                                                var recommendLev = response.data.level;
+                                                // alert(recommendLev);
+
+                                                if (recommendLev == 1) {
+                                                    if (recommendVal >= 0 && recommendVal <= 33) {
+                                                        document.getElementById('recommnd-level').innerHTML = "General Recommend";
+                                                    } else if (recommendVal >= 33 && recommendVal <= 66) {
+                                                        document.getElementById('recommnd-level').innerHTML = "Slightly Recommend";
+                                                    } else {
+                                                        document.getElementById('recommnd-level').innerHTML = "Highly Recommend";
+                                                    }
+
+                                                } else if (recommendLev == 2) {
+                                                    if (recommendVal >= 0 && recommendVal <= 33) {
+                                                        document.getElementById('recommnd-level').innerHTML = "General Warning";
+                                                    } else if (recommendVal >= 33 && recommendVal <= 66) {
+                                                        document.getElementById('recommnd-level').innerHTML = "Slightly Warning";
+                                                    } else {
+                                                        document.getElementById('recommnd-level').innerHTML = "Highly Warning";
+                                                    }
+
+
+                                                } else if (recommendLev == 3) {
+                                                    if (recommendVal >= 0 && recommendVal <= 33) {
+                                                        document.getElementById('recommnd-level').innerHTML = "General Not Recommend";
+                                                    } else if (recommendVal >= 33 && recommendVal <= 66) {
+                                                        document.getElementById('recommnd-level').innerHTML = "Slightly Not Recommend";
+                                                    } else {
+                                                        document.getElementById('recommnd-level').innerHTML = "Highly Not Recommend";
+                                                    }
+                                                }
+                                            }
+                                        });
+
+                                        // setInterval(notify, 1000)
+                                    })
+                                </script>
+
+                                <!--                                <button class="recommend_yes btn btn-success btn-icon-text btn-lg">-->
+                                <!--                                    <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>-->
+                                <!--                                    <span class="d-inline-block text-left">-->
+                                <!--                                        <h4>Recommend rate<span> 95%</span></h4>-->
+                                <!--                                        <h1>Recommend</h1>-->
+                                <!--                                    </span>-->
+                                <!--                                </button>-->
+
+                                <!--                                <button class="recommend_med btn btn-warning btn-icon-text btn-lg">-->
+                                <!--                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>-->
+                                <!--                                    <span class="d-inline-block text-left">-->
+                                <!--                                        <h4>Recommend rate<span> 55%</span></h4>-->
+                                <!--                                    <h1>Warning</h1>-->
+                                <!--                                    </span>-->
+                                <!--                                </button>-->
+
+                                <!--                                <button class="recommend_not btn btn-danger btn-icon-text btn-lg">-->
+                                <!--                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>-->
+                                <!--                                    <span class="d-inline-block text-left">-->
+                                <!--                                        <h4>Recommend rate<span> 35%</span></h4>-->
+                                <!--                                    <h1>Not Recommend</h1>-->
+                                <!--                                    </span>-->
+                                <!--                                </button>-->
 
                             </div>
 
@@ -461,13 +535,35 @@
                                         <div class="d-flex flex-wrap pt-2">
                                             <div class="mr-4 mb-lg-2 mb-xl-0">
                                                 <p>User consumption</p>
-                                                <h4 class="font-weight-bold mb-0">2871.10 <span
-                                                        class="text-success">kWH</span></h4>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success"> kWH</span>
                                             </div>
                                             <div>
                                                 <p>Energy Price</p>
-                                                <h4 class="font-weight-bold mb-0">160694.80 <span class="text-success">cents / MWH</span>
-                                                </h4>
+                                                <h4 id="user-price" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success"> cents</span>
+
+                                                <script>
+                                                    $(function () {
+                                                        $.ajax({
+                                                            type: "get",
+                                                            url: "http://54.79.60.225:8080/data/get_cumulative_data",
+                                                            data: {
+                                                                email: "xxx@anu.edu.au",
+                                                            },
+                                                            async: false, // 要求同步
+
+                                                            //success函数表示交互成功后的操作
+                                                            success: function (response) {//response代表后台传过来的数据
+                                                                // alert(response.data.value);
+                                                                document.getElementById('user-consumption').innerHTML = response.data.userConsumption;
+                                                                document.getElementById('user-price').innerHTML = response.data.price;
+
+                                                            }
+                                                        });
+                                                    })
+                                                </script>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1115,11 +1211,11 @@
             success: function (response) {//response代表后台传过来的数据
                 for (var i = 0; i < response.data.monthly.length; i++) {
                     if (i == response.data.length) {
-                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption*50;
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50;
                         yearlyPriceData += response.data.yearly[i].price;
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
                     } else {
-                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption*50 + ",";
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50 + ",";
                         yearlyPriceData += response.data.yearly[i].price + ",";
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
                     }
@@ -1141,11 +1237,11 @@
             success: function (response) {//response代表后台传过来的数据
                 for (var i = 0; i < response.data.monthly.length; i++) {
                     if (i == response.data.length - 1) {
-                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption*50;
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption * 50;
                         monthlyPriceData += response.data.monthly[i].price;
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
                     } else {
-                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption*50 + ",";
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption * 50 + ",";
                         monthlyPriceData += response.data.monthly[i].price + ",";
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
                     }
@@ -1167,11 +1263,11 @@
             success: function (response) {//response代表后台传过来的数据
                 for (var i = 0; i < response.data.monthly.length; i++) {
                     if (i == response.data.length - 1) {
-                        dailyUserConsumptionData += response.data.daily[i].userConsumption*50;
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption * 50;
                         dailyPriceData += response.data.daily[i].price;
                         dailyDatatimeStr += response.data.daily[i].datetimeStr;
                     } else {
-                        dailyUserConsumptionData += response.data.daily[i].userConsumption*50 +",";
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption * 50 + ",";
                         dailyPriceData += response.data.daily[i].price + ",";
                         dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
                     }
