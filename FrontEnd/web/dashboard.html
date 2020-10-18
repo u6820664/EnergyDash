@@ -76,60 +76,15 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item radin1 radpub">
-                        <a href="#" class="nav-link icon-link">
-                            <i class="mdi mdi-flash text-success"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item radin2 radpub">
-                        <a href="#" class="nav-link icon-link">
-                            <i class="mdi mdi-flash-alert text-warning"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item radin3 radpub">
-                        <a href="#" class="nav-link icon-link">
-                            <i class="mdi mdi-flash-alert text-danger"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item radpubH">
-                        &nbsp;
-                    </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link icon-link">
-                            <i class="mdi mdi-cog text-primary"></i>
+                            <i id="recommend_yes" class="mdi mdi-flash text-success"></i>
+                            <i id="recommend_med" class="mdi mdi-flash-alert text-warning"></i>
+                            <i id="recommend_not" class="mdi mdi-flash-alert text-danger"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link icon-link">
-                            <i class="mdi mdi-logout text-primary"></i>
-                        </a>
-                    </li>
+
                 </ul>
-                <script src="js/jquery-3.3.1.min.js"></script>
-
-                <script>
-
-                    $(function () {
-                        function sj() {
-                            var rand = Math.random() * 3;
-
-                            if (0 < rand && rand < 1) {
-                                $(".radin1").find('i').show();
-                                $(".radin1").siblings('.radpub').find('i').hide();
-                            }
-                            if (1 < rand && rand < 2) {
-                                $(".radin2").find('i').show();
-                                $(".radin2").siblings('.radpub').find('i').hide();
-                            }
-                            if (2 < rand && rand < 3) {
-                                $(".radin3").find('i').show();
-                                $(".radin3").siblings('.radpub').find('i').hide();
-                            }
-                        }
-
-                        setInterval(sj, 1000)
-                    })
-                </script>
             </div>
         </nav>
 
@@ -157,9 +112,9 @@
 
 
                                 <button id="btn-notify" class="btn btn-icon-text btn-lg">
-                                    <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
+                                    <i id="recommnd-icon" class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
                                     <span class="d-inline-block text-left">
-                                        <h4>Rate <span id="recommnd-value"></span></h4>
+                                        <h2 id="recommnd-value"></h2>
                                         <h1 id="recommnd-level"></h1>
                                     </span>
                                 </button>
@@ -195,6 +150,10 @@
                                                         document.getElementById('recommnd-level').innerHTML = "Highly Recommend";
                                                     }
 
+                                                    document.getElementById("recommend_yes").style.display = 'inline';
+                                                    document.getElementById("recommend_med").style.display = 'none';
+                                                    document.getElementById("recommend_not").style.display = 'none';
+
                                                 } else if (recommendLev == 2) {
                                                     if (recommendVal >= 0 && recommendVal <= 33) {
                                                         document.getElementById('recommnd-level').innerHTML = "General Warning";
@@ -204,6 +163,9 @@
                                                         document.getElementById('recommnd-level').innerHTML = "Highly Warning";
                                                     }
 
+                                                    document.getElementById("recommend_yes").style.display = 'none';
+                                                    document.getElementById("recommend_med").style.display = 'inline';
+                                                    document.getElementById("recommend_not").style.display = 'none';
 
                                                 } else if (recommendLev == 3) {
                                                     if (recommendVal >= 0 && recommendVal <= 33) {
@@ -213,6 +175,10 @@
                                                     } else {
                                                         document.getElementById('recommnd-level').innerHTML = "Highly Not Recommend";
                                                     }
+
+                                                    document.getElementById("recommend_yes").style.display = 'none';
+                                                    document.getElementById("recommend_med").style.display = 'none';
+                                                    document.getElementById("recommend_not").style.display = 'inline';
                                                 }
                                             }
                                         });
@@ -220,31 +186,6 @@
                                         // setInterval(notify, 1000)
                                     })
                                 </script>
-
-                                <!--                                <button class="recommend_yes btn btn-success btn-icon-text btn-lg">-->
-                                <!--                                    <i class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>-->
-                                <!--                                    <span class="d-inline-block text-left">-->
-                                <!--                                        <h4>Recommend rate<span> 95%</span></h4>-->
-                                <!--                                        <h1>Recommend</h1>-->
-                                <!--                                    </span>-->
-                                <!--                                </button>-->
-
-                                <!--                                <button class="recommend_med btn btn-warning btn-icon-text btn-lg">-->
-                                <!--                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>-->
-                                <!--                                    <span class="d-inline-block text-left">-->
-                                <!--                                        <h4>Recommend rate<span> 55%</span></h4>-->
-                                <!--                                    <h1>Warning</h1>-->
-                                <!--                                    </span>-->
-                                <!--                                </button>-->
-
-                                <!--                                <button class="recommend_not btn btn-danger btn-icon-text btn-lg">-->
-                                <!--                                    <i class="mdi mdi-flash-alert btn-icon-prepend mdi-36px"></i>-->
-                                <!--                                    <span class="d-inline-block text-left">-->
-                                <!--                                        <h4>Recommend rate<span> 35%</span></h4>-->
-                                <!--                                    <h1>Not Recommend</h1>-->
-                                <!--                                    </span>-->
-                                <!--                                </button>-->
-
                             </div>
 
                             <!-- Energy Price -->
@@ -344,11 +285,13 @@
                                                 <p class="card-title">Energy Price</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">24.88</h5>
+                                                <h5 id="avg_energy-price" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                                 <p class="text-success mb-0">cents / MWH</p>
                                             </div>
-                                            <canvas id="energy-price-chart" height="130"></canvas>
+                                            <canvas id="energy-price" height="130"></canvas>
                                         </div>
+
+<!--                                        !!! To be change another method-->
 
                                         <div style="display: none;" id="card_Metrics_2">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
@@ -404,10 +347,15 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Carbon intensity</p>
-
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-rounded btn-icon">
+                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
+                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
+                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                            </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
+                                            <h5 id="avg_carbon-intensity" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">kg / MWH</p>
                                         </div>
                                         <canvas id="carbon-intensity" height="130"></canvas>
@@ -421,10 +369,15 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Coal generator profits</p>
-
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-rounded btn-icon">
+                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
+                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
+                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                            </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
+                                            <h5 id="avg_coal-profits" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="coal-profits" height="130"></canvas>
@@ -438,10 +391,15 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Renewable energy profits</p>
-
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-rounded btn-icon">
+                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
+                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
+                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                            </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
+                                            <h5 id="avg_renewable-profits" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="renewable-profits" height="130"></canvas>
@@ -455,10 +413,15 @@
                                     <div class="card-body" id="coal">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Energy consumption</p>
-
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-rounded btn-icon">
+                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
+                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
+                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                            </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
+                                            <h5 id="avg_energy-consumption" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">kWH</p>
                                         </div>
                                         <canvas id="energy-consumption" height="130"></canvas>
@@ -744,6 +707,7 @@
     })
 </script>
 
+<!--Loading Data-->
 <script>
     $(function () {
 
@@ -797,7 +761,37 @@
 
         var timeDataArr = timeData.split(',');
 
-        if ($("#energy-price-chart").length) {
+        var carbonDataArrFloat = carbonDataArr.map(function(value, index){
+            return parseFloat(value);
+        })
+        var renewableDataArrFloat = renewableDataArr.map(function(value, index){
+            return parseFloat(value);
+        })
+        var consumptionDataArrFloat = consumptionDataArr.map(function(value, index){
+            return parseFloat(value);
+        })
+        var coalDataArrFloat = coalDataArr.map(function(value, index){
+            return parseFloat(value);
+        })
+        var priceDataArrFloat = priceDataArr.map(function(value, index){
+            return parseFloat(value);
+        })
+
+        //count avg
+        const average = (...arr) => {
+            const nums = [].concat(...arr);
+            return nums.reduce((acc, val) => acc + val, 0) / nums.length;
+        };
+
+        // console.log(average(carbonDataArrFloat).toFixed(2));
+
+        document.getElementById('avg_carbon-intensity').innerHTML = average(carbonDataArrFloat).toFixed(2);
+        document.getElementById('avg_coal-profits').innerHTML = average(coalDataArrFloat).toFixed(2);
+        document.getElementById('avg_renewable-profits').innerHTML = average(renewableDataArrFloat).toFixed(2);
+        document.getElementById('avg_energy-consumption').innerHTML = average(consumptionDataArrFloat).toFixed(2);
+        document.getElementById('avg_energy-price').innerHTML = average(priceDataArrFloat).toFixed(2);
+
+        if ($("#energy-price").length) {
             var areaData = {
                 labels: timeDataArr,
                 datasets: [
@@ -886,7 +880,7 @@
                     }
                 }
             }
-            var balanceChartCanvas = $("#energy-price-chart").get(0).getContext("2d");
+            var balanceChartCanvas = $("#energy-price").get(0).getContext("2d");
             var balanceChart = new Chart(balanceChartCanvas, {
                 type: 'line',
                 data: areaData,
@@ -1191,9 +1185,11 @@
         var yearlyUserConsumptionData = "";
         var yearlyPriceData = "";
         var yearlyDatatimeStr = "";
+
         var monthlyUserConsumptionData = "";
         var monthlyPriceData = "";
         var monthlyDatatimeStr = "";
+
         var dailyUserConsumptionData = "";
         var dailyPriceData = "";
         var dailyDatatimeStr = "";
@@ -1214,12 +1210,14 @@
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50;
                         yearlyPriceData += response.data.yearly[i].price;
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
+                        console.log(yearlyUserConsumptionData);
                     } else {
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50 + ",";
                         yearlyPriceData += response.data.yearly[i].price + ",";
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
                     }
                 }
+
 
             }
 
@@ -1292,7 +1290,7 @@
         if ($("#historical-chart-year").length) {
             var AudienceChartCanvas = $("#historical-chart-year").get(0).getContext("2d");
             var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: yearlyDatatimeStrArr,
                     datasets: [
@@ -1304,6 +1302,8 @@
                             borderColor: '#ff4c5b'
                         },
                         {
+                            type: 'line',
+                            fill: false,
                             label: 'Price',
                             data: yearlyPriceDataArr,
                             backgroundColor: '#1cbccd'
@@ -1371,7 +1371,7 @@
         if ($("#historical-chart-month").length) {
             var AudienceChartCanvas = $("#historical-chart-month").get(0).getContext("2d");
             var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: monthlyDatatimeStrArr,
                     datasets: [
@@ -1383,6 +1383,8 @@
                             borderColor: '#ff4c5b'
                         },
                         {
+                            type: 'line',
+                            fill: false,
                             label: 'Price',
                             data: monthlyPriceDataArr,
                             backgroundColor: '#1cbccd'
@@ -1450,7 +1452,7 @@
         if ($("#historical-chart-day").length) {
             var AudienceChartCanvas = $("#historical-chart-day").get(0).getContext("2d");
             var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: dailyDatatimeStrArr,
                     datasets: [
@@ -1462,6 +1464,8 @@
                             borderColor: '#ff4c5b'
                         },
                         {
+                            type: 'line',
+                            fill: false,
                             label: 'Price',
                             data: dailyPriceDataArr,
                             backgroundColor: '#1cbccd'
