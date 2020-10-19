@@ -285,13 +285,14 @@
                                                 <p class="card-title">Energy Price</p>
                                             </div>
                                             <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 id="avg_energy-price" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
+                                                <h5 id="avg_energy-price"
+                                                    class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                                 <p class="text-success mb-0">cents / MWH</p>
                                             </div>
                                             <canvas id="energy-price" height="130"></canvas>
                                         </div>
 
-<!--                                        !!! To be change another method-->
+                                        <!--                                        !!! To be change another method-->
 
                                         <div style="display: none;" id="card_Metrics_2">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
@@ -349,13 +350,16 @@
                                             <p class="card-title">Carbon intensity</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
-                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
-                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                                <i id="CI_recommend_yes" class="mdi mdi-flash text-success"></i>
+                                                <i id="CI_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
+                                                <i id="CI_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
                                             </button>
+
+
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 id="avg_carbon-intensity" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
+                                            <h5 id="avg_carbon-intensity"
+                                                class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">kg / MWH</p>
                                         </div>
                                         <canvas id="carbon-intensity" height="130"></canvas>
@@ -377,7 +381,8 @@
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 id="avg_coal-profits" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
+                                            <h5 id="avg_coal-profits"
+                                                class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="coal-profits" height="130"></canvas>
@@ -399,7 +404,8 @@
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 id="avg_renewable-profits" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
+                                            <h5 id="avg_renewable-profits"
+                                                class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">cents / MWH</p>
                                         </div>
                                         <canvas id="renewable-profits" height="130"></canvas>
@@ -421,7 +427,8 @@
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
-                                            <h5 id="avg_energy-consumption" class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
+                                            <h5 id="avg_energy-consumption"
+                                                class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">kWH</p>
                                         </div>
                                         <canvas id="energy-consumption" height="130"></canvas>
@@ -761,19 +768,19 @@
 
         var timeDataArr = timeData.split(',');
 
-        var carbonDataArrFloat = carbonDataArr.map(function(value, index){
+        var carbonDataArrFloat = carbonDataArr.map(function (value, index) {
             return parseFloat(value);
         })
-        var renewableDataArrFloat = renewableDataArr.map(function(value, index){
+        var renewableDataArrFloat = renewableDataArr.map(function (value, index) {
             return parseFloat(value);
         })
-        var consumptionDataArrFloat = consumptionDataArr.map(function(value, index){
+        var consumptionDataArrFloat = consumptionDataArr.map(function (value, index) {
             return parseFloat(value);
         })
-        var coalDataArrFloat = coalDataArr.map(function(value, index){
+        var coalDataArrFloat = coalDataArr.map(function (value, index) {
             return parseFloat(value);
         })
-        var priceDataArrFloat = priceDataArr.map(function(value, index){
+        var priceDataArrFloat = priceDataArr.map(function (value, index) {
             return parseFloat(value);
         })
 
@@ -785,11 +792,34 @@
 
         // console.log(average(carbonDataArrFloat).toFixed(2));
 
-        document.getElementById('avg_carbon-intensity').innerHTML = average(carbonDataArrFloat).toFixed(2);
-        document.getElementById('avg_coal-profits').innerHTML = average(coalDataArrFloat).toFixed(2);
-        document.getElementById('avg_renewable-profits').innerHTML = average(renewableDataArrFloat).toFixed(2);
-        document.getElementById('avg_energy-consumption').innerHTML = average(consumptionDataArrFloat).toFixed(2);
-        document.getElementById('avg_energy-price').innerHTML = average(priceDataArrFloat).toFixed(2);
+        var avg_carbonData = average(carbonDataArrFloat).toFixed(2);
+        var avg_coalData = average(coalDataArrFloat).toFixed(2);
+        var avg_renewableData = average(renewableDataArrFloat).toFixed(2);
+        var avg_consumptionData = average(consumptionDataArrFloat).toFixed(2);
+        var avg_priceData = average(priceDataArrFloat).toFixed(2);
+
+        document.getElementById('avg_carbon-intensity').innerHTML = avg_carbonData;
+        document.getElementById('avg_coal-profits').innerHTML = avg_coalData;
+        document.getElementById('avg_renewable-profits').innerHTML = avg_renewableData;
+        document.getElementById('avg_energy-consumption').innerHTML = avg_consumptionData;
+        document.getElementById('avg_energy-price').innerHTML = avg_priceData;
+
+        // if (400 < avg_carbonData && avg_carbonData < 500) {
+        //     document.getElementById("CI_recommend_yes").style.display = 'inline';
+        //     document.getElementById("CI_recommend_med").style.display = 'none';
+        //     document.getElementById("CI_recommend_no").style.display = 'none';
+        // }
+        // if (500 < avg_carbonData && avg_carbonData < 700) {
+        //     document.getElementById("CI_recommend_yes").style.display = 'none';
+        //     document.getElementById("CI_recommend_med").style.display = 'inline';
+        //     document.getElementById("CI_recommend_no").style.display = 'none';
+        // }
+        // if (700 < avg_carbonData && avg_carbonData < 1000) {
+        //     document.getElementById("CI_recommend_yes").style.display = 'none';
+        //     document.getElementById("CI_recommend_med").style.display = 'none';
+        //     document.getElementById("CI_recommend_no").style.display = 'inline';
+        // }
+
 
         if ($("#energy-price").length) {
             var areaData = {
@@ -1356,7 +1386,7 @@
                         }]
                     },
                     legend: {
-                        display: false
+                        display: true
                     },
                     elements: {
                         point: {
@@ -1437,7 +1467,7 @@
                         }]
                     },
                     legend: {
-                        display: false
+                        display: true
                     },
                     elements: {
                         point: {
@@ -1518,7 +1548,7 @@
                         }]
                     },
                     legend: {
-                        display: false
+                        display: true
                     },
                     elements: {
                         point: {
