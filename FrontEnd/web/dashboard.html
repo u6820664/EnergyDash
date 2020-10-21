@@ -375,9 +375,9 @@
                                             <p class="card-title">Coal generator profits</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
-                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
-                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                                <i id="CGP_recommend_yes" class="mdi mdi-flash text-success"></i>
+                                                <i id="CGP_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
+                                                <i id="CGP_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -398,9 +398,9 @@
                                             <p class="card-title">Renewable energy profits</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
-                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
-                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                                <i id="REP_recommend_yes" class="mdi mdi-flash text-success"></i>
+                                                <i id="REP_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
+                                                <i id="REP_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -421,9 +421,9 @@
                                             <p class="card-title">Energy consumption</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i class="mdi mdi-flash text-success recommend_yes"></i>
-                                                <i class="mdi mdi-flash-alert text-warning recommend_med"></i>
-                                                <i class="mdi mdi-flash-alert text-danger recommend_not"></i>
+                                                <i id="EC_recommend_yes" class="mdi mdi-flash text-success"></i>
+                                                <i id="EC_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
+                                                <i id="EC_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -803,22 +803,6 @@
         document.getElementById('avg_renewable-profits').innerHTML = avg_renewableData;
         document.getElementById('avg_energy-consumption').innerHTML = avg_consumptionData;
         document.getElementById('avg_energy-price').innerHTML = avg_priceData;
-
-        // if (400 < avg_carbonData && avg_carbonData < 500) {
-        //     document.getElementById("CI_recommend_yes").style.display = 'inline';
-        //     document.getElementById("CI_recommend_med").style.display = 'none';
-        //     document.getElementById("CI_recommend_no").style.display = 'none';
-        // }
-        // if (500 < avg_carbonData && avg_carbonData < 700) {
-        //     document.getElementById("CI_recommend_yes").style.display = 'none';
-        //     document.getElementById("CI_recommend_med").style.display = 'inline';
-        //     document.getElementById("CI_recommend_no").style.display = 'none';
-        // }
-        // if (700 < avg_carbonData && avg_carbonData < 1000) {
-        //     document.getElementById("CI_recommend_yes").style.display = 'none';
-        //     document.getElementById("CI_recommend_med").style.display = 'none';
-        //     document.getElementById("CI_recommend_no").style.display = 'inline';
-        // }
 
 
         if ($("#energy-price").length) {
@@ -1558,6 +1542,74 @@
                     }
                 },
             });
+        }
+
+        // 1
+        if (400 < avg_carbonData && avg_carbonData < 500) {
+            document.getElementById("CI_recommend_yes").style.display = 'inline';
+            document.getElementById("CI_recommend_med").style.display = 'none';
+            document.getElementById("CI_recommend_no").style.display = 'none';
+        }
+        if (500 < avg_carbonData && avg_carbonData < 700) {
+            document.getElementById("CI_recommend_yes").style.display = 'none';
+            document.getElementById("CI_recommend_med").style.display = 'inline';
+            document.getElementById("CI_recommend_no").style.display = 'none';
+        }
+        if (700 < avg_carbonData && avg_carbonData < 1000) {
+            document.getElementById("CI_recommend_yes").style.display = 'none';
+            document.getElementById("CI_recommend_med").style.display = 'none';
+            document.getElementById("CI_recommend_no").style.display = 'inline';
+        }
+
+        // 2
+        if (40 < avg_coalData && avg_coalData < 50) {
+            document.getElementById("CGP_recommend_yes").style.display = 'inline';
+            document.getElementById("CGP_recommend_med").style.display = 'none';
+            document.getElementById("CGP_recommend_no").style.display = 'none';
+        }
+        if (50 < avg_coalData && avg_coalData < 70) {
+            document.getElementById("CGP_recommend_yes").style.display = 'none';
+            document.getElementById("CGP_recommend_med").style.display = 'inline';
+            document.getElementById("CGP_recommend_no").style.display = 'none';
+        }
+        if (70 < avg_coalData && avg_coalData < 100) {
+            document.getElementById("CGP_recommend_yes").style.display = 'none';
+            document.getElementById("CGP_recommend_med").style.display = 'none';
+            document.getElementById("CGP_recommend_no").style.display = 'inline';
+        }
+
+        // 3
+        if (30 < avg_renewableData && avg_renewableData < 50) {
+            document.getElementById("REP_recommend_yes").style.display = 'inline';
+            document.getElementById("REP_recommend_med").style.display = 'none';
+            document.getElementById("REP_recommend_no").style.display = 'none';
+        }
+        if (20 < avg_renewableData && avg_renewableData < 30) {
+            document.getElementById("REP_recommend_yes").style.display = 'none';
+            document.getElementById("REP_recommend_med").style.display = 'inline';
+            document.getElementById("REP_recommend_no").style.display = 'none';
+        }
+        if (10 < avg_renewableData && avg_renewableData < 20) {
+            document.getElementById("REP_recommend_yes").style.display = 'none';
+            document.getElementById("REP_recommend_med").style.display = 'none';
+            document.getElementById("REP_recommend_no").style.display = 'inline';
+        }
+
+        // 4
+        if (0 < avg_consumptionData && avg_consumptionData < 0.2) {
+            document.getElementById("EC_recommend_yes").style.display = 'inline';
+            document.getElementById("EC_recommend_med").style.display = 'none';
+            document.getElementById("EC_recommend_no").style.display = 'none';
+        }
+        if (0.2 < avg_consumptionData && avg_consumptionData < 0.5) {
+            document.getElementById("EC_recommend_yes").style.display = 'none';
+            document.getElementById("EC_recommend_med").style.display = 'inline';
+            document.getElementById("EC_recommend_no").style.display = 'none';
+        }
+        if (0.5 < avg_consumptionData && avg_consumptionData < 0.8) {
+            document.getElementById("EC_recommend_yes").style.display = 'none';
+            document.getElementById("EC_recommend_med").style.display = 'none';
+            document.getElementById("EC_recommend_no").style.display = 'inline';
         }
 
 
