@@ -78,9 +78,7 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item">
                         <a href="#" class="nav-link icon-link">
-                            <i id="recommend_yes" class="mdi mdi-flash text-success"></i>
-                            <i id="recommend_med" class="mdi mdi-flash-alert text-warning"></i>
-                            <i id="recommend_not" class="mdi mdi-flash-alert text-danger"></i>
+                            <i id="recommend"></i>
                         </a>
                     </li>
 
@@ -101,18 +99,8 @@
                         <div class="row w-100 flex-grow">
                             <!-- Recommendation Status -->
                             <div class="col-md-12 grid-margin" align="center">
-
-                                <style>
-                                    #btn-notify {
-                                        color: #fff;
-                                        background-color: #00d082;
-                                        border-color: #00d082;
-                                    }
-                                </style>
-
-
-                                <button id="btn-notify" class="btn btn-icon-text btn-lg">
-                                    <i id="recommnd-icon" class="mdi mdi-flash btn-icon-prepend mdi-36px"></i>
+                                <button id="recommnd-color" class="btn btn-icon-text btn-lg">
+                                    <i id="recommnd-icon" class="mdi btn-icon-prepend mdi-36px"></i>
                                     <span class="d-inline-block text-left">
                                         <h2 id="recommnd-value"></h2>
                                         <h1 id="recommnd-level"></h1>
@@ -211,8 +199,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="card-body">
-                                        <div style="display: block;" id="card_Metrics_1">
+                                    <div class="card-body" id="main_chart">
+
+                                        <div style="display: block;" id="card_Metrics_0">
                                             <div class="d-flex align-items-center justify-content-between flex-wrap">
                                                 <p class="card-title">Energy Price</p>
                                             </div>
@@ -221,54 +210,68 @@
                                                     class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                                 <p class="text-success mb-0">cents / MWH</p>
                                             </div>
-                                            <canvas id="energy-price" height="130"></canvas>
+                                            <canvas class="energy-price" height="130"></canvas>
                                         </div>
 
-                                        <!--                                        !!! To be change another method-->
+<!--                                        <div style="display: block;" id="card_Metrics_1">-->
+<!--                                            <div class="d-flex align-items-center justify-content-between flex-wrap">-->
+<!--                                                <p class="card-title">Energy Price</p>-->
+<!--                                            </div>-->
+<!--                                            <div class="d-flex align-items-center flex-wrap mb-3">-->
+<!--                                                <h5 id="avg_energy-price"-->
+<!--                                                    class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>-->
+<!--                                                <p class="text-success mb-0">cents / MWH</p>-->
+<!--                                            </div>-->
+<!--                                            <canvas class="energy-price" height="130"></canvas>-->
+<!--                                        </div>-->
 
-                                        <div style="display: none;" id="card_Metrics_2">
-                                            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                                <p class="card-title">Carbon intensity</p>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-success mb-0">kg / MWH</p>
-                                            </div>
-                                            <canvas id="task-chart1" height="130"></canvas>
-                                        </div>
+                                        <!--!!! To be change another method-->
 
-                                        <div style="display: none;" id="card_Metrics_3">
-                                            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                                <p class="card-title">Coal generator profits</p>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-success mb-0">kg / MWH</p>
-                                            </div>
-                                            <canvas id="task-chart2" height="130"></canvas>
-                                        </div>
+<!--                                        <div style="display: none;" id="card_Metrics_2">-->
+<!--                                            <div class="d-flex align-items-center justify-content-between flex-wrap">-->
+<!--                                                <p class="card-title">Carbon intensity</p>-->
+<!--                                            </div>-->
+<!--                                            <div class="d-flex align-items-center flex-wrap mb-3">-->
+<!--                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>-->
+<!--                                                <p class="text-success mb-0">kg / MWH</p>-->
+<!--                                            </div>-->
+<!--                                            <canvas id="task-chart1" height="130"></canvas>-->
+<!--                                        </div>-->
 
-                                        <div style="display: none;" id="card_Metrics_4">
-                                            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                                <p class="card-title">Renewable energy profits</p>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-success mb-0">cents / MWH</p>
-                                            </div>
-                                            <canvas id="task-chart3" height="130"></canvas>
-                                        </div>
+<!--                                        <div style="display: none;" id="card_Metrics_3">-->
+<!--                                            <div class="d-flex align-items-center justify-content-between flex-wrap">-->
+<!--                                                <p class="card-title">Coal generator profits</p>-->
+<!--                                            </div>-->
+<!--                                            <div class="d-flex align-items-center flex-wrap mb-3">-->
+<!--                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>-->
+<!--                                                <p class="text-success mb-0">kg / MWH</p>-->
+<!--                                            </div>-->
+<!--                                            <canvas id="task-chart2" height="130"></canvas>-->
+<!--                                        </div>-->
 
-                                        <div style="display: none;" id="card_Metrics_5">
-                                            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                                <p class="card-title">Energy consumption</p>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-wrap mb-3">
-                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>
-                                                <p class="text-success mb-0">kWh</p>
-                                            </div>
-                                            <canvas id="task-chart4" height="130"></canvas>
-                                        </div>
+<!--                                        <div style="display: none;" id="card_Metrics_4">-->
+<!--                                            <div class="d-flex align-items-center justify-content-between flex-wrap">-->
+<!--                                                <p class="card-title">Renewable energy profits</p>-->
+<!--                                            </div>-->
+<!--                                            <div class="d-flex align-items-center flex-wrap mb-3">-->
+<!--                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>-->
+<!--                                                <p class="text-success mb-0">cents / MWH</p>-->
+<!--                                            </div>-->
+<!--                                            <canvas id="task-chart3" height="130"></canvas>-->
+<!--                                        </div>-->
+
+<!--                                        <div style="display: none;" id="card_Metrics_5">-->
+<!--                                            <div class="d-flex align-items-center justify-content-between flex-wrap">-->
+<!--                                                <p class="card-title">Energy consumption</p>-->
+<!--                                            </div>-->
+<!--                                            <div class="d-flex align-items-center flex-wrap mb-3">-->
+<!--                                                <h5 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3">17.24</h5>-->
+<!--                                                <p class="text-success mb-0">kWh</p>-->
+<!--                                            </div>-->
+<!--                                            <canvas id="task-chart4" height="130"></canvas>-->
+<!--                                        </div>-->
+
+
                                     </div>
 
                                 </div>
@@ -277,24 +280,20 @@
                             <!-- Carbon intensity -->
                             <div class="col-md-6  grid-margin stretch-card">
                                 <div class="card">
-                                    <div class="card-body" id="coal">
+                                    <div class="card-body carbon">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Carbon intensity</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i id="CI_recommend_yes" class="mdi mdi-flash text-success"></i>
-                                                <i id="CI_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
-                                                <i id="CI_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
+                                                <i id="CI_recommend"></i>
                                             </button>
-
-
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
                                             <h5 id="avg_carbon-intensity"
                                                 class="font-weight-normal mb-0 mb-md-1 mb-lg-0 mr-3"></h5>
                                             <p class="text-success mb-0">kg / MWH</p>
                                         </div>
-                                        <canvas id="carbon-intensity" height="130"></canvas>
+                                        <canvas class="carbon-intensity" height="130"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -307,9 +306,7 @@
                                             <p class="card-title">Coal generator profits</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i id="CGP_recommend_yes" class="mdi mdi-flash text-success"></i>
-                                                <i id="CGP_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
-                                                <i id="CGP_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
+                                                <i id="CGP_recommend"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -325,14 +322,12 @@
                             <!-- Renewable energy profits -->
                             <div class="col-md-6  grid-margin stretch-card">
                                 <div class="card">
-                                    <div class="card-body" id="coal">
+                                    <div class="card-body" id="renewable">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Renewable energy profits</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i id="REP_recommend_yes" class="mdi mdi-flash text-success"></i>
-                                                <i id="REP_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
-                                                <i id="REP_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
+                                                <i id="REP_recommend"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -348,14 +343,12 @@
                             <!-- Energy consumption -->
                             <div class="col-md-6  grid-margin stretch-card">
                                 <div class="card">
-                                    <div class="card-body" id="coal">
+                                    <div class="card-body" id="consumption">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                                             <p class="card-title">Energy consumption</p>
                                             <button type="button"
                                                     class="btn btn-outline-secondary btn-rounded btn-icon">
-                                                <i id="EC_recommend_yes" class="mdi mdi-flash text-success"></i>
-                                                <i id="EC_recommend_med" class="mdi mdi-flash-alert text-warning"></i>
-                                                <i id="EC_recommend_not" class="mdi mdi-flash-alert text-danger"></i>
+                                                <i id="EC_recommend"></i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center flex-wrap mb-3">
@@ -379,7 +372,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <p class="card-title">Historical Metrics</p>
-                                        <div class="row mb-3">
+                                        <div class="row">
                                             <div class="col-md-7">
                                                 <p class="text-muted">Historical energy consumption and price data of
                                                     users</p>
@@ -411,18 +404,19 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="card-body">
-                                        <div style="display: block;" id="card_day">
-                                            <canvas id="historical-chart-day" height="130"></canvas>
+                                        <div>
+                                            <div style="display: block;" id="card_day">
+                                                <canvas id="historical-chart-day" height="250"></canvas>
+                                            </div>
+                                            <div style="display: none;" id="card_month">
+                                                <canvas id="historical-chart-month" height="250"></canvas>
+                                            </div>
+                                            <div style="display: none;" id="card_year">
+                                                <canvas id="historical-chart-year" height="250"></canvas>
+                                            </div>
                                         </div>
-                                        <div style="display: none;" id="card_month">
-                                            <canvas id="historical-chart-month" height="130"></canvas>
-                                        </div>
-                                        <div style="display: none;" id="card_year">
-                                            <canvas id="historical-chart-year" height="130"></canvas>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>

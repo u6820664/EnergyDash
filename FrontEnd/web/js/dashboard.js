@@ -30,11 +30,9 @@
                     } else {
                         document.getElementById('recommnd-level').innerHTML = "Highly Recommend";
                     }
-
-                    document.getElementById("recommend_yes").style.display = 'inline';
-                    document.getElementById("recommend_med").style.display = 'none';
-                    document.getElementById("recommend_not").style.display = 'none';
-
+                    document.getElementById("recommnd-color").setAttribute("class", "btn btn-icon-text btn-lg btn-success");
+                    document.getElementById("recommnd-icon").setAttribute("class", "mdi mdi-flash btn-icon-prepend mdi-36px");
+                    document.getElementById("recommend").setAttribute("class", "mdi mdi-flash text-success");
                 } else if (recommendLev == 2) {
                     if (recommendVal >= 0 && recommendVal <= 33) {
                         document.getElementById('recommnd-level').innerHTML = "General Warning";
@@ -43,11 +41,9 @@
                     } else {
                         document.getElementById('recommnd-level').innerHTML = "Highly Warning";
                     }
-
-                    document.getElementById("recommend_yes").style.display = 'none';
-                    document.getElementById("recommend_med").style.display = 'inline';
-                    document.getElementById("recommend_not").style.display = 'none';
-
+                    document.getElementById("recommnd-color").setAttribute("class", "btn btn-icon-text btn-lg btn-warning");
+                    document.getElementById("recommnd-icon").setAttribute("class", "mdi mdi-flash-alert btn-icon-prepend mdi-36px");
+                    document.getElementById("recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
                 } else if (recommendLev == 3) {
                     if (recommendVal >= 0 && recommendVal <= 33) {
                         document.getElementById('recommnd-level').innerHTML = "General Not Recommend";
@@ -56,10 +52,9 @@
                     } else {
                         document.getElementById('recommnd-level').innerHTML = "Highly Not Recommend";
                     }
-
-                    document.getElementById("recommend_yes").style.display = 'none';
-                    document.getElementById("recommend_med").style.display = 'none';
-                    document.getElementById("recommend_not").style.display = 'inline';
+                    document.getElementById("recommnd-color").setAttribute("class", "btn btn-icon-text btn-lg btn-danger");
+                    document.getElementById("recommnd-icon").setAttribute("class", "mdi mdi-flash-alert btn-icon-prepend mdi-36px");
+                    document.getElementById("recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
                 }
             }
         });
@@ -361,96 +356,29 @@
             });
         }
 
-        // Canvas_swap Metrics 1-5
+        // Swap_metrics
         document.getElementById("tab_Metrics_1").onclick = function () {
-            changeToMetrics_1()
+            document.getElementById("main_chart").child
+            setAttribute("class", "card-body carbon");
+            console.log(document.getElementById("main_chart"));
+            console.log(document.getElementById("main_chart").className);
         };
-
-        function changeToMetrics_1() {
-            document.getElementById("card_Metrics_1").style.display = 'block';
-            document.getElementById("card_Metrics_2").style.display = 'none';
-            document.getElementById("card_Metrics_3").style.display = 'none';
-            document.getElementById("card_Metrics_4").style.display = 'none';
-            document.getElementById("card_Metrics_5").style.display = 'none';
-        }
 
         document.getElementById("tab_Metrics_2").onclick = function () {
-            changeToMetrics_2()
         };
-
-        function changeToMetrics_2() {
-            document.getElementById("card_Metrics_1").style.display = 'none';
-            document.getElementById("card_Metrics_2").style.display = 'block';
-            document.getElementById("card_Metrics_3").style.display = 'none';
-            document.getElementById("card_Metrics_4").style.display = 'none';
-            document.getElementById("card_Metrics_5").style.display = 'none';
-        }
 
         document.getElementById("tab_Metrics_3").onclick = function () {
-            changeToMetrics_3()
         };
-
-        function changeToMetrics_3() {
-            document.getElementById("card_Metrics_1").style.display = 'none';
-            document.getElementById("card_Metrics_2").style.display = 'none';
-            document.getElementById("card_Metrics_3").style.display = 'block';
-            document.getElementById("card_Metrics_4").style.display = 'none';
-            document.getElementById("card_Metrics_5").style.display = 'none';
-        }
 
         document.getElementById("tab_Metrics_4").onclick = function () {
-            changeToMetrics_4()
         };
-
-        function changeToMetrics_4() {
-            document.getElementById("card_Metrics_1").style.display = 'none';
-            document.getElementById("card_Metrics_2").style.display = 'none';
-            document.getElementById("card_Metrics_3").style.display = 'none';
-            document.getElementById("card_Metrics_4").style.display = 'block';
-            document.getElementById("card_Metrics_5").style.display = 'none';
-        }
 
         document.getElementById("tab_Metrics_5").onclick = function () {
-            changeToMetrics_5()
         };
-
-        function changeToMetrics_5() {
-            document.getElementById("card_Metrics_1").style.display = 'none';
-            document.getElementById("card_Metrics_2").style.display = 'none';
-            document.getElementById("card_Metrics_3").style.display = 'none';
-            document.getElementById("card_Metrics_4").style.display = 'none';
-            document.getElementById("card_Metrics_5").style.display = 'block';
-        }
 
     });
 
-    // Small chart Notify
-    $(function () {
-        function notify() {
-            for (var i = 0; i < document.getElementsByClassName("recommend_yes").length; i++) {
-                var randv = Math.random() * 3;
-                if (0 < randv && randv < 1) {
-                    document.getElementsByClassName("recommend_yes")[i].style.display = 'inline';
-                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
-                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
-                }
-                if (1 < randv && randv < 2) {
-                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
-                    document.getElementsByClassName("recommend_med")[i].style.display = 'inline';
-                    document.getElementsByClassName("recommend_not")[i].style.display = 'none';
-                }
-                if (2 < randv && randv < 3) {
-                    document.getElementsByClassName("recommend_yes")[i].style.display = 'none';
-                    document.getElementsByClassName("recommend_med")[i].style.display = 'none';
-                    document.getElementsByClassName("recommend_not")[i].style.display = 'inline';
-                }
-            }
-        }
-
-        setInterval(notify, 1000)
-    })
-
-    // Loading Data
+    // Loading Energy Related Data
     $(function () {
 
         var carbonData = "";
@@ -495,6 +423,7 @@
             }
         });
 
+        //Str2Arr
         var carbonDataArr = carbonData.split(',');
         var renewableDataArr = renewableData.split(',');
         var consumptionDataArr = consumptionData.split(',');
@@ -503,6 +432,7 @@
 
         var timeDataArr = timeData.split(',');
 
+        //Arr2Float
         var carbonDataArrFloat = carbonDataArr.map(function (value, index) {
             return parseFloat(value);
         })
@@ -533,14 +463,14 @@
         var avg_consumptionData = average(consumptionDataArrFloat).toFixed(2);
         var avg_priceData = average(priceDataArrFloat).toFixed(2);
 
+        //load avg data
         document.getElementById('avg_carbon-intensity').innerHTML = avg_carbonData;
         document.getElementById('avg_coal-profits').innerHTML = avg_coalData;
         document.getElementById('avg_renewable-profits').innerHTML = avg_renewableData;
         document.getElementById('avg_energy-consumption').innerHTML = avg_consumptionData;
         document.getElementById('avg_energy-price').innerHTML = avg_priceData;
 
-
-        if ($("#energy-price").length) {
+        if ($(".energy-price").length) {
             var areaData = {
                 labels: timeDataArr,
                 datasets: [
@@ -629,7 +559,7 @@
                     }
                 }
             }
-            var balanceChartCanvas = $("#energy-price").get(0).getContext("2d");
+            var balanceChartCanvas = $(".energy-price").get(0).getContext("2d");
             var balanceChart = new Chart(balanceChartCanvas, {
                 type: 'line',
                 data: areaData,
@@ -638,8 +568,8 @@
         }
 
 
-        if ($("#carbon-intensity").length) {
-            var taskChartCanvas = $("#carbon-intensity").get(0).getContext("2d");
+        if ($(".carbon-intensity").length) {
+            var taskChartCanvas = $(".carbon-intensity").get(0).getContext("2d");
             var taskChart = new Chart(taskChartCanvas, {
                 type: 'line',
                 data: {
@@ -961,7 +891,6 @@
         var dailyPriceData = "";
         var dailyDatatimeStr = "";
 
-
         $.ajax({
             type: "get",
             url: "http://54.79.60.225:8080/data/get_historical_data",
@@ -972,67 +901,37 @@
 
             //success函数表示交互成功后的操作
             success: function (response) {//response代表后台传过来的数据
-                for (var i = 0; i < response.data.monthly.length; i++) {
-                    if (i == response.data.length) {
-                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50;
+                for (var i = 0; i < response.data.yearly.length; i++) {
+                    if (i == response.data.yearly.length - 1) {
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption;
                         yearlyPriceData += response.data.yearly[i].price;
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
-                        console.log(yearlyUserConsumptionData);
                     } else {
-                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption * 50 + ",";
+                        yearlyUserConsumptionData += response.data.yearly[i].userConsumption + ",";
                         yearlyPriceData += response.data.yearly[i].price + ",";
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
                     }
                 }
 
-
-            }
-
-        });
-
-        $.ajax({
-            type: "get",
-            url: "http://54.79.60.225:8080/data/get_historical_data",
-            data: {
-                email: "xxx@anu.edu.au",
-            },
-            async: false, // 要求同步
-
-            //success函数表示交互成功后的操作
-            success: function (response) {//response代表后台传过来的数据
                 for (var i = 0; i < response.data.monthly.length; i++) {
-                    if (i == response.data.length - 1) {
-                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption * 50;
+                    if (i == response.data.monthly.length - 1) {
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption;
                         monthlyPriceData += response.data.monthly[i].price;
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
                     } else {
-                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption * 50 + ",";
+                        monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";
                         monthlyPriceData += response.data.monthly[i].price + ",";
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
                     }
                 }
 
-            }
-
-        });
-
-        $.ajax({
-            type: "get",
-            url: "http://54.79.60.225:8080/data/get_historical_data",
-            data: {
-                email: "xxx@anu.edu.au",
-            },
-            async: false, // 要求同步
-
-            //success函数表示交互成功后的操作
-            success: function (response) {//response代表后台传过来的数据
-                for (var i = 0; i < response.data.monthly.length; i++) {
-                    if (i == response.data.length - 1) {
-                        dailyUserConsumptionData += response.data.daily[i].userConsumption * 50;
+                for (var i = 0; i < response.data.daily.length; i++) {
+                    if (i == response.data.daily.length - 1) {
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption;
                         dailyPriceData += response.data.daily[i].price;
                         dailyDatatimeStr += response.data.daily[i].datetimeStr;
                     } else {
-                        dailyUserConsumptionData += response.data.daily[i].userConsumption * 50 + ",";
+                        dailyUserConsumptionData += response.data.daily[i].userConsumption + ",";
                         dailyPriceData += response.data.daily[i].price + ",";
                         dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
                     }
@@ -1059,20 +958,20 @@
             var AudienceChart = new Chart(AudienceChartCanvas, {
                 type: 'line',
                 data: {
-                    labels: yearlyDatatimeStrArr,
+                    labels: yearlyDatatimeStrArr.reverse(),
                     datasets: [
                         {
                             type: 'line',
                             fill: false,
-                            label: 'User Consumption',
-                            data: yearlyUserConsumptionDataArr,
+                            label: 'Energy Consumption',
+                            data: yearlyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Price',
-                            data: yearlyPriceDataArr,
+                            label: 'Energy Price',
+                            data: yearlyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
                     ]
@@ -1099,9 +998,6 @@
                             },
                             ticks: {
                                 display: true,
-                                min: 0,
-                                max: 120000,
-                                stepSize: 10000,
                                 fontColor: "#b1b0b0",
                                 fontSize: 10,
                                 padding: 10
@@ -1140,20 +1036,20 @@
             var AudienceChart = new Chart(AudienceChartCanvas, {
                 type: 'line',
                 data: {
-                    labels: monthlyDatatimeStrArr,
+                    labels: monthlyDatatimeStrArr.reverse(),
                     datasets: [
                         {
                             type: 'line',
                             fill: false,
-                            label: 'User Consumption',
-                            data: monthlyUserConsumptionDataArr,
+                            label: 'Energy Consumption',
+                            data: monthlyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Price',
-                            data: monthlyPriceDataArr,
+                            label: 'Energy Price',
+                            data: monthlyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
                     ]
@@ -1180,9 +1076,6 @@
                             },
                             ticks: {
                                 display: true,
-                                min: 0,
-                                max: 15000,
-                                stepSize: 1000,
                                 fontColor: "#b1b0b0",
                                 fontSize: 10,
                                 padding: 10
@@ -1221,20 +1114,20 @@
             var AudienceChart = new Chart(AudienceChartCanvas, {
                 type: 'line',
                 data: {
-                    labels: dailyDatatimeStrArr,
+                    labels: dailyDatatimeStrArr.reverse(),
                     datasets: [
                         {
                             type: 'line',
                             fill: false,
-                            label: 'User Consumption',
-                            data: dailyUserConsumptionDataArr,
+                            label: 'Energy Consumption',
+                            data: dailyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Price',
-                            data: dailyPriceDataArr,
+                            label: 'Energy Price',
+                            data: dailyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
                     ]
@@ -1261,9 +1154,6 @@
                             },
                             ticks: {
                                 display: true,
-                                min: 0,
-                                max: 500,
-                                stepSize: 100,
                                 fontColor: "#b1b0b0",
                                 fontSize: 10,
                                 padding: 10
@@ -1328,72 +1218,41 @@
             document.getElementById("card_year").style.display = 'block';
         }
 
-        // 1
+        //Small chart notification
+        // Carbon Intensity
         if (400 < avg_carbonData && avg_carbonData < 500) {
-            document.getElementById("CI_recommend_yes").style.display = 'inline';
-            document.getElementById("CI_recommend_med").style.display = 'none';
-            document.getElementById("CI_recommend_no").style.display = 'none';
-        }
-        if (500 < avg_carbonData && avg_carbonData < 700) {
-            document.getElementById("CI_recommend_yes").style.display = 'none';
-            document.getElementById("CI_recommend_med").style.display = 'inline';
-            document.getElementById("CI_recommend_no").style.display = 'none';
-        }
-        if (700 < avg_carbonData && avg_carbonData < 1000) {
-            document.getElementById("CI_recommend_yes").style.display = 'none';
-            document.getElementById("CI_recommend_med").style.display = 'none';
-            document.getElementById("CI_recommend_no").style.display = 'inline';
+            document.getElementById("CI_recommend").setAttribute("class", "mdi mdi-flash text-success");
+        } else if (500 < avg_carbonData && avg_carbonData < 700) {
+            document.getElementById("CI_recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
+        } else if (700 < avg_carbonData && avg_carbonData < 1000) {
+            document.getElementById("CI_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
         }
 
-        // 2
+        // Coal Generator Profits
         if (40 < avg_coalData && avg_coalData < 50) {
-            document.getElementById("CGP_recommend_yes").style.display = 'inline';
-            document.getElementById("CGP_recommend_med").style.display = 'none';
-            document.getElementById("CGP_recommend_no").style.display = 'none';
-        }
-        if (50 < avg_coalData && avg_coalData < 70) {
-            document.getElementById("CGP_recommend_yes").style.display = 'none';
-            document.getElementById("CGP_recommend_med").style.display = 'inline';
-            document.getElementById("CGP_recommend_no").style.display = 'none';
-        }
-        if (70 < avg_coalData && avg_coalData < 100) {
-            document.getElementById("CGP_recommend_yes").style.display = 'none';
-            document.getElementById("CGP_recommend_med").style.display = 'none';
-            document.getElementById("CGP_recommend_no").style.display = 'inline';
+            document.getElementById("CGP_recommend").setAttribute("class", "mdi mdi-flash text-success");
+        } else if (50 < avg_coalData && avg_coalData < 70) {
+            document.getElementById("CGP_recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
+        } else if (70 < avg_coalData && avg_coalData < 100) {
+            document.getElementById("CGP_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
         }
 
-        // 3
+        // Renewable Energy Profits
         if (30 < avg_renewableData && avg_renewableData < 50) {
-            document.getElementById("REP_recommend_yes").style.display = 'inline';
-            document.getElementById("REP_recommend_med").style.display = 'none';
-            document.getElementById("REP_recommend_no").style.display = 'none';
-        }
-        if (20 < avg_renewableData && avg_renewableData < 30) {
-            document.getElementById("REP_recommend_yes").style.display = 'none';
-            document.getElementById("REP_recommend_med").style.display = 'inline';
-            document.getElementById("REP_recommend_no").style.display = 'none';
-        }
-        if (10 < avg_renewableData && avg_renewableData < 20) {
-            document.getElementById("REP_recommend_yes").style.display = 'none';
-            document.getElementById("REP_recommend_med").style.display = 'none';
-            document.getElementById("REP_recommend_no").style.display = 'inline';
+            document.getElementById("REP_recommend").setAttribute("class", "mdi mdi-flash text-success");
+        } else if (20 < avg_renewableData && avg_renewableData < 30) {
+            document.getElementById("REP_recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
+        } else if (10 < avg_renewableData && avg_renewableData < 20) {
+            document.getElementById("REP_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
         }
 
-        // 4
+        // Energy Consumption
         if (0 < avg_consumptionData && avg_consumptionData < 0.2) {
-            document.getElementById("EC_recommend_yes").style.display = 'inline';
-            document.getElementById("EC_recommend_med").style.display = 'none';
-            document.getElementById("EC_recommend_no").style.display = 'none';
-        }
-        if (0.2 < avg_consumptionData && avg_consumptionData < 0.5) {
-            document.getElementById("EC_recommend_yes").style.display = 'none';
-            document.getElementById("EC_recommend_med").style.display = 'inline';
-            document.getElementById("EC_recommend_no").style.display = 'none';
-        }
-        if (0.5 < avg_consumptionData && avg_consumptionData < 0.8) {
-            document.getElementById("EC_recommend_yes").style.display = 'none';
-            document.getElementById("EC_recommend_med").style.display = 'none';
-            document.getElementById("EC_recommend_no").style.display = 'inline';
+            document.getElementById("EC_recommend").setAttribute("class", "mdi mdi-flash text-success");
+        } else if (0.2 < avg_consumptionData && avg_consumptionData < 0.5) {
+            document.getElementById("EC_recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
+        } else if (0.5 < avg_consumptionData && avg_consumptionData < 0.8) {
+            document.getElementById("EC_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
         }
 
 
@@ -1402,7 +1261,7 @@
 })(jQuery);
 
 
-// Auto loading
+// for Auto loading
 function PerRefresh() {
 
 }
