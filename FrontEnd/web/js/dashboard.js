@@ -1218,6 +1218,15 @@
         }
 
         //Small chart notification
+        // Energy Price
+        if (50 < avg_priceData && avg_priceData < -50) {
+            document.getElementById("EP_recommend").setAttribute("class", "mdi mdi-flash text-success");
+        } else if (50 < avg_priceData && avg_priceData < 100) {
+            document.getElementById("EP_recommend").setAttribute("class", "mdi mdi-flash-alert text-warning");
+        } else if (100 < avg_priceData && avg_priceData < 250) {
+            document.getElementById("EP_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
+        }
+
         // Carbon Intensity
         if (400 < avg_carbonData && avg_carbonData < 500) {
             document.getElementById("CI_recommend").setAttribute("class", "mdi mdi-flash text-success");
