@@ -358,10 +358,10 @@
 
         // Swap_metrics
         document.getElementById("tab_Metrics_1").onclick = function () {
-            document.getElementById("main_chart").child
-            setAttribute("class", "card-body carbon");
-            console.log(document.getElementById("main_chart"));
-            console.log(document.getElementById("main_chart").className);
+            // document.getElementById("main_chart").child
+            // setAttribute("class", "card-body carbon");
+            // console.log(document.getElementById("main_chart"));
+            // console.log(document.getElementById("main_chart").className);
         };
 
         document.getElementById("tab_Metrics_2").onclick = function () {
@@ -400,6 +400,7 @@
             //success函数表示交互成功后的操作
             success: function (response) {//response代表后台传过来的数据
                 // alert(response.data[0].renewableProfits);
+                // alert(response.data.length);
                 for (var i = 0; i < response.data.length; i++) {
                     if (i == response.data.length - 1) {
                         carbonData += response.data[i].carbonIntensity;
@@ -408,7 +409,7 @@
                         coalData += response.data[i].coalProfits;
                         priceData += response.data[i].wholesalePrice;
 
-                        timeData += response.data[i].datetime;
+                        timeData += response.data[i].datetimeStr.slice(11,16);
                     } else {
                         carbonData += response.data[i].carbonIntensity + ",";
                         renewableData += response.data[i].renewableProfits + ",";
@@ -416,7 +417,7 @@
                         coalData += response.data[i].coalProfits + ",";
                         priceData += response.data[i].wholesalePrice + ",";
 
-                        timeData += response.data[i].datetime + ",";
+                        timeData += response.data[i].datetimeStr.slice(11,16) + ",";
                     }
                 }
 
@@ -472,16 +473,16 @@
 
         if ($(".energy-price").length) {
             var areaData = {
-                labels: timeDataArr,
+                labels: timeDataArr.reverse(),
                 datasets: [
                     {
-                        data: priceDataArr,
+                        data: priceDataArr.reverse(),
                         borderColor: [
                             '#1faf47'
                         ],
                         borderWidth: 3,
                         fill: false,
-                        label: "services"
+                        label: "energy-price"
                     },
                 ]
             };
@@ -497,7 +498,7 @@
                     xAxes: [{
                         display: true,
                         ticks: {
-                            display: false,
+                            display: true,
                         },
                         gridLines: {
                             display: false,
@@ -574,11 +575,11 @@
                 type: 'line',
                 data: {
                     // labels: [],
-                    labels: timeDataArr,
+                    labels: timeDataArr.reverse(),
                     datasets: [{
                         label: 'Carbon Intensity',
                         // data:[],
-                        data: carbonDataArr,
+                        data: carbonDataArr.reverse(),
                         backgroundColor: 'orange'
                     }
                     ]
@@ -611,7 +612,7 @@
                             }
                         }],
                         xAxes: [{
-                            display: false,
+                            display: true,
                             stacked: false,
                             categoryPercentage: 1,
                             ticks: {
@@ -626,7 +627,6 @@
                                 display: false
                             },
                             position: 'bottom',
-                            barPercentage: 0.7
                         }]
                     },
                     legend: {
@@ -647,11 +647,11 @@
                 type: 'line',
                 data: {
                     // labels: [],
-                    labels: timeDataArr,
+                    labels: timeDataArr.reverse(),
                     datasets: [{
                         label: 'Coal Generator Profits',
                         // data:[],
-                        data: coalDataArr,
+                        data: coalDataArr.reverse(),
                         backgroundColor: 'brown'
                     }
                     ]
@@ -684,7 +684,7 @@
                             }
                         }],
                         xAxes: [{
-                            display: false,
+                            display: true,
                             stacked: false,
                             categoryPercentage: 1,
                             ticks: {
@@ -720,11 +720,11 @@
                 type: 'line',
                 data: {
                     // labels: [],
-                    labels: timeDataArr,
+                    labels: timeDataArr.reverse(),
                     datasets: [{
                         label: 'Renewable Energy Profits',
                         // data:[],
-                        data: renewableDataArr,
+                        data: renewableDataArr.reverse(),
                         backgroundColor: 'lightgreen'
                     }
                     ]
@@ -757,7 +757,7 @@
                             }
                         }],
                         xAxes: [{
-                            display: false,
+                            display: true,
                             stacked: false,
                             categoryPercentage: 1,
                             ticks: {
@@ -793,11 +793,11 @@
                 type: 'line',
                 data: {
                     // labels: [],
-                    labels: timeDataArr,
+                    labels: timeDataArr.reverse(),
                     datasets: [{
                         label: 'Energy Consumption',
                         // data:[],
-                        data: consumptionDataArr,
+                        data: consumptionDataArr.reverse(),
                         backgroundColor: 'pink'
                     }
                     ]
@@ -830,7 +830,7 @@
                             }
                         }],
                         xAxes: [{
-                            display: false,
+                            display: true,
                             stacked: false,
                             categoryPercentage: 1,
                             ticks: {
@@ -873,8 +873,7 @@
             success: function (response) {//response代表后台传过来的数据
                 // alert(response.data.value);
                 document.getElementById('user-consumption').innerHTML = response.data.userConsumption;
-                document.getElementById('user-price').innerHTML = response.data.price;
-
+                document.getElementById('user-price').innerHTML = (response.data.price/100).toFixed(2);
             }
         });
 
@@ -904,11 +903,11 @@
                 for (var i = 0; i < response.data.yearly.length; i++) {
                     if (i == response.data.yearly.length - 1) {
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption;
-                        yearlyPriceData += response.data.yearly[i].price;
+                        yearlyPriceData += response.data.yearly[i].price/100;
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
                     } else {
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption + ",";
-                        yearlyPriceData += response.data.yearly[i].price + ",";
+                        yearlyPriceData += response.data.yearly[i].price/100 + ",";
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
                     }
                 }
@@ -916,11 +915,11 @@
                 for (var i = 0; i < response.data.monthly.length; i++) {
                     if (i == response.data.monthly.length - 1) {
                         monthlyUserConsumptionData += response.data.monthly[i].userConsumption;
-                        monthlyPriceData += response.data.monthly[i].price;
+                        monthlyPriceData += response.data.monthly[i].price/100;
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
                     } else {
                         monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";
-                        monthlyPriceData += response.data.monthly[i].price + ",";
+                        monthlyPriceData += response.data.monthly[i].price/100 + ",";
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
                     }
                 }
@@ -928,11 +927,11 @@
                 for (var i = 0; i < response.data.daily.length; i++) {
                     if (i == response.data.daily.length - 1) {
                         dailyUserConsumptionData += response.data.daily[i].userConsumption;
-                        dailyPriceData += response.data.daily[i].price;
+                        dailyPriceData += response.data.daily[i].price/100;
                         dailyDatatimeStr += response.data.daily[i].datetimeStr;
                     } else {
                         dailyUserConsumptionData += response.data.daily[i].userConsumption + ",";
-                        dailyPriceData += response.data.daily[i].price + ",";
+                        dailyPriceData += response.data.daily[i].price/100 + ",";
                         dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
                     }
                 }
@@ -963,14 +962,14 @@
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Consumption',
+                            label: 'Energy Consumption (kWH)',
                             data: yearlyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Price',
+                            label: 'Energy Price (A$)',
                             data: yearlyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
@@ -1041,14 +1040,14 @@
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Consumption',
+                            label: 'Energy Consumption (kWH)',
                             data: monthlyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Price',
+                            label: 'Energy Price (A$)',
                             data: monthlyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
@@ -1119,14 +1118,14 @@
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Consumption',
+                            label: 'Energy Consumption (kWH)',
                             data: dailyUserConsumptionDataArr.reverse(),
                             borderColor: '#ff4c5b'
                         },
                         {
                             type: 'line',
                             fill: false,
-                            label: 'Energy Price',
+                            label: 'Energy Price (A$)',
                             data: dailyPriceDataArr.reverse(),
                             backgroundColor: '#1cbccd'
                         }
@@ -1254,7 +1253,6 @@
         } else if (0.5 < avg_consumptionData && avg_consumptionData < 0.8) {
             document.getElementById("EC_recommend").setAttribute("class", "mdi mdi-flash-alert text-danger");
         }
-
 
     });
 
