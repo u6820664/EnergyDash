@@ -222,10 +222,10 @@ The client's vision is to inspire people to respond to climate change, by choosi
 
 | Name           | Uni ID   | Role                                   |
 | -------------- | -------- | -------------------------------------- |
-| Yun  Huang     | u6766683 | Back-End Developer,  Spokesperson      |
+| Qinzhuo Li     | u6808341 | Back-End Developer,  Spokesperson      |
 | Alex  Xiu      | u6820664 | Front-End Developer,  Spokesperson     |
-| Hao  Cao       | u6807681 | Back-End Developer,  Database designer |
-| Haonan  Liu    | u6762898 | Front-End Developer                    |
+| Haoyu  Wang       | u6783702 | Back-End Developer,  Database designer |
+| Jiaoyang Sun    | u7075346 | Data Analysist                    |
 | Zixin  Ye      | u6605822 | Front-End Developer,  Documentation    |
 | Mingchao  Sima | u6502811 | Back-End Developer,  Algorithm designer|
 | Jie  Zou       | u6849083 | Front-End Developer                    |
