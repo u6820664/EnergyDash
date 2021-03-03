@@ -36,8 +36,8 @@ First, we will check the things that we need to do. Second, after communicating 
 
 ## 2.1 Project Management Tools
 
-- [Slack](https://app.slack.com/client/T018HVDJHGR/D017QJTF4A3) (General Q&A)
-- [Monday](https://rexergy-company.monday.com/boards/681706745) (Task management)
+- [Slack](https://app.slack.com/client/T018HVDJHGR/C018HVDJQMP) (General Q&A)
+- [Monday](https://rexergy-company.monday.com/boards/1084297759/) (Task management)
 - [Github](https://github.com/u6820664/EnergyDash) (Code branch)
 - [Google Drive](https://drive.google.com/drive/folders/1ZiKnLC1JR_i2kxBUCV4yKgBujJBVFTC4?usp=sharing) (Document)
 - Zoom (Meeting)
@@ -48,7 +48,7 @@ First, we will check the things that we need to do. Second, after communicating 
 
 ### 2.2.1 Programming Language
 
-Java and most likely a combination of JavaScript.
+Java and most likely a combination of JavaScript and Python.
 
 
 
