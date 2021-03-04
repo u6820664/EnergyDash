@@ -309,7 +309,7 @@ The client does not propose any due day so we will follow the due day of this co
 ### [UI Design](https://drive.google.com/drive/folders/1utlLs2qP6LNefEX7tVfz68_A9mFICBP8?usp=sharing)
 
 
-## 8.6 Testing
+## 8.7 Testing
 
 ### [User Tesing](https://drive.google.com/drive/folders/1Qvcm0PWao91BEMG7EOlW5k8crBUSCec9?usp=sharing)
 
