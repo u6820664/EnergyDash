@@ -225,7 +225,7 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | Qinzhuo Li     | u6808341 | Back-End Developer,  Spokesperson      |
 | Alex  Xiu      | u6820664 | Front-End Developer,  Spokesperson     |
 | Haoyu  Wang       | u6783702 | Back-End Developer,  Database designer |
-| Jiaoyang Sun    | u7075346 | Data Analysist                    |
+| Jiaoyang Sun    | u7075346 | Data Analyst             |
 | Zixin  Ye      | u6605822 | Front-End Developer,  Documentation    |
 | Mingchao  Sima | u6502811 | Back-End Developer,  Algorithm designer|
 | Jie  Zou       | u6849083 | Front-End Developer                    |
@@ -266,17 +266,17 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.1 Project Agreement
 
-### [Statement of Work](https://drive.google.com/drive/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e?usp=sharing)
+### [Statement of Work](https://drive.google.com/file/d/1T5inUQw_f6bkJt5efT0fc_nF1o_N6wNo/view?usp=sharing)
 
-### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/folders/112DykV1Qlnf3BQF3_-AGou1tMyCtb5-e?usp=sharing)
+### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/folders/1stFfjimrtKzusL8iJifaQsQbu7jR8lqq?usp=sharing)
 
 
 
 ## 8.2 Reasoning
 
-### [Decision Making Log](https://drive.google.com/drive/folders/1qnEjROiQc_zanEzhyR-Ib-Rk9vlLXdEV?usp=sharing)
+### [Decision Making Log](https://drive.google.com/file/d/1OYYqmoGFWluf5sC83kGeEFqLps5CMbGK/view?usp=sharing)
 
-### [Risk Assessment](https://drive.google.com/drive/folders/1OK5QtOvjTlIOm_WwxvxJhTR4jDvf6Jq_?usp=sharing)
+### [Risk Assessment](https://drive.google.com/drive/folders/1BJi3eXIh1tuaJaehJzyY36xM9oEf_asH?usp=sharing)
 
 
 
@@ -288,9 +288,9 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.4 Meeting Agenda
 
-### [Client Meeting](https://drive.google.com/drive/folders/1JDLw-aj0xIpS0n6nQhEs_xYXsJeqq_1z?usp=sharing)
+### [Client Meeting](https://drive.google.com/drive/folders/1b4LXe25A1e8mvnNACgBO3Nm5nXbNxVnq?usp=sharing)
 
-### [Group Meeting](https://drive.google.com/drive/folders/1BSpx8gMwuLM7Ho7e31pjJPzcxYUEbgdz?usp=sharing)
+### [Group Meeting](https://drive.google.com/drive/folders/14iQ9F7pz4-8Ze4D39rwnnjU4TOkds3Yg?usp=sharing)
 
 
 
@@ -371,4 +371,5 @@ Please open these page via Firefox browser.
 ### [User Profile Page](http://54.79.60.225/pages/users/profile.html)
 
 ### [Dashboard Page](http://54.79.60.225/dashboard.html)
+
 
