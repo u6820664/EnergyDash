@@ -324,7 +324,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
 
-### [Sprint Retrospective](https://drive.google.com/drive/folders/1aGodGwa0H8544wW6PvFrpb00gdzQgKYL?usp=sharing)
+### [Sprint Retrospective](https://drive.google.com/drive/folders/1Q38OSdE6j1ROt6hZbTPdrxuM6VVB_LFY?usp=sharing)
 
 ### [All Documentation](https://drive.google.com/drive/folders/1oJ7hHrorU4bZR3f5lQjXwZ6CGYB3JNRX?usp=sharing)
 
