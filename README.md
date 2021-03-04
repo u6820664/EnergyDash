@@ -253,7 +253,7 @@ The client's vision is to inspire people to respond to climate change, by choosi
 
 **Gantt Chart**
 
-# ![Diagram](Resources/Gantt_chart.png)
+# ![Diagram](Resources/Gantt_Chart.png)
 
 ## 7.2 Due Date
 
