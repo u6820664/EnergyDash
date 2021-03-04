@@ -240,15 +240,15 @@ The client's vision is to inspire people to respond to climate change, by choosi
 | ----------------- | ------------------------------------------------------------ |
 | Week  01          | ●      Form team                                             |
 | Week  02          | ●      Divide roles<br/>●      Confirm requirements with clients<br/>●      Decide schedule and milestones<br/>●      Risk management |
-| Week  03          | ●      Project Audit 01<br/>●      Finished legal issues<br/>●      Set up the development environment<br/>●      Improve and finalise the SOE<br/>●      Search for related information |
-| Week  04          | ●      Design web UI<br/>●      Design Database structure (with E-R)<br/>●      Mockup<br/>●      Start coding |
-| Week  05          | ●      Improved website functions<br/>●      Improved data analysis algorithm |
+| Week  03          | ●      Project Audit 01<br/>●      Finished legal issues<br/>●      Set up the development environment<br/>●      Improve and finalise the SOW<br/>●      Search for related information |
+| Week  04          | ●      Design web UI<br/>●      Re-Design Database structure (with E-R)<br/>●      Re-Design Mockup<br/>●      Start coding |
+| Week  05          | ●      Improve website functions<br/>●      Improve data analysis algorithm |
 | Week  06          | ●      Audit 02<br/>●      Coding                            |
 | Teaching  Break-1 | ●      Coding                                                |
 | Teaching  Break-2 | ●      Coding                                                |
-| Week  07          | ●      Compared among different data analysis algorithm<br/>●      Test & Debug<br/>●      Adjusting UI and functions according to reflection<br/>●      Conduct the first user feedback |
+| Week  07          | ●      Compared among different data analysis algorithm<br/>●      Test & Debug<br/>●      Adjusting UI and functions according to reflection<br/>●      Conduct the user feedback |
 | Week  08          | ●      Conduct the second user survey<br/>●      Analyse and reflect to survey report<br/>●      Keep improving UI interface according to reflection<br/>●      Keep improving the data analysis algorithms according to reflection |
-| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Design Project Video<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
+| Week  09-10       | ●      Audit 03<br/>●      Accomplish final deliverable<br/>●      Re-Design Project Video<br/>●      Showcase<br/>●      Adjusting UI and functions according to reflection |
 | Week  11-12       | ●      Finish handover documents<br/>●      Report to the client |
 
 **Gantt Chart**
