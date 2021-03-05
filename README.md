@@ -24,12 +24,27 @@ Table of Contents
 
 ## 1.1 Problem
 
-In recent years, climate change has become a global issue that affects human life. However, many government actions are perpetually 20 years late to protect the environment. On the other side, it is annoying for people to face high energy bills every month but they do not know what to do. Besides, in Australia, it is estimated that grids dominated by coal will be retired around 2040, and it is quite hard to replace coal energy by using fully renewable energy nowadays.
+In recent years, climate change has become a global issue affecting human life.
+
+
+However, when it comes to protecting the environment, many government actions always lag more than 20 years, making the response to climate change extremely lagging. In addition, in the face of the delayed improvement of the energy structure, ordinary energy users will still face high bills. Currently, in Australia, the coal-based power grid is expected to be phased out around 2040, and it is difficult to completely replace coal with renewable energy.
+
+
+How to optimize Australia's energy structure and provide cheap and sustainable energy for energy consumers has become a great challenge for the Australian energy industry.
+
 
 ## 1.2 Solution
 
-First, we will check the things that we need to do. Second, after communicating with the client, we decide to make a product with multiple platforms which is easy for people to have an impact, like let people know if it is a good time to use more or less power, provide some advice to save money. Third, this product should provide very simple information, maybe just a number or a color, even a 10-year-old child can understand the meaning. Fourth, this product should have no annoying notification, Also, giving the user feedback is important, this product will tell the user what is the good behavior, and reward the good behavior in time.
+To address the current dilemma facing the Australian energy industry, we have proposed a solution that does not affect the interests of all parties.
 
+
+First, we obtained the energy plan content of most mainstream energy providers in Australia through the data crawler tool, including the data of energy application type, energy price, energy plan period and so on.
+
+
+Second, we will establish a set of energy program recommendation system, users only need to input the basic information (such as postal code, energy habits, etc), through the data processing unit and recommendation algorithm, we will according to the situation of the users, for their match will be the most suitable energy use plans, and inform the user to use or change an energy plan, it will reduce on energy use for the users of your bills.
+
+
+Finally, through the real-time data display platform, the system adopts a variety of access methods, so that users will get real-time suggestions on energy use and inform energy users in a simple and understandable way whether it is a reasonable time to use energy before that time.
 
 
 # <span id="Tools_and_Skills_Related">2 Tools and Skills Related<span>
