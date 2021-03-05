@@ -99,7 +99,10 @@ The project will be implemented on multiple platforms, including Web App, Mobile
   - Display savings in the metrics
   - Implement create plan for user Data Security and Storage for back- end
   - Implement turn metrics into a colour, and incorporate into background
-  - Implement convert main metric into an icon with a colour and/or number and/or symbol than changes with the metric (Chrome extension)
+  - Realize savings on energy bills by providing users with recommended plans and using or changing energy plans
+  - The implementation generates forecast data through the analysis of historical data
+  - Implement display prediction index
+
 
 
 
