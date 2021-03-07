@@ -310,6 +310,8 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Group Meeting](https://drive.google.com/drive/folders/14iQ9F7pz4-8Ze4D39rwnnjU4TOkds3Yg?usp=sharing)
 
+### [Tutorial Meeting](https://drive.google.com/drive/folders/1WYyuf1Pzv8t-DotNMji8u5gJn_cIw7qJ?usp=sharing)
+
 
 
 ## 8.5 Back-End
