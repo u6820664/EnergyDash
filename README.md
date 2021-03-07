@@ -286,7 +286,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Statement of Work](https://drive.google.com/file/d/1T5inUQw_f6bkJt5efT0fc_nF1o_N6wNo/view?usp=sharing)
 
-### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/drive/folders/1stFfjimrtKzusL8iJifaQsQbu7jR8lqq?usp=sharing)
+### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/file/d/1Dzu0JycLEu9UdVrfnF9sfhLhG3bl20q_/view?usp=sharing)
 
 
 
