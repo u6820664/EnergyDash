@@ -314,30 +314,38 @@ The client does not propose any due day so we will follow the due day of this co
 ### [Tutorial Meeting](https://drive.google.com/drive/folders/1WYyuf1Pzv8t-DotNMji8u5gJn_cIw7qJ?usp=sharing)
 
 
+## 8.5 Team Output
 
-## 8.5 Back-End
+### [Function List](https://drive.google.com/file/d/1_ljtNPHOTcbNBhlwIbpRZz36XnJ8bKp-/view?usp=sharing)
+
+### [Requirements Analysis](https://drive.google.com/file/d/1_ljtNPHOTcbNBhlwIbpRZz36XnJ8bKp-/view?usp=sharing)
+
+### [Algorithm Design](https://drive.google.com/drive/folders/1yEpM7vOa2Jbf0M3TQW7-tPS9HmNimz-7?usp=sharing)
+
+
+## 8.6 Back-End Output
 
 ### [Database Design](https://drive.google.com/drive/folders/19knAw8IHXNzad8U5dhfQt4VRO404zVnY?usp=sharing)
 
 ### [UML](https://drive.google.com/drive/folders/12qYF1f2b75q0imdozGkLMq2D9bHybGEK?usp=sharing)
 
-### [Algorithm Design](https://drive.google.com/drive/folders/1yEpM7vOa2Jbf0M3TQW7-tPS9HmNimz-7?usp=sharing)
+### [System Diagrams](https://drive.google.com/file/d/19hTKDlIqHkGJxfo6ognVoL55qhRLK8kX/view?usp=sharing)
 
 
 
-## 8.6 Front-End
+## 8.7 Front-End Output
 
 ### [UI Design](https://drive.google.com/drive/folders/1eNAf-4_XLgdgPVrnK51_wAnGaOZuuUOg?usp=sharing)
 
 
-## 8.7 Testing
+## 8.8 Testing
 
 ### [User Tesing](https://drive.google.com/drive/folders/1ldUD0WwO62g096d5iLbHCLbNyLDWULwR?usp=sharing)
 
 ### [API Tesing](https://drive.google.com/file/d/1UaetZZt32kuJsnC40Vky1LiaZsCtqCHT/view?usp=sharing)
 
 
-## 8.8 Other Resources
+## 8.9 Other Resources
 
 ### [Research Sharing](https://drive.google.com/file/d/1k4EdyBkzy9MZpOHKO2dmYDs8qiJ1dWxc/view?usp=sharing)
 
