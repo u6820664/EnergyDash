@@ -284,17 +284,18 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.1 Project Agreement
 
-### [Statement of Work](https://drive.google.com/file/d/1T5inUQw_f6bkJt5efT0fc_nF1o_N6wNo/view?usp=sharing)
+### [Statement of Work](https://drive.google.com/file/d/12tLfls5pkxizoJvyAn6dVs2xAEdaUKTn/view?usp=sharing)
 
 ### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/file/d/1Dzu0JycLEu9UdVrfnF9sfhLhG3bl20q_/view?usp=sharing)
 
+### [Team Charter](https://drive.google.com/file/d/1pmdKD5qTtafa2FyvKnvyHnLsv1tPk_1U/view?usp=sharing)
 
 
 ## 8.2 Reasoning
 
 ### [Decision Making Log](https://drive.google.com/file/d/1OYYqmoGFWluf5sC83kGeEFqLps5CMbGK/view?usp=sharing)
 
-### [Risk Assessment](https://drive.google.com/drive/folders/1BJi3eXIh1tuaJaehJzyY36xM9oEf_asH?usp=sharing)
+### [Risk Assessment](https://drive.google.com/file/d/1VwItzxZ4HXE-6Q8GRQW2awXppRpGOXd1/view?usp=sharing)
 
 
 
@@ -316,37 +317,37 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.5 Back-End
 
-### [Database Design](https://drive.google.com/drive/folders/1tkQT_4t1h0Qyp2xlwNVflvykOAMFCKoT?usp=sharing)
+### [Database Design](https://drive.google.com/drive/folders/19knAw8IHXNzad8U5dhfQt4VRO404zVnY?usp=sharing)
 
-### [UML](https://drive.google.com/drive/folders/1VvfnzY-Egh6AkJ76DHdV00hi9aOu6bkM?usp=sharing)
+### [UML](https://drive.google.com/drive/folders/12qYF1f2b75q0imdozGkLMq2D9bHybGEK?usp=sharing)
 
-### [Algorithm Design](https://drive.google.com/drive/folders/1IdvaRxg19wjUpIyF0sUtcp0OVh1V7P0P?usp=sharing)
+### [Algorithm Design](https://drive.google.com/drive/folders/1yEpM7vOa2Jbf0M3TQW7-tPS9HmNimz-7?usp=sharing)
 
 
 
 ## 8.6 Front-End
 
-### [UI Design](https://drive.google.com/drive/folders/1utlLs2qP6LNefEX7tVfz68_A9mFICBP8?usp=sharing)
+### [UI Design](https://drive.google.com/drive/folders/1eNAf-4_XLgdgPVrnK51_wAnGaOZuuUOg?usp=sharing)
 
 
 ## 8.7 Testing
 
-### [User Tesing](https://drive.google.com/drive/folders/1Qvcm0PWao91BEMG7EOlW5k8crBUSCec9?usp=sharing)
+### [User Tesing](https://drive.google.com/drive/folders/1ldUD0WwO62g096d5iLbHCLbNyLDWULwR?usp=sharing)
 
-### [API Tesing](https://docs.google.com/document/d/1s8LyBLpKRte5gukueUs6tT1X-DtfO-ICFRQUfXLjnAw/edit?usp=sharing)
+### [API Tesing](https://drive.google.com/file/d/1UaetZZt32kuJsnC40Vky1LiaZsCtqCHT/view?usp=sharing)
 
 
 ## 8.8 Other Resources
 
-### [Research Sharing](https://docs.google.com/document/d/1H_ipKDZmFIqc3q1vdcv-0pn2KEomQojkn3Gl-T1MEUk/edit?usp=sharing)
+### [Research Sharing](https://drive.google.com/file/d/1k4EdyBkzy9MZpOHKO2dmYDs8qiJ1dWxc/view?usp=sharing)
 
-### [API Documentation](https://drive.google.com/file/d/1XEcROfJQPSBGS7BiwUgDYhjM4dE8qYsK/view?usp=sharing)
+### [API Documentation](https://drive.google.com/file/d/1frD5Pkk1CbKgRKCslzcWi9O8TIbYaXQq/view?usp=sharing)
 
-### [Stakeholder Analysis](https://drive.google.com/file/d/1YvjuLh1BRCB08TlhzTSXpXQ5lzzW7rZM/view?usp=sharing)
+### [Stakeholder Analysis](https://drive.google.com/file/d/1FjCHKAHK1PCBThPKEvvTgVUUah_7_ce8/view?usp=sharing)
 
 ### [Sprint Retrospective](https://drive.google.com/drive/folders/1Q38OSdE6j1ROt6hZbTPdrxuM6VVB_LFY?usp=sharing)
 
-### [All Documentation](https://drive.google.com/drive/folders/1oJ7hHrorU4bZR3f5lQjXwZ6CGYB3JNRX?usp=sharing)
+### [All Documentation](https://drive.google.com/drive/folders/1ZiKnLC1JR_i2kxBUCV4yKgBujJBVFTC4?usp=sharing)
 
 
 # <span id="Appendix">Appendix<span>
