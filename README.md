@@ -298,11 +298,9 @@ The client does not propose any due day so we will follow the due day of this co
 ### [Risk Assessment](https://drive.google.com/file/d/1VwItzxZ4HXE-6Q8GRQW2awXppRpGOXd1/view?usp=sharing)
 
 
-
 ## 8.3 Feedback&Reflection
 
 ### [Feedback&Reflection](https://drive.google.com/drive/folders/1mOen_1rinE8JD-2ItWBkpfDgqPUh5ejf?usp=sharing)
-
 
 
 ## 8.4 Meeting Agenda
@@ -320,7 +318,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [Requirements Analysis](https://drive.google.com/file/d/1_ljtNPHOTcbNBhlwIbpRZz36XnJ8bKp-/view?usp=sharing)
 
-### [Algorithm Design](https://drive.google.com/drive/folders/1yEpM7vOa2Jbf0M3TQW7-tPS9HmNimz-7?usp=sharing)
+### [System Diagrams](https://drive.google.com/file/d/19hTKDlIqHkGJxfo6ognVoL55qhRLK8kX/view?usp=sharing)
 
 
 ## 8.6 Back-End Output
@@ -329,8 +327,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [UML](https://drive.google.com/drive/folders/12qYF1f2b75q0imdozGkLMq2D9bHybGEK?usp=sharing)
 
-### [System Diagrams](https://drive.google.com/file/d/19hTKDlIqHkGJxfo6ognVoL55qhRLK8kX/view?usp=sharing)
-
+### [Algorithm Design](https://drive.google.com/drive/folders/1yEpM7vOa2Jbf0M3TQW7-tPS9HmNimz-7?usp=sharing)
 
 
 ## 8.7 Front-End Output
