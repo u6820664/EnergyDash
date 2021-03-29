@@ -320,6 +320,8 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [System Diagrams](https://drive.google.com/file/d/19hTKDlIqHkGJxfo6ognVoL55qhRLK8kX/view?usp=sharing)
 
+### [API Documentation](https://drive.google.com/file/d/1frD5Pkk1CbKgRKCslzcWi9O8TIbYaXQq/view?usp=sharing)
+
 
 ## 8.6 Back-End Output
 
@@ -344,9 +346,9 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.9 Other Resources
 
-### [Research Sharing](https://drive.google.com/file/d/1k4EdyBkzy9MZpOHKO2dmYDs8qiJ1dWxc/view?usp=sharing)
+### [Time Tracking log](https://drive.google.com/file/d/1EmWm4ZVTGO0IjHzJE9BL0S_Bg66Uuocl/view?usp=sharing)
 
-### [API Documentation](https://drive.google.com/file/d/1frD5Pkk1CbKgRKCslzcWi9O8TIbYaXQq/view?usp=sharing)
+### [Research Sharing](https://drive.google.com/file/d/1k4EdyBkzy9MZpOHKO2dmYDs8qiJ1dWxc/view?usp=sharing)
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1FjCHKAHK1PCBThPKEvvTgVUUah_7_ce8/view?usp=sharing)
 
