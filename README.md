@@ -361,7 +361,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## User Story Map
 
-![Diagram](Resources/User_Story_Map.png)
+![Diagram](Resources/USM_2021_S1.png)
 
 
 
