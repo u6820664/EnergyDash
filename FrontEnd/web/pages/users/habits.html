@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rexergy | Usage Habits</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png"/>
+
+    <!--jquery-->
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <style>
+        .user_bg {
+            background-color: #01baef;
+            background-image: linear-gradient(360deg, #01baef 0%, #20bf55 80%);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="adcenter"></div>
+<div class="container-scroller d-flex">
+    <!-- partial:./partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <li class="nav-item sidebar-category">
+                <p>Navigation</p>
+                <span></span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../dashboard.html">
+                    <i class="mdi mdi-view-quilt menu-icon"></i>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="habits.html">
+                    <i class="mdi mdi-flash menu-icon"></i>
+                    <span class="menu-title">Usage Habits</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="recommend.html">
+                    <i class="mdi mdi-star menu-icon"></i>
+                    <span class="menu-title">Plan Recommend</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="profile.html">
+                    <i class="mdi mdi-account menu-icon"></i>
+                    <span class="menu-title">User Profile</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:./partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row">
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+                <div class="navbar-brand-wrapper">
+                    <a class="navbar-brand brand-logo" href="index.html"><img src="../../images/logo.svg"
+                                                                              alt="logo"/></a>
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../images/logo-mini.svg"
+                                                                                   alt="logo"/></a>
+                </div>
+                <ul class="navbar-nav navbar-nav-right">
+
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                        data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+            <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1 text-black">Welcome back, Alex Xiu</h4>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 col-xl-12 grid-margin stretch-card">
+                        <div class="row w-100 flex-grow">
+                            <div class="col-md-4 grid-margin stretch-card">
+                                <div class="card text-white">
+                                    <div class="card-body user_bg">
+                                        <div class="col-md-12" align="center">
+                                            <img src="../../images/faces/face1.jpg" alt="image"/>
+                                            <p class="display-4">Alex</p>
+                                            <p>Platinum member</p>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <blockquote class="blockquote">
+                                                <address>
+                                                    <p class="font-weight-bold">ANU</p>
+                                                    <p>
+                                                        University Ave,
+                                                    </p>
+                                                    <p>
+                                                        Unit 15
+                                                    </p>
+                                                    <p>
+                                                        Canberra, ACT 2600
+                                                    </p>
+                                                </address>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- User info -->
+                            <div class="col-md-8 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <p class="card-title mb-0 mr-1">User Basic Info</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap pt-2">
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>House Type</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">Apartment</span>
+                                            </div>
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Room No.</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">3</span>
+                                            </div>
+                                        </div>
+
+                                        <br><br>
+                                        <div class="d-flex align-items-center mb-4">
+                                            <p class="card-title mb-0 mr-1">Current Energy Plan</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap pt-2">
+
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Retailor Name</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">ActewAGL</span>
+                                            </div>
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Plan Name</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">Home TOU - 15% off usage</span>
+                                            </div>
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Plan ID</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">ACT106106MRE1</span>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="d-flex flex-wrap pt-2">
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Tariff Type</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">Time of use</span>
+                                            </div>
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Contract Period</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">1 year</span>
+                                            </div>
+                                            <div class="mr-4 mb-lg-2 mb-xl-0">
+                                                <p>Estimated price</p>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
+                                                    class="text-success">$1,720</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:./partials/_footer.html -->
+            <footer class="footer">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+                            <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright © 2021 Energy
+                                Dash Team. All
+                                rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- base:js -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<!-- endinject -->
+
+</body>
+
+</html>
