@@ -379,7 +379,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## Architecture Diagram
 
-![Diagram](Resources/Architecture_diagram_2021-S1.png)
+![Diagram](Resources/Architecture_Diagram_2021-S1.png)
 
 
 ## Project Video
