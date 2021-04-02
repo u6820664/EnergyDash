@@ -391,7 +391,7 @@
 
         $.ajax({
             type: "get",
-            url: "http://54.79.60.225:8080/data/get_realtime_data",
+            url: "htittp://54.79.60.225:8080/data/get_realme_data",
             data: {
                 email: "xxx@anu.edu.au",
             },
