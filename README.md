@@ -284,9 +284,9 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## 8.1 Project Agreement
 
-### [Statement of Work](https://drive.google.com/file/d/12tLfls5pkxizoJvyAn6dVs2xAEdaUKTn/view?usp=sharing)
+### [Statement of Work](https://drive.google.com/file/d/1T5inUQw_f6bkJt5efT0fc_nF1o_N6wNo/view?usp=sharing)
 
-### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/file/d/1Dzu0JycLEu9UdVrfnF9sfhLhG3bl20q_/view?usp=sharing)
+### [Non-Disclosure Agreement and any Intellectual Property](https://drive.google.com/file/d/12tLfls5pkxizoJvyAn6dVs2xAEdaUKTn/view?usp=sharing)
 
 ### [Team Charter](https://drive.google.com/file/d/1pmdKD5qTtafa2FyvKnvyHnLsv1tPk_1U/view?usp=sharing)
 
