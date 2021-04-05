@@ -376,7 +376,26 @@ public class DataController {
         return percent.format(value);
     }
 
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc Interface 2006：get recommend energy plan
+     * @author Mingchao Sima
+     * @date 5 April 2021
+     * @func_name getRecommend
+     */
+    @ResponseBody
+    @RequestMapping(value = "/user_get_recommend", method = RequestMethod.GET)
+    public Object getRecommend(@RequestParam(value = "email") String email,
+                               @RequestParam(value = "userName", required = false) String userName){
+//        User user = userService.getUser(email);
+        List<Plan> plans = planService.findAllPlan();
+//        plans.sort(Comparator.comparingInt(o -> Integer.valueOf(o.getPid())));
 
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(plans);
+        return JSON.toJSON(resultBean);
+    }
 
 
 

@@ -32,6 +32,11 @@ public class PlanServiceImpl implements PlanService {
     private EnergyPlanDao energyPlanDao;
 
     @Override
+    public List<Plan> findAllPlan() {
+        return planDao.findAllPlan();
+    }
+
+    @Override
     public List<Plan> findPlanId(Map paramMap) {
         return planDao.findPlanId(paramMap);
     }

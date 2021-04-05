@@ -17,6 +17,7 @@ import java.util.Map;
 
 @Repository
 public interface PlanDao {
+    List<Plan> findAllPlan();
 
     List<Plan> findPlanId(Map paramMap);
 

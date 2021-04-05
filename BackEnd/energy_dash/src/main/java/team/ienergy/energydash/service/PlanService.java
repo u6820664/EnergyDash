@@ -15,7 +15,7 @@ import java.util.Map;
  */
 
 public interface PlanService {
-
+    List<Plan> findAllPlan();
     List<Plan> findPlanId(Map paramMap);
 
     EnergyPlan getEnergyPlan(String pid);

@@ -11,6 +11,9 @@
     <id column="tariff_type" jdbcType="VARCHAR" property="tariffType" />
   </resultMap>
 
+  <select id="findAllPlan" resultMap="PlanResultMap" >
+      SELECT * FROM energy_plan
+  </select>
 
   <select id="findPlanId" resultMap="PlanResultMap"  >
         SELECT * FROM energy_plan
