@@ -20967,4 +20967,275 @@ dl li {
   }
 }
 
+/*-------------------------------------------------------------------*/
+/* === Components === */
+/* Accordions */
+.accordion .card {
+  margin-bottom: .75rem;
+  box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+  border-radius: .25rem;
+}
+
+.accordion .card .card-header {
+  background-color: transparent;
+  border: none;
+  padding: 2rem;
+}
+
+.accordion .card .card-header * {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.accordion .card .card-header a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  position: relative;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  padding-right: 1.5rem;
+}
+
+.accordion .card .card-header a:before {
+  font-family: "Material Design Icons";
+  position: absolute;
+  right: 7px;
+  top: 0;
+  font-size: 18px;
+  display: block;
+}
+
+.accordion .card .card-header a[aria-expanded="true"] {
+  color: #6640b2;
+}
+
+.accordion .card .card-header a[aria-expanded="true"]:before {
+  content: "\F374";
+}
+
+.accordion .card .card-header a[aria-expanded="false"]:before {
+  content: "\F415";
+}
+
+.accordion .card .card-body {
+  font-size: 14px;
+  padding: 0 2rem 2rem 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.accordion .card .card-body i {
+  font-size: 1.25rem;
+}
+
+.accordion.accordion-bordered {
+  background: #ffffff;
+  box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+}
+
+.accordion.accordion-bordered .card {
+  margin: 0 2rem;
+  border-top: 1px solid #f3f3f3;
+  box-shadow: none;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.accordion.accordion-bordered .card .card-header,
+.accordion.accordion-bordered .card .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.accordion.accordion-bordered .card .card-header a:before {
+  color: #f83e37;
+}
+
+.accordion.accordion-bordered .card .card-header a[aria-expanded="true"] {
+  color: inherit;
+}
+
+.accordion.accordion-bordered .card .card-header a[aria-expanded="true"]:before {
+  content: "\F062";
+}
+
+.accordion.accordion-bordered .card .card-header a[aria-expanded="false"]:before {
+  content: "\F04A";
+}
+
+.accordion.accordion-bordered .card:first-child {
+  border-top: 0;
+}
+
+.accordion.accordion-bordered .card:last-child {
+  border-bottom: 0;
+}
+
+.accordion.accordion-filled .card {
+  padding: 0;
+}
+
+.accordion.accordion-filled .card .card-header {
+  padding: 0;
+}
+
+.accordion.accordion-filled .card .card-header a {
+  padding: 2rem 4.5rem 2rem 2rem;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.accordion.accordion-filled .card .card-header a:before {
+  top: 40%;
+  right: 40px;
+}
+
+.accordion.accordion-filled .card .card-header a[aria-expanded="true"] {
+  background: #1cbccd;
+  color: #ffffff;
+}
+
+.accordion.accordion-filled .card .card-header a[aria-expanded="true"]:before {
+  content: "\F143";
+  color: #ffffff;
+}
+
+.accordion.accordion-filled .card .card-header a[aria-expanded="false"]:before {
+  content: "\F140";
+}
+
+.accordion.accordion-filled .card .card-body {
+  padding: 0 2rem 2rem 2rem;
+  background: #1cbccd;
+  color: #ffffff;
+}
+
+.accordion.accordion-solid-header .card {
+  padding: 0;
+}
+
+.accordion.accordion-solid-header .card .card-header {
+  padding: 0;
+}
+
+.accordion.accordion-solid-header .card .card-header a {
+  padding: 2rem 4.5rem 2rem 2rem;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.accordion.accordion-solid-header .card .card-header a:before {
+  top: 40%;
+  right: 40px;
+}
+
+.accordion.accordion-solid-header .card .card-header a[aria-expanded="true"] {
+  background: #6640b2;
+  color: #ffffff;
+}
+
+.accordion.accordion-solid-header .card .card-header a[aria-expanded="true"]:before {
+  content: "\F143";
+  color: #ffffff;
+}
+
+.accordion.accordion-solid-header .card .card-header a[aria-expanded="false"]:before {
+  content: "\F140";
+}
+
+.accordion.accordion-solid-header .card .card-body {
+  padding: 2rem;
+}
+
+.accordion.accordion-solid-content .card {
+  padding: 0;
+}
+
+.accordion.accordion-solid-content .card .card-header {
+  padding: 0;
+}
+
+.accordion.accordion-solid-content .card .card-header a {
+  padding: 2rem 4.5rem 2rem 2rem;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.accordion.accordion-solid-content .card .card-header a:before {
+  top: 40%;
+  right: 40px;
+}
+
+.accordion.accordion-solid-content .card .card-header a[aria-expanded="true"] {
+  color: inherit;
+}
+
+.accordion.accordion-solid-content .card .card-header a[aria-expanded="true"]:before {
+  content: "\F143";
+}
+
+.accordion.accordion-solid-content .card .card-header a[aria-expanded="false"]:before {
+  content: "\F140";
+}
+
+.accordion.accordion-solid-content .card .card-body {
+  padding: 2rem;
+  background: #00d082;
+  color: #ffffff;
+}
+
+.accordion.accordion-multi-colored .card .card-header,
+.accordion.accordion-multi-colored .card .card-body {
+  background: transparent;
+  color: #ffffff;
+}
+
+.accordion.accordion-multi-colored .card:nth-child(1) {
+  background: #6640b2;
+}
+
+.accordion.accordion-multi-colored .card:nth-child(2) {
+  background: #00d082;
+}
+
+.accordion.accordion-multi-colored .card:nth-child(3) {
+  background: #f83e37;
+}
+
+.accordion.accordion-multi-colored .card:nth-child(4) {
+  background: #ffbf36;
+}
+
+.accordion.accordion-multi-colored .card:nth-child(5) {
+  background: #1cbccd;
+}
+
+.accordion.accordion-multi-colored .card .card-header a[aria-expanded="true"] {
+  color: inherit;
+}
+
+.accordion.accordion-multi-colored .card .card-header a[aria-expanded="true"]:before {
+  content: "\F143";
+}
+
+.accordion.accordion-multi-colored .card .card-header a[aria-expanded="false"]:before {
+  content: "\F140";
+}
+
+
 /*# sourceMappingURL=maps/style.css.map */
