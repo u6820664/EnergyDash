@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.ConsumptionDao">
+
+    <resultMap id="ConsumptionResultMap" type="team.ienergy.energydash.beans.Consumption">
+        <id column="uid" jdbcType="VARCHAR" property="uid" />
+        <id column="pid" jdbcType="VARCHAR" property="pid" />
+        <id column="p0" jdbcType="VARCHAR" property="p0" />
+        <id column="p1" jdbcType="VARCHAR" property="p1" />
+        <id column="p2" jdbcType="VARCHAR" property="p2" />
+        <id column="p3" jdbcType="VARCHAR" property="p3" />
+        <id column="p4" jdbcType="VARCHAR" property="p4" />
+        <id column="p5" jdbcType="VARCHAR" property="p5" />
+        <id column="p6" jdbcType="VARCHAR" property="p6" />
+        <id column="p7" jdbcType="VARCHAR" property="p7" />
+        <id column="p8" jdbcType="VARCHAR" property="p8" />
+        <id column="p9" jdbcType="VARCHAR" property="p9" />
+        <id column="p10" jdbcType="VARCHAR" property="p10" />
+        <id column="p11" jdbcType="VARCHAR" property="p11" />
+        <id column="p12" jdbcType="VARCHAR" property="p12" />
+        <id column="p13" jdbcType="VARCHAR" property="p13" />
+        <id column="p14" jdbcType="VARCHAR" property="p14" />
+        <id column="p15" jdbcType="VARCHAR" property="p15" />
+        <id column="p16" jdbcType="VARCHAR" property="p16" />
+        <id column="p17" jdbcType="VARCHAR" property="p17" />
+        <id column="p18" jdbcType="VARCHAR" property="p18" />
+        <id column="p19" jdbcType="VARCHAR" property="p19" />
+        <id column="p20" jdbcType="VARCHAR" property="p20" />
+        <id column="p21" jdbcType="VARCHAR" property="p21" />
+        <id column="p22" jdbcType="VARCHAR" property="p22" />
+        <id column="p23" jdbcType="VARCHAR" property="p23" />
+    </resultMap>
+
+    <select id="getConsumption" resultMap="ConsumptionResultMap" >
+        SELECT * FROM user_consumption_fake
+    </select>
+
+
+</mapper>

@@ -3,12 +3,27 @@
 <mapper namespace="team.ienergy.energydash.dao.PlanDao">
 
   <resultMap id="PlanResultMap" type="team.ienergy.energydash.beans.Plan">
-    <id column="pid" jdbcType="VARCHAR" property="pid" />
-    <id column="plan_name" jdbcType="VARCHAR" property="planName" />
-    <id column="company_name" jdbcType="VARCHAR" property="companyName" />
-    <id column="customer_type" jdbcType="VARCHAR" property="customerType" />
-    <id column="postcode" jdbcType="VARCHAR" property="postcode" />
-    <id column="tariff_type" jdbcType="VARCHAR" property="tariffType" />
+      <id column="pid" jdbcType="VARCHAR" property="pid" />
+      <id column="plan_name" jdbcType="VARCHAR" property="planName" />
+      <id column="company_name" jdbcType="VARCHAR" property="companyName" />
+      <id column="customer_type" jdbcType="VARCHAR" property="customerType" />
+      <id column="postcode" jdbcType="VARCHAR" property="postcode" />
+      <id column="tariff_type" jdbcType="VARCHAR" property="tariffType" />
+      <id column="supply_price" jdbcType="VARCHAR" property="supplyPrice" />
+      <id column="single_price" jdbcType="VARCHAR" property="singlePrice" />
+      <id column="peak_price" jdbcType="VARCHAR" property="peakPrice" />
+      <id column="off_peak_price" jdbcType="VARCHAR" property="offPeakPrice" />
+      <id column="shoulder_price" jdbcType="VARCHAR" property="shoulderPrice" />
+      <id column="tou1" jdbcType="VARCHAR" property="tou1" />
+      <id column="tou2" jdbcType="VARCHAR" property="tou2" />
+      <id column="tou3" jdbcType="VARCHAR" property="tou3" />
+      <id column="tou4" jdbcType="VARCHAR" property="tou4" />
+      <id column="tou5" jdbcType="VARCHAR" property="tou5" />
+      <id column="tou6" jdbcType="VARCHAR" property="tou6" />
+      <id column="demand_start" jdbcType="VARCHAR" property="demandStart" />
+      <id column="demand_end" jdbcType="VARCHAR" property="demandEnd" />
+      <id column="demand_price" jdbcType="VARCHAR" property="demandPrice" />
+
   </resultMap>
 
   <select id="findAllPlan" resultMap="PlanResultMap" >
