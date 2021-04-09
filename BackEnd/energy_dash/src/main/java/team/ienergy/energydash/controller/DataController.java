@@ -11,10 +11,13 @@ import team.ienergy.energydash.exception.NormalException;
 import team.ienergy.energydash.service.DataService;
 import team.ienergy.energydash.service.PlanService;
 import team.ienergy.energydash.service.UserService;
+import org.apache.commons.codec.binary.Base64;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -420,6 +423,31 @@ public class DataController {
         return JSON.toJSON(resultBean);
     }
 
+    public static String byteArr2String(byte[] byteArr) {
+        String stringBase64 = null;
+        try {
+            Base64 encoder = new Base64();
+            stringBase64 =(byteArr != null ? encoder.encodeToString(byteArr) : "");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringBase64;
+    }
+
+//    @ResponseBody
+//    @RequestMapping(value = "/get_image", method = RequestMethod.GET)
+//    public Object getImage(@RequestParam(value = "companyName") String companyName){
+//        Map companyImages = planService.findImage(companyName);
+//        ResultBean resultBean = new ResultBean();
+//        resultBean.setData(byteArr2String((byte[]) companyImages.get("picture")));
+//        return JSON.toJSON(resultBean);
+//    }
+
+    public String findImage(String companyName){
+        Map companyImages = planService.findImage(companyName);
+        return byteArr2String((byte[]) companyImages.get("picture"));
+    }
+
     /**
      * @param
      * @return java.lang.Object
@@ -436,6 +464,8 @@ public class DataController {
         User user = userService.getUser(email);
         String targetPlanID = user.getPlanId();
         List<Consumption> consumptions = planService.getConsumption();
+        Map<String, String> mapImage = new HashMap<>();
+
         Plan targetPlan = new Plan();
         Consumption targetConsumption = new Consumption();
         for (Consumption consumption : consumptions) {
@@ -472,6 +502,10 @@ public class DataController {
                 rp.setCompanyName(plan.getCompanyName());
                 rp.setTotalCost(totalCost);
                 rp.setSaveMoney(originCost - totalCost);
+                if(mapImage.isEmpty() || !mapImage.containsKey(plan.getCompanyName())){
+                    mapImage.put(plan.getCompanyName(), findImage(plan.getCompanyName()));
+                }
+                rp.setImage(mapImage.get(plan.getCompanyName()));
                 recommendPlans.add(rp);
             }
         }
