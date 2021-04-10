@@ -1,5 +1,7 @@
 package team.ienergy.energydash.service;
 
+import team.ienergy.energydash.beans.CompanyImage;
+import team.ienergy.energydash.beans.Consumption;
 import team.ienergy.energydash.beans.EnergyPlan;
 import team.ienergy.energydash.beans.Plan;
 
@@ -15,7 +17,12 @@ import java.util.Map;
  */
 
 public interface PlanService {
+    Map findImage(String companyName);
+
+    List<Consumption> getConsumption();
+
     List<Plan> findAllPlan();
+
     List<Plan> findPlanId(Map paramMap);
 
     EnergyPlan getEnergyPlan(String pid);

@@ -11,10 +11,13 @@ import team.ienergy.energydash.exception.NormalException;
 import team.ienergy.energydash.service.DataService;
 import team.ienergy.energydash.service.PlanService;
 import team.ienergy.energydash.service.UserService;
+import org.apache.commons.codec.binary.Base64;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -381,6 +384,75 @@ public class DataController {
      * @return java.lang.Object
      * @desc Interface 2006：get recommend energy plan
      * @author Mingchao Sima
+     * @date 7 April 2021
+     * @func_name getConsumption
+     */
+    @ResponseBody
+    @RequestMapping(value = "/get_consumption", method = RequestMethod.GET)
+    public Object getConsumption(@RequestParam(value = "email") String email,
+                                 @RequestParam(value = "userName", required = false) String userName){
+        User user = userService.getUser(email);
+        Map<String, String> resultMap = new HashMap<>();
+        resultMap.put("uid", String.valueOf(user.getUserId()));
+
+        List<Consumption> consumptions = planService.getConsumption();
+        Plan targetPlan = new Plan();
+        Consumption targetConsumption = new Consumption();
+        for (Consumption consumption : consumptions) {
+            if (consumption.getUid() == (user.getUserId())) {
+                targetConsumption = consumption;
+                break;
+            }
+        }
+        resultMap.put("pid", user.getPlanId());
+
+        List<Plan> plans = planService.findAllPlan();
+        List<RecommendPlan> recommendPlans = new ArrayList<>();
+        float originCost = 0;
+        for (Plan plan : plans) {
+            if (plan.getPid().equals(user.getPlanId())) {
+                originCost = planCal(plan, targetConsumption);
+                break;
+            }
+        }
+
+        resultMap.put("cost", String.valueOf(originCost));
+
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(resultMap);
+        return JSON.toJSON(resultBean);
+    }
+
+    public static String byteArr2String(byte[] byteArr) {
+        String stringBase64 = null;
+        try {
+            Base64 encoder = new Base64();
+            stringBase64 =(byteArr != null ? encoder.encodeToString(byteArr) : "");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringBase64;
+    }
+
+//    @ResponseBody
+//    @RequestMapping(value = "/get_image", method = RequestMethod.GET)
+//    public Object getImage(@RequestParam(value = "companyName") String companyName){
+//        Map companyImages = planService.findImage(companyName);
+//        ResultBean resultBean = new ResultBean();
+//        resultBean.setData(byteArr2String((byte[]) companyImages.get("picture")));
+//        return JSON.toJSON(resultBean);
+//    }
+
+    public String findImage(String companyName){
+        Map companyImages = planService.findImage(companyName);
+        return byteArr2String((byte[]) companyImages.get("picture"));
+    }
+
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc Interface 2006：get recommend energy plan
+     * @author Mingchao Sima
      * @date 5 April 2021
      * @func_name getRecommend
      */
@@ -388,15 +460,139 @@ public class DataController {
     @RequestMapping(value = "/user_get_recommend", method = RequestMethod.GET)
     public Object getRecommend(@RequestParam(value = "email") String email,
                                @RequestParam(value = "userName", required = false) String userName){
-//        User user = userService.getUser(email);
+
+        User user = userService.getUser(email);
+        String targetPlanID = user.getPlanId();
+        List<Consumption> consumptions = planService.getConsumption();
+        Map<String, String> mapImage = new HashMap<>();
+
+        Plan targetPlan = new Plan();
+        Consumption targetConsumption = new Consumption();
+        for (Consumption consumption : consumptions) {
+            if (consumption.getUid() == (user.getUserId())) {
+                targetConsumption = consumption;
+                break;
+            }
+        }
+        boolean isLegal = false;
         List<Plan> plans = planService.findAllPlan();
-//        plans.sort(Comparator.comparingInt(o -> Integer.valueOf(o.getPid())));
+        List<RecommendPlan> recommendPlans = new ArrayList<>();
+        float originCost = 0;
+        for (Plan plan : plans) {
+            if (plan.getPid().equals(targetPlanID)) {
+                originCost = planCal(plan, targetConsumption);
+                targetPlan = plan;
+                isLegal = true;
+                break;
+            }
+        }
+
+        if(!isLegal){
+            throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "Illegal plan");
+        }
+
+        for (Plan plan : plans) {
+            if (plan.getPid().equals(targetPlanID)) continue;
+
+            float totalCost = planCal(plan, targetConsumption);
+            if (totalCost < originCost) {
+                RecommendPlan rp = new RecommendPlan();
+                rp.setPid(plan.getPid());
+                rp.setPlanName(plan.getPlanName());
+                rp.setCompanyName(plan.getCompanyName());
+                rp.setTotalCost(totalCost);
+                rp.setSaveMoney(originCost - totalCost);
+                if(mapImage.isEmpty() || !mapImage.containsKey(plan.getCompanyName())){
+                    mapImage.put(plan.getCompanyName(), findImage(plan.getCompanyName()));
+                }
+                rp.setImage(mapImage.get(plan.getCompanyName()));
+                recommendPlans.add(rp);
+            }
+        }
+
+        if(recommendPlans.isEmpty()){
+            throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "No better plans recommended");
+
+        }
+
+        recommendPlans.sort((o1, o2) -> {
+            if(o1.getTotalCost() == o2.getTotalCost()){
+                return Integer.valueOf(o1.getPid()) - Integer.valueOf(o2.getPid());
+            }else {
+                if(o1.getTotalCost() > o2.getTotalCost()) return 1;
+                else return -1;
+            }
+        });
 
         ResultBean resultBean = new ResultBean();
-        resultBean.setData(plans);
+        resultBean.setData(recommendPlans);
         return JSON.toJSON(resultBean);
     }
 
+    private static float planCal(Plan plan, Consumption consumption){
+        List<String> res = consumption.getList();
+        if(plan.getTariffType().equals("single")){
+            return singleCal(Float.parseFloat(plan.getSupplyPrice()),
+                    Float.parseFloat(plan.getSinglePrice()),res, consumption);
+        }
+        if(plan.getTariffType().equals("demand")){
+            if(plan.getDemandStart()==null || plan.getDemandEnd()==null) return Float.MAX_VALUE;
+            return demandCal(Float.parseFloat(plan.getSupplyPrice()),Float.parseFloat(plan.getSinglePrice()),
+                    Integer.parseInt(plan.getDemandStart()),Integer.parseInt(plan.getDemandEnd()),
+                    Float.parseFloat(plan.getDemandPrice()),res, consumption);
+        }
+        if(plan.getTariffType().equals("timeofuse")){
+            int[] tou = new int[6];
+            if(plan.getTou1() == null || plan.getTou2() == null || plan.getTou3() == null ||
+                    plan.getTou4() == null || plan.getTou5() == null || plan.getTou6() == null){
+                return Float.MAX_VALUE;
+            }
+            tou[0] = Integer.parseInt(plan.getTou1());
+            tou[1] = Integer.parseInt(plan.getTou2());
+            tou[2] = Integer.parseInt(plan.getTou3());
+            tou[3] = Integer.parseInt(plan.getTou4());
+            tou[4] = Integer.parseInt(plan.getTou5());
+            tou[5] = Integer.parseInt(plan.getTou6());
+            return timeofuseCal(Float.parseFloat(plan.getSupplyPrice()),Float.parseFloat(plan.getPeakPrice()),
+                    Float.parseFloat(plan.getOffPeakPrice()),Float.parseFloat(plan.getShoulderPrice()),
+                    tou, res, consumption);
+        }
+        return Float.MAX_VALUE;
+    }
+
+    private static float singleCal( float supply_price, float single_price,
+                                    List<String> res, Consumption consumption){
+        return single_price * consumption.getUsage(0, 24, res) +
+                supply_price;
+    }
+
+    private static float demandCal( float supply_price,float single_price, int demand_start,
+                                    int demand_end, float demand_price, List<String> res, Consumption consumption){
+        float demand_total_price = demand_price * demandMaxUsage(demand_start,demand_end,res);
+        float demand_normal_price = single_price * (consumption.getUsage(0, demand_start,res) +
+                consumption.getUsage(demand_end, 24, res));
+        return demand_normal_price + demand_total_price + supply_price;
+    }
+
+    private static float demandMaxUsage(int startTime, int endTime, List<String> res){
+        float max_usage = 0.0f;
+        for(int i = startTime; i < endTime; i++){
+            if(Float.parseFloat(res.get(i)) > max_usage)    max_usage = Float.parseFloat(res.get(i));
+        }
+        return max_usage*(endTime-startTime);
+    }
+
+    private static float timeofuseCal(float supply_price, float peak_price, float off_peak_price,
+                                      float shoulder_price, int[] tou, List<String> res, Consumption consumption){
+        float peak_total_price = peak_price * consumption.getUsage(tou[2], tou[3], res);
+        float shoulder_total_price = shoulder_price * (consumption.getUsage(tou[0], tou[1], res) +
+                consumption.getUsage(tou[4], tou[5], res));
+        float off_peak_total_price = off_peak_price * (consumption.getUsage(0, tou[0],res) +
+                consumption.getUsage(tou[1], tou[2], res) +
+                consumption.getUsage(tou[3], tou[4], res) +
+                consumption.getUsage(tou[5], 24, res));
+        return peak_total_price + shoulder_total_price + off_peak_total_price + supply_price;
+    }
 
 
 }
