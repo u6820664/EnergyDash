@@ -9,6 +9,11 @@
         var saveMoneyData = "";
         var totalCostData = "";
 
+        var flagData = "";
+        var tariffData = "";
+        var supplyPerData = "";
+        var energyPerData = "";
+
         $.ajax({
             type: "get",
             url: "http://54.79.60.225:8080/data/user_get_recommend",
@@ -28,6 +33,11 @@
                         pidData += response.data[i].pid;
                         saveMoneyData += response.data[i].saveMoney;
                         totalCostData += response.data[i].totalCost;
+
+                        flagData += response.data[i].flag;
+                        tariffData += response.data[i].tariff;
+                        supplyPerData += response.data[i].supplyPer;
+                        energyPerData += response.data[i].energyPer;
                     } else {
                         imageData += response.data[i].image + ",";
                         companyNameData += response.data[i].companyName + ",";
@@ -35,6 +45,11 @@
                         pidData += response.data[i].pid + ",";
                         saveMoneyData += response.data[i].saveMoney + ",";
                         totalCostData += response.data[i].totalCost + ",";
+
+                        flagData += response.data[i].flag + ",";
+                        tariffData += response.data[i].tariff + ",";
+                        supplyPerData += response.data[i].supplyPer + ",";
+                        energyPerData += response.data[i].energyPer + ",";
                     }
                 }
             }
@@ -49,22 +64,34 @@
         var saveMoneyDataArr = saveMoneyData.split(',');
         var totalCostDataArr = totalCostData.split(',');
 
+        var flagDataArr = flagData.split(',');
+        var tariffDataArr = tariffData.split(',');
+        var supplyPerDataArr = supplyPerData.split(',');
+        var energyPerDataArr = energyPerData.split(',');
+
         // alert(companyNameDataArr.length);
-        for (var i = 0; i < imageDataArr.length; i++) {
+        for (var i = 0; i < imageDataArr.length - 1; i++) {
             var tr = document.createElement("TR");
 
-            var imageTD = document.createElement("TD");
-            var imageIMG = document.createElement('img');
-            imageIMG.src = 'data:image/png;base64,'+imageDataArr[i];
-            imageTD.appendChild(imageIMG);
+            var rankTD = document.createElement("TD");
+            var rankT = document.createTextNode(i + 1);
+            rankTD.appendChild(rankT);
 
             var companyNameTD = document.createElement("TD");
+            var imageIMG = document.createElement('img');
+            imageIMG.src = 'data:image/png;base64,' + imageDataArr[i];
+            imageIMG.className = 'mw-100';
+            companyNameTD.appendChild(imageIMG);
             var companyNameT = document.createTextNode(companyNameDataArr[i]);
             companyNameTD.appendChild(companyNameT);
 
             var planNameTD = document.createElement("TD");
             var planNameT = document.createTextNode(planNameDataArr[i]);
             planNameTD.appendChild(planNameT);
+
+            var tariffTD = document.createElement("TD");
+            var tariffT = document.createTextNode(tariffDataArr[i]);
+            tariffTD.appendChild(tariffT);
 
             var totalCostTD = document.createElement("TD");
             var totalCostT = document.createTextNode("$ " + parseInt(totalCostDataArr[i]));
@@ -74,9 +101,10 @@
             var saveMoneyT = document.createTextNode("$ " + parseInt(saveMoneyDataArr[i]));
             saveMoneyTD.appendChild(saveMoneyT);
 
-            tr.appendChild(imageTD);
+            tr.appendChild(rankTD);
             tr.appendChild(companyNameTD);
             tr.appendChild(planNameTD);
+            tr.appendChild(tariffTD);
             tr.appendChild(totalCostTD);
             tr.appendChild(saveMoneyTD);
 
@@ -87,10 +115,40 @@
         // alert(parseInt(saveMoneyDataArr[0]));
         document.getElementById('most_saved').innerHTML = parseInt(saveMoneyDataArr[0]);
 
+        //Best Matching Energy Plan
+        document.getElementById('BM_image').src = 'data:image/png;base64,' + imageDataArr[0];
+        document.getElementById('BM_companyName').innerHTML = companyNameDataArr[0];
+        document.getElementById('BM_planName').innerHTML = planNameDataArr[0];
+        document.getElementById('BM_totalCost').innerHTML = parseInt(totalCostDataArr[0]);
+        document.getElementById('BM_saveMoney').innerHTML = parseInt(saveMoneyDataArr[0]);
+        document.getElementById('BM_energyPer').style.width = parseInt(energyPerDataArr[0] * 100) + "%";
+        document.getElementById('BM_supplyPer').style.width = parseInt(supplyPerDataArr[0] * 100) + "%";
 
+        //Your Current Energy Plan
+        var current_rank = imageDataArr.length - 1;
+        // alert(current_rank);
+        document.getElementById('YC_image').src = 'data:image/png;base64,' + imageDataArr[current_rank];
+        document.getElementById('YC_companyName').innerHTML = companyNameDataArr[current_rank];
+        document.getElementById('YC_planName').innerHTML = planNameDataArr[current_rank];
+        document.getElementById('YC_totalCost').innerHTML = parseInt(totalCostDataArr[current_rank]);
+        document.getElementById('YC_saveMoney').innerHTML = parseInt(saveMoneyDataArr[current_rank]);
+        document.getElementById('YC_energyPer').style.width = parseInt(energyPerDataArr[current_rank] * 100) + "%";
+        document.getElementById('YC_supplyPer').style.width = parseInt(supplyPerDataArr[current_rank] * 100) + "%";
 
-
-        // most_saved
     });
 
 })(jQuery);
+
+
+function displayRecommended() {
+    var x = document.getElementById("recommended_energyPlan");
+    var y = document.getElementById("planDisplayBtn");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.innerHTML = "Hidden list";
+    } else {
+        x.style.display = "none";
+        y.innerHTML = "Show more";
+    }
+}
