@@ -83,6 +83,14 @@
             // alert(tr);
             document.getElementById("recommended_list").appendChild(tr);
         }
+
+        // alert(parseInt(saveMoneyDataArr[0]));
+        document.getElementById('most_saved').innerHTML = parseInt(saveMoneyDataArr[0]);
+
+
+
+
+        // most_saved
     });
 
 })(jQuery);
