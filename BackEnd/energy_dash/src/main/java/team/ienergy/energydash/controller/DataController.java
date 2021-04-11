@@ -382,7 +382,6 @@ public class DataController {
     /**
      * @param
      * @return java.lang.Object
-     * @desc Interface 2006：get recommend energy plan
      * @author Mingchao Sima
      * @date 7 April 2021
      * @func_name getConsumption
@@ -408,7 +407,7 @@ public class DataController {
 
         List<Plan> plans = planService.findAllPlan();
         List<RecommendPlan> recommendPlans = new ArrayList<>();
-        float originCost = 0;
+        float[] originCost = new float[3];
         for (Plan plan : plans) {
             if (plan.getPid().equals(user.getPlanId())) {
                 originCost = planCal(plan, targetConsumption);
@@ -416,7 +415,7 @@ public class DataController {
             }
         }
 
-        resultMap.put("cost", String.valueOf(originCost));
+        resultMap.put("cost", String.valueOf(originCost[0]));
 
         ResultBean resultBean = new ResultBean();
         resultBean.setData(resultMap);
@@ -434,14 +433,14 @@ public class DataController {
         return stringBase64;
     }
 
-//    @ResponseBody
-//    @RequestMapping(value = "/get_image", method = RequestMethod.GET)
-//    public Object getImage(@RequestParam(value = "companyName") String companyName){
-//        Map companyImages = planService.findImage(companyName);
-//        ResultBean resultBean = new ResultBean();
-//        resultBean.setData(byteArr2String((byte[]) companyImages.get("picture")));
-//        return JSON.toJSON(resultBean);
-//    }
+    @ResponseBody
+    @RequestMapping(value = "/get_image", method = RequestMethod.GET)
+    public Object getImage(@RequestParam(value = "companyName") String companyName){
+        Map companyImages = planService.findImage(companyName);
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(byteArr2String((byte[]) companyImages.get("picture")));
+        return JSON.toJSON(resultBean);
+    }
 
     public String findImage(String companyName){
         Map companyImages = planService.findImage(companyName);
@@ -477,7 +476,7 @@ public class DataController {
         boolean isLegal = false;
         List<Plan> plans = planService.findAllPlan();
         List<RecommendPlan> recommendPlans = new ArrayList<>();
-        float originCost = 0;
+        float[] originCost = new float[3];
         for (Plan plan : plans) {
             if (plan.getPid().equals(targetPlanID)) {
                 originCost = planCal(plan, targetConsumption);
@@ -494,18 +493,22 @@ public class DataController {
         for (Plan plan : plans) {
             if (plan.getPid().equals(targetPlanID)) continue;
 
-            float totalCost = planCal(plan, targetConsumption);
-            if (totalCost < originCost) {
+            float[] totalCost = planCal(plan, targetConsumption);
+            if (totalCost[0] < originCost[0]) {
                 RecommendPlan rp = new RecommendPlan();
                 rp.setPid(plan.getPid());
                 rp.setPlanName(plan.getPlanName());
                 rp.setCompanyName(plan.getCompanyName());
-                rp.setTotalCost(totalCost);
-                rp.setSaveMoney(originCost - totalCost);
+                rp.setTariff(plan.getTariffType());
+                rp.setTotalCost(totalCost[0]);
+                rp.setSaveMoney(originCost[0] - totalCost[0]);
+                rp.setEnergyPer(totalCost[1]);
+                rp.setSupplyPer(totalCost[2]);
                 if(mapImage.isEmpty() || !mapImage.containsKey(plan.getCompanyName())){
                     mapImage.put(plan.getCompanyName(), findImage(plan.getCompanyName()));
                 }
                 rp.setImage(mapImage.get(plan.getCompanyName()));
+                rp.setFlag("0");
                 recommendPlans.add(rp);
             }
         }
@@ -524,19 +527,32 @@ public class DataController {
             }
         });
 
+        RecommendPlan rp = new RecommendPlan();
+        rp.setPid(targetPlan.getPid());
+        rp.setPlanName(targetPlan.getPlanName());
+        rp.setCompanyName(targetPlan.getCompanyName());
+        rp.setTariff(targetPlan.getTariffType());
+        rp.setTotalCost(originCost[0]);
+        rp.setSaveMoney(0);
+        rp.setEnergyPer(originCost[1]);
+        rp.setSupplyPer(originCost[2]);
+        rp.setImage(findImage(targetPlan.getCompanyName()));
+        rp.setFlag("1");
+        recommendPlans.add(rp);
+
         ResultBean resultBean = new ResultBean();
         resultBean.setData(recommendPlans);
         return JSON.toJSON(resultBean);
     }
 
-    private static float planCal(Plan plan, Consumption consumption){
+    private static float[] planCal(Plan plan, Consumption consumption){
         List<String> res = consumption.getList();
         if(plan.getTariffType().equals("single")){
             return singleCal(Float.parseFloat(plan.getSupplyPrice()),
                     Float.parseFloat(plan.getSinglePrice()),res, consumption);
         }
         if(plan.getTariffType().equals("demand")){
-            if(plan.getDemandStart()==null || plan.getDemandEnd()==null) return Float.MAX_VALUE;
+            if(plan.getDemandStart()==null || plan.getDemandEnd()==null) return new float[]{Float.MAX_VALUE};
             return demandCal(Float.parseFloat(plan.getSupplyPrice()),Float.parseFloat(plan.getSinglePrice()),
                     Integer.parseInt(plan.getDemandStart()),Integer.parseInt(plan.getDemandEnd()),
                     Float.parseFloat(plan.getDemandPrice()),res, consumption);
@@ -545,7 +561,7 @@ public class DataController {
             int[] tou = new int[6];
             if(plan.getTou1() == null || plan.getTou2() == null || plan.getTou3() == null ||
                     plan.getTou4() == null || plan.getTou5() == null || plan.getTou6() == null){
-                return Float.MAX_VALUE;
+                return new float[]{Float.MAX_VALUE};
             }
             tou[0] = Integer.parseInt(plan.getTou1());
             tou[1] = Integer.parseInt(plan.getTou2());
@@ -557,21 +573,32 @@ public class DataController {
                     Float.parseFloat(plan.getOffPeakPrice()),Float.parseFloat(plan.getShoulderPrice()),
                     tou, res, consumption);
         }
-        return Float.MAX_VALUE;
+        return new float[]{Float.MAX_VALUE};
     }
 
-    private static float singleCal( float supply_price, float single_price,
+    private static float[] singleCal( float supply_price, float single_price,
                                     List<String> res, Consumption consumption){
-        return single_price * consumption.getUsage(0, 24, res) +
-                supply_price;
+        float[] resCal = new float[3];
+        float single = single_price * consumption.getUsage(0, 24, res);
+        float total = single + supply_price;
+        resCal[0] = total;
+        resCal[1] = single / total;
+        resCal[2] = supply_price / total;
+        return resCal;
     }
 
-    private static float demandCal( float supply_price,float single_price, int demand_start,
+    private static float[] demandCal( float supply_price,float single_price, int demand_start,
                                     int demand_end, float demand_price, List<String> res, Consumption consumption){
         float demand_total_price = demand_price * demandMaxUsage(demand_start,demand_end,res);
         float demand_normal_price = single_price * (consumption.getUsage(0, demand_start,res) +
                 consumption.getUsage(demand_end, 24, res));
-        return demand_normal_price + demand_total_price + supply_price;
+        float[] resCal = new float[3];
+        float single = demand_normal_price + demand_total_price;
+        float total = single + supply_price;
+        resCal[0] = total;
+        resCal[1] = single / total;
+        resCal[2] = supply_price / total;
+        return resCal;
     }
 
     private static float demandMaxUsage(int startTime, int endTime, List<String> res){
@@ -582,7 +609,7 @@ public class DataController {
         return max_usage*(endTime-startTime);
     }
 
-    private static float timeofuseCal(float supply_price, float peak_price, float off_peak_price,
+    private static float[] timeofuseCal(float supply_price, float peak_price, float off_peak_price,
                                       float shoulder_price, int[] tou, List<String> res, Consumption consumption){
         float peak_total_price = peak_price * consumption.getUsage(tou[2], tou[3], res);
         float shoulder_total_price = shoulder_price * (consumption.getUsage(tou[0], tou[1], res) +
@@ -591,7 +618,14 @@ public class DataController {
                 consumption.getUsage(tou[1], tou[2], res) +
                 consumption.getUsage(tou[3], tou[4], res) +
                 consumption.getUsage(tou[5], 24, res));
-        return peak_total_price + shoulder_total_price + off_peak_total_price + supply_price;
+
+        float[] resCal = new float[3];
+        float single = peak_total_price + shoulder_total_price + off_peak_total_price;
+        float total = single + supply_price;
+        resCal[0] = total;
+        resCal[1] = single / total;
+        resCal[2] = supply_price / total;
+        return resCal;
     }
 
 
