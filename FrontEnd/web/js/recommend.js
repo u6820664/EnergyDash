@@ -67,11 +67,11 @@
             planNameTD.appendChild(planNameT);
 
             var totalCostTD = document.createElement("TD");
-            var totalCostT = document.createTextNode(totalCostDataArr[i]);
+            var totalCostT = document.createTextNode("$ " + parseInt(totalCostDataArr[i]));
             totalCostTD.appendChild(totalCostT);
 
             var saveMoneyTD = document.createElement("TD");
-            var saveMoneyT = document.createTextNode(saveMoneyDataArr[i]);
+            var saveMoneyT = document.createTextNode("$ " + parseInt(saveMoneyDataArr[i]));
             saveMoneyTD.appendChild(saveMoneyT);
 
             tr.appendChild(imageTD);
