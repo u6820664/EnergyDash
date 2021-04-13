@@ -20031,9 +20031,9 @@ dl li {
 }
 
 .table td img {
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
+  width: 40px;
+  /*height: 36px;*/
+  /*border-radius: 100%;*/
 }
 
 .table td .badge {
@@ -21011,7 +21011,7 @@ dl li {
 }
 
 .accordion .card .card-header a[aria-expanded="true"] {
-  color: #6640b2;
+  color: #3dba62;
 }
 
 .accordion .card .card-header a[aria-expanded="true"]:before {
@@ -21105,12 +21105,12 @@ dl li {
 }
 
 .accordion.accordion-filled .card .card-header a[aria-expanded="true"]:before {
-  content: "\F143";
+  content: "\F0143";
   color: #ffffff;
 }
 
 .accordion.accordion-filled .card .card-header a[aria-expanded="false"]:before {
-  content: "\F140";
+  content: "\F0140";
 }
 
 .accordion.accordion-filled .card .card-body {
@@ -21142,17 +21142,17 @@ dl li {
 }
 
 .accordion.accordion-solid-header .card .card-header a[aria-expanded="true"] {
-  background: #6640b2;
+  background: #3dba62;
   color: #ffffff;
 }
 
 .accordion.accordion-solid-header .card .card-header a[aria-expanded="true"]:before {
-  content: "\F143";
+  content: "\F0143";
   color: #ffffff;
 }
 
 .accordion.accordion-solid-header .card .card-header a[aria-expanded="false"]:before {
-  content: "\F140";
+  content: "\F0140";
 }
 
 .accordion.accordion-solid-header .card .card-body {
@@ -21186,11 +21186,11 @@ dl li {
 }
 
 .accordion.accordion-solid-content .card .card-header a[aria-expanded="true"]:before {
-  content: "\F143";
+  content: "\F0143";
 }
 
 .accordion.accordion-solid-content .card .card-header a[aria-expanded="false"]:before {
-  content: "\F140";
+  content: "\F0140";
 }
 
 .accordion.accordion-solid-content .card .card-body {
@@ -21206,7 +21206,7 @@ dl li {
 }
 
 .accordion.accordion-multi-colored .card:nth-child(1) {
-  background: #6640b2;
+  background: #3dba62;
 }
 
 .accordion.accordion-multi-colored .card:nth-child(2) {
@@ -21230,11 +21230,11 @@ dl li {
 }
 
 .accordion.accordion-multi-colored .card .card-header a[aria-expanded="true"]:before {
-  content: "\F143";
+  content: "\F0143";
 }
 
 .accordion.accordion-multi-colored .card .card-header a[aria-expanded="false"]:before {
-  content: "\F140";
+  content: "\F0140";
 }
 
 

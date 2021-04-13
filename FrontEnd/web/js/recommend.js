@@ -70,8 +70,14 @@
         var energyPerDataArr = energyPerData.split(',');
 
         // alert(companyNameDataArr.length);
-        for (var i = 0; i < imageDataArr.length - 1; i++) {
-            var tr = document.createElement("TR");
+        for (var i = 0; i < imageDataArr.length; i++) {
+            if (flagDataArr[i] == 0) {
+                var tr = document.createElement("TR");
+            } else {
+                var tr = document.createElement("TR");
+                tr.style.background = "#f83e37";
+                tr.style.color = "#f3f3f3";
+            }
 
             var rankTD = document.createElement("TD");
             var rankT = document.createTextNode(i + 1);
@@ -82,7 +88,7 @@
             imageIMG.src = 'data:image/png;base64,' + imageDataArr[i];
             imageIMG.className = 'mw-100';
             companyNameTD.appendChild(imageIMG);
-            var companyNameT = document.createTextNode(companyNameDataArr[i]);
+            var companyNameT = document.createTextNode(" " + companyNameDataArr[i]);
             companyNameTD.appendChild(companyNameT);
 
             var planNameTD = document.createElement("TD");
