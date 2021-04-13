@@ -545,6 +545,13 @@ public class DataController {
         return JSON.toJSON(resultBean);
     }
 
+    /**
+     * @param
+     * @return float
+     * @author Jiaoyang Sun
+     * @date 3 April 2021
+     * @func_name planCal
+     */
     private static float[] planCal(Plan plan, Consumption consumption){
         List<String> res = consumption.getList();
         if(plan.getTariffType().equals("single")){
@@ -575,7 +582,7 @@ public class DataController {
         }
         return new float[]{Float.MAX_VALUE};
     }
-
+    
     private static float[] singleCal( float supply_price, float single_price,
                                     List<String> res, Consumption consumption){
         float[] resCal = new float[3];
