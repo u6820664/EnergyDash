@@ -552,7 +552,7 @@ public class DataController {
      * @date 3 April 2021
      * @func_name planCal
      */
-    private static float[] planCal(Plan plan, Consumption consumption){
+    public float[] planCal(Plan plan, Consumption consumption){
         List<String> res = consumption.getList();
         if(plan.getTariffType().equals("single")){
             return singleCal(Float.parseFloat(plan.getSupplyPrice()),
