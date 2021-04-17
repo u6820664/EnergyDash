@@ -1,6 +1,8 @@
 package team.ienergy.energydash.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import team.ienergy.energydash.beans.Usage;
+import team.ienergy.energydash.dao.UsageDao;
 import team.ienergy.energydash.dao.UserDao;
 import team.ienergy.energydash.beans.User;
 import team.ienergy.energydash.service.UserService;
@@ -22,6 +24,9 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private UsageDao usageDao;
 
     @Override
     public List<User> findAll() {
@@ -49,5 +54,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public void updateUserProfile(Map paramMap) {
         userDao.updateUserProfile(paramMap);
+    }
+
+    @Override
+    public Usage getUsage(String email) {
+        return usageDao.getUsage(email);
     }
 }

@@ -4,9 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import team.ienergy.energydash.beans.Plan;
-import team.ienergy.energydash.beans.ResultBean;
-import team.ienergy.energydash.beans.User;
+import team.ienergy.energydash.beans.*;
 import team.ienergy.energydash.exception.NormalException;
 import team.ienergy.energydash.service.PlanService;
 import team.ienergy.energydash.service.UserService;
@@ -279,5 +277,46 @@ public class UserController {
         return JSON.toJSON(resultBean);
     }
 
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc Interface
+     * @author Mingchao Sima
+     * @date 17 April 2021
+     * @func_name getUsageHabit
+     */
+    @ResponseBody
+    @RequestMapping(value = "/get_usage_habit", method = RequestMethod.GET)
+    public Object getUsageHabit(@RequestParam(value = "email", required = true) String email,
+                                 @RequestParam(value = "userName", required = false) String userName){
+        Usage usage = userService.getUsage(email);
+        User user = userService.getUser(email);
+        String targetPlanID = user.getPlanId();
+        List<Plan> planList = planService.findAllPlan();
+        List<Consumption> consumptions = planService.getConsumption();
 
+        Consumption targetConsumption = new Consumption();
+        for (Consumption consumption : consumptions) {
+            if (consumption.getUid() == (user.getUserId())) {
+                targetConsumption = consumption;
+                break;
+            }
+        }
+
+
+        for (Plan plan : planList) {
+            if(plan.getPid().equals(targetPlanID)){
+                usage.setCompanyName(plan.getCompanyName());
+                usage.setPlanName(plan.getPlanName());
+                usage.setPlanId(targetPlanID);
+                usage.setTariffType(plan.getTariffType());
+                usage.setEstimatedPrice(DataController.planCal(plan, targetConsumption)[0]);
+                break;
+            }
+        }
+
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(usage);
+        return JSON.toJSON(resultBean);
+    }
 }

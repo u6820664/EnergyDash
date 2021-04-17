@@ -1,6 +1,8 @@
 package team.ienergy.energydash.service;
 import org.springframework.stereotype.Service;
+import team.ienergy.energydash.beans.Usage;
 import team.ienergy.energydash.beans.User;
+import team.ienergy.energydash.dao.UsageDao;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,8 @@ public interface UserService {
     User getUser(String email);
 
     void updateUserProfile(Map paramMap);
+
+    Usage getUsage(String email);
 
 }
 

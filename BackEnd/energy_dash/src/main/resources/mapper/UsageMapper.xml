@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.ienergy.energydash.dao.UsageDao">
+
+    <resultMap id="UsageResultMap" type="team.ienergy.energydash.beans.Usage">
+        <id column="email" jdbcType="VARCHAR" property="email" />
+        <id column="user_name" jdbcType="VARCHAR" property="userName" />
+        <id column="house_type" jdbcType="VARCHAR" property="houseType" />
+        <id column="room_number" jdbcType="VARCHAR" property="roomNumber" />
+        <id column="address" jdbcType="VARCHAR" property="address" />
+        <id column="contract_period" jdbcType="VARCHAR" property="contractPeriod" />
+    </resultMap>
+
+    <select id="getUsage" resultMap="UsageResultMap"  >
+        SELECT * FROM usage_habit
+        where 1=1 and email = #{email,jdbcType = VARCHAR}
+    </select>
+
+</mapper>

@@ -520,7 +520,7 @@ public class DataController {
 
         recommendPlans.sort((o1, o2) -> {
             if(o1.getTotalCost() == o2.getTotalCost()){
-                return Integer.valueOf(o1.getPid()) - Integer.valueOf(o2.getPid());
+                return Integer.parseInt(o1.getPid()) - Integer.parseInt(o2.getPid());
             }else {
                 if(o1.getTotalCost() > o2.getTotalCost()) return 1;
                 else return -1;
@@ -545,7 +545,7 @@ public class DataController {
         return JSON.toJSON(resultBean);
     }
 
-    private static float[] planCal(Plan plan, Consumption consumption){
+    public static float[] planCal(Plan plan, Consumption consumption){
         List<String> res = consumption.getList();
         if(plan.getTariffType().equals("single")){
             return singleCal(Float.parseFloat(plan.getSupplyPrice()),

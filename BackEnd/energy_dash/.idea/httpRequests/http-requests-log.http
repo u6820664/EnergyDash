@@ -1,3 +1,37 @@
+GET http://localhost:8080/data/get_cumulative_data
+
+<> 2021-04-12T154318-1.400.json
+
+###
+
+GET http://localhost:8080/data/get_cumulative_data
+
+<> 2021-04-12T154318.400.json
+
+###
+
+GET http://localhost:8080/user/list
+
+###
+
+GET http://localhost:8080/user/list
+
+###
+
+GET http://localhost:8080/data/get_cumulative_data
+
+###
+
+GET http://localhost:8080/data/get_cumulative_data
+
+###
+
+GET http://localhost:8080/data/get_cumulative_data
+
+<> 2021-04-12T153933.400.json
+
+###
+
 GET http://localhost:8080/data/get_notification?email=yyy@anu.edu.au
 Accept: */*
 Cache-Control: no-cache
@@ -339,62 +373,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2020-10-12T083031.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T041015.200.json
-
-###
-
-GET http://localhost:8080/data/get_cumulative_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T040753.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T035708.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T035618.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T035349.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T034747.200.json
-
-###
-
-GET http://localhost:8080/data/get_historical_data?email=yyy@anu.edu.au
-Accept: */*
-Cache-Control: no-cache
-
-<> 2020-10-12T034700.200.json
 
 ###
 
