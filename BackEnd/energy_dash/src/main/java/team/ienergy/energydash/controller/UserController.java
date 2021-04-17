@@ -280,7 +280,7 @@ public class UserController {
     /**
      * @param
      * @return java.lang.Object
-     * @desc Interface
+     * @desc Interface 1008
      * @author Mingchao Sima
      * @date 17 April 2021
      * @func_name getUsageHabit
