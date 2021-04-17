@@ -1,0 +1,10 @@
+pid,plan_name,company_name,customer_type,tariff_type,supply_price,single_price,peak_price,off_peak_price,shoulder_price,tou1,tou2,tou3,tou4,tou5,tou6,demand__start,demand_end,demand_price,solar_feed_in,controlled
+5292,plan A,ActewAGL,residential,single,2.091,1.939,0,0,0,0,0,0,0,0,0,0,0,0,2.019,2.077
+9155,plan B,ActewAGL,residential,demand,1.998,1.939,0,0,0,0,0,0,0,0,0,17,20,5.032,2.122,1.866
+4564,plan C,Origin,residential,timeofuse,2.111,0,2.146,1.56,2.115,7,9,17,20,22,24,0,0,0,1.922,1.907
+8975,plan D,Origin,business,single,2.189,2.052,0,0,0,0,0,0,0,0,0,0,0,0,1.92,2.01
+8678,plan E,EnergyAustralia,residential,demand,2.016,1.966,0,0,0,0,0,0,0,0,0,17,21,4.987,2.119,2.084
+4663,plan F,EnergyAustralia,business,timeofuse,2.15,0,2.499,1.516,1.927,8,10,17,20,23,24,0,0,0,2.068,2.202
+9828,plan A,Energy Locals,business,single,2.1,1.992,0,0,0,0,0,0,0,0,0,0,0,0,1.998,2.241
+1755,plan B,Energy Locals,residential,demand,2.072,2.062,0,0,0,0,0,0,0,0,0,17,20,5.116,1.94,2.063
+8861,plan C,Power Club,residential,timeofuse,2.172,0,2.525,1.667,1.765,7,10,18,20,21,24,0,0,0,1.924,1.954
