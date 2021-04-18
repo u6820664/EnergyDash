@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import team.ienergy.energydash.beans.Usage;
 
+import java.util.Map;
+
 /**
  * @desc: A DAO for usage habit
  * @author: Mingchao Sima
@@ -12,5 +14,8 @@ import team.ienergy.energydash.beans.Usage;
  */
 @Repository
 public interface UsageDao {
-    Usage getUsage(@Param(value =  "email") String email);
+    Usage getUsage(@Param(value =  "email") String email,
+                   @Param(value = "password") String password);
+
+    void updateUsageProfile(Map paramMap);
 }

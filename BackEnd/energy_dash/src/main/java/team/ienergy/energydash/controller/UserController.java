@@ -212,7 +212,10 @@ public class UserController {
                                     @RequestParam(value = "postcode", required = true) String postcode,
                                     @RequestParam(value = "planId", required = false) String planId,
                                     @RequestParam(value = "image", required = false) MultipartFile file,
-                                    @RequestParam(value = "originalEmail", required = true) String originalEmail) {
+                                    @RequestParam(value = "originalEmail", required = true) String originalEmail,
+                                    @RequestParam(value = "houseType", required = false) String houseType,
+                                    @RequestParam(value = "roomNumber", required = false) String roomNumber,
+                                    @RequestParam(value = "address", required = false) String address) {
 
         //check existence of the user's originalEmail
         User testUser = userService.getUser(originalEmail);
@@ -221,12 +224,22 @@ public class UserController {
         }
 
         User updatedUser = new User();
-        Map paramMap=new HashMap();
-        paramMap.put("userName", userName);
-        paramMap.put("email", email);
-        paramMap.put("password", password);
-        paramMap.put("postcode", postcode);
-        paramMap.put("originalEmail", originalEmail);
+        Map userMap=new HashMap();
+        Map usageMap=new HashMap();
+
+        userMap.put("userName", userName);
+        userMap.put("email", email);
+        userMap.put("password", password);
+        userMap.put("postcode", postcode);
+        userMap.put("originalEmail", originalEmail);
+
+        usageMap.put("userName", userName);
+        usageMap.put("originalEmail", originalEmail);
+        usageMap.put("email", email);
+        usageMap.put("password", password);
+        usageMap.put("houseType", houseType);
+        usageMap.put("roomNumber", roomNumber);
+        usageMap.put("address", address);
 
         updatedUser.setUserId(testUser.getUserId());
         updatedUser.setUserName(userName);
@@ -235,11 +248,12 @@ public class UserController {
         updatedUser.setPostcode(postcode);
         if (planId != null && planId.length() != 0){
             updatedUser.setPlanId(planId);
-            paramMap.put("planId", planId);
+            userMap.put("planId", planId);
         }
 
         ResultBean resultBean = new ResultBean();
-        userService.updateUserProfile(paramMap);
+        userService.updateUserProfile(userMap);
+        userService.updateUsageProfile(usageMap);
         resultBean.setData(updatedUser);
         return JSON.toJSON(resultBean);
     }
@@ -288,9 +302,9 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/get_usage_habit", method = RequestMethod.GET)
     public Object getUsageHabit(@RequestParam(value = "email", required = true) String email,
-                                 @RequestParam(value = "userName", required = false) String userName){
-        Usage usage = userService.getUsage(email);
+                                 @RequestParam(value = "password", required = true) String password){
         User user = userService.getUser(email);
+        Usage usage = userService.getUsage(email, password);
         String targetPlanID = user.getPlanId();
         List<Plan> planList = planService.findAllPlan();
         List<Consumption> consumptions = planService.getConsumption();
