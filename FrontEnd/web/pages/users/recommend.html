@@ -128,6 +128,7 @@
                                     <button type="button" class="btn btn-social-icon-text btn-youtube"><i
                                             class="mdi mdi-swap-horizontal"></i>Switch Now
                                     </button>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +143,8 @@
                                         <div class="card">
                                             <div class="card-header" role="tab" id="Best_Matching_heading">
                                                 <h6 class="mb-0">
-                                                    <a data-toggle="collapse" href="#Best_Matching_collapse" aria-expanded="true"
+                                                    <a data-toggle="collapse" href="#Best_Matching_collapse"
+                                                       aria-expanded="true"
                                                        aria-controls="Best_Matching_collapse">
                                                         Best Matching
                                                     </a>
@@ -155,6 +157,69 @@
                                                         <!-- logo图片 -->
                                                         <div class="col-1">
                                                             <img class="mw-100" id="BM_image">
+
+                                                            <div class="text-center mb-0">
+                                                                <button type="button" class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal"
+                                                                        data-target="#exampleModal-1">
+                                                                    Details
+                                                                </button>
+                                                            </div>
+
+                                                            <div class="modal fade" id="exampleModal-1" tabindex="-1"
+                                                                 role="dialog" aria-labelledby="exampleModalLabel-1"
+                                                                 style="display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog modal-lg" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title"
+                                                                                id="exampleModalLabel">Power Club -
+                                                                                Powerbank Home Flex + Battery</h5>
+                                                                            <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                <span aria-hidden="true">×</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Retailer</span>
+                                                                                <span class="float-right text-success">Power Club</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Plan Name</span>
+                                                                                <span class="float-right text-success">Powerbank Home Flex + Battery</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Tariff Type</span>
+                                                                                <span class="float-right text-success">timeofuse</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Energy Cost</span>
+                                                                                <span class="float-right text-success">$ 1686</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Supply Cost</span>
+                                                                                <span class="float-right text-success">$ 73</span>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Total Cost</span>
+                                                                                <span class="float-right text-success">$ 1759</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Money Saved</span>
+                                                                                <span class="float-right text-success">$ 556</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger"
+                                                                                    data-dismiss="modal">Switch
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
 
                                                         <div class="col-7">
@@ -182,17 +247,26 @@
                                                                      aria-valuemax="100" id="BM_supplyPer"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-2 text-center">
-                                                            <h4>Total</h4>
-                                                            <h1>$
-                                                                <span id="BM_totalCost"></span>
-                                                            </h1>
+                                                        <div class="col-1 text-center text-success">
+                                                            <h4 class="mt-md-2 mb-4">Energy</h4>
+                                                            <h2><span id="BM_energy"></span>
+                                                            </h2>
                                                         </div>
-                                                        <div class="col-2 text-center text-danger">
-                                                            <h4>Saving</h4>
-                                                            <h1>$
+                                                        <div class="col-1 text-center text-danger">
+                                                            <h4 class="mt-md-2 mb-4">Supply</h4>
+                                                            <h2><span id="BM_supply"></span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-1 text-center">
+                                                            <h4 class="mt-md-2 mb-4">Total</h4>
+                                                            <h2><span id="BM_totalCost"></span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-1 text-center text-info">
+                                                            <h4 class="mt-md-2 mb-4">Saving</h4>
+                                                            <h2>
                                                                 <sapn id="BM_saveMoney"></sapn>
-                                                            </h1>
+                                                            </h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -202,7 +276,8 @@
                                         <div class="card">
                                             <div class="card-header" role="tab" id="Your_Current_heading">
                                                 <h6 class="mb-0">
-                                                    <a class="collapsed" data-toggle="collapse" href="#Your_Current_collapse"
+                                                    <a class="collapsed" data-toggle="collapse"
+                                                       href="#Your_Current_collapse"
                                                        aria-expanded="true" aria-controls="Your_Current_collapse">
                                                         Your Current Plan
                                                     </a>
@@ -214,6 +289,68 @@
                                                     <div class="row">
                                                         <div class="col-1">
                                                             <img class="mw-100" id="YC_image">
+
+                                                            <div class="text-center mb-0">
+                                                                <button type="button" class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#exampleModal">
+                                                                    Details
+                                                                </button>
+                                                            </div>
+
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                 role="dialog" aria-labelledby="exampleModalLabel"
+                                                                 style="display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog modal-lg" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title"
+                                                                                id="exampleModalLabel">ActewAGL -
+                                                                                Home</h5>
+                                                                            <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                <span aria-hidden="true">×</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Retailer</span>
+                                                                                <span class="float-right text-success">ActewAGL</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Plan Name</span>
+                                                                                <span class="float-right text-success">Home</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Tariff Type</span>
+                                                                                <span class="float-right text-success">single</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Energy Cost</span>
+                                                                                <span class="float-right text-success">$ 2176</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Supply Cost</span>
+                                                                                <span class="float-right text-success">$ 139</span>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Total Cost</span>
+                                                                                <span class="float-right text-success">$ 2315</span>
+                                                                            </p>
+                                                                            <p class="clearfix">
+                                                                                <span class="float-left">Money Saved</span>
+                                                                                <span class="float-right text-success">$ 0</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger"
+                                                                                    data-dismiss="modal">Switch
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
 
                                                         <div class="col-7">
@@ -241,18 +378,29 @@
                                                                      aria-valuemax="100" id="YC_supplyPer"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-2 text-center">
-                                                            <h4>Total</h4>
-                                                            <h1>$
-                                                                <span id="YC_totalCost"></span>
-                                                            </h1>
+                                                        <div class="col-1 text-center text-success">
+                                                            <h4 class="mt-md-2 mb-4">Energy</h4>
+                                                            <h2><span id="YC_energy"></span>
+                                                            </h2>
                                                         </div>
-                                                        <div class="col-2 text-center text-danger">
-                                                            <h4>Saving</h4>
-                                                            <h1>$
+                                                        <div class="col-1 text-center text-danger">
+                                                            <h4 class="mt-md-2 mb-4">Supply</h4>
+                                                            <h2><span id="YC_supply"></span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-1 text-center">
+                                                            <h4 class="mt-md-2 mb-4">Total</h4>
+                                                            <h2><span id="YC_totalCost"></span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-1 text-center text-info">
+                                                            <h4 class="mt-md-2 mb-4">Saving</h4>
+                                                            <h2>
                                                                 <sapn id="YC_saveMoney"></sapn>
-                                                            </h1>
+                                                            </h2>
                                                         </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -265,7 +413,8 @@
                     </div>
 
                     <div class="col-md-12 grid-margin card-body text-center">
-                        <button type="button" class="btn btn-primary btn-lg" onclick="displayRecommended()" id="planDisplayBtn">
+                        <button type="button" class="btn btn-primary btn-lg" onclick="displayRecommended()"
+                                id="planDisplayBtn">
                             Show more
                         </button>
                     </div>
@@ -300,6 +449,9 @@
                                             </th>
                                             <th>
                                                 Money Saved
+                                            </th>
+                                            <th>
+                                                Switch or NOT
                                             </th>
                                         </tr>
                                         </thead>
