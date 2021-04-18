@@ -164,11 +164,13 @@
                                                 // var password = dataJson.password;
 
                                                 var email = "xxx@anu.edu.au";     //测试用
+                                                var password = "123";     //测试用
                                                 $.ajax({
                                                     type: "get",
                                                     url: "http://54.79.60.225:8080/user/get_usage_habit",
                                                     data: {
                                                         email: email,
+                                                        password: password
                                                     },
                                                     async: false, // 要求同步
                                                     success: function (response) {
