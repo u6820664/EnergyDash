@@ -206,6 +206,39 @@
                                                 </div>
                                             </div>
 
+
+                                            <!-- Address -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Address</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="address"
+                                                           placeholder="Level 1, 28 University Ave, Canberra, ACT 2601">
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Room Number -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Room
+                                                    Number</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="roomNumber"
+                                                           placeholder="3">
+                                                </div>
+                                            </div>
+
+
+                                            <!-- House Type -->
+                                            <div class="form-group row">
+                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">House
+                                                    Type</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="houseType"
+                                                           placeholder="Apartment">
+                                                </div>
+                                            </div>
+
+
                                             <!--                                            <div class="form-group row">-->
                                             <!--                                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Address</label>-->
                                             <!--                                                <div class="col-sm-9">-->
@@ -229,6 +262,7 @@
                                                 </div>
                                             </div>
 
+
                                             <!-- Plan ID -->
                                             <div class="form-group row">
                                                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Plan
@@ -238,6 +272,7 @@
                                                            placeholder="7500128">
                                                 </div>
                                             </div>
+
 
                                             <button id="btn" type="button" class="btn btn-primary mr-2">Edit</button>
                                             <button class="btn btn-light">Cancel</button>
@@ -268,6 +303,10 @@
                                                             document.getElementById('username').setAttribute('value', response.data.userName);
                                                             document.getElementById('password').setAttribute('value', response.data.password);
                                                             document.getElementById('postcode').setAttribute('value', response.data.postcode);
+                                                            document.getElementById('address').setAttribute('value', response.data.address);
+                                                            document.getElementById('roomNumber').setAttribute('value', response.data.roomNumber);
+                                                            document.getElementById('houseType').setAttribute('value', response.data.houseType);
+
                                                             if (response.data.planId !== null) {
                                                                 document.getElementById('planID').setAttribute('value', response.data.planId);
                                                             }
@@ -380,12 +419,19 @@
                                                         var planIDINP = document.getElementById('planID').value;
                                                         var emailINP = document.getElementById('email').value;
 
+                                                        var addressINP = document.getElementById('address').value;
+                                                        var roomNumberINP = document.getElementById('roomNumber').value;
+                                                        var houseTypeINP = document.getElementById('houseType').value;
 
                                                         var usernameORI = "";
                                                         var passwordORI = "";
                                                         var postcodeORI = "";
                                                         var planIDORI = "";
                                                         var emailORI = "0";
+                                                        var addressORI = "";
+                                                        var roomNumberORI = "";
+                                                        var houseTypeORI = "";
+
 
                                                         $.ajax({
                                                             type: "get",
@@ -398,16 +444,20 @@
                                                                 postcodeORI = response.data.postcode;
                                                                 planIDORI = response.data.planId;
                                                                 emailORI = response.data.email;
+                                                                addressORI = response.data.address;
+                                                                roomNumberORI = response.data.roomNumber;
+                                                                houseTypeORI = response.data.houseType;
                                                             }
                                                         });
-
 
                                                         var usernameOtp = contrastContent(usernameINP, usernameORI);
                                                         var passwordOtp = contrastContent(passwordINP, passwordORI);
                                                         var postcodeOtp = contrastContent(postcodeINP, postcodeORI);
                                                         var planIDOtp = contrastContent(planIDINP, planIDORI);
                                                         var emailOtp = contrastContent(emailINP, emailORI);
-
+                                                        var addressOtp = contrastContent(addressINP, addressORI);
+                                                        var roomNumberOtp = contrastContent(roomNumberINP, roomNumberORI);
+                                                        var houseTypeOtp = contrastContent(houseTypeINP, houseTypeORI);
 
                                                         $.ajax({
                                                             type: "post",
@@ -418,6 +468,9 @@
                                                                 planId: planIDOtp,
                                                                 userName: usernameOtp,
                                                                 email: emailOtp,
+                                                                address: addressOtp,
+                                                                roomNumber: roomNumberOtp,
+                                                                houseType: houseTypeOtp,
                                                             }
 
                                                         });
