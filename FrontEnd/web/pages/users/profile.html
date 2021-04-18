@@ -279,15 +279,22 @@
 
 
                                             <script type="text/javascript">
+                                                function isNull(data) {
+                                                    return (data == "" || data == undefined || data == null) ? 0 : 1;
+                                                }
+
                                                 $(function () {
-                                                    var str = window.location.search;  //获取链接中传递的参数
-                                                    var orderData = str.substring(str.indexOf("=") + 1);//?orderData={"roomNum":"210","orderDay":"TODAY","orderTime":["10301100","11001140"]}
-                                                    var reg = new RegExp("%22", "g");
-                                                    var dataJson = $.parseJSON(orderData.replace(reg, "\""));
+                                                    // var str = window.location.search;  //获取链接中传递的参数
+                                                    // var orderData = str.substring(str.indexOf("=") + 1);//?orderData={"roomNum":"210","orderDay":"TODAY","orderTime":["10301100","11001140"]}
+                                                    // var reg = new RegExp("%22", "g");
+                                                    // var dataJson = $.parseJSON(orderData.replace(reg, "\""));
+                                                    //
+                                                    //
+                                                    // var email = dataJson.email;
+                                                    // var password = dataJson.password;
 
-
-                                                    var email = dataJson.email;
-                                                    var password = dataJson.password;
+                                                    var email = "xxx@anu.edu.au";     //测试用
+                                                    var password = "123";     //测试用
 
 
                                                     $.ajax({
@@ -306,20 +313,29 @@
                                                             document.getElementById('address').setAttribute('value', response.data.address);
                                                             document.getElementById('roomNumber').setAttribute('value', response.data.roomNumber);
                                                             document.getElementById('houseType').setAttribute('value', response.data.houseType);
-
-                                                            if (response.data.planId !== null) {
-                                                                document.getElementById('planID').setAttribute('value', response.data.planId);
+                                                            var temp = response.data.planId;
+                                                            if (!isNull(temp)) {
+                                                                document.getElementById('planID').setAttribute('value', temp);
                                                             }
                                                         }
                                                     });
 
-                                                    // document.getElementById('email').setAttribute('value', dataJson.email);
-                                                    // document.getElementById('username').setAttribute('value', dataJson.userName);
-                                                    // document.getElementById('password').setAttribute('value', dataJson.password);
-                                                    // document.getElementById('postcode').setAttribute('value', dataJson.postcode);
-                                                    // if (dataJson.planId !== null) {
-                                                    //     document.getElementById('planID').setAttribute('value', dataJson.planId);
-                                                    // }
+
+                                                    // 从1008接口获取剩余3条
+                                                    $.ajax({
+                                                        type: "get",
+                                                        url: "http://54.79.60.225:8080/user/get_usage_habit",
+                                                        data: {
+                                                            email: email,
+                                                            password: password
+                                                        },
+                                                        async: false, // 要求同步
+                                                        success: function (response) {
+                                                            document.getElementById('address').setAttribute('value', response.data.address);
+                                                            document.getElementById('roomNumber').setAttribute('value', response.data.roomNumber);
+                                                            document.getElementById('houseType').setAttribute('value', response.data.houseType);
+                                                        }
+                                                    });
 
                                                 });
 
@@ -327,6 +343,9 @@
 
 
                                             <script>
+                                                var email = "xxx@anu.edu.au";     //测试用
+                                                var password = "123";     //测试用
+
                                                 /*
                                                 检测邮箱是否可
                                                  */
@@ -382,7 +401,6 @@
                                                         }
 
                                                     });
-
                                                 };
 
 
@@ -416,7 +434,12 @@
                                                         var usernameINP = document.getElementById('username').value;
                                                         var passwordINP = document.getElementById('password').value;
                                                         var postcodeINP = document.getElementById('postcode').value;
-                                                        var planIDINP = document.getElementById('planID').value;
+
+                                                        if (document.getElementById('planID') != null) {
+                                                            var planIDINP = document.getElementById('planID').value;
+                                                        }
+
+
                                                         var emailINP = document.getElementById('email').value;
 
                                                         var addressINP = document.getElementById('address').value;
@@ -436,6 +459,10 @@
                                                         $.ajax({
                                                             type: "get",
                                                             url: "http://54.79.60.225:8080/user/load_user_profile",
+                                                            data: {
+                                                                email: email,
+                                                                password: password
+                                                            },
                                                             async: false, // 要求同步
                                                             success: function (response) {
                                                                 // 这部分是从数据库获取的原始数据
@@ -444,6 +471,20 @@
                                                                 postcodeORI = response.data.postcode;
                                                                 planIDORI = response.data.planId;
                                                                 emailORI = response.data.email;
+                                                            }
+                                                        });
+
+
+                                                        // 从1008接口获取剩余3条
+                                                        $.ajax({
+                                                            type: "get",
+                                                            url: "http://54.79.60.225:8080/user/get_usage_habit",
+                                                            data: {
+                                                                email: email,
+                                                                password: password
+                                                            },
+                                                            async: false, // 要求同步
+                                                            success: function (response) {
                                                                 addressORI = response.data.address;
                                                                 roomNumberORI = response.data.roomNumber;
                                                                 houseTypeORI = response.data.houseType;
@@ -461,12 +502,13 @@
 
                                                         $.ajax({
                                                             type: "post",
-                                                            url: 'editServlet',
+                                                            url: "http://54.79.60.225:8080/user/update_user_profile",
                                                             data: {
                                                                 password: passwordOtp,
                                                                 postcode: postcodeOtp,
-                                                                planId: planIDOtp,
                                                                 userName: usernameOtp,
+                                                                originalEmail: "xxx@anu.edu.au",
+                                                                planId: planIDOtp,
                                                                 email: emailOtp,
                                                                 address: addressOtp,
                                                                 roomNumber: roomNumberOtp,
