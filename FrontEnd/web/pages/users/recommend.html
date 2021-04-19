@@ -14,6 +14,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
@@ -207,7 +208,7 @@
                                                                             </p>
                                                                             <p class="clearfix">
                                                                                 <span class="float-left">Money Saved</span>
-                                                                                <span class="float-right text-success">$ 556</span>
+                                                                                <span class="float-right text-danger">$ 556</span>
                                                                             </p>
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -247,22 +248,12 @@
                                                                      aria-valuemax="100" id="BM_supplyPer"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-1 text-center text-success">
-                                                            <h4 class="mt-md-2 mb-4">Energy</h4>
-                                                            <h2><span id="BM_energy"></span>
-                                                            </h2>
-                                                        </div>
-                                                        <div class="col-1 text-center text-danger">
-                                                            <h4 class="mt-md-2 mb-4">Supply</h4>
-                                                            <h2><span id="BM_supply"></span>
-                                                            </h2>
-                                                        </div>
-                                                        <div class="col-1 text-center">
+                                                        <div class="col-2 text-center">
                                                             <h4 class="mt-md-2 mb-4">Total</h4>
                                                             <h2><span id="BM_totalCost"></span>
                                                             </h2>
                                                         </div>
-                                                        <div class="col-1 text-center text-info">
+                                                        <div class="col-2 text-center text-danger">
                                                             <h4 class="mt-md-2 mb-4">Saving</h4>
                                                             <h2>
                                                                 <sapn id="BM_saveMoney"></sapn>
@@ -338,7 +329,7 @@
                                                                             </p>
                                                                             <p class="clearfix">
                                                                                 <span class="float-left">Money Saved</span>
-                                                                                <span class="float-right text-success">$ 0</span>
+                                                                                <span class="float-right text-danger">$ 0</span>
                                                                             </p>
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -378,22 +369,12 @@
                                                                      aria-valuemax="100" id="YC_supplyPer"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-1 text-center text-success">
-                                                            <h4 class="mt-md-2 mb-4">Energy</h4>
-                                                            <h2><span id="YC_energy"></span>
-                                                            </h2>
-                                                        </div>
-                                                        <div class="col-1 text-center text-danger">
-                                                            <h4 class="mt-md-2 mb-4">Supply</h4>
-                                                            <h2><span id="YC_supply"></span>
-                                                            </h2>
-                                                        </div>
-                                                        <div class="col-1 text-center">
+                                                        <div class="col-2 text-center">
                                                             <h4 class="mt-md-2 mb-4">Total</h4>
                                                             <h2><span id="YC_totalCost"></span>
                                                             </h2>
                                                         </div>
-                                                        <div class="col-1 text-center text-info">
+                                                        <div class="col-2 text-center text-danger">
                                                             <h4 class="mt-md-2 mb-4">Saving</h4>
                                                             <h2>
                                                                 <sapn id="YC_saveMoney"></sapn>
@@ -413,7 +394,7 @@
                     </div>
 
                     <div class="col-md-12 grid-margin card-body text-center">
-                        <button type="button" class="btn btn-primary btn-lg" onclick="displayRecommended()"
+                        <button type="button" class="btn btn-primary btn-lg" onclick="displayRecommended()"-
                                 id="planDisplayBtn">
                             Show more
                         </button>
@@ -427,41 +408,79 @@
                                 <p class="card-description">
                                     What we could tell you
                                 </p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="table-responsive">
+                                            <div id="order-listing_wrapper"
+                                                 class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table id="order-listing" class="table dataTable no-footer"
+                                                               role="grid" aria-describedby="order-listing_info">
+                                                            <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting_asc" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1" aria-sort="ascending"
+                                                                    aria-label="Order #: activate to sort column descending"
+                                                                    >
+                                                                    Rank
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1"
+                                                                    aria-label="Purchased On: activate to sort column ascending"
+                                                                    >
+                                                                    Retailer
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1"
+                                                                    aria-label="Customer: activate to sort column ascending"
+                                                                    >
+                                                                    Plan Name
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1"
+                                                                    aria-label="Ship to: activate to sort column ascending"
+                                                                    >
+                                                                    Tariff Type
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1"
+                                                                    aria-label="Base Price: activate to sort column ascending"
+                                                                    >
+                                                                    Total Cost
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="order-listing" rowspan="1"
+                                                                    colspan="1"
+                                                                    aria-label="Purchased Price: activate to sort column ascending"
+                                                                    >
+                                                                    Money Saved
+                                                                </th>
+                                                                <th>
+                                                                    Switch or NOT
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody id="recommended_list">
 
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Rank
-                                            </th>
-                                            <th>
-                                                Retailer
-                                            </th>
-                                            <th>
-                                                Plan Name
-                                            </th>
-                                            <th>
-                                                Tariff Type
-                                            </th>
-                                            <th>
-                                                Total Cost
-                                            </th>
-                                            <th>
-                                                Money Saved
-                                            </th>
-                                            <th>
-                                                Switch or NOT
-                                            </th>
-                                        </tr>
-                                        </thead>
+                                                            </tbody>
+                                                        </table>
 
-                                        <tbody id="recommended_list">
 
-                                        </tbody>
-                                    </table>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -500,6 +519,10 @@
 <!-- Custom js for this page-->
 <script src="../../js/recommend.js"></script>
 <!-- End custom js for this page-->
+<script src="../../js/data-table.js"></script>
+<script src="../../js/dataTables.bootstrap4.js"></script>
+<script src="../../js/jquery.dataTables.js"></script>
+
 
 </body>
 

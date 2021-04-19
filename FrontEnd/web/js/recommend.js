@@ -119,7 +119,7 @@
 
             var switchTD = document.createElement("TD");
             var switchBTN = document.createElement('button');
-            switchBTN.className = 'btn btn-danger';
+            switchBTN.className = 'btn btn-outline-danger';
             switchBTN.innerHTML = 'Switch Now';
             switchTD.appendChild(switchBTN);
 
@@ -146,8 +146,8 @@
         document.getElementById('BM_saveMoney').innerHTML = "$ " + parseInt(saveMoneyDataArr[0]);
         document.getElementById('BM_energyPer').style.width = parseInt(energyPerDataArr[0] * 100) + "%";
         document.getElementById('BM_supplyPer').style.width = parseInt(supplyPerDataArr[0] * 100) + "%";
-        document.getElementById('BM_energy').innerHTML = "$ " + parseInt(energyDataArr[0]);
-        document.getElementById('BM_supply').innerHTML = "$ " + parseInt(supplyDataArr[0]);
+        // document.getElementById('BM_energy').innerHTML = "$ " + parseInt(energyDataArr[0]);
+        // document.getElementById('BM_supply').innerHTML = "$ " + parseInt(supplyDataArr[0]);
 
         //Your Current Energy Plan
         var current_rank = imageDataArr.length - 1;
@@ -159,8 +159,8 @@
         document.getElementById('YC_saveMoney').innerHTML = "$ " + parseInt(saveMoneyDataArr[current_rank]);
         document.getElementById('YC_energyPer').style.width = parseInt(energyPerDataArr[current_rank] * 100) + "%";
         document.getElementById('YC_supplyPer').style.width = parseInt(supplyPerDataArr[current_rank] * 100) + "%";
-        document.getElementById('YC_energy').innerHTML = "$ " + parseInt(energyDataArr[current_rank]);
-        document.getElementById('YC_supply').innerHTML = "$ " + parseInt(supplyDataArr[current_rank]);
+        // document.getElementById('YC_energy').innerHTML = "$ " + parseInt(energyDataArr[current_rank]);
+        // document.getElementById('YC_supply').innerHTML = "$ " + parseInt(supplyDataArr[current_rank]);
 
     });
 
