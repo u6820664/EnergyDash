@@ -337,7 +337,7 @@ The client does not propose any due day so we will follow the due day of this co
 ### [UI Design](https://drive.google.com/drive/folders/1eNAf-4_XLgdgPVrnK51_wAnGaOZuuUOg?usp=sharing)
 
 
-## 8.8 Testing
+## 8.8 Testing Output
 
 ### [User Tesing](https://drive.google.com/drive/folders/1ldUD0WwO62g096d5iLbHCLbNyLDWULwR?usp=sharing)
 
@@ -347,8 +347,6 @@ The client does not propose any due day so we will follow the due day of this co
 ## 8.9 Other Resources
 
 ### [Time Tracking log](https://drive.google.com/file/d/1EmWm4ZVTGO0IjHzJE9BL0S_Bg66Uuocl/view?usp=sharing)
-
-### [Research Sharing](https://drive.google.com/file/d/1k4EdyBkzy9MZpOHKO2dmYDs8qiJ1dWxc/view?usp=sharing)
 
 ### [Stakeholder Analysis](https://drive.google.com/file/d/1FjCHKAHK1PCBThPKEvvTgVUUah_7_ce8/view?usp=sharing)
 
@@ -384,7 +382,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## Project Video
 
-### [Project Video](https://youtu.be/te2DoCKfq8g)
+### [Project Video](https://youtu.be/cFltdoeN21U)
 
 
 ## Dev Environment (for Test only)
@@ -396,8 +394,11 @@ Please open these page via Firefox browser.
 
 ### [Sign up Page](http://54.79.60.225/pages/auth/register.html)
 
-### [User Profile Page](http://54.79.60.225/pages/users/profile.html)
-
 ### [Dashboard Page](http://54.79.60.225/dashboard.html)
 
+### [Usage Habits Page](http://54.79.60.225/pages/users/habits.html)
+
+### [Plan Recommend Page](http://54.79.60.225/pages/users/recommend.html)
+
+### [User Profile Page](http://54.79.60.225/pages/users/profile.html)
 
