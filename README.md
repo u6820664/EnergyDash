@@ -344,7 +344,17 @@ The client does not propose any due day so we will follow the due day of this co
 ### [API Tesing](https://drive.google.com/file/d/1UaetZZt32kuJsnC40Vky1LiaZsCtqCHT/view?usp=sharing)
 
 
-## 8.9 Other Resources
+## 8.9 Handover
+
+### [Handover doc](https://drive.google.com/drive/folders/1yyrKHWjNZQVZBnqXQXvpcCqVgN8y2fJG?usp=sharing)
+
+### [Stakeholder Analysis](https://drive.google.com/file/d/1FjCHKAHK1PCBThPKEvvTgVUUah_7_ce8/view?usp=sharing)
+
+### [Sprint Retrospective](https://drive.google.com/drive/folders/1Q38OSdE6j1ROt6hZbTPdrxuM6VVB_LFY?usp=sharing)
+
+### [All Documentation](https://drive.google.com/drive/folders/1ZiKnLC1JR_i2kxBUCV4yKgBujJBVFTC4?usp=sharing)
+
+## 8.10 Other Resources
 
 ### [Time Tracking log](https://drive.google.com/file/d/1EmWm4ZVTGO0IjHzJE9BL0S_Bg66Uuocl/view?usp=sharing)
 
