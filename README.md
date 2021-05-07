@@ -382,7 +382,7 @@ The client does not propose any due day so we will follow the due day of this co
 
 ## Project Video
 
-### [Project Video](https://youtu.be/cFltdoeN21U)
+### [Project Video](https://youtu.be/Wm2fZxCf1xc)
 
 
 ## Dev Environment (for Test only)
