@@ -14,7 +14,6 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 
@@ -28,6 +27,11 @@
         }
 
     </style>
+
+    <!--DataTable-->
+    <link rel="stylesheet" type="text/css" href="../../css/datatable.min.css" media="screen">
+    <script type="text/javascript" src="../../js/datatable.min.js"></script>
+
 </head>
 
 <body>
@@ -401,7 +405,7 @@
                     </div>
 
                     <!-- Recommended List-->
-                    <div class="col-lg-12 grid-margin stretch-card" id="recommended_energyPlan" style="display:none">
+                    <div class="col-lg-12 grid-margin stretch-card" id="recommended_energyPlan" style="display:none;">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Recommended Energy Plan</h4>
@@ -410,72 +414,24 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="table-responsive">
-                                            <div id="order-listing_wrapper"
-                                                 class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table id="order-listing" class="table dataTable no-footer"
-                                                               role="grid" aria-describedby="order-listing_info">
-                                                            <thead>
-                                                            <tr role="row">
-                                                                <th class="sorting_asc" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1" aria-sort="ascending"
-                                                                    aria-label="Order #: activate to sort column descending"
-                                                                    >
-                                                                    Rank
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1"
-                                                                    aria-label="Purchased On: activate to sort column ascending"
-                                                                    >
-                                                                    Retailer
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1"
-                                                                    aria-label="Customer: activate to sort column ascending"
-                                                                    >
-                                                                    Plan Name
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1"
-                                                                    aria-label="Ship to: activate to sort column ascending"
-                                                                    >
-                                                                    Tariff Type
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1"
-                                                                    aria-label="Base Price: activate to sort column ascending"
-                                                                    >
-                                                                    Total Cost
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="order-listing" rowspan="1"
-                                                                    colspan="1"
-                                                                    aria-label="Purchased Price: activate to sort column ascending"
-                                                                    >
-                                                                    Money Saved
-                                                                </th>
-                                                                <th>
-                                                                    Switch or NOT
-                                                                </th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody id="recommended_list">
+                                        <div id="recommended_list_datatable">
+                                            <table class="table dataTable no-footer">
+                                                <thead>
+                                                <tr>
+                                                    <th>Rank</th>
+                                                    <th>Retailer</th>
+                                                    <th>Plan Name</th>
+                                                    <th>Tariff Type</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Money Saved</th>
+                                                    <th>Switch or NOT</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="recommended_list">
 
-                                                            </tbody>
-                                                        </table>
-
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                </tbody>
+                                            </table>
+                                            <div id="paging_recommended_list_datatable" class="pagination text-center"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -519,11 +475,6 @@
 <!-- Custom js for this page-->
 <script src="../../js/recommend.js"></script>
 <!-- End custom js for this page-->
-<script src="../../js/data-table.js"></script>
-<script src="../../js/dataTables.bootstrap4.js"></script>
-<script src="../../js/jquery.dataTables.js"></script>
-
-
 </body>
 
 </html>

@@ -23,7 +23,7 @@
             async: false, // 要求同步
             //success函数表示交互成功后的操作
             success: function (response) {//response代表后台传过来的数据
-                // alert(response.data[0].companyName);
+                // alert(response.data[0]);
                 // alert(response.data.length);
                 for (var i = 0; i < response.data.length; i++) {
                     if (i == response.data.length - 1) {
@@ -54,7 +54,7 @@
                 }
             }
         });
-        // alert(companyNameData);
+        // alert(response.data);
 
         //Str2Arr
         var imageDataArr = imageData.split(',');
@@ -135,6 +135,14 @@
             document.getElementById("recommended_list").appendChild(tr);
         }
 
+        var datatable = new DataTable(document.querySelector('#recommended_list_datatable table'), {
+            pageSize: 10,
+            sort: [true, true, false, true, true, true, false],
+            filters: [false, 'select', true, 'select', false, false, false],
+            filterText: 'Type to filter... ',
+            pagingDivSelector: "#paging_recommended_list_datatable"
+        });
+
         // alert(parseInt(saveMoneyDataArr[0]));
         document.getElementById('most_saved').innerHTML = parseInt(saveMoneyDataArr[0]);
 
@@ -162,6 +170,8 @@
         // document.getElementById('YC_energy').innerHTML = "$ " + parseInt(energyDataArr[current_rank]);
         // document.getElementById('YC_supply').innerHTML = "$ " + parseInt(supplyDataArr[current_rank]);
 
+
+
     });
 
 })(jQuery);
@@ -179,3 +189,6 @@ function displayRecommended() {
         y.innerHTML = "Show more";
     }
 }
+
+
+
