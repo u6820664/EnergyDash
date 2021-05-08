@@ -57,7 +57,12 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Usage getUsage(String email) {
-        return usageDao.getUsage(email);
+    public void updateUsageProfile(Map paramMap) {
+        usageDao.updateUsageProfile(paramMap);
+    }
+
+    @Override
+    public Usage getUsage(String email, String password) {
+        return usageDao.getUsage(email, password);
     }
 }

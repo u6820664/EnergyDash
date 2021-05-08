@@ -26,7 +26,9 @@ public interface UserService {
 
     void updateUserProfile(Map paramMap);
 
-    Usage getUsage(String email);
+    void updateUsageProfile(Map paramMap);
+
+    Usage getUsage(String email, String password);
 
 }
 

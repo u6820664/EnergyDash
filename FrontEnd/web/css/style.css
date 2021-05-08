@@ -21237,5 +21237,82 @@ dl li {
   content: "\F0140";
 }
 
+/* Data Tables */
+.dataTables_wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dataTables_wrapper label {
+  font-size: .8125rem;
+}
+
+.dataTables_wrapper select {
+  padding: .4rem;
+  outline-offset: -2px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  margin-left: .25rem;
+  margin-right: .25rem;
+}
+
+.dataTables_wrapper .dataTable .btn, .dataTables_wrapper .dataTable .fc button, .fc .dataTables_wrapper .dataTable button, .dataTables_wrapper .dataTable .ajax-upload-dragdrop .ajax-file-upload, .ajax-upload-dragdrop .dataTables_wrapper .dataTable .ajax-file-upload, .dataTables_wrapper .dataTable .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .dataTables_wrapper .dataTable .swal2-styled, .dataTables_wrapper .dataTable .wizard > .actions a, .wizard > .actions .dataTables_wrapper .dataTable a {
+  padding: 0.1rem 1rem;
+  vertical-align: top;
+}
+
+.dataTables_wrapper .dataTable thead th {
+  border-bottom-width: 0;
+}
+
+.dataTables_wrapper .dataTable thead .sorting:before, .dataTables_wrapper .dataTable thead .sorting:after,
+.dataTables_wrapper .dataTable thead .sorting_asc:before,
+.dataTables_wrapper .dataTable thead .sorting_asc:after,
+.dataTables_wrapper .dataTable thead .sorting_desc:before,
+.dataTables_wrapper .dataTable thead .sorting_desc:after,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
+  line-height: 2.5;
+  font-family: Material Design Icons;
+  font-size: .65rem;
+}
+
+.dataTables_wrapper .dataTable thead .sorting:before,
+.dataTables_wrapper .dataTable thead .sorting_asc:before,
+.dataTables_wrapper .dataTable thead .sorting_desc:before,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
+  content: "\F05D";
+  right: 1.2em;
+}
+
+.dataTables_wrapper .dataTable thead .sorting:after,
+.dataTables_wrapper .dataTable thead .sorting_asc:after,
+.dataTables_wrapper .dataTable thead .sorting_desc:after,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
+  content: "\F045";
+  right: 0.2em;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  margin-top: 20px;
+}
+
+.dataTables_wrapper .dataTables_info {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 576px) {
+  .dataTables_wrapper .dataTables_info {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
 
 /*# sourceMappingURL=maps/style.css.map */

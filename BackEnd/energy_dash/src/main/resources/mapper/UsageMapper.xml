@@ -14,6 +14,31 @@
     <select id="getUsage" resultMap="UsageResultMap"  >
         SELECT * FROM usage_habit
         where 1=1 and email = #{email,jdbcType = VARCHAR}
+        and password = #{password,jdbcType = VARCHAR}
     </select>
+
+    <update id="updateUsageProfile">
+        UPDATE usage_habit
+        <if test="userName != null and userName != ''">
+            set user_name = #{userName,jdbcType = VARCHAR}
+        </if>
+        <if test="email != null and email !=''">
+            ,email = #{email,jdbcType = VARCHAR}
+        </if>
+        <if test="password != null and password !=''">
+            ,password = #{password,jdbcType = VARCHAR}
+        </if>
+        <if test="roomNumber != null and roomNumber !=''">
+            ,room_number = #{roomNumber,jdbcType = VARCHAR}
+        </if>
+        <if test="houseType != null and houseType !=''">
+            ,house_type = #{houseType,jdbcType = VARCHAR}
+        </if>
+        <if test="address != null and address !=''">
+            ,address = #{address,jdbcType = VARCHAR}
+        </if>
+        where email = #{originalEmail,jdbcType = VARCHAR}
+
+    </update>
 
 </mapper>

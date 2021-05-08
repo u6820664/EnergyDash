@@ -409,7 +409,7 @@
                         coalData += response.data[i].coalProfits;
                         priceData += response.data[i].wholesalePrice;
 
-                        timeData += response.data[i].datetimeStr.slice(11,16);
+                        timeData += response.data[i].datetimeStr.slice(11, 16);
                     } else {
                         carbonData += response.data[i].carbonIntensity + ",";
                         renewableData += response.data[i].renewableProfits + ",";
@@ -417,7 +417,7 @@
                         coalData += response.data[i].coalProfits + ",";
                         priceData += response.data[i].wholesalePrice + ",";
 
-                        timeData += response.data[i].datetimeStr.slice(11,16) + ",";
+                        timeData += response.data[i].datetimeStr.slice(11, 16) + ",";
                     }
                 }
 
@@ -873,7 +873,7 @@
             success: function (response) {//response代表后台传过来的数据
                 // alert(response.data.value);
                 document.getElementById('user-consumption').innerHTML = response.data.userConsumption;
-                document.getElementById('user-price').innerHTML = (response.data.price/100).toFixed(2);
+                document.getElementById('user-price').innerHTML = (response.data.price / 100).toFixed(2);
             }
         });
 
@@ -903,11 +903,11 @@
                 for (var i = 0; i < response.data.yearly.length; i++) {
                     if (i == response.data.yearly.length - 1) {
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption;
-                        yearlyPriceData += response.data.yearly[i].price/100;
+                        yearlyPriceData += response.data.yearly[i].price / 100;
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
                     } else {
                         yearlyUserConsumptionData += response.data.yearly[i].userConsumption + ",";
-                        yearlyPriceData += response.data.yearly[i].price/100 + ",";
+                        yearlyPriceData += response.data.yearly[i].price / 100 + ",";
                         yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
                     }
                 }
@@ -915,11 +915,11 @@
                 for (var i = 0; i < response.data.monthly.length; i++) {
                     if (i == response.data.monthly.length - 1) {
                         monthlyUserConsumptionData += response.data.monthly[i].userConsumption;
-                        monthlyPriceData += response.data.monthly[i].price/100;
+                        monthlyPriceData += response.data.monthly[i].price / 100;
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
                     } else {
                         monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";
-                        monthlyPriceData += response.data.monthly[i].price/100 + ",";
+                        monthlyPriceData += response.data.monthly[i].price / 100 + ",";
                         monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
                     }
                 }
@@ -927,11 +927,11 @@
                 for (var i = 0; i < response.data.daily.length; i++) {
                     if (i == response.data.daily.length - 1) {
                         dailyUserConsumptionData += response.data.daily[i].userConsumption;
-                        dailyPriceData += response.data.daily[i].price/100;
+                        dailyPriceData += response.data.daily[i].price / 100;
                         dailyDatatimeStr += response.data.daily[i].datetimeStr;
                     } else {
                         dailyUserConsumptionData += response.data.daily[i].userConsumption + ",";
-                        dailyPriceData += response.data.daily[i].price/100 + ",";
+                        dailyPriceData += response.data.daily[i].price / 100 + ",";
                         dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
                     }
                 }
@@ -951,6 +951,110 @@
         var dailyUserConsumptionDataArr = dailyUserConsumptionData.split(',');
         var dailyPriceDataArr = dailyPriceData.split(',');
         var dailyDatatimeStrArr = dailyDatatimeStr.split(',');
+
+        // const half = Math.ceil(dailyUserConsumptionDataArr.length / 2);
+        //
+        // const firstHalf = dailyUserConsumptionDataArr.splice(0, half)
+        //
+        // dailyUserConsumptionDataArr.fill(0, half, 2*half);
+        // // const filled = dailyUserConsumptionDataArr.fill(0, 0, half);
+        // // console.log(dailyUserConsumptionDataArr.fill(0, 0, half));
+        // const secondHalf = dailyUserConsumptionDataArr.splice(-half);
+        console.log(dailyPriceDataArr);
+
+        if ($("#historical-chart-day").length) {
+            var AudienceChartCanvas = $("#historical-chart-day").get(0).getContext("2d");
+            var AudienceChart = new Chart(AudienceChartCanvas, {
+                type: 'line',
+                data: {
+                    labels: dailyDatatimeStrArr.reverse(),
+                    datasets: [
+                        {
+                            type: 'line',
+                            fill: false,
+                            label: 'Energy Consumption (kWH) (Historical)',
+                            data: dailyUserConsumptionDataArr.reverse(),
+                            borderColor: 'green',
+                        },
+                        {
+                            type: 'line',
+                            fill: false,
+                            label: 'Energy Price (A$) (Historical)',
+                            data: dailyPriceDataArr.reverse(),
+                            backgroundColor: 'red'
+                        },
+                        {
+                            type: 'line',
+                            fill: false,
+                            borderDash: [5, 5],
+                            label: 'Energy Consumption (kWH) (Predicted)',
+                            data: dailyUserConsumptionDataArr.reverse(),
+                            backgroundColor: 'teal'
+                        },
+                        {
+                            type: 'line',
+                            fill: false,
+                            borderDash: [5, 5],
+                            label: 'Energy Price (A$) (Predicted)',
+                            data: dailyPriceDataArr.reverse(),
+                            backgroundColor: 'pink'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 20,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            gridLines: {
+                                display: true,
+                                drawBorder: false,
+                                color: "#f8f8f8",
+                                zeroLineColor: "#f8f8f8"
+                            },
+                            ticks: {
+                                display: true,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10,
+                                padding: 10
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "#b1b0b0",
+                                fontSize: 10
+                            },
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                                display: false
+                            },
+                            barPercentage: .9,
+                            categoryPercentage: .7,
+                        }]
+                    },
+                    legend: {
+                        display: true
+                    },
+                    elements: {
+                        point: {
+                            radius: 3,
+                            backgroundColor: '#ff4c5b'
+                        }
+                    }
+                },
+            });
+        }
 
         if ($("#historical-chart-year").length) {
             var AudienceChartCanvas = $("#historical-chart-year").get(0).getContext("2d");
@@ -1108,83 +1212,6 @@
             });
         }
 
-        if ($("#historical-chart-day").length) {
-            var AudienceChartCanvas = $("#historical-chart-day").get(0).getContext("2d");
-            var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'line',
-                data: {
-                    labels: dailyDatatimeStrArr.reverse(),
-                    datasets: [
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Consumption (kWH)',
-                            data: dailyUserConsumptionDataArr.reverse(),
-                            borderColor: '#ff4c5b'
-                        },
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Price (A$)',
-                            data: dailyPriceDataArr.reverse(),
-                            backgroundColor: '#1cbccd'
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 0,
-                            top: 20,
-                            bottom: 0
-                        }
-                    },
-                    scales: {
-                        yAxes: [{
-                            display: true,
-                            gridLines: {
-                                display: true,
-                                drawBorder: false,
-                                color: "#f8f8f8",
-                                zeroLineColor: "#f8f8f8"
-                            },
-                            ticks: {
-                                display: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10,
-                                padding: 10
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: false,
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10
-                            },
-                            gridLines: {
-                                color: "rgba(0, 0, 0, 0)",
-                                display: false
-                            },
-                            barPercentage: .9,
-                            categoryPercentage: .7,
-                        }]
-                    },
-                    legend: {
-                        display: true
-                    },
-                    elements: {
-                        point: {
-                            radius: 3,
-                            backgroundColor: '#ff4c5b'
-                        }
-                    }
-                },
-            });
-        }
 
         // Tab_swap Day/ Month /Year
         document.getElementById("tab_day").onclick = function () {
@@ -1304,276 +1331,276 @@
         // var dailyPriceDataArr = dailyPriceData.split(',');
         // var dailyDatatimeStrArr = dailyDatatimeStr.split(',');
 
-        if ($("#predicted-chart-year").length) {
-            var AudienceChartCanvas = $("#predicted-chart-year").get(0).getContext("2d");
-            var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'line',
-                data: {
-                    labels: yearlyDatatimeStrArr.reverse(),
-                    datasets: [
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Consumption (kWH)',
-                            data: yearlyUserConsumptionDataArr.reverse(),
-                            borderColor: '#ff4c5b',
-                            borderDash: [5, 5]
-                        },
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Price (A$)',
-                            data: yearlyPriceDataArr.reverse(),
-                            backgroundColor: '#1cbccd',
-                            borderDash: [5, 5]
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 0,
-                            top: 20,
-                            bottom: 0
-                        }
-                    },
-                    scales: {
-                        yAxes: [{
-                            display: true,
-                            gridLines: {
-                                display: true,
-                                drawBorder: false,
-                                color: "#f8f8f8",
-                                zeroLineColor: "#f8f8f8"
-                            },
-                            ticks: {
-                                display: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10,
-                                padding: 10
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: false,
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10
-                            },
-                            gridLines: {
-                                color: "rgba(0, 0, 0, 0)",
-                                display: false
-                            },
-                            barPercentage: .9,
-                            categoryPercentage: .7,
-                        }]
-                    },
-                    legend: {
-                        display: true
-                    },
-                    elements: {
-                        point: {
-                            radius: 3,
-                            backgroundColor: '#ff4c5b'
-                        }
-                    }
-                },
-            });
-        }
-
-        if ($("#predicted-chart-month").length) {
-            var AudienceChartCanvas = $("#predicted-chart-month").get(0).getContext("2d");
-            var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'line',
-                data: {
-                    labels: monthlyDatatimeStrArr.reverse(),
-                    datasets: [
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Consumption (kWH)',
-                            data: monthlyUserConsumptionDataArr.reverse(),
-                            borderColor: '#ff4c5b',
-                            borderDash: [5, 5]
-                        },
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Price (A$)',
-                            data: monthlyPriceDataArr.reverse(),
-                            backgroundColor: '#1cbccd',
-                            borderDash: [5, 5]
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 0,
-                            top: 20,
-                            bottom: 0
-                        }
-                    },
-                    scales: {
-                        yAxes: [{
-                            display: true,
-                            gridLines: {
-                                display: true,
-                                drawBorder: false,
-                                color: "#f8f8f8",
-                                zeroLineColor: "#f8f8f8"
-                            },
-                            ticks: {
-                                display: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10,
-                                padding: 10
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: false,
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10
-                            },
-                            gridLines: {
-                                color: "rgba(0, 0, 0, 0)",
-                                display: false
-                            },
-                            barPercentage: .9,
-                            categoryPercentage: .7,
-                        }]
-                    },
-                    legend: {
-                        display: true
-                    },
-                    elements: {
-                        point: {
-                            radius: 3,
-                            backgroundColor: '#ff4c5b'
-                        }
-                    }
-                },
-            });
-        }
-
-        if ($("#predicted-chart-day").length) {
-            var AudienceChartCanvas = $("#predicted-chart-day").get(0).getContext("2d");
-            var AudienceChart = new Chart(AudienceChartCanvas, {
-                type: 'line',
-                data: {
-                    labels: dailyDatatimeStrArr.reverse(),
-                    datasets: [
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Consumption (kWH)',
-                            data: dailyUserConsumptionDataArr.reverse(),
-                            borderColor: '#ff4c5b',
-                            borderDash: [5, 5]
-                        },
-                        {
-                            type: 'line',
-                            fill: false,
-                            label: 'Energy Price (A$)',
-                            data: dailyPriceDataArr.reverse(),
-                            backgroundColor: '#1cbccd',
-                            borderDash: [5, 5]
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 0,
-                            top: 20,
-                            bottom: 0
-                        }
-                    },
-                    scales: {
-                        yAxes: [{
-                            display: true,
-                            gridLines: {
-                                display: true,
-                                drawBorder: false,
-                                color: "#f8f8f8",
-                                zeroLineColor: "#f8f8f8"
-                            },
-                            ticks: {
-                                display: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10,
-                                padding: 10
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: false,
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: "#b1b0b0",
-                                fontSize: 10
-                            },
-                            gridLines: {
-                                color: "rgba(0, 0, 0, 0)",
-                                display: false
-                            },
-                            barPercentage: .9,
-                            categoryPercentage: .7,
-                        }]
-                    },
-                    legend: {
-                        display: true
-                    },
-                    elements: {
-                        point: {
-                            radius: 3,
-                            backgroundColor: '#ff4c5b'
-                        }
-                    }
-                },
-            });
-        }
-
-        // Tab_swap Day/ Month /Year
-        document.getElementById("tab_predicted_day").onclick = function () {
-            changeToDay()
-        };
-
-        function changeToDay() {
-            document.getElementById("card_predicted_day").style.display = 'block';
-            document.getElementById("card_predicted_month").style.display = 'none';
-            document.getElementById("card_predicted_year").style.display = 'none';
-        }
-
-        document.getElementById("tab_predicted_month").onclick = function () {
-            changeToMonth()
-        };
-
-        function changeToMonth() {
-            document.getElementById("card_predicted_day").style.display = 'none';
-            document.getElementById("card_predicted_month").style.display = 'block';
-            document.getElementById("card_predicted_year").style.display = 'none';
-        }
-
-        document.getElementById("tab_predicted_year").onclick = function () {
-            changeToYear()
-        };
-
-        function changeToYear() {
-            document.getElementById("card_predicted_day").style.display = 'none';
-            document.getElementById("card_predicted_month").style.display = 'none';
-            document.getElementById("card_predicted_year").style.display = 'block';
-        }
+        // if ($("#predicted-chart-year").length) {
+        //     var AudienceChartCanvas = $("#predicted-chart-year").get(0).getContext("2d");
+        //     var AudienceChart = new Chart(AudienceChartCanvas, {
+        //         type: 'line',
+        //         data: {
+        //             labels: yearlyDatatimeStrArr.reverse(),
+        //             datasets: [
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Consumption (kWH)',
+        //                     data: yearlyUserConsumptionDataArr.reverse(),
+        //                     borderColor: '#ff4c5b',
+        //                     borderDash: [5, 5]
+        //                 },
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Price (A$)',
+        //                     data: yearlyPriceDataArr.reverse(),
+        //                     backgroundColor: '#1cbccd',
+        //                     borderDash: [5, 5]
+        //                 }
+        //             ]
+        //         },
+        //         options: {
+        //             responsive: true,
+        //             maintainAspectRatio: true,
+        //             layout: {
+        //                 padding: {
+        //                     left: 0,
+        //                     right: 0,
+        //                     top: 20,
+        //                     bottom: 0
+        //                 }
+        //             },
+        //             scales: {
+        //                 yAxes: [{
+        //                     display: true,
+        //                     gridLines: {
+        //                         display: true,
+        //                         drawBorder: false,
+        //                         color: "#f8f8f8",
+        //                         zeroLineColor: "#f8f8f8"
+        //                     },
+        //                     ticks: {
+        //                         display: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10,
+        //                         padding: 10
+        //                     }
+        //                 }],
+        //                 xAxes: [{
+        //                     stacked: false,
+        //                     ticks: {
+        //                         beginAtZero: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10
+        //                     },
+        //                     gridLines: {
+        //                         color: "rgba(0, 0, 0, 0)",
+        //                         display: false
+        //                     },
+        //                     barPercentage: .9,
+        //                     categoryPercentage: .7,
+        //                 }]
+        //             },
+        //             legend: {
+        //                 display: true
+        //             },
+        //             elements: {
+        //                 point: {
+        //                     radius: 3,
+        //                     backgroundColor: '#ff4c5b'
+        //                 }
+        //             }
+        //         },
+        //     });
+        // }
+        //
+        // if ($("#predicted-chart-month").length) {
+        //     var AudienceChartCanvas = $("#predicted-chart-month").get(0).getContext("2d");
+        //     var AudienceChart = new Chart(AudienceChartCanvas, {
+        //         type: 'line',
+        //         data: {
+        //             labels: monthlyDatatimeStrArr.reverse(),
+        //             datasets: [
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Consumption (kWH)',
+        //                     data: monthlyUserConsumptionDataArr.reverse(),
+        //                     borderColor: '#ff4c5b',
+        //                     borderDash: [5, 5]
+        //                 },
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Price (A$)',
+        //                     data: monthlyPriceDataArr.reverse(),
+        //                     backgroundColor: '#1cbccd',
+        //                     borderDash: [5, 5]
+        //                 }
+        //             ]
+        //         },
+        //         options: {
+        //             responsive: true,
+        //             maintainAspectRatio: true,
+        //             layout: {
+        //                 padding: {
+        //                     left: 0,
+        //                     right: 0,
+        //                     top: 20,
+        //                     bottom: 0
+        //                 }
+        //             },
+        //             scales: {
+        //                 yAxes: [{
+        //                     display: true,
+        //                     gridLines: {
+        //                         display: true,
+        //                         drawBorder: false,
+        //                         color: "#f8f8f8",
+        //                         zeroLineColor: "#f8f8f8"
+        //                     },
+        //                     ticks: {
+        //                         display: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10,
+        //                         padding: 10
+        //                     }
+        //                 }],
+        //                 xAxes: [{
+        //                     stacked: false,
+        //                     ticks: {
+        //                         beginAtZero: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10
+        //                     },
+        //                     gridLines: {
+        //                         color: "rgba(0, 0, 0, 0)",
+        //                         display: false
+        //                     },
+        //                     barPercentage: .9,
+        //                     categoryPercentage: .7,
+        //                 }]
+        //             },
+        //             legend: {
+        //                 display: true
+        //             },
+        //             elements: {
+        //                 point: {
+        //                     radius: 3,
+        //                     backgroundColor: '#ff4c5b'
+        //                 }
+        //             }
+        //         },
+        //     });
+        // }
+        //
+        // if ($("#predicted-chart-day").length) {
+        //     var AudienceChartCanvas = $("#predicted-chart-day").get(0).getContext("2d");
+        //     var AudienceChart = new Chart(AudienceChartCanvas, {
+        //         type: 'line',
+        //         data: {
+        //             labels: dailyDatatimeStrArr.reverse(),
+        //             datasets: [
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Consumption (kWH)',
+        //                     data: dailyUserConsumptionDataArr.reverse(),
+        //                     borderColor: '#ff4c5b',
+        //                     borderDash: [5, 5]
+        //                 },
+        //                 {
+        //                     type: 'line',
+        //                     fill: false,
+        //                     label: 'Energy Price (A$)',
+        //                     data: dailyPriceDataArr.reverse(),
+        //                     backgroundColor: '#1cbccd',
+        //                     borderDash: [5, 5]
+        //                 }
+        //             ]
+        //         },
+        //         options: {
+        //             responsive: true,
+        //             maintainAspectRatio: true,
+        //             layout: {
+        //                 padding: {
+        //                     left: 0,
+        //                     right: 0,
+        //                     top: 20,
+        //                     bottom: 0
+        //                 }
+        //             },
+        //             scales: {
+        //                 yAxes: [{
+        //                     display: true,
+        //                     gridLines: {
+        //                         display: true,
+        //                         drawBorder: false,
+        //                         color: "#f8f8f8",
+        //                         zeroLineColor: "#f8f8f8"
+        //                     },
+        //                     ticks: {
+        //                         display: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10,
+        //                         padding: 10
+        //                     }
+        //                 }],
+        //                 xAxes: [{
+        //                     stacked: false,
+        //                     ticks: {
+        //                         beginAtZero: true,
+        //                         fontColor: "#b1b0b0",
+        //                         fontSize: 10
+        //                     },
+        //                     gridLines: {
+        //                         color: "rgba(0, 0, 0, 0)",
+        //                         display: false
+        //                     },
+        //                     barPercentage: .9,
+        //                     categoryPercentage: .7,
+        //                 }]
+        //             },
+        //             legend: {
+        //                 display: true
+        //             },
+        //             elements: {
+        //                 point: {
+        //                     radius: 3,
+        //                     backgroundColor: '#ff4c5b'
+        //                 }
+        //             }
+        //         },
+        //     });
+        // }
+        //
+        // // Tab_swap Day/ Month /Year
+        // document.getElementById("tab_predicted_day").onclick = function () {
+        //     changeToDay()
+        // };
+        //
+        // function changeToDay() {
+        //     document.getElementById("card_predicted_day").style.display = 'block';
+        //     document.getElementById("card_predicted_month").style.display = 'none';
+        //     document.getElementById("card_predicted_year").style.display = 'none';
+        // }
+        //
+        // document.getElementById("tab_predicted_month").onclick = function () {
+        //     changeToMonth()
+        // };
+        //
+        // function changeToMonth() {
+        //     document.getElementById("card_predicted_day").style.display = 'none';
+        //     document.getElementById("card_predicted_month").style.display = 'block';
+        //     document.getElementById("card_predicted_year").style.display = 'none';
+        // }
+        //
+        // document.getElementById("tab_predicted_year").onclick = function () {
+        //     changeToYear()
+        // };
+        //
+        // function changeToYear() {
+        //     document.getElementById("card_predicted_day").style.display = 'none';
+        //     document.getElementById("card_predicted_month").style.display = 'none';
+        //     document.getElementById("card_predicted_year").style.display = 'block';
+        // }
 
         //Small chart notification
         // Energy Price

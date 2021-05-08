@@ -17,7 +17,7 @@ public class Usage {
 
     private String address;
 
-    private String roomNumber;
+    private int roomNumber;
 
     private String contractPeriod;
 
