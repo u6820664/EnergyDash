@@ -6,140 +6,321 @@
 </head>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-<canvas id="myChart" height="90"></canvas>
+<link rel="stylesheet" type="text/css" href="css/datatable.min.css" media="screen">
+<script type="text/javascript" src="js/datatable.min.js"></script>
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css" rel="stylesheet">
+
+<body>
+
+<div id="first-datatable-output">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Linus</td>
+            <td>Torvalds</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Brian</td>
+            <td>Kernighan</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Blaise</td>
+            <td>Pascal</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Larry</td>
+            <td>Page</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Richard</td>
+            <td>Hamming</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Grace</td>
+            <td>Hopper</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>Bezier</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Shigeru</td>
+            <td>Miyamoto</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Leslie</td>
+            <td>Lamport</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Rasmus</td>
+            <td>Lerdorf</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Xavier</td>
+            <td>Leroy</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Albert</td>
+            <td>Einstein</td>
+            <td>Physics</td>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>Gates</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Leonard</td>
+            <td>De Vinci</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Pierre</td>
+            <td>De Fermat</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>René</td>
+            <td>Descartes</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Alan</td>
+            <td>Turing</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Ada</td>
+            <td>Lovelace</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Isaac</td>
+            <td>Newton</td>
+            <td>Physics</td>
+        </tr>
+        <tr>
+            <td>Carl Friedrich</td>
+            <td>Gauss</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Von Neumann</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Claude</td>
+            <td>Shannon</td>
+            <td>Mathematics</td>
+        </tr>
+        <tr>
+            <td>Tim</td>
+            <td>Berners-Lee</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Richard</td>
+            <td>Stallman</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Dennis</td>
+            <td>Ritchie</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Bjarne</td>
+            <td>Stroustrup</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Steve</td>
+            <td>Jobs</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Steve</td>
+            <td>Wozniak</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Mario</td>
+            <td>Molina</td>
+            <td>Chemistry</td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="paging-first-datatable"></div>
+</div>
 
 <script>
-    // historical
-    var yearlyUserConsumptionData = "";
-    var yearlyPriceData = "";
-    var yearlyDatatimeStr = "";
+    var datatable = new DataTable(document.querySelector('#first-datatable-output table'), {
 
-    var monthlyUserConsumptionData = "";
-    var monthlyPriceData = "";
-    var monthlyDatatimeStr = "";
 
-    var dailyUserConsumptionData = "";
-    var dailyPriceData = "";
-    var dailyDatatimeStr = "";
 
-    $.ajax({
-        type: "get",
-        url: "http://54.79.60.225:8080/data/get_historical_data",
-        data: {
-            email: "xxx@anu.edu.au",
-        },
-        async: false, // 要求同步
-
-        //success函数表示交互成功后的操作
-        success: function (response) {//response代表后台传过来的数据
-            for (var i = 0; i < response.data.yearly.length; i++) {
-                if (i == response.data.yearly.length - 1) {
-                    yearlyUserConsumptionData += response.data.yearly[i].userConsumption;
-                    yearlyPriceData += response.data.yearly[i].price / 100;
-                    yearlyDatatimeStr += response.data.yearly[i].datetimeStr;
-                } else {
-                    yearlyUserConsumptionData += response.data.yearly[i].userConsumption + ",";
-                    yearlyPriceData += response.data.yearly[i].price / 100 + ",";
-                    yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";
-                }
-            }
-
-            for (var i = 0; i < response.data.monthly.length; i++) {
-                if (i == response.data.monthly.length - 1) {
-                    monthlyUserConsumptionData += response.data.monthly[i].userConsumption;
-                    monthlyPriceData += response.data.monthly[i].price / 100;
-                    monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
-                } else {
-                    monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";
-                    monthlyPriceData += response.data.monthly[i].price / 100 + ",";
-                    monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
-                }
-            }
-
-            for (var i = 0; i < response.data.daily.length; i++) {
-                if (i == response.data.daily.length - 1) {
-                    dailyUserConsumptionData += response.data.daily[i].userConsumption;
-                    dailyPriceData += response.data.daily[i].price / 100;
-                    dailyDatatimeStr += response.data.daily[i].datetimeStr;
-                } else {
-                    dailyUserConsumptionData += response.data.daily[i].userConsumption + ",";
-                    dailyPriceData += response.data.daily[i].price / 100 + ",";
-                    dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";
-                }
-            }
-
-        }
-
+        pageSize: 5,
+        sort: [true, true, false],
+        filters: [true, false, 'select'],
+        filterText: 'Type to filter... ',
+        pagingDivSelector: "#paging-first-datatable"
     });
-
-    var yearlyUserConsumptionDataArr = yearlyUserConsumptionData.split(',');
-    var yearlyPriceDataArr = yearlyPriceData.split(',');
-    var yearlyDatatimeStrArr = yearlyDatatimeStr.split(',');
-
-    var monthlyUserConsumptionDataArr = monthlyUserConsumptionData.split(',');
-    var monthlyPriceDataArr = monthlyPriceData.split(',');
-    var monthlyDatatimeStrArr = monthlyDatatimeStr.split(',');
-
-    var dailyUserConsumptionDataArr = dailyUserConsumptionData.split(',');
-    var dailyPriceDataArr = dailyPriceData.split(',');
-    var dailyDatatimeStrArr = dailyDatatimeStr.split(',');
-
-    console.log(dailyUserConsumptionDataArr);
-    // const half = Math.ceil(dailyUserConsumptionDataArr.length / 2);
-    // const firstHalf = dailyUserConsumptionDataArr.splice(0, half)
-    // console.log(firstHalf);
-
-
-    for (var i = 0; i < dailyUserConsumptionDataArr.length; i++) {
-        if (i < dailyUserConsumptionDataArr.length / 2) {
-            dailyUserConsumptionDataArr[i] = "NaN";
-        }
-    }
-    console.log(dailyUserConsumptionDataArr);
-
-
-    var originalLineDraw = Chart.controllers.line.prototype.draw;
-    Chart.helpers.extend(Chart.controllers.line.prototype, {
-        draw: function() {
-            originalLineDraw.apply(this, arguments);
-
-            var chart = this.chart;
-            var ctx = chart.chart.ctx;
-
-            var index = chart.config.data.lineAtIndex;
-            if (index) {
-                var xaxis = chart.scales['x-axis-0'];
-                var yaxis = chart.scales['y-axis-0'];
-
-                ctx.save();
-                ctx.beginPath();
-                ctx.moveTo(xaxis.getPixelForValue(undefined, index), yaxis.top);
-                ctx.strokeStyle = '#ff0000';
-                ctx.lineTo(xaxis.getPixelForValue(undefined, index), yaxis.bottom);
-                ctx.stroke();
-                ctx.restore();
-            }
-        }
-    });
-
-    var config = {
-        type: 'line',
-        data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [{
-                label: "My First dataset",
-                data: [65, 0, 80, 81, 56, 85, 40],
-                fill: false
-
-            }],
-            lineAtIndex: 2
-        }
-    };
-
-    var ctx = document.getElementById("myChart").getContext("2d");
-    new Chart(ctx, config);
-
 </script>
+
+
+<!--<canvas id="myChart" height="90"></canvas>-->
+
+
+<!--<script>-->
+<!--    // historical-->
+<!--    var yearlyUserConsumptionData = "";-->
+<!--    var yearlyPriceData = "";-->
+<!--    var yearlyDatatimeStr = "";-->
+
+<!--    var monthlyUserConsumptionData = "";-->
+<!--    var monthlyPriceData = "";-->
+<!--    var monthlyDatatimeStr = "";-->
+
+<!--    var dailyUserConsumptionData = "";-->
+<!--    var dailyPriceData = "";-->
+<!--    var dailyDatatimeStr = "";-->
+
+<!--    $.ajax({-->
+<!--        type: "get",-->
+<!--        url: "http://54.79.60.225:8080/data/get_historical_data",-->
+<!--        data: {-->
+<!--            email: "xxx@anu.edu.au",-->
+<!--        },-->
+<!--        async: false, // 要求同步-->
+
+<!--        //success函数表示交互成功后的操作-->
+<!--        success: function (response) {//response代表后台传过来的数据-->
+<!--            for (var i = 0; i < response.data.yearly.length; i++) {-->
+<!--                if (i == response.data.yearly.length - 1) {-->
+<!--                    yearlyUserConsumptionData += response.data.yearly[i].userConsumption;-->
+<!--                    yearlyPriceData += response.data.yearly[i].price / 100;-->
+<!--                    yearlyDatatimeStr += response.data.yearly[i].datetimeStr;-->
+<!--                } else {-->
+<!--                    yearlyUserConsumptionData += response.data.yearly[i].userConsumption + ",";-->
+<!--                    yearlyPriceData += response.data.yearly[i].price / 100 + ",";-->
+<!--                    yearlyDatatimeStr += response.data.yearly[i].datetimeStr + ",";-->
+<!--                }-->
+<!--            }-->
+
+<!--            for (var i = 0; i < response.data.monthly.length; i++) {-->
+<!--                if (i == response.data.monthly.length - 1) {-->
+<!--                    monthlyUserConsumptionData += response.data.monthly[i].userConsumption;-->
+<!--                    monthlyPriceData += response.data.monthly[i].price / 100;-->
+<!--                    monthlyDatatimeStr += response.data.monthly[i].datetimeStr;-->
+<!--                } else {-->
+<!--                    monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";-->
+<!--                    monthlyPriceData += response.data.monthly[i].price / 100 + ",";-->
+<!--                    monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";-->
+<!--                }-->
+<!--            }-->
+
+<!--            for (var i = 0; i < response.data.daily.length; i++) {-->
+<!--                if (i == response.data.daily.length - 1) {-->
+<!--                    dailyUserConsumptionData += response.data.daily[i].userConsumption;-->
+<!--                    dailyPriceData += response.data.daily[i].price / 100;-->
+<!--                    dailyDatatimeStr += response.data.daily[i].datetimeStr;-->
+<!--                } else {-->
+<!--                    dailyUserConsumptionData += response.data.daily[i].userConsumption + ",";-->
+<!--                    dailyPriceData += response.data.daily[i].price / 100 + ",";-->
+<!--                    dailyDatatimeStr += response.data.daily[i].datetimeStr + ",";-->
+<!--                }-->
+<!--            }-->
+
+<!--        }-->
+
+<!--    });-->
+
+<!--    var yearlyUserConsumptionDataArr = yearlyUserConsumptionData.split(',');-->
+<!--    var yearlyPriceDataArr = yearlyPriceData.split(',');-->
+<!--    var yearlyDatatimeStrArr = yearlyDatatimeStr.split(',');-->
+
+<!--    var monthlyUserConsumptionDataArr = monthlyUserConsumptionData.split(',');-->
+<!--    var monthlyPriceDataArr = monthlyPriceData.split(',');-->
+<!--    var monthlyDatatimeStrArr = monthlyDatatimeStr.split(',');-->
+
+<!--    var dailyUserConsumptionDataArr = dailyUserConsumptionData.split(',');-->
+<!--    var dailyPriceDataArr = dailyPriceData.split(',');-->
+<!--    var dailyDatatimeStrArr = dailyDatatimeStr.split(',');-->
+
+<!--    console.log(dailyUserConsumptionDataArr);-->
+<!--    // const half = Math.ceil(dailyUserConsumptionDataArr.length / 2);-->
+<!--    // const firstHalf = dailyUserConsumptionDataArr.splice(0, half)-->
+<!--    // console.log(firstHalf);-->
+
+
+<!--    for (var i = 0; i < dailyUserConsumptionDataArr.length; i++) {-->
+<!--        if (i < dailyUserConsumptionDataArr.length / 2) {-->
+<!--            dailyUserConsumptionDataArr[i] = "NaN";-->
+<!--        }-->
+<!--    }-->
+<!--    console.log(dailyUserConsumptionDataArr);-->
+
+
+<!--    var originalLineDraw = Chart.controllers.line.prototype.draw;-->
+<!--    Chart.helpers.extend(Chart.controllers.line.prototype, {-->
+<!--        draw: function() {-->
+<!--            originalLineDraw.apply(this, arguments);-->
+
+<!--            var chart = this.chart;-->
+<!--            var ctx = chart.chart.ctx;-->
+
+<!--            var index = chart.config.data.lineAtIndex;-->
+<!--            if (index) {-->
+<!--                var xaxis = chart.scales['x-axis-0'];-->
+<!--                var yaxis = chart.scales['y-axis-0'];-->
+
+<!--                ctx.save();-->
+<!--                ctx.beginPath();-->
+<!--                ctx.moveTo(xaxis.getPixelForValue(undefined, index), yaxis.top);-->
+<!--                ctx.strokeStyle = '#ff0000';-->
+<!--                ctx.lineTo(xaxis.getPixelForValue(undefined, index), yaxis.bottom);-->
+<!--                ctx.stroke();-->
+<!--                ctx.restore();-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+
+<!--    var config = {-->
+<!--        type: 'line',-->
+<!--        data: {-->
+<!--            labels: ["January", "February", "March", "April", "May", "June", "July"],-->
+<!--            datasets: [{-->
+<!--                label: "My First dataset",-->
+<!--                data: [65, 0, 80, 81, 56, 85, 40],-->
+<!--                fill: false-->
+
+<!--            }],-->
+<!--            lineAtIndex: 2-->
+<!--        }-->
+<!--    };-->
+
+<!--    var ctx = document.getElementById("myChart").getContext("2d");-->
+<!--    new Chart(ctx, config);-->
+
+<!--</script>-->
 
 
 </body>
