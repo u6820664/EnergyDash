@@ -1301,7 +1301,40 @@
             });
         }
 
-        //myChart
+        //Predicted metrics - MONTH
+        // var monthlyUserConsumptionData = "";
+        // var monthlyDatatimeStr = "";
+        //
+        // $.ajax({
+        //     type: "get",
+        //     url: "http://54.79.60.225:8080/data/get_prediction_data",
+        //     data: {
+        //         email: "xxx@anu.edu.au",
+        //     },
+        //     async: false, // 要求同步
+        //
+        //     //success函数表示交互成功后的操作
+        //     success: function (response) {//response代表后台传过来的数据
+        //         for (var i = 0; i < response.data.monthly.length; i++) {
+        //             if (i == response.data.monthly.length - 1) {
+        //                 monthlyUserConsumptionData += response.data.monthly[i].userConsumption;
+        //                 monthlyPriceData += response.data.monthly[i].price / 100;
+        //                 monthlyDatatimeStr += response.data.monthly[i].datetimeStr;
+        //             } else {
+        //                 monthlyUserConsumptionData += response.data.monthly[i].userConsumption + ",";
+        //                 monthlyPriceData += response.data.monthly[i].price / 100 + ",";
+        //                 monthlyDatatimeStr += response.data.monthly[i].datetimeStr + ",";
+        //             }
+        //         }
+        //     }
+        //
+        // });
+
+        // var monthlyUserConsumptionDataArr = monthlyUserConsumptionData.split(',');
+        // var monthlyPriceDataArr = monthlyPriceData.split(',');
+        // var monthlyDatatimeStrArr = monthlyDatatimeStr.split(',');
+
+
         var originalLineDraw = Chart.controllers.line.prototype.draw;
         Chart.helpers.extend(Chart.controllers.line.prototype, {
             draw: function() {
@@ -1332,7 +1365,7 @@
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
                     label: "Energy Consumption (kWH)",
-                    data: monthlyUserConsumptionDataArr.reverse(),
+                    data: ["130.56", "125.96", "152.66", "102.76", "133.75", "149.88", "160.89", "170.54", "155.33", "158.34", "150.93", "188.26"],
                     type: 'line',
                     fill: false,
                     borderDash: [5, 5],
