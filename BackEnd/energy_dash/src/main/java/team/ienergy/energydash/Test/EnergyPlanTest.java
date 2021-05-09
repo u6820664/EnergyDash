@@ -165,7 +165,7 @@ public class EnergyPlanTest {
 
     //Test the time of use price is satisfied the "total_price = supply_price + peak_price * peak_usage + off_peak_price * off_peak_usage + shoulder_price * shoulder_usage"
     //tou1-2 and 5-6 is shoulder
-    //tou4-5 is peak
+    //tou 3-4 is peak
     //rest time is off peak
     @Test
     public void timeOfUseTest(){
@@ -182,8 +182,9 @@ public class EnergyPlanTest {
                 tt = Float.parseFloat(plan.getSupplyPrice()) +
                         Float.parseFloat(plan.getOffPeakPrice())*consumption.getUsage(0,Integer.parseInt(plan.getTou1()),consumption.getList())
                         +Float.parseFloat(plan.getShoulderPrice())*consumption.getUsage(Integer.parseInt(plan.getTou1()),Integer.parseInt(plan.getTou2()),consumption.getList())
-                        +Float.parseFloat(plan.getOffPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou2()),Integer.parseInt(plan.getTou4()),consumption.getList())
-                        +Float.parseFloat(plan.getPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou4()),Integer.parseInt(plan.getTou5()),consumption.getList())
+                        +Float.parseFloat(plan.getOffPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou2()),Integer.parseInt(plan.getTou3()),consumption.getList())
+                        +Float.parseFloat(plan.getPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou3()),Integer.parseInt(plan.getTou4()),consumption.getList())
+                        +Float.parseFloat(plan.getOffPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou4()),Integer.parseInt(plan.getTou5()),consumption.getList())
                         +Float.parseFloat(plan.getShoulderPrice())*consumption.getUsage(Integer.parseInt(plan.getTou5()),Integer.parseInt(plan.getTou6()),consumption.getList())
                         +Float.parseFloat(plan.getOffPeakPrice())*consumption.getUsage(Integer.parseInt(plan.getTou6()),24,consumption.getList());
 
