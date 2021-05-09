@@ -341,6 +341,12 @@ The client does not propose any due day so we will follow the due day of this co
 
 ### [User Tesing](https://drive.google.com/drive/folders/1ldUD0WwO62g096d5iLbHCLbNyLDWULwR?usp=sharing)
 
+#### [User Tesing_Phrase Ⅰ](https://drive.google.com/file/d/1QvdCBdUJBD1r4YtjnmWlObczG1T47Tea/view?usp=sharing)
+
+#### [User Tesing_Phrase Ⅱ Part a](https://drive.google.com/file/d/1zs6XPu2yPKKE7N1Cyrh6gIb1MUnz90Hq/view?usp=sharing)
+
+#### [User Tesing_Phrase Ⅱ Part b](https://docs.google.com/document/d/17kLJ804NyeB4IEKOOCDFWkyNv7BQg81pyqk0UAGPRsQ/edit?usp=sharing)
+
 ### [API Tesing](https://drive.google.com/file/d/1UaetZZt32kuJsnC40Vky1LiaZsCtqCHT/view?usp=sharing)
 
 
