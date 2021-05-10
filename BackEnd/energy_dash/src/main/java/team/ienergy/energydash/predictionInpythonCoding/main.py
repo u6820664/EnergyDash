@@ -1,3 +1,4 @@
+import dataframe as dataframe
 import pandas as pd
 import torch
 import torch.nn.functional as F
@@ -40,8 +41,11 @@ for index, date in data.iterrows():
             dataMonth.append(sumForOneMonth)
             dataPre.append(dataMonth)
             dataMonth = []
-            sumForOneDay = date['supply']
+            sumForOneMonth = date['supply']
             dateTime = int(date['datetime'] + 0.000000001)
+dataMonth.append(dateTime)
+dataMonth.append(sumForOneMonth)
+dataPre.append(dataMonth)
 dataPre.remove([0, 0])
 
 # Build an empty DataFrame and store all the normalized data
@@ -89,9 +93,9 @@ for month in dataPre:
             continue
         if month[0] % 100 == 12:
             line['December'] = month[1]
+            data = data.append(line, ignore_index=True)
             continue
     else:
-        data = data.append(line,ignore_index=True)
         line['Year'] = int(month[0] / 100)
         line['January']=month[1]
         year = int(month[0] / 100)
@@ -304,8 +308,29 @@ network.train(X, Y)
 input = []
 print(data)
 
-input = inputDeal(data.iloc[7])[1:13]
+for i in range(1):
 
-a = network.feedforward(input)
-print(a)
+    input = inputDeal(data.iloc[5+i])[1:13]
+    a = network.feedforward(input)
+
+    a=a.numpy()
+    line = {'Year': 1, 'January': 0.1, 'February': 0.1, 'March': 0.1, 'April': 0.1, 'May': 0.1, 'June': 0.1, 'July': 0.1,
+            'August': 0.1, 'September': 0.1, 'October': 0.1, 'November': 0.1, 'December': 0.1}
+
+    line['Year']=2021+i
+    line['January']=a[0]
+    line['February']=a[1]
+    line['March']=a[2]
+    line['April']=a[3]
+    line['May']=a[4]
+    line['June']=a[5]
+    line['July']=a[6]
+    line['August']=a[7]
+    line['September']=a[8]
+    line['October']=a[9]
+    line['November']=a[10]
+    line['December']=a[11]
+    data= data.append(line,ignore_index=True)
+
+data.to_csv("prediction.csv",index=False,sep=',')
 
