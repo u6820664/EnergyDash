@@ -1365,14 +1365,14 @@
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
                     label: "Energy Consumption (kWH)",
-                    data: ["130.56", "125.96", "152.66", "102.76", "133.75", "149.88", "160.89", "170.54", "155.33", "158.34", "150.93", "188.26"],
+                    data: ["742.86", "671.88", "751.71", "719.27", "744.83", "713.48", "739.88", "753.91", "722.47", "748.68", "721.81", "735.97"],
                     type: 'line',
                     fill: false,
                     borderDash: [5, 5],
                     backgroundColor: '#ff4c5b'
 
                 }],
-                lineAtIndex: 5
+                lineAtIndex: 4
             },
             options: {
                 responsive: true,
