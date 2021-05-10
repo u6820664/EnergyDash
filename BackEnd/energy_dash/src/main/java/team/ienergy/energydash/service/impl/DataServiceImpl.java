@@ -3,7 +3,9 @@ package team.ienergy.energydash.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import team.ienergy.energydash.beans.HistoricalData;
+import team.ienergy.energydash.beans.PredictionData;
 import team.ienergy.energydash.dao.HistoricalDao;
+import team.ienergy.energydash.dao.PredictionDao;
 import team.ienergy.energydash.dao.RealtimeDao;
 import team.ienergy.energydash.exception.NormalException;
 import team.ienergy.energydash.service.DataService;
@@ -29,10 +31,18 @@ public class DataServiceImpl implements DataService {
     @Autowired
     private HistoricalDao historicalDao;
 
+    @Autowired
+    private PredictionDao predictionDao;
+
 
     @Override
     public List getRealtimeData(int userId) {
         return realtimeDao.getRealtimeData(userId);
+    }
+
+    @Override
+    public List<PredictionData> getPredictionMonthlyData(int userId) {
+        return predictionDao.getPredictionMonthlyData(userId);
     }
 
     @Override

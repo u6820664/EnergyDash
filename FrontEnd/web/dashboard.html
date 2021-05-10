@@ -332,10 +332,10 @@
                             <div class="col-md-12 order-0 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-title">Energy Metrics</p>
+                                        <p class="card-title">Historical Metrics</p>
                                         <div class="row">
                                             <div class="col-md-7">
-                                                <p class="text-muted">Historical and Predicted energy info about
+                                                <p class="text-muted">Historical energy info about
                                                     users</p>
                                             </div>
                                             <div class="col-md-5">
@@ -382,64 +382,24 @@
                                 </div>
                             </div>
 
-<!--                            &lt;!&ndash; Predicted Metrics &ndash;&gt;-->
-<!--                            <div class="col-md-12 grid-margin stretch-card">-->
-<!--                                <div class="row w-100 flex-grow">-->
-<!--                                    <div class="col-md-12 order-0 grid-margin stretch-card">-->
-<!--                                        <div class="card">-->
-<!--                                            <div class="card-body">-->
-<!--                                                <p class="card-title">Predicted Metrics</p>-->
-<!--                                                <div class="row">-->
-<!--                                                    <div class="col-md-7">-->
-<!--                                                        <p class="text-muted">Predicted energy consumption and price data of-->
-<!--                                                            users</p>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-md-5">-->
-<!--                                                        <ul class="nav nav-pills nav-pills-custom justify-content-md-end"-->
-<!--                                                            id="pills-tab-custom" role="tablist">-->
-<!--                                                            <li class="nav-item">-->
-<!--                                                                <a class="nav-link active" id="tab_predicted_day"-->
-<!--                                                                   data-toggle="pill" href="#pills-health" role="tab"-->
-<!--                                                                   aria-controls="pills-home" aria-selected="true">-->
-<!--                                                                    Day-->
-<!--                                                                </a>-->
-<!--                                                            </li>-->
-<!--                                                            <li class="nav-item">-->
-<!--                                                                <a class="nav-link" id="tab_predicted_month"-->
-<!--                                                                   data-toggle="pill" href="#pills-music" role="tab"-->
-<!--                                                                   aria-controls="pills-contact" aria-selected="false">-->
-<!--                                                                    Month-->
-<!--                                                                </a>-->
-<!--                                                            </li>-->
-<!--                                                            <li class="nav-item">-->
-<!--                                                                <a class="nav-link" id="tab_predicted_year"-->
-<!--                                                                   data-toggle="pill" href="#pills-career" role="tab"-->
-<!--                                                                   aria-controls="pills-profile" aria-selected="false">-->
-<!--                                                                    Year-->
-<!--                                                                </a>-->
-<!--                                                            </li>-->
-<!--                                                        </ul>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-
-<!--                                                <div>-->
-<!--                                                    <div style="display: block;" id="card_predicted_day">-->
-<!--                                                        <canvas id="predicted-chart-day" height="250"></canvas>-->
-<!--                                                    </div>-->
-<!--                                                    <div style="display: none;" id="card_predicted_month">-->
-<!--                                                        <canvas id="predicted-chart-month" height="250"></canvas>-->
-<!--                                                    </div>-->
-<!--                                                    <div style="display: none;" id="card_predicted_year">-->
-<!--                                                        <canvas id="predicted-chart-year" height="250"></canvas>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
+                            <!-- Predicted Metrics -->
+                            <div class="col-12 col-xl-12 grid-margin stretch-card">
+                                <div class="row w-100 flex-grow">
+                                    <div class="col-md-12 order-0 grid-margin stretch-card">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-title">Predicted Metrics</p>
+                                                <div class="row">
+                                                    <p class="text-muted">Predicted energy consumption</p>
+                                                </div>
+                                                <div>
+                                                    <canvas id="myChart" height="250"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- Cumulative Metrics -->
                             <div class="col-md-12 grid-margin stretch-card">
@@ -451,8 +411,9 @@
                                         <div class="d-flex flex-wrap pt-2">
                                             <div class="mr-4 mb-lg-2 mb-xl-0">
                                                 <p>Energy consumption</p>
-                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4><span
-                                                    class="text-success"> kWH</span>
+                                                <h4 id="user-consumption" class="font-weight-bold mb-0"></h4>
+                                                <span
+                                                        class="text-success"> kWH</span>
                                             </div>
                                             <div>
                                                 <p>Energy Bill</p>
@@ -479,7 +440,8 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
-                            <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright © 2021 Energy
+                            <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright © 2021
+                                Energy
                                 Dash Team. All
                                 rights reserved.</p>
                         </div>

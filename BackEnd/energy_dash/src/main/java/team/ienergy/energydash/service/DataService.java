@@ -2,6 +2,7 @@ package team.ienergy.energydash.service;
 
 import team.ienergy.energydash.beans.HistoricalData;
 import team.ienergy.energydash.beans.Plan;
+import team.ienergy.energydash.beans.PredictionData;
 import team.ienergy.energydash.beans.RealtimeData;
 
 import java.util.List;
@@ -20,6 +21,8 @@ public interface DataService {
     List<RealtimeData> getRealtimeData(int userId);
 
     List<HistoricalData> getHistoricalYearlyData(int userId);
+
+    List<PredictionData> getPredictionMonthlyData(int userId);
 
     List<HistoricalData> getHistoricalMonthlyData(int userId);
 

@@ -520,7 +520,7 @@ public class DataController {
 
         recommendPlans.sort((o1, o2) -> {
             if(o1.getTotalCost() == o2.getTotalCost()){
-                return Integer.valueOf(o1.getPid()) - Integer.valueOf(o2.getPid());
+                return Integer.parseInt(o1.getPid()) - Integer.parseInt(o2.getPid());
             }else {
                 if(o1.getTotalCost() > o2.getTotalCost()) return 1;
                 else return -1;
@@ -635,5 +635,34 @@ public class DataController {
         return resCal;
     }
 
+    /**
+     * @param
+     * @return java.lang.Object
+     * @desc Interface 2005：get prediction data
+     * @author Mingchao Sima
+     * @date 02 May 2021
+     * @func_name getPredictionData
+     */
+    @ResponseBody
+    @RequestMapping(value = "/get_prediction_data", method = RequestMethod.GET)
+    public Object getPredictionData(@RequestParam(value = "email", required = true) String email,
+                                    @RequestParam(value = "userName", required = false) String userName) {
 
+
+        User user = userService.getUser(email);
+        int userId = user.getUserId();
+
+        Map<String, List<PredictionData>> resultMap = new HashMap<>();
+
+        //monthly
+        List<PredictionData> monthlyData = dataService.getPredictionMonthlyData(userId);
+        if (monthlyData.size() == 0){
+            throw new NormalException("2003"+NormalException.ERROR_CODE_NO_RESULT, "No prediction data for now");
+        }
+        resultMap.put("monthly", monthlyData);
+
+        ResultBean resultBean = new ResultBean();
+        resultBean.setData(resultMap);
+        return JSON.toJSON(resultBean);
+    }
 }
