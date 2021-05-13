@@ -308,6 +308,12 @@ network.train(X, Y)
 input = []
 print(data)
 
+plt.plot(loss_All)
+plt.title('Losses')
+plt.xlabel('Epochs')
+plt.ylabel('Losses')
+plt.show()
+
 for i in range(1):
 
     input = inputDeal(data.iloc[5+i])[1:13]
